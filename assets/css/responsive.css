@@ -1,0 +1,908 @@
+/* ==========================================================================
+   EV Disha – Static Website Version 1.0
+   All-Device Responsive Architecture (responsive.css)
+   Device Tiers:
+     1. Large Desktop & 4K:                  1440px and above
+     2. Compact Laptop / Tablet Pro:         992px – 1239px
+     3. Tablet & Mobile Navigation/Drawers:  <= 991px
+     4. Mobile Devices & Phablets:           <= 767px
+     5. Standard Portrait Smartphones:       <= 539px
+     6. Ultra-Compact Phones:                320px – 389px
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. Large Desktop (1440px+)
+   -------------------------------------------------------------------------- */
+@media (min-width: 1440px) {
+  :root {
+    --container-max: 1340px;
+  }
+
+  .hero-section {
+    padding-block: 108px 128px;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   2. Laptop & iPad Pro Landscape (992px – 1239px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 1239px) {
+  .brand-logo img {
+    height: 52px;
+    max-width: 196px;
+  }
+
+  .nav-link {
+    padding: 8px 11px;
+    font-size: 0.89rem;
+  }
+
+  .categories-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .brands-logo-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .benefits-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .vehicles-grid,
+  .news-grid,
+  .brands-directory-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+  }
+
+  .explore-layout {
+    grid-template-columns: 264px minmax(0, 1fr);
+    gap: 24px;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   3. Tablet & Mobile Navigation + Filter Drawers (<= 991px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 991px) {
+  :root {
+    --header-height: 78px;
+  }
+
+  .brand-logo img {
+    height: 52px;
+    max-width: 198px;
+  }
+
+  .mobile-menu-toggle {
+    display: inline-flex;
+  }
+
+  /* Full-Height Viewport Slide-Over Navigation Menu */
+  .primary-nav {
+    position: fixed;
+    top: var(--header-height);
+    right: 0;
+    left: auto;
+    bottom: auto;
+    width: min(320px, 86vw);
+    height: calc(100vh - var(--header-height));
+    height: calc(100dvh - var(--header-height));
+    background-color: var(--color-white);
+    border-left: 1px solid var(--color-border);
+    box-shadow: var(--shadow-lg);
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    padding: 18px 16px max(24px, env(safe-area-inset-bottom));
+    gap: 6px;
+    z-index: 960;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateX(102%);
+    transition: transform var(--transition-base), visibility 0s linear 280ms;
+  }
+
+  .primary-nav.is-open {
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateX(0);
+    transition: transform var(--transition-base), visibility 0s linear 0s;
+  }
+
+  .nav-link {
+    min-height: 48px;
+    font-size: 1rem;
+    padding: 12px 16px;
+    border-radius: var(--radius-sm);
+    justify-content: space-between;
+    color: var(--color-navy);
+    font-weight: 700;
+  }
+
+  .nav-link.active {
+    background-color: var(--color-bg-light);
+    color: var(--color-navy);
+  }
+
+  .nav-link.active::after {
+    left: 0;
+    right: auto;
+    top: 10px;
+    bottom: 10px;
+    width: 3.5px;
+    height: auto;
+  }
+
+  .mobile-nav-extra {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: auto;
+    padding-top: 14px;
+    border-top: 1px solid var(--color-border);
+  }
+
+  .mobile-nav-cta-box {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding-top: 4px;
+  }
+
+  /* Symmetric 2x2 Quick Search Grid on Tablets */
+  .quick-search-form {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+  }
+
+  .quick-search-form>.btn {
+    width: 100%;
+    min-height: 48px;
+  }
+
+  /* Promotional Banner */
+  .promo-banner-card {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .promo-banner-content {
+    padding: 36px 32px;
+  }
+
+  .promo-banner-media {
+    max-height: 260px;
+  }
+
+  /* Explore Page Layout & Full-Screen Slide-Over Filter Sheet */
+  .explore-layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .mobile-filter-btn {
+    display: inline-flex;
+  }
+
+  .filter-sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: auto;
+    bottom: auto;
+    width: min(350px, 88vw);
+    height: 100vh;
+    height: 100dvh;
+    border-radius: 0 var(--radius-lg) var(--radius-lg) 0;
+    border: 0;
+    border-right: 1px solid var(--color-border);
+    box-shadow: var(--shadow-lg);
+    z-index: 1050;
+    padding: 18px 18px max(20px, env(safe-area-inset-bottom));
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    display: flex;
+    flex-direction: column;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateX(-104%);
+    transition: transform var(--transition-base), visibility 0s linear 280ms;
+  }
+
+  .filter-sidebar.is-open {
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateX(0);
+    transition: transform var(--transition-base), visibility 0s linear 0s;
+  }
+
+  .filter-sidebar .checkbox-list {
+    max-height: none;
+    overflow: visible;
+  }
+
+  .filter-drawer-close {
+    display: inline-flex;
+    width: 38px;
+    height: 38px;
+    font-size: 1.35rem;
+  }
+
+  .filter-drawer-footer {
+    display: block;
+    position: sticky;
+    bottom: -18px;
+    background: var(--color-white);
+    padding: 14px 0 6px;
+    margin-top: auto;
+    border-top: 1px solid var(--color-border);
+  }
+
+  /* Compare Slots on Tablet (768px–991px) */
+  .compare-slots-grid {
+    gap: 14px;
+  }
+
+  .compare-slot-card {
+    padding: 14px;
+    min-height: 220px;
+  }
+
+  /* Details, Specs & Contact Grids */
+  .details-hero-grid,
+  .specs-sections-grid,
+  .contact-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 26px;
+  }
+
+  .brands-logo-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .footer-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 32px;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   4. Mobile Devices & Phablets (<= 767px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 767px) {
+  :root {
+    --header-height: 70px;
+  }
+
+  .container {
+    padding-inline: 16px;
+  }
+
+  .section {
+    padding-block: 48px;
+  }
+
+  .section-header {
+    margin-bottom: 24px;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .brand-logo img {
+    height: 44px;
+    max-width: 162px;
+  }
+
+  .header-actions {
+    gap: 8px;
+  }
+
+  .icon-btn {
+    width: 42px;
+    height: 42px;
+  }
+
+  .footer-logo-plate {
+    padding: 10px 14px;
+  }
+
+  .footer-logo-plate img {
+    height: 48px;
+    max-width: 190px;
+  }
+
+  /* Mobile Hero */
+  .hero-section {
+    padding-block: 48px 68px;
+  }
+
+  .hero-bg img {
+    object-position: 68% center;
+  }
+
+  .hero-overlay {
+    background: linear-gradient(180deg,
+        rgba(7, 29, 59, 0.90) 0%,
+        rgba(9, 43, 85, 0.88) 62%,
+        rgba(7, 29, 59, 0.96) 100%);
+  }
+
+  .hero-title {
+    font-size: clamp(1.85rem, 7vw, 2.4rem);
+  }
+
+  .hero-cta-group {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  .hero-cta-group .btn {
+    width: 100%;
+    padding-inline: 12px;
+    font-size: 0.9rem;
+  }
+
+  .hero-highlights {
+    gap: 8px 14px;
+    margin-top: 20px;
+    padding-top: 16px;
+    font-size: 0.78rem;
+  }
+
+  .quick-search-section {
+    margin-top: -28px;
+  }
+
+  .quick-search-card {
+    padding: 18px 16px;
+  }
+
+  .quick-search-form {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 12px;
+  }
+
+  /* Inner Page Heroes & Notices */
+  .page-hero {
+    padding-block: 34px;
+  }
+
+  .page-hero h1 {
+    font-size: clamp(1.6rem, 6.2vw, 2.05rem);
+  }
+
+  .sample-data-banner {
+    padding: 12px 14px;
+    font-size: 0.8125rem;
+    margin-bottom: 20px;
+  }
+
+  /* News Filter Bar & Horizontal Swipe Pills (Brands, News, Picker Modal) */
+  .news-filter-bar {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+    margin-bottom: 20px;
+  }
+
+  .news-search-wrap {
+    width: 100%;
+  }
+
+  .segment-filter-pills {
+    width: 100%;
+    max-width: 100%;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding-bottom: 6px;
+    margin-bottom: 20px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .segment-filter-pills::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Grids on Mobile */
+  .vehicles-grid,
+  .news-grid,
+  .brands-directory-grid,
+  .features-checklist {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 18px;
+  }
+
+  /* Keep 2-col Categories & Benefits on Wide Phones / Foldables (540px–767px) */
+  .categories-grid,
+  .benefits-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+  }
+
+  .brands-logo-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .brand-profile-card {
+    padding: 18px;
+  }
+
+  .brand-profile-logo {
+    width: 124px;
+  }
+
+  /* Compact Horizontal Compare Slot Cards on Mobile */
+  .compare-controls-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .compare-slots-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 12px;
+    margin-bottom: 22px;
+  }
+
+  .compare-slot-card.compare-slot-filled {
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+    min-height: 0;
+    padding: 12px 42px 12px 12px;
+  }
+
+  .compare-slot-card.compare-slot-filled .compare-slot-media {
+    width: 98px;
+    flex-shrink: 0;
+  }
+
+  .compare-slot-card.compare-slot-filled .compare-slot-img {
+    margin-bottom: 0;
+  }
+
+  .compare-slot-card.compare-slot-filled .compare-slot-title {
+    font-size: 1rem;
+  }
+
+  .compare-slot-card.compare-slot-filled .compare-slot-price {
+    margin-bottom: 6px;
+    font-size: 0.9rem;
+  }
+
+  .compare-slot-empty {
+    min-height: 112px;
+    flex-direction: row;
+    text-align: left;
+    justify-content: flex-start;
+    padding: 14px 16px;
+  }
+
+  .compare-table {
+    min-width: 560px;
+  }
+
+  .compare-table th,
+  .compare-table td {
+    padding: 12px 14px;
+    font-size: 0.85rem;
+  }
+
+  .compare-table tbody th {
+    min-width: 130px;
+    width: 130px;
+  }
+
+  /* Explore Toolbar */
+  .explore-toolbar {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+    padding: 14px;
+  }
+
+  .toolbar-controls {
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    gap: 10px;
+  }
+
+  .toolbar-controls select {
+    width: 100% !important;
+  }
+
+  /* Modals as Clean Bottom Sheets on Phones */
+  .modal-overlay {
+    align-items: flex-end;
+    padding: 0;
+  }
+
+  .modal-card {
+    max-height: 90dvh;
+    border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+  }
+
+  .modal-header {
+    padding: 16px 18px;
+  }
+
+  .modal-body {
+    padding: 16px 18px max(20px, env(safe-area-inset-bottom));
+  }
+
+  .search-modal {
+    padding: 12px;
+  }
+
+  .search-modal-bar {
+    padding: 12px 14px;
+  }
+
+  /* Details, Specs & Contact Cards */
+  .promo-banner-content {
+    padding: 26px 20px;
+  }
+
+  .details-summary-card,
+  .spec-panel,
+  .contact-card,
+  .info-card {
+    padding: 18px;
+  }
+
+  .key-metric-box {
+    padding: 11px 12px;
+  }
+
+  .key-metric-box strong {
+    font-size: 0.88rem;
+    line-height: 1.3;
+    overflow-wrap: anywhere;
+  }
+
+  .spec-row {
+    flex-direction: column;
+    gap: 3px;
+  }
+
+  .spec-row dd {
+    text-align: left;
+  }
+
+  .variants-table th,
+  .variants-table td {
+    padding: 11px 14px;
+    font-size: 0.85rem;
+  }
+
+  /* Floating Compare Bar Mobile Fit */
+  .floating-compare-bar {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+    padding: 12px 14px;
+    width: calc(100vw - 24px);
+  }
+
+  .compare-bar-items {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding-bottom: 2px;
+    scrollbar-width: none;
+  }
+
+  .compare-bar-items::-webkit-scrollbar {
+    display: none;
+  }
+
+  .floating-compare-bar>div:last-child {
+    display: grid !important;
+    grid-template-columns: auto minmax(0, 1fr);
+  }
+
+  .toast-container {
+    left: 14px;
+    right: 14px;
+    bottom: max(16px, env(safe-area-inset-bottom));
+  }
+
+  /* Bottom EV Brand Marquee Mobile */
+  .brand-marquee-section {
+    padding-block: 36px 40px;
+  }
+
+  .brand-marquee-header {
+    margin-bottom: 18px;
+  }
+
+  .brand-marquee-controls {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    padding-bottom: 4px;
+    scrollbar-width: none;
+  }
+
+  .brand-marquee-controls::-webkit-scrollbar {
+    display: none;
+  }
+
+  .brand-marquee-viewport {
+    gap: 12px;
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, #000 4%, #000 96%, transparent 100%);
+    mask-image: linear-gradient(to right, transparent 0%, #000 4%, #000 96%, transparent 100%);
+  }
+
+  .marquee-brand-card {
+    width: 154px;
+    padding: 10px 10px 8px;
+    margin-right: 12px;
+    gap: 6px;
+  }
+
+  .marquee-brand-card img {
+    width: 128px;
+  }
+
+  /* Compact Draggable Robotic AI Agent Mobile */
+  .ev-ai-launcher {
+    left: 12px;
+    bottom: max(14px, env(safe-area-inset-bottom));
+    padding: 4px 11px 4px 4px;
+    gap: 6px;
+  }
+
+  .ev-ai-robot-orb {
+    width: 28px;
+    height: 28px;
+  }
+
+  .ev-ai-bot-svg {
+    width: 19px;
+    height: 19px;
+  }
+
+  .ev-ai-launcher-title {
+    font-size: 0.75rem;
+  }
+
+  .ev-ai-panel {
+    left: 12px;
+    right: 12px;
+    bottom: max(62px, env(safe-area-inset-bottom));
+    width: calc(100vw - 24px);
+    height: min(480px, 74dvh);
+  }
+
+  body:has(#floating-compare-bar:not([hidden])) .ev-ai-launcher {
+    bottom: 118px;
+  }
+
+  /* Mobile Footer */
+  .footer-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 26px 18px;
+  }
+
+  .footer-grid>.footer-col:first-child {
+    grid-column: 1 / -1;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   5. Standard Portrait Smartphones (<= 539px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 539px) {
+
+  .categories-grid,
+  .benefits-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 16px;
+  }
+
+  .brands-logo-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .brand-tile {
+    padding: 10px;
+  }
+
+  .vehicle-card-body {
+    padding: 16px;
+  }
+
+  .vehicle-card-actions .btn {
+    padding-inline: 10px;
+    font-size: 0.82rem;
+  }
+
+  .details-cta-row {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .details-cta-row .btn {
+    width: 100%;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   6. Ultra-Compact Phones (320px – 389px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 389px) {
+  :root {
+    --header-height: 64px;
+  }
+
+  .brand-logo img {
+    height: 38px;
+    max-width: 144px;
+  }
+
+  .hero-cta-group,
+  .vehicle-card-actions,
+  .key-metrics-grid,
+  .footer-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .compare-slot-empty {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+
+/* --------------------------------------------------------------------------
+   5-Category Bento Grid & Spotlight Responsive Rules (Tablet & Mobile)
+   -------------------------------------------------------------------------- */
+@media (max-width: 1199px) {
+  .categories-bento-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+  }
+
+  .bento-slot-1,
+  .bento-slot-2,
+  .bento-slot-3,
+  .bento-slot-4 {
+    grid-column: span 1;
+  }
+
+  /* 5th card spans full 2 columns symmetrically on Tablet/Laptop */
+  .bento-slot-5 {
+    grid-column: 1 / -1;
+  }
+
+  .bento-slot-4 .category-card-media {
+    aspect-ratio: 16 / 10;
+  }
+}
+
+@media (max-width: 767px) {
+  .categories-bento-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 16px;
+  }
+
+  .bento-slot-1,
+  .bento-slot-2,
+  .bento-slot-3,
+  .bento-slot-4,
+  .bento-slot-5 {
+    grid-column: span 1;
+  }
+
+  .bento-slot-5 .category-card-media {
+    aspect-ratio: 16 / 10;
+  }
+
+  .spotlight-header-card {
+    padding: 18px;
+  }
+
+  .spotlight-subcats-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 10px;
+  }
+}
+
+
+/* --------------------------------------------------------------------------
+   Compact Jewel Cards & 5-Category Responsive Tuning
+   -------------------------------------------------------------------------- */
+@media (max-width: 1239px) {
+  .categories-compact-5grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .vehicles-grid-compact {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 991px) {
+  .categories-compact-5grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .vehicles-grid,
+  .vehicles-grid-compact {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+  }
+}
+
+@media (max-width: 767px) {
+  .categories-compact-5grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .category-compact-card .category-card-media {
+    height: 106px;
+  }
+
+  .subcat-visual-showcase {
+    padding: 13px;
+  }
+
+  .subcat-thumb-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+  }
+
+  .vehicles-grid,
+  .vehicles-grid-compact {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .vehicle-card-media {
+    height: 132px;
+  }
+}
+
+@media (max-width: 479px) {
+
+  .categories-compact-5grid,
+  .subcat-thumb-grid,
+  .vehicles-grid,
+  .vehicles-grid-compact {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .category-compact-card .category-card-media {
+    height: 128px;
+  }
+
+  .vehicle-card-media {
+    height: 148px;
+  }
+}
+
+
+@media (max-width: 767px) {
+  .footer-disclaimer-box {
+    padding: 12px 14px;
+    font-size: 0.76rem;
+    margin-top: 20px;
+  }
+
+  .tnc-highlight-box {
+    padding: 15px 16px;
+    font-size: 0.85rem;
+  }
+
+  .tnc-clause-card {
+    padding: 18px;
+  }
+}

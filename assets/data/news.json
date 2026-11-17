@@ -1,0 +1,124 @@
+[
+  {
+    "id": "india-highway-dc-fast-charging-guide",
+    "title": "Planning Highway Road Trips in an Electric Car Across India: A Practical CCS2 Guide",
+    "category": "Charging & Infrastructure",
+    "publishedDate": "2026-11-10",
+    "displayDate": "10 Nov 2026",
+    "readTime": "5 min read",
+    "author": "EV Disha Editorial Desk",
+    "image": "assets/images/news/highway-charging.webp",
+    "excerpt": "From corridor charger spacing on NH-44 and NH-48 to understanding 10–80% DC charging curves, here is how Indian EV owners plan stress-free intercity drives.",
+    "content": [
+      "Long-distance electric road trips across major Indian expressways—such as Mumbai–Pune–Bengaluru, Delhi–Jaipur–Udaipur, and Chennai–Bengaluru–Mysuru—have become significantly easier thanks to higher-capacity 40 kWh to 60 kWh battery packs and denser 60 kW+ CCS2 fast-charging hubs.",
+      "### Understand the 10% to 80% Charging Curve",
+      "Most modern electric cars reach peak DC kilowatt intake between 10% and 65% state of charge (SoC), tapering power automatically above 80% to protect battery cell longevity. Stopping twice for 25 minutes from 15% to 75% is almost always faster than waiting a full hour to top up to 100%.",
+      "### Always Keep a Backup Charger Within Buffer Range",
+      "Before departing, map a primary fast-charging stop at roughly 65–70% of your real-world highway range and verify a secondary backup station within 30–40 km. Check recent check-ins on aggregator apps and carry your portable 15A travel cable in the boot or frunk for overnight hotel top-ups.",
+      "### Highway Speeds Affect Consumption",
+      "Cruising steadily at 85–95 km/h with moderate AC set to 23–24°C and tyre pressures inflated to manufacturer highway specifications can preserve 12% to 18% more usable range than aggressive bursts above 110 km/h."
+    ]
+  },
+  {
+    "id": "family-electric-scooters-buying-checklist",
+    "title": "Family Electric Scooters in India: 6 Things That Matter More Than Claimed IDC Range",
+    "category": "Reviews & Comparisons",
+    "publishedDate": "2026-11-04",
+    "displayDate": "04 Nov 2026",
+    "readTime": "6 min read",
+    "author": "EV Disha Two-Wheeler Team",
+    "image": "assets/images/news/family-scooters.webp",
+    "excerpt": "Seat length, flat-floorboard practicality, pillion grab rails, and wet-road traction control often shape daily ownership far more than brochure top speed.",
+    "content": [
+      "India's electric scooter market has matured from early tech-focused runabouts into practical household vehicles expected to replace 110cc and 125cc petrol scooters for every member of the family.",
+      "### 1. True Usable City Range vs IDC Figures",
+      "Indian Driving Cycle (IDC) tests are conducted under controlled laboratory profiles. As a dependable rule of thumb, expect 70% to 80% of the claimed IDC number in two-up city traffic—meaning a 3.4 kWh to 3.7 kWh pack comfortably covers 105–125 km per charge.",
+      "### 2. Underseat Boot Layout and Floorboard Space",
+      "Look beyond total litre capacity: check whether the boot fits a full-face ISI/ECE helmet without pressing against the seat latch, and verify flat floorboard width if you carry grocery bags.",
+      "### 3. Charging Simplicity at Home",
+      "Scooters with integrated on-board chargers or compact portable bricks that plug into a standard 5A/15A domestic socket simplify apartment parking Bay approvals.",
+      "### 4. Suspension Compliance & Pillion Ergonomics",
+      "Test ride over broken tarmac with a pillion rider. Progressive rear damping, low pillion footrest height, and a sturdy backrest-ready grab rail make a noticeable difference on daily school and office runs."
+    ]
+  },
+  {
+    "id": "lfp-vs-nmc-ev-battery-chemistry-india",
+    "title": "LFP vs NMC EV Batteries in Indian Climates: Thermal Safety, Cycle Life & Charging Habits",
+    "category": "EV Technology",
+    "publishedDate": "2026-10-28",
+    "displayDate": "28 Oct 2026",
+    "readTime": "5 min read",
+    "author": "EV Disha Tech Desk",
+    "image": "assets/images/news/battery-chemistry.webp",
+    "excerpt": "Why Lithium Iron Phosphate (LFP) has become the preferred chemistry across mainstream Indian electric cars, scooters, and commercial fleets.",
+    "content": [
+      "When comparing electric vehicles on EV Disha, you will frequently see two dominant lithium-ion cell chemistries listed under Battery Specifications: LFP (Lithium Iron Phosphate) and NMC (Nickel Manganese Cobalt).",
+      "### Thermal Tolerance in 42°C+ Summers",
+      "LFP cells feature strong phosphorus-oxygen covalent bonds with a significantly higher thermal runaway threshold than high-nickel chemistries. Combined with active liquid cooling in cars and aluminum heat-dissipating enclosures in two-wheelers, LFP handles peak Indian summer temperatures remarkably well.",
+      "### Cycle Life and 100% Calibration",
+      "LFP batteries routinely deliver 2,000 to 3,000+ full charge-discharge cycles before reaching 80% capacity retention. Automakers actually recommend charging LFP packs to 100% at least once a week on slow AC power so the Battery Management System (BMS) can balance cells accurately.",
+      "### Where NMC Still Excels",
+      "NMC packs offer higher gravimetric energy density—storing more kilowatt-hours per kilogram—making them popular in lightweight performance motorcycles and long-range global EVs where minimizing kerb weight is paramount."
+    ]
+  },
+  {
+    "id": "commercial-ev-last-mile-logistics-india",
+    "title": "Total Cost of Ownership: Why Urban Delivery Fleets Are Adopting Electric Mini-Trucks & 3Ws",
+    "category": "Commercial Mobility",
+    "publishedDate": "2026-10-19",
+    "displayDate": "19 Oct 2026",
+    "readTime": "4 min read",
+    "author": "EV Disha Fleet Insights",
+    "image": "assets/images/news/commercial-fleets.webp",
+    "excerpt": "Predictable night-time depot charging, fewer moving drivetrain parts, and zero clutch fatigue are transforming unit economics for last-mile operators.",
+    "content": [
+      "Electric three-wheelers and sub-one-tonne electric mini-trucks represent the fastest-electrifying segment of Indian road transport, driven purely by operating arithmetic rather than lifestyle appeal.",
+      "### Predictable Daily Duty Cycles",
+      "E-commerce parcel hubs, grocery dark stores, and dairy distributors typically run fixed 70 km to 130 km urban loops each day before returning vehicles to a central depot—an ideal match for 8 kWh to 21 kWh LFP commercial packs.",
+      "### Per-Kilometre Energy & Maintenance Savings",
+      "Charged on commercial or time-of-day tariffs, electric three-wheelers and compact cargo vans incur a fraction of the per-kilometre energy cost of diesel or CNG equivalents, while eliminating clutch plates, engine oil changes, and idling fuel waste in congested market lanes.",
+      "### Driver Retention Through Reduced Fatigue",
+      "Clutchless single-speed electric drivetrains and lower cabin vibration measurably reduce driver exhaustion across 8-to-10-hour city shifts."
+    ]
+  },
+  {
+    "id": "apartment-home-ev-charger-rwa-checklist",
+    "title": "Installing a Home EV Charger in Indian Apartment Societies: Step-by-Step RWA Checklist",
+    "category": "Ownership Guide",
+    "publishedDate": "2026-10-11",
+    "displayDate": "11 Oct 2026",
+    "readTime": "5 min read",
+    "author": "EV Disha Editorial Desk",
+    "image": "assets/images/news/home-charging-guide.webp",
+    "excerpt": "How to check sanctioned load, coordinate armoured cabling from your meter room, and submit a clean safety proposal to your housing society.",
+    "content": [
+      "Over 80% of everyday EV charging happens peacefully overnight in your own parking bay. Setting up a 3.3 kW socket box or 7.2 kW AC wallbox in a multi-storey residential complex is straightforward when approached methodically.",
+      "### Step 1: Check Your Sanctioned Electricity Load",
+      "A 15A / 3.3 kW charger adds roughly 3 kW of night-time draw—often manageable within a typical 5 kW–7 kW 3-phase household connection if heavy appliances aren't running simultaneously. For a 7.2 kW wallbox, consult your DISCOM portal for a sanctioned load enhancement or dedicated green EV sub-meter where state tariffs offer discounted EV rates.",
+      "### Step 2: Use Certified Safety Switchgear",
+      "Ensure the automaker's authorized installation partner uses ISI-marked armoured copper cable routed neatly along existing cable trays, paired with a dedicated MCB + Type-A/Type-B RCCB earth-leakage breaker and lockable IP65 enclosure.",
+      "### Step 3: Share Documentation Proactively with Your RWA",
+      "Provide your Resident Welfare Association with a one-page cable routing diagram, OEM charger safety certificates (AIS-138 / IEC compliant), and electrician sign-off so society committees have complete clarity on fire and electrical safety."
+    ]
+  },
+  {
+    "id": "midc-arai-idc-real-world-range-explained",
+    "title": "MIDC, ARAI & IDC Range Explained: Estimating Real-World EV Mileage on Indian Roads",
+    "category": "Buyer's Guide",
+    "publishedDate": "2026-10-02",
+    "displayDate": "02 Oct 2026",
+    "readTime": "4 min read",
+    "author": "EV Disha Buyer Advisory",
+    "image": "assets/images/news/real-world-range.webp",
+    "excerpt": "Why certified test cycles exist, how C75 real-world estimates work, and a simple formula to calculate realistic city and highway range before you buy.",
+    "content": [
+      "Every electric car and two-wheeler brochure quotes a certified range figure labeled MIDC, ARAI, or IDC. Standardized dynamometer tests are essential because they test every vehicle under identical temperature and speed profiles—allowing fair apples-to-apples comparison.",
+      "### Why Real-World Range Differs",
+      "Standard test cycles involve gentle acceleration and minimal auxiliary climate-control load. In real Indian conditions—38°C afternoon cabin cooling, flyover gradients, four passengers, or sustained 95 km/h expressway speeds—energy consumption rises naturally.",
+      "### A Reliable Rule-of-Thumb Formula",
+      "For electric cars, multiplying usable battery kWh by 6.5 to 7.5 km/kWh gives a realistic mixed city-plus-highway figure (for example, a 45 kWh pack typically yields 300–340 km with comfortable reserve). For electric scooters, multiplying battery kWh by 28 to 33 km/kWh gives a realistic everyday city estimate.",
+      "### Compare Side by Side Before Deciding",
+      "Use EV Disha's Compare tool to evaluate battery kWh alongside claimed range—battery capacity in kilowatt-hours is the true 'fuel tank size' of any electric vehicle."
+    ]
+  }
+]

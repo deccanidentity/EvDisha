@@ -1,0 +1,799 @@
+{
+  "states": [
+    {
+      "code": "AP",
+      "name": "Andhra Pradesh"
+    },
+    {
+      "code": "AS",
+      "name": "Assam"
+    },
+    {
+      "code": "BR",
+      "name": "Bihar"
+    },
+    {
+      "code": "CH",
+      "name": "Chandigarh"
+    },
+    {
+      "code": "CG",
+      "name": "Chhattisgarh"
+    },
+    {
+      "code": "DL",
+      "name": "Delhi NCR"
+    },
+    {
+      "code": "GA",
+      "name": "Goa"
+    },
+    {
+      "code": "GJ",
+      "name": "Gujarat"
+    },
+    {
+      "code": "HR",
+      "name": "Haryana"
+    },
+    {
+      "code": "HP",
+      "name": "Himachal Pradesh"
+    },
+    {
+      "code": "JK",
+      "name": "Jammu & Kashmir"
+    },
+    {
+      "code": "JH",
+      "name": "Jharkhand"
+    },
+    {
+      "code": "KA",
+      "name": "Karnataka"
+    },
+    {
+      "code": "KL",
+      "name": "Kerala"
+    },
+    {
+      "code": "MP",
+      "name": "Madhya Pradesh"
+    },
+    {
+      "code": "MH",
+      "name": "Maharashtra"
+    },
+    {
+      "code": "OR",
+      "name": "Odisha"
+    },
+    {
+      "code": "PY",
+      "name": "Puducherry"
+    },
+    {
+      "code": "PB",
+      "name": "Punjab"
+    },
+    {
+      "code": "RJ",
+      "name": "Rajasthan"
+    },
+    {
+      "code": "TN",
+      "name": "Tamil Nadu"
+    },
+    {
+      "code": "TG",
+      "name": "Telangana"
+    },
+    {
+      "code": "UP",
+      "name": "Uttar Pradesh"
+    },
+    {
+      "code": "UK",
+      "name": "Uttarakhand"
+    },
+    {
+      "code": "WB",
+      "name": "West Bengal"
+    }
+  ],
+  "cities": [
+    {
+      "id": "bengaluru",
+      "name": "Bengaluru",
+      "stateCode": "KA",
+      "state": "Karnataka",
+      "tier": "tier1",
+      "popularMetro": true,
+      "sampleZip": "560001",
+      "pinPrefixes": [
+        "560",
+        "561",
+        "562"
+      ]
+    },
+    {
+      "id": "mumbai",
+      "name": "Mumbai",
+      "stateCode": "MH",
+      "state": "Maharashtra",
+      "tier": "tier1",
+      "popularMetro": true,
+      "sampleZip": "400001",
+      "pinPrefixes": [
+        "400",
+        "401",
+        "410"
+      ]
+    },
+    {
+      "id": "new-delhi",
+      "name": "New Delhi",
+      "stateCode": "DL",
+      "state": "Delhi NCR",
+      "tier": "tier1",
+      "popularMetro": true,
+      "sampleZip": "110001",
+      "pinPrefixes": [
+        "110"
+      ]
+    },
+    {
+      "id": "hyderabad",
+      "name": "Hyderabad",
+      "stateCode": "TG",
+      "state": "Telangana",
+      "tier": "tier1",
+      "popularMetro": true,
+      "sampleZip": "500001",
+      "pinPrefixes": [
+        "500",
+        "501",
+        "502"
+      ]
+    },
+    {
+      "id": "pune",
+      "name": "Pune",
+      "stateCode": "MH",
+      "state": "Maharashtra",
+      "tier": "tier1",
+      "popularMetro": true,
+      "sampleZip": "411001",
+      "pinPrefixes": [
+        "411",
+        "412"
+      ]
+    },
+    {
+      "id": "chennai",
+      "name": "Chennai",
+      "stateCode": "TN",
+      "state": "Tamil Nadu",
+      "tier": "tier1",
+      "popularMetro": true,
+      "sampleZip": "600001",
+      "pinPrefixes": [
+        "600",
+        "601",
+        "602",
+        "603"
+      ]
+    },
+    {
+      "id": "ahmedabad",
+      "name": "Ahmedabad",
+      "stateCode": "GJ",
+      "state": "Gujarat",
+      "tier": "tier1",
+      "popularMetro": true,
+      "sampleZip": "380001",
+      "pinPrefixes": [
+        "380",
+        "382"
+      ]
+    },
+    {
+      "id": "kolkata",
+      "name": "Kolkata",
+      "stateCode": "WB",
+      "state": "West Bengal",
+      "tier": "tier1",
+      "popularMetro": true,
+      "sampleZip": "700001",
+      "pinPrefixes": [
+        "700",
+        "711"
+      ]
+    },
+    {
+      "id": "gurugram",
+      "name": "Gurugram",
+      "stateCode": "HR",
+      "state": "Haryana",
+      "tier": "tier1",
+      "popularMetro": true,
+      "sampleZip": "122001",
+      "pinPrefixes": [
+        "122"
+      ]
+    },
+    {
+      "id": "noida",
+      "name": "Noida",
+      "stateCode": "UP",
+      "state": "Uttar Pradesh",
+      "tier": "tier1",
+      "popularMetro": true,
+      "sampleZip": "201301",
+      "pinPrefixes": [
+        "2013",
+        "2032"
+      ]
+    },
+    {
+      "id": "jaipur",
+      "name": "Jaipur",
+      "stateCode": "RJ",
+      "state": "Rajasthan",
+      "tier": "tier2",
+      "popularMetro": false,
+      "sampleZip": "302001",
+      "pinPrefixes": [
+        "302",
+        "303"
+      ]
+    },
+    {
+      "id": "lucknow",
+      "name": "Lucknow",
+      "stateCode": "UP",
+      "state": "Uttar Pradesh",
+      "tier": "tier2",
+      "popularMetro": false,
+      "sampleZip": "226001",
+      "pinPrefixes": [
+        "226",
+        "227"
+      ]
+    },
+    {
+      "id": "kochi",
+      "name": "Kochi",
+      "stateCode": "KL",
+      "state": "Kerala",
+      "tier": "tier2",
+      "popularMetro": false,
+      "sampleZip": "682001",
+      "pinPrefixes": [
+        "682",
+        "683"
+      ]
+    },
+    {
+      "id": "surat",
+      "name": "Surat",
+      "stateCode": "GJ",
+      "state": "Gujarat",
+      "tier": "tier2",
+      "popularMetro": false,
+      "sampleZip": "395003",
+      "pinPrefixes": [
+        "394",
+        "395"
+      ]
+    },
+    {
+      "id": "indore",
+      "name": "Indore",
+      "stateCode": "MP",
+      "state": "Madhya Pradesh",
+      "tier": "tier2",
+      "popularMetro": false,
+      "sampleZip": "452001",
+      "pinPrefixes": [
+        "452",
+        "453"
+      ]
+    },
+    {
+      "id": "chandigarh",
+      "name": "Chandigarh",
+      "stateCode": "CH",
+      "state": "Chandigarh",
+      "tier": "tier2",
+      "popularMetro": false,
+      "sampleZip": "160017",
+      "pinPrefixes": [
+        "160",
+        "140"
+      ]
+    },
+    {
+      "id": "coimbatore",
+      "name": "Coimbatore",
+      "stateCode": "TN",
+      "state": "Tamil Nadu",
+      "tier": "tier2",
+      "popularMetro": false,
+      "sampleZip": "641001",
+      "pinPrefixes": [
+        "641"
+      ]
+    },
+    {
+      "id": "visakhapatnam",
+      "name": "Visakhapatnam",
+      "stateCode": "AP",
+      "state": "Andhra Pradesh",
+      "tier": "tier2",
+      "popularMetro": false,
+      "sampleZip": "530001",
+      "pinPrefixes": [
+        "530",
+        "531"
+      ]
+    },
+    {
+      "id": "nagpur",
+      "name": "Nagpur",
+      "stateCode": "MH",
+      "state": "Maharashtra",
+      "tier": "tier2",
+      "popularMetro": false,
+      "sampleZip": "440001",
+      "pinPrefixes": [
+        "440",
+        "441"
+      ]
+    },
+    {
+      "id": "bhopal",
+      "name": "Bhopal",
+      "stateCode": "MP",
+      "state": "Madhya Pradesh",
+      "tier": "tier2",
+      "popularMetro": false,
+      "sampleZip": "462001",
+      "pinPrefixes": [
+        "462"
+      ]
+    },
+    {
+      "id": "vadodara",
+      "name": "Vadodara",
+      "stateCode": "GJ",
+      "state": "Gujarat",
+      "tier": "tier2",
+      "popularMetro": false,
+      "sampleZip": "390001",
+      "pinPrefixes": [
+        "390",
+        "391"
+      ]
+    },
+    {
+      "id": "patna",
+      "name": "Patna",
+      "stateCode": "BR",
+      "state": "Bihar",
+      "tier": "tier2",
+      "popularMetro": false,
+      "sampleZip": "800001",
+      "pinPrefixes": [
+        "800",
+        "801"
+      ]
+    },
+    {
+      "id": "bhubaneswar",
+      "name": "Bhubaneswar",
+      "stateCode": "OR",
+      "state": "Odisha",
+      "tier": "tier2",
+      "popularMetro": false,
+      "sampleZip": "751001",
+      "pinPrefixes": [
+        "751",
+        "752"
+      ]
+    },
+    {
+      "id": "thiruvananthapuram",
+      "name": "Thiruvananthapuram",
+      "stateCode": "KL",
+      "state": "Kerala",
+      "tier": "tier2",
+      "popularMetro": false,
+      "sampleZip": "695001",
+      "pinPrefixes": [
+        "695"
+      ]
+    },
+    {
+      "id": "guwahati",
+      "name": "Guwahati",
+      "stateCode": "AS",
+      "state": "Assam",
+      "tier": "tier2",
+      "popularMetro": false,
+      "sampleZip": "781001",
+      "pinPrefixes": [
+        "781"
+      ]
+    },
+    {
+      "id": "ludhiana",
+      "name": "Ludhiana",
+      "stateCode": "PB",
+      "state": "Punjab",
+      "tier": "tier2",
+      "popularMetro": false,
+      "sampleZip": "141001",
+      "pinPrefixes": [
+        "141"
+      ]
+    },
+    {
+      "id": "nashik",
+      "name": "Nashik",
+      "stateCode": "MH",
+      "state": "Maharashtra",
+      "tier": "tier2",
+      "popularMetro": false,
+      "sampleZip": "422001",
+      "pinPrefixes": [
+        "422"
+      ]
+    },
+    {
+      "id": "mysuru",
+      "name": "Mysuru",
+      "stateCode": "KA",
+      "state": "Karnataka",
+      "tier": "tier2",
+      "popularMetro": false,
+      "sampleZip": "570001",
+      "pinPrefixes": [
+        "570",
+        "571"
+      ]
+    },
+    {
+      "id": "vijayawada",
+      "name": "Vijayawada",
+      "stateCode": "AP",
+      "state": "Andhra Pradesh",
+      "tier": "tier2",
+      "popularMetro": false,
+      "sampleZip": "520001",
+      "pinPrefixes": [
+        "520",
+        "521"
+      ]
+    },
+    {
+      "id": "raipur",
+      "name": "Raipur",
+      "stateCode": "CG",
+      "state": "Chhattisgarh",
+      "tier": "tier2",
+      "popularMetro": false,
+      "sampleZip": "492001",
+      "pinPrefixes": [
+        "492",
+        "493"
+      ]
+    },
+    {
+      "id": "ranchi",
+      "name": "Ranchi",
+      "stateCode": "JH",
+      "state": "Jharkhand",
+      "tier": "tier2",
+      "popularMetro": false,
+      "sampleZip": "834001",
+      "pinPrefixes": [
+        "834",
+        "835"
+      ]
+    },
+    {
+      "id": "dehradun",
+      "name": "Dehradun",
+      "stateCode": "UK",
+      "state": "Uttarakhand",
+      "tier": "tier2",
+      "popularMetro": false,
+      "sampleZip": "248001",
+      "pinPrefixes": [
+        "248"
+      ]
+    },
+    {
+      "id": "panaji",
+      "name": "Panaji (Goa)",
+      "stateCode": "GA",
+      "state": "Goa",
+      "tier": "tier2",
+      "popularMetro": false,
+      "sampleZip": "403001",
+      "pinPrefixes": [
+        "403"
+      ]
+    },
+    {
+      "id": "madurai",
+      "name": "Madurai",
+      "stateCode": "TN",
+      "state": "Tamil Nadu",
+      "tier": "tier2",
+      "popularMetro": false,
+      "sampleZip": "625001",
+      "pinPrefixes": [
+        "625"
+      ]
+    },
+    {
+      "id": "kanpur",
+      "name": "Kanpur",
+      "stateCode": "UP",
+      "state": "Uttar Pradesh",
+      "tier": "tier2",
+      "popularMetro": false,
+      "sampleZip": "208001",
+      "pinPrefixes": [
+        "208",
+        "209"
+      ]
+    },
+    {
+      "id": "varanasi",
+      "name": "Varanasi",
+      "stateCode": "UP",
+      "state": "Uttar Pradesh",
+      "tier": "tier2",
+      "popularMetro": false,
+      "sampleZip": "221001",
+      "pinPrefixes": [
+        "221"
+      ]
+    },
+    {
+      "id": "agra",
+      "name": "Agra",
+      "stateCode": "UP",
+      "state": "Uttar Pradesh",
+      "tier": "tier2",
+      "popularMetro": false,
+      "sampleZip": "282001",
+      "pinPrefixes": [
+        "282",
+        "283"
+      ]
+    },
+    {
+      "id": "jodhpur",
+      "name": "Jodhpur",
+      "stateCode": "RJ",
+      "state": "Rajasthan",
+      "tier": "tier2",
+      "popularMetro": false,
+      "sampleZip": "342001",
+      "pinPrefixes": [
+        "342"
+      ]
+    },
+    {
+      "id": "udaipur",
+      "name": "Udaipur",
+      "stateCode": "RJ",
+      "state": "Rajasthan",
+      "tier": "tier2",
+      "popularMetro": false,
+      "sampleZip": "313001",
+      "pinPrefixes": [
+        "313"
+      ]
+    },
+    {
+      "id": "rajkot",
+      "name": "Rajkot",
+      "stateCode": "GJ",
+      "state": "Gujarat",
+      "tier": "tier2",
+      "popularMetro": false,
+      "sampleZip": "360001",
+      "pinPrefixes": [
+        "360"
+      ]
+    },
+    {
+      "id": "mangaluru",
+      "name": "Mangaluru",
+      "stateCode": "KA",
+      "state": "Karnataka",
+      "tier": "tier2",
+      "popularMetro": false,
+      "sampleZip": "575001",
+      "pinPrefixes": [
+        "574",
+        "575"
+      ]
+    },
+    {
+      "id": "tiruchirappalli",
+      "name": "Tiruchirappalli",
+      "stateCode": "TN",
+      "state": "Tamil Nadu",
+      "tier": "tier2",
+      "popularMetro": false,
+      "sampleZip": "620001",
+      "pinPrefixes": [
+        "620",
+        "621"
+      ]
+    },
+    {
+      "id": "chhatrapati-sambhajinagar",
+      "name": "Chh. Sambhajinagar",
+      "stateCode": "MH",
+      "state": "Maharashtra",
+      "tier": "tier2",
+      "popularMetro": false,
+      "sampleZip": "431001",
+      "pinPrefixes": [
+        "431"
+      ]
+    },
+    {
+      "id": "amritsar",
+      "name": "Amritsar",
+      "stateCode": "PB",
+      "state": "Punjab",
+      "tier": "tier2",
+      "popularMetro": false,
+      "sampleZip": "143001",
+      "pinPrefixes": [
+        "143"
+      ]
+    },
+    {
+      "id": "faridabad",
+      "name": "Faridabad",
+      "stateCode": "HR",
+      "state": "Haryana",
+      "tier": "tier2",
+      "popularMetro": false,
+      "sampleZip": "121001",
+      "pinPrefixes": [
+        "121"
+      ]
+    },
+    {
+      "id": "ghaziabad",
+      "name": "Ghaziabad",
+      "stateCode": "UP",
+      "state": "Uttar Pradesh",
+      "tier": "tier2",
+      "popularMetro": false,
+      "sampleZip": "201001",
+      "pinPrefixes": [
+        "2010",
+        "2011",
+        "2012"
+      ]
+    },
+    {
+      "id": "puducherry",
+      "name": "Puducherry",
+      "stateCode": "PY",
+      "state": "Puducherry",
+      "tier": "tier2",
+      "popularMetro": false,
+      "sampleZip": "605001",
+      "pinPrefixes": [
+        "605"
+      ]
+    },
+    {
+      "id": "shimla",
+      "name": "Shimla",
+      "stateCode": "HP",
+      "state": "Himachal Pradesh",
+      "tier": "tier2",
+      "popularMetro": false,
+      "sampleZip": "171001",
+      "pinPrefixes": [
+        "171"
+      ]
+    },
+    {
+      "id": "jammu",
+      "name": "Jammu / Srinagar",
+      "stateCode": "JK",
+      "state": "Jammu & Kashmir",
+      "tier": "tier2",
+      "popularMetro": false,
+      "sampleZip": "180001",
+      "pinPrefixes": [
+        "180",
+        "190"
+      ]
+    }
+  ],
+  "pinCircles": {
+    "11": "DL",
+    "12": "HR",
+    "13": "HR",
+    "14": "PB",
+    "15": "PB",
+    "16": "CH",
+    "17": "HP",
+    "18": "JK",
+    "19": "JK",
+    "20": "UP",
+    "21": "UP",
+    "22": "UP",
+    "23": "UP",
+    "25": "UP",
+    "26": "UP",
+    "27": "UP",
+    "28": "UP",
+    "24": "UK",
+    "30": "RJ",
+    "31": "RJ",
+    "32": "RJ",
+    "33": "RJ",
+    "34": "RJ",
+    "36": "GJ",
+    "37": "GJ",
+    "38": "GJ",
+    "39": "GJ",
+    "40": "MH",
+    "41": "MH",
+    "42": "MH",
+    "43": "MH",
+    "44": "MH",
+    "45": "MP",
+    "46": "MP",
+    "47": "MP",
+    "48": "MP",
+    "49": "CG",
+    "50": "TG",
+    "51": "AP",
+    "52": "AP",
+    "53": "AP",
+    "56": "KA",
+    "57": "KA",
+    "58": "KA",
+    "59": "KA",
+    "60": "TN",
+    "61": "TN",
+    "62": "TN",
+    "63": "TN",
+    "64": "TN",
+    "67": "KL",
+    "68": "KL",
+    "69": "KL",
+    "70": "WB",
+    "71": "WB",
+    "72": "WB",
+    "73": "WB",
+    "74": "WB",
+    "75": "OR",
+    "76": "OR",
+    "77": "OR",
+    "78": "AS",
+    "80": "BR",
+    "81": "BR",
+    "82": "BR",
+    "84": "BR",
+    "85": "BR",
+    "83": "JH"
+  }
+}

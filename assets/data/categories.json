@@ -1,0 +1,79 @@
+[
+  {
+    "id": "cycles",
+    "name": "Electric Cycles",
+    "shortName": "Cycles",
+    "tagline": "Commuter, Folding & MTB",
+    "description": "License-free pedal-assist and throttle e-cycles for fitness, campus commutes, and daily city rides.",
+    "priceStarting": "From ₹28,999*",
+    "image": "assets/images/vehicles/hero-lectro-h5.webp",
+    "icon": "cycle",
+    "subcategories": [
+      { "id": "city-commuter", "name": "City Commuter Cycles", "image": "assets/images/vehicles/hero-lectro-h5.webp" },
+      { "id": "folding-fat-tyre", "name": "Folding & Fat-Tyre", "image": "assets/images/vehicles/emotorad-doodle-v3.webp" },
+      { "id": "mtb-adventure", "name": "MTB & Trail E-Cycles", "image": "assets/images/vehicles/emotorad-trex-air.webp" }
+    ]
+  },
+  {
+    "id": "two-wheelers",
+    "name": "2-Wheelers",
+    "shortName": "2-Wheelers",
+    "tagline": "Scooters, Bikes & Mopeds",
+    "description": "Practical family scooters, smart high-range commuters, electric motorcycles, and heavy-duty utility mopeds.",
+    "priceStarting": "From ₹69,990*",
+    "image": "assets/images/vehicles/ather-rizta.webp",
+    "icon": "two-wheeler",
+    "subcategories": [
+      { "id": "family-scooters", "name": "Family Scooters", "image": "assets/images/vehicles/ather-rizta.webp" },
+      { "id": "smart-scooters", "name": "Smart High-Range Scooters", "image": "assets/images/vehicles/ola-s1-pro.webp" },
+      { "id": "commuter-bikes", "name": "Commuter Bikes", "image": "assets/images/vehicles/oben-rorr.webp" },
+      { "id": "performance-bikes", "name": "Performance Sportbikes", "image": "assets/images/vehicles/ultraviolette-f77-mach-2.webp" },
+      { "id": "utility-mopeds", "name": "Utility Mopeds", "image": "assets/images/vehicles/kinetic-e-luna.webp" }
+    ]
+  },
+  {
+    "id": "three-wheelers",
+    "name": "3-Wheelers",
+    "shortName": "3-Wheelers",
+    "tagline": "E-Autos, Cargo & E-Rickshaws",
+    "description": "Low-running-cost passenger auto-rickshaws, city e-rickshaws, and liquid-cooled 3W cargo loaders.",
+    "priceStarting": "From ₹1.61 Lakh*",
+    "image": "assets/images/vehicles/mahindra-treo.webp",
+    "icon": "three-wheeler",
+    "subcategories": [
+      { "id": "passenger-autos", "name": "Passenger E-Autos", "image": "assets/images/vehicles/mahindra-treo.webp" },
+      { "id": "cargo-3w", "name": "3W Cargo Loaders", "image": "assets/images/vehicles/euler-hiload-ev.webp" },
+      { "id": "e-rickshaws", "name": "City E-Rickshaws", "image": "assets/images/vehicles/mahindra-e-alfa-plus.webp" }
+    ]
+  },
+  {
+    "id": "four-wheelers",
+    "name": "4-Wheelers",
+    "shortName": "4-Wheelers",
+    "tagline": "Compact SUVs, CUVs & Luxury",
+    "description": "Connected city SUVs, Aero-Lounge family crossovers, and long-range highway electric cars with CCS2 fast charging.",
+    "priceStarting": "From ₹9.99 Lakh*",
+    "image": "assets/images/vehicles/tata-nexon-ev.webp",
+    "icon": "four-wheeler",
+    "subcategories": [
+      { "id": "compact-suvs", "name": "Compact & Micro SUVs", "image": "assets/images/vehicles/tata-punch-ev.webp" },
+      { "id": "family-crossovers", "name": "Family Crossovers", "image": "assets/images/vehicles/tata-nexon-ev.webp" },
+      { "id": "premium-suvs", "name": "Long-Range SUVs", "image": "assets/images/vehicles/byd-atto-3.webp" }
+    ]
+  },
+  {
+    "id": "commercial",
+    "name": "Commercial Vehicles",
+    "shortName": "Commercial",
+    "tagline": "Mini-Trucks, LCVs & E-Buses",
+    "description": "Four-wheel urban mini-trucks, 1.75-tonne LCV pickups, and zero-emission electric city transit buses.",
+    "priceStarting": "From ₹8.72 Lakh*",
+    "image": "assets/images/vehicles/tata-ace-ev.webp",
+    "icon": "commercial",
+    "subcategories": [
+      { "id": "mini-trucks", "name": "4W Mini-Trucks", "image": "assets/images/vehicles/tata-ace-ev.webp" },
+      { "id": "electric-lcv", "name": "Electric LCV Pickups", "image": "assets/images/vehicles/switch-iev4.webp" },
+      { "id": "electric-buses", "name": "Electric Buses", "image": "assets/images/vehicles/olectra-k7-ev-bus.webp" }
+    ]
+  }
+]

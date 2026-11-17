@@ -1,0 +1,1674 @@
+[
+  {
+    "id": "tata-nexon-ev",
+    "brandId": "tata-ev",
+    "brand": "Tata.ev",
+    "model": "Nexon.ev",
+    "fullName": "Tata Nexon.ev",
+    "categoryId": "four-wheelers",
+    "category": "4-Wheelers",
+    "isSampleData": true,
+    "sampleDataNote": "Sample reference data based on published manufacturer specifications. Verify city ex-showroom pricing and variant details with an authorized dealership.",
+    "trending": true,
+    "popularity": 98,
+    "priceMin": 1249000,
+    "priceMax": 1719000,
+    "priceDisplay": "₹12.49 – ₹17.19 Lakh",
+    "batteryCapacityKwh": 45.0,
+    "batteryDisplay": "45 kWh",
+    "batteryChemistry": "Prismatic Lithium Iron Phosphate (LFP), IP67 Rated",
+    "claimedRangeKm": 489,
+    "rangeDisplay": "489 km (MIDC)",
+    "rangeStandard": "MIDC Certified (45 kWh Pack)",
+    "topSpeedKmh": 150,
+    "topSpeedDisplay": "150 km/h",
+    "accelerationDisplay": "8.9 sec (0–100 km/h)",
+    "chargingTimeDisplay": "40 mins (10–80% DC 60 kW) | ~6.5 hrs (7.2 kW AC)",
+    "acChargingTime": "~6 hrs 30 mins (10–100% via 7.2 kW AC Wallbox)",
+    "dcChargingTime": "~40 mins (10–80% via 60 kW DC Fast Charger)",
+    "chargingConnector": "CCS2 (Combo)",
+    "motorPowerKw": 106.0,
+    "motorPowerDisplay": "106 kW (144 PS) / 215 Nm",
+    "motorType": "Permanent Magnet Synchronous Motor (Gen-2)",
+    "driveType": "Front-Wheel Drive (FWD)",
+    "warrantyDisplay": "8 Years / 1,60,000 km (Battery & Motor)",
+    "vehicleWarranty": "3 Years / 1,25,000 km Standard Vehicle Warranty",
+    "image": "assets/images/vehicles/tata-nexon-ev.webp",
+    "images": [
+      "assets/images/vehicles/tata-nexon-ev.webp",
+      "assets/images/vehicles/tata-nexon-ev-front.webp",
+      "assets/images/vehicles/tata-nexon-ev-profile.webp"
+    ],
+    "galleryLabels": [
+      "3/4 Studio Exterior",
+      "LED Lightbar & Fascia",
+      "Crossover Profile & Stance"
+    ],
+    "overview": "India's benchmark subcompact electric SUV offering a 45 kWh prismatic battery option, multi-level paddle regenerative braking, Vehicle-to-Load (V2L) power export, and highway-capable CCS2 fast charging.",
+    "variants": [
+      {
+        "name": "Creative+ MR",
+        "battery": "30 kWh",
+        "range": "325 km (MIDC)",
+        "price": "₹12.49 Lakh*"
+      },
+      {
+        "name": "Fearless 45",
+        "battery": "45 kWh",
+        "range": "489 km (MIDC)",
+        "price": "₹13.99 Lakh*"
+      },
+      {
+        "name": "Empowered+ 45",
+        "battery": "45 kWh",
+        "range": "489 km (MIDC)",
+        "price": "₹16.99 Lakh*"
+      },
+      {
+        "name": "Empowered+ 45 Red Dark",
+        "battery": "45 kWh",
+        "range": "489 km (MIDC)",
+        "price": "₹17.19 Lakh*"
+      }
+    ],
+    "features": [
+      "31.24 cm Cinematic Touchscreen Infotainment by Harman",
+      "26.03 cm Full Digital Instrument Cluster with Navigation",
+      "Vehicle-to-Vehicle (V2V) & Vehicle-to-Load (V2L) Capability",
+      "Panoramic Sunroof & Ventilated Front Seats",
+      "360-Degree Surround View Camera with Blind View Monitor",
+      "6 Airbags, Electronic Stability Program (ESP) & All-Wheel Disc Brakes",
+      "4-Level Paddle-Shifter Controlled Regenerative Braking",
+      "JBL 9-Speaker Sound System & Arcade.ev App Suite"
+    ],
+    "subCategoryId": "family-crossovers",
+    "subCategory": "Family Crossovers & CUVs"
+  },
+  {
+    "id": "mg-windsor-ev",
+    "brandId": "mg-motor",
+    "brand": "MG Motor",
+    "model": "Windsor EV",
+    "fullName": "MG Windsor EV",
+    "categoryId": "four-wheelers",
+    "category": "4-Wheelers",
+    "isSampleData": true,
+    "sampleDataNote": "Sample reference data based on published manufacturer specifications (full battery ownership ex-showroom prices shown). Verify BaaS or outright pricing with dealer.",
+    "trending": true,
+    "popularity": 96,
+    "priceMin": 1350000,
+    "priceMax": 1550000,
+    "priceDisplay": "₹13.50 – ₹15.50 Lakh",
+    "batteryCapacityKwh": 38.0,
+    "batteryDisplay": "38 kWh",
+    "batteryChemistry": "Prismatic Lithium Iron Phosphate (LFP), IP67 Rated",
+    "claimedRangeKm": 332,
+    "rangeDisplay": "332 km (MIDC)",
+    "rangeStandard": "MIDC Certified",
+    "topSpeedKmh": 153,
+    "topSpeedDisplay": "153 km/h",
+    "accelerationDisplay": "Not officially specified",
+    "chargingTimeDisplay": "~50 mins (20–80% DC 60 kW) | ~9.5 hrs (7.4 kW AC)",
+    "acChargingTime": "~9 hrs 30 mins (0–100% via 7.4 kW AC Fast Charger)",
+    "dcChargingTime": "~50 mins (20–80% via 60 kW DC Fast Charger)",
+    "chargingConnector": "CCS2 (Combo)",
+    "motorPowerKw": 100.0,
+    "motorPowerDisplay": "100 kW (136 PS) / 200 Nm",
+    "motorType": "Permanent Magnet Synchronous Motor",
+    "driveType": "Front-Wheel Drive (FWD)",
+    "warrantyDisplay": "Lifetime Battery Warranty (1st Owner) / 8 Yrs 1,60,000 km",
+    "vehicleWarranty": "3 Years / Unlimited km Standard Vehicle Warranty",
+    "image": "assets/images/vehicles/mg-windsor-ev.webp",
+    "images": [
+      "assets/images/vehicles/mg-windsor-ev.webp",
+      "assets/images/vehicles/mg-windsor-ev-front.webp",
+      "assets/images/vehicles/mg-windsor-ev-profile.webp"
+    ],
+    "galleryLabels": [
+      "3/4 Studio Exterior",
+      "Illuminated Front Fascia",
+      "Aero-Lounge Crossover Profile"
+    ],
+    "overview": "An intelligent crossover utility EV engineered around spacious rear-cabin comfort with 135-degree reclining Aero-Lounge seats, an expansive Infinity View glass roof, and a 15.6-inch GrandView touch display.",
+    "variants": [
+      {
+        "name": "Excite",
+        "battery": "38 kWh",
+        "range": "332 km (MIDC)",
+        "price": "₹13.50 Lakh*"
+      },
+      {
+        "name": "Exclusive",
+        "battery": "38 kWh",
+        "range": "332 km (MIDC)",
+        "price": "₹14.50 Lakh*"
+      },
+      {
+        "name": "Essence",
+        "battery": "38 kWh",
+        "range": "332 km (MIDC)",
+        "price": "₹15.50 Lakh*"
+      }
+    ],
+    "features": [
+      "39.62 cm (15.6-inch) GrandView Touch Display",
+      "135-Degree Reclining Rear Aero-Lounge Seats",
+      "Infinity View Panoramic Glass Roof",
+      "Ventilated Front Row Seats & Wireless Smartphone Charger",
+      "9-Speaker Infinity Audio System",
+      "360-Degree Surround Camera & 6 Airbags Standard",
+      "4 Driving Modes (Eco+, Eco, Normal, Sport)",
+      "i-SMART Connected Car Suite with 80+ Features"
+    ],
+    "subCategoryId": "family-crossovers",
+    "subCategory": "Family Crossovers & CUVs"
+  },
+  {
+    "id": "tata-punch-ev",
+    "brandId": "tata-ev",
+    "brand": "Tata.ev",
+    "model": "Punch.ev",
+    "fullName": "Tata Punch.ev",
+    "categoryId": "four-wheelers",
+    "category": "4-Wheelers",
+    "isSampleData": true,
+    "sampleDataNote": "Sample reference data based on published manufacturer specifications. Verify city ex-showroom pricing and variant details with an authorized dealership.",
+    "trending": true,
+    "popularity": 95,
+    "priceMin": 999000,
+    "priceMax": 1429000,
+    "priceDisplay": "₹9.99 – ₹14.29 Lakh",
+    "batteryCapacityKwh": 35.0,
+    "batteryDisplay": "35 kWh",
+    "batteryChemistry": "Lithium Iron Phosphate (LFP) on acti.ev Pure EV Architecture",
+    "claimedRangeKm": 421,
+    "rangeDisplay": "421 km (MIDC)",
+    "rangeStandard": "MIDC Certified (Long Range 35 kWh)",
+    "topSpeedKmh": 140,
+    "topSpeedDisplay": "140 km/h",
+    "accelerationDisplay": "9.5 sec (0–100 km/h)",
+    "chargingTimeDisplay": "56 mins (10–80% DC 50 kW) | ~5 hrs (7.2 kW AC)",
+    "acChargingTime": "~5 hrs (10–100% via 7.2 kW AC Fast Charger)",
+    "dcChargingTime": "~56 mins (10–80% via 50 kW DC Fast Charger)",
+    "chargingConnector": "CCS2 (Combo) – Front Nose Charging Port",
+    "motorPowerKw": 90.0,
+    "motorPowerDisplay": "90 kW (122 PS) / 190 Nm",
+    "motorType": "Permanent Magnet Synchronous Motor",
+    "driveType": "Front-Wheel Drive (FWD)",
+    "warrantyDisplay": "8 Years / 1,60,000 km (Battery & Motor)",
+    "vehicleWarranty": "3 Years / 1,25,000 km Standard Vehicle Warranty",
+    "image": "assets/images/vehicles/tata-punch-ev.webp",
+    "images": [
+      "assets/images/vehicles/tata-punch-ev.webp",
+      "assets/images/vehicles/tata-punch-ev-front.webp",
+      "assets/images/vehicles/tata-punch-ev-profile.webp"
+    ],
+    "galleryLabels": [
+      "3/4 Studio Exterior",
+      "Front Charging Flap & LED DRLs",
+      "Compact SUV Stance"
+    ],
+    "overview": "Built on Tata's dedicated acti.ev pure-electric architecture, the Punch.ev pairs compact city manoeuvrability and high ground clearance with a front storage frunk, flat rear floor, and dual battery pack choices.",
+    "variants": [
+      {
+        "name": "Smart 25 kWh",
+        "battery": "25 kWh",
+        "range": "315 km (MIDC)",
+        "price": "₹9.99 Lakh*"
+      },
+      {
+        "name": "Adventure LR",
+        "battery": "35 kWh",
+        "range": "421 km (MIDC)",
+        "price": "₹12.84 Lakh*"
+      },
+      {
+        "name": "Empowered+ S LR",
+        "battery": "35 kWh",
+        "range": "421 km (MIDC)",
+        "price": "₹14.29 Lakh*"
+      }
+    ],
+    "features": [
+      "Dedicated acti.ev Pure Electric Platform with Front Frunk",
+      "Dual 26.03 cm HD Infotainment & Digital Cockpit Displays",
+      "Motorized Front-Mounted CCS2 Charging Lid",
+      "Ventilated Leatherette Front Seats & Voice-Assisted Sunroof",
+      "360-Degree Surround Camera & Blind Spot View Monitor",
+      "6 Airbags, Electronic Parking Brake with Auto-Hold & ESP",
+      "Multi-Mode Regen via Steering Paddles"
+    ],
+    "subCategoryId": "compact-suvs",
+    "subCategory": "Compact & Micro SUVs"
+  },
+  {
+    "id": "mahindra-xuv400",
+    "brandId": "mahindra",
+    "brand": "Mahindra",
+    "model": "XUV400 Pro",
+    "fullName": "Mahindra XUV400 Pro",
+    "categoryId": "four-wheelers",
+    "category": "4-Wheelers",
+    "isSampleData": true,
+    "sampleDataNote": "Sample reference data based on published manufacturer specifications. Verify city ex-showroom pricing and variant details with an authorized dealership.",
+    "trending": false,
+    "popularity": 87,
+    "priceMin": 1549000,
+    "priceMax": 1769000,
+    "priceDisplay": "₹15.49 – ₹17.69 Lakh",
+    "batteryCapacityKwh": 39.4,
+    "batteryDisplay": "39.4 kWh",
+    "batteryChemistry": "Lithium-ion NMC Dust & Waterproof IP67 Pack",
+    "claimedRangeKm": 456,
+    "rangeDisplay": "456 km (MIDC)",
+    "rangeStandard": "MIDC Certified (EL Pro 39.4 kWh)",
+    "topSpeedKmh": 150,
+    "topSpeedDisplay": "150 km/h",
+    "accelerationDisplay": "8.3 sec (0–100 km/h)",
+    "chargingTimeDisplay": "50 mins (0–80% DC 50 kW) | 6.5 hrs (7.2 kW AC)",
+    "acChargingTime": "~6 hrs 30 mins (0–100% via 7.2 kW AC Charger)",
+    "dcChargingTime": "~50 mins (0–80% via 50 kW DC Fast Charger)",
+    "chargingConnector": "CCS2 (Combo)",
+    "motorPowerKw": 110.0,
+    "motorPowerDisplay": "110 kW (150 PS) / 310 Nm",
+    "motorType": "Permanent Magnet Synchronous Motor",
+    "driveType": "Front-Wheel Drive (FWD)",
+    "warrantyDisplay": "8 Years / 1,60,000 km (Battery)",
+    "vehicleWarranty": "3 Years / Unlimited km Standard Vehicle Warranty",
+    "image": "assets/images/vehicles/mahindra-xuv400.webp",
+    "images": [
+      "assets/images/vehicles/mahindra-xuv400.webp",
+      "assets/images/vehicles/mahindra-xuv400-front.webp",
+      "assets/images/vehicles/mahindra-xuv400-profile.webp"
+    ],
+    "galleryLabels": [
+      "3/4 Studio Exterior",
+      "Satin Copper Trim & Grille",
+      "SUV Wheelbase & Profile"
+    ],
+    "overview": "A brisk, wide-bodied compact electric SUV delivering 310 Nm of instant torque, dual-zone climate control, a modern twin-screen Pro cabin, and single-pedal Lively mode driving.",
+    "variants": [
+      {
+        "name": "EC Pro 34.5 kWh",
+        "battery": "34.5 kWh",
+        "range": "375 km (MIDC)",
+        "price": "₹15.49 Lakh*"
+      },
+      {
+        "name": "EL Pro 34.5 kWh",
+        "battery": "34.5 kWh",
+        "range": "375 km (MIDC)",
+        "price": "₹16.74 Lakh*"
+      },
+      {
+        "name": "EL Pro 39.4 kWh",
+        "battery": "39.4 kWh",
+        "range": "456 km (MIDC)",
+        "price": "₹17.69 Lakh*"
+      }
+    ],
+    "features": [
+      "Dual 26.04 cm Floating Touchscreen & Digital Cluster",
+      "Adrenox Connected Vehicle Suite with 55+ Smart Features",
+      "Dual-Zone Automatic Temperature Control",
+      "Fun, Fast & Fearless Drive Modes + Lively Single-Pedal Mode",
+      "Electric Sunroof & Wireless Phone Charging",
+      "6 Airbags, All-Wheel Disc Brakes & ISOFIX Mounts"
+    ],
+    "subCategoryId": "family-crossovers",
+    "subCategory": "Family Crossovers & CUVs"
+  },
+  {
+    "id": "byd-atto-3",
+    "brandId": "byd",
+    "brand": "BYD India",
+    "model": "Atto 3",
+    "fullName": "BYD Atto 3",
+    "categoryId": "four-wheelers",
+    "category": "4-Wheelers",
+    "isSampleData": true,
+    "sampleDataNote": "Sample reference data based on published manufacturer specifications. Verify city ex-showroom pricing and variant details with an authorized dealership.",
+    "trending": false,
+    "popularity": 89,
+    "priceMin": 2499000,
+    "priceMax": 3399000,
+    "priceDisplay": "₹24.99 – ₹33.99 Lakh",
+    "batteryCapacityKwh": 60.48,
+    "batteryDisplay": "60.48 kWh",
+    "batteryChemistry": "BYD Blade Battery (Ultra-Safe LFP) on e-Platform 3.0",
+    "claimedRangeKm": 521,
+    "rangeDisplay": "521 km (ARAI)",
+    "rangeStandard": "ARAI Certified (60.48 kWh Pack)",
+    "topSpeedKmh": 160,
+    "topSpeedDisplay": "160 km/h",
+    "accelerationDisplay": "7.3 sec (0–100 km/h)",
+    "chargingTimeDisplay": "50 mins (0–80% DC 80 kW) | ~9.5–10 hrs (7 kW AC)",
+    "acChargingTime": "~9 hrs 30 mins – 10 hrs (via 7 kW AC Wallbox)",
+    "dcChargingTime": "~50 mins (0–80% via 80 kW DC Fast Charger)",
+    "chargingConnector": "CCS2 (Combo)",
+    "motorPowerKw": 150.0,
+    "motorPowerDisplay": "150 kW (204 PS) / 310 Nm",
+    "motorType": "Permanent Magnet Synchronous Motor (8-in-1 Electric Powertrain)",
+    "driveType": "Front-Wheel Drive (FWD)",
+    "warrantyDisplay": "8 Years / 1,60,000 km (Battery)",
+    "vehicleWarranty": "6 Years / 1,50,000 km Vehicle & 8 Years / 1,50,000 km Motor",
+    "image": "assets/images/vehicles/byd-atto-3.webp",
+    "images": [
+      "assets/images/vehicles/byd-atto-3.webp",
+      "assets/images/vehicles/byd-atto-3-front.webp",
+      "assets/images/vehicles/byd-atto-3-profile.webp"
+    ],
+    "galleryLabels": [
+      "3/4 Studio Exterior",
+      "Crystal LED Headlamps",
+      "Mid-Size SUV Silhouette"
+    ],
+    "overview": "A global mid-size electric SUV built on BYD's dedicated e-Platform 3.0 featuring the nail-penetration-tested Blade LFP battery, rotating 12.8-inch infotainment screen, and Level-2 ADAS safety suite.",
+    "variants": [
+      {
+        "name": "Dynamic",
+        "battery": "49.92 kWh",
+        "range": "468 km (ARAI)",
+        "price": "₹24.99 Lakh*"
+      },
+      {
+        "name": "Premium",
+        "battery": "60.48 kWh",
+        "range": "521 km (ARAI)",
+        "price": "₹29.85 Lakh*"
+      },
+      {
+        "name": "Superior",
+        "battery": "60.48 kWh",
+        "range": "521 km (ARAI)",
+        "price": "₹33.99 Lakh*"
+      }
+    ],
+    "features": [
+      "BYD Blade Battery & 8-in-1 Integrated Electric Powertrain",
+      "32.5 cm (12.8-inch) Electric Rotating Touchscreen",
+      "DiPilot Level-2 ADAS (Superior Variant)",
+      "Panoramic Sunroof & Powered Tailgate",
+      "7 Airbags & 360-Degree Holographic Transparent Imaging",
+      "VTOL Mobile Power Station (3.3 kW External Discharge)",
+      "NFC Card Keyless Entry & Dirac 8-Speaker Audio"
+    ],
+    "subCategoryId": "premium-suvs",
+    "subCategory": "Premium & Long-Range SUVs"
+  },
+  {
+    "id": "ather-rizta",
+    "brandId": "ather",
+    "brand": "Ather Energy",
+    "model": "Rizta",
+    "fullName": "Ather Rizta Z",
+    "categoryId": "two-wheelers",
+    "category": "2-Wheelers",
+    "isSampleData": true,
+    "sampleDataNote": "Sample reference data based on published manufacturer specifications. Verify city ex-showroom pricing and Pro Pack options with an Ather Space outlet.",
+    "trending": true,
+    "popularity": 94,
+    "priceMin": 109999,
+    "priceMax": 145999,
+    "priceDisplay": "₹1.10 – ₹1.46 Lakh",
+    "batteryCapacityKwh": 3.7,
+    "batteryDisplay": "3.7 kWh",
+    "batteryChemistry": "IP67 Water-Resistant Lithium-ion Pack (400 mm Water Wading)",
+    "claimedRangeKm": 159,
+    "rangeDisplay": "159 km (IDC)",
+    "rangeStandard": "IDC Certified (3.7 kWh Z Variant)",
+    "topSpeedKmh": 80,
+    "topSpeedDisplay": "80 km/h",
+    "accelerationDisplay": "4.7 sec (0–40 km/h)",
+    "chargingTimeDisplay": "4 hrs 30 mins (0–80% Duo Charger) | Ather Grid Fast Charge",
+    "acChargingTime": "4 hrs 30 mins (0–80% via 700W Ather Duo Home Charger)",
+    "dcChargingTime": "~15 km/10 mins via Ather Grid Public Fast Chargers",
+    "chargingConnector": "LECCS (IS 17017-2-6) / Ather Duo",
+    "motorPowerKw": 4.3,
+    "motorPowerDisplay": "4.3 kW Peak / 22 Nm",
+    "motorType": "Permanent Magnet Synchronous Mid-Drive Motor",
+    "driveType": "Belt Final Drive",
+    "warrantyDisplay": "5 Years / 60,000 km (Pro Pack; Eight70 8-Yr Option)",
+    "vehicleWarranty": "3 Years / 30,000 km Standard Scooter Warranty",
+    "image": "assets/images/vehicles/ather-rizta.webp",
+    "images": [
+      "assets/images/vehicles/ather-rizta.webp",
+      "assets/images/vehicles/ather-rizta-front.webp",
+      "assets/images/vehicles/ather-rizta-profile.webp"
+    ],
+    "galleryLabels": [
+      "3/4 Studio Exterior",
+      "Horizontal Apron LED Lamp",
+      "Spacious Family Seat & Floorboard"
+    ],
+    "overview": "Purpose-built for Indian families, the Ather Rizta features an extra-long two-up seat, 56 litres of combined storage (34L underseat + optional 22L frunk), SkidControl traction safety, and WhatsApp notifications on the dashboard.",
+    "variants": [
+      {
+        "name": "Rizta S (2.9 kWh)",
+        "battery": "2.9 kWh",
+        "range": "123 km (IDC)",
+        "price": "₹1.10 Lakh*"
+      },
+      {
+        "name": "Rizta Z (2.9 kWh)",
+        "battery": "2.9 kWh",
+        "range": "123 km (IDC)",
+        "price": "₹1.26 Lakh*"
+      },
+      {
+        "name": "Rizta Z (3.7 kWh)",
+        "battery": "3.7 kWh",
+        "range": "159 km (IDC)",
+        "price": "₹1.46 Lakh*"
+      }
+    ],
+    "features": [
+      "34-Litre Underseat Storage + Optional Multi-Purpose Charger",
+      "17.78 cm (7-inch) TFT Display with Google Maps Navigation (Z)",
+      "SkidControl Traction Control System for Wet/Gravel Roads",
+      "MagicTwist Regenerative Throttle Deceleration",
+      "AutoHold Hill Assist, FallSafe & Emergency Stop Signal",
+      "Reverse Assist & Live Location Sharing via Ather App"
+    ],
+    "subCategoryId": "family-scooters",
+    "subCategory": "Family & Urban Scooters"
+  },
+  {
+    "id": "tvs-iqube",
+    "brandId": "tvs",
+    "brand": "TVS Motor",
+    "model": "iQube ST",
+    "fullName": "TVS iQube ST",
+    "categoryId": "two-wheelers",
+    "category": "2-Wheelers",
+    "isSampleData": true,
+    "sampleDataNote": "Sample reference data based on published manufacturer specifications. Verify city ex-showroom pricing across 2.2, 3.4, and 5.1 kWh variants.",
+    "trending": true,
+    "popularity": 93,
+    "priceMin": 94999,
+    "priceMax": 185373,
+    "priceDisplay": "₹0.95 – ₹1.85 Lakh",
+    "batteryCapacityKwh": 5.1,
+    "batteryDisplay": "5.1 kWh",
+    "batteryChemistry": "AIS-156 Certified IP67 Lithium-ion Dual Pack",
+    "claimedRangeKm": 150,
+    "rangeDisplay": "150 km (Real-World / Certified)",
+    "rangeStandard": "TVS Certified Range (ST 5.1 kWh)",
+    "topSpeedKmh": 82,
+    "topSpeedDisplay": "82 km/h",
+    "accelerationDisplay": "4.2 sec (0–40 km/h)",
+    "chargingTimeDisplay": "4 hrs 18 mins (0–80% via 950W Portable Charger)",
+    "acChargingTime": "4 hrs 18 mins (0–80% via 950W Off-Board Charger)",
+    "dcChargingTime": "AC Portable Charging Standard",
+    "chargingConnector": "IS 17017-2-7 Off-Board Portable Charger",
+    "motorPowerKw": 4.4,
+    "motorPowerDisplay": "4.4 kW Peak / 140 Nm (at wheel)",
+    "motorType": "BLDC Hub-Mounted Electric Motor",
+    "driveType": "Direct Hub Drive",
+    "warrantyDisplay": "3 Years / 50,000 km (Battery & Motor)",
+    "vehicleWarranty": "3 Years / 50,000 km Standard Warranty",
+    "image": "assets/images/vehicles/tvs-iqube.webp",
+    "images": [
+      "assets/images/vehicles/tvs-iqube.webp",
+      "assets/images/vehicles/tvs-iqube-front.webp",
+      "assets/images/vehicles/tvs-iqube-profile.webp"
+    ],
+    "galleryLabels": [
+      "3/4 Studio Exterior",
+      "Signature U-Shaped LED DRL",
+      "Ergonomic Urban Profile"
+    ],
+    "overview": "One of India's most trusted everyday electric scooters offering whisper-quiet BLDC hub propulsion, plush telescopic suspension, 32 litres of underseat storage, and battery options spanning 2.2 kWh to 5.1 kWh.",
+    "variants": [
+      {
+        "name": "iQube 2.2 kWh",
+        "battery": "2.2 kWh",
+        "range": "75 km",
+        "price": "₹0.95 Lakh*"
+      },
+      {
+        "name": "iQube 3.4 kWh",
+        "battery": "3.4 kWh",
+        "range": "100 km",
+        "price": "₹1.37 Lakh*"
+      },
+      {
+        "name": "iQube ST 3.4 kWh",
+        "battery": "3.4 kWh",
+        "range": "100 km",
+        "price": "₹1.56 Lakh*"
+      },
+      {
+        "name": "iQube ST 5.1 kWh",
+        "battery": "5.1 kWh",
+        "range": "150 km",
+        "price": "₹1.85 Lakh*"
+      }
+    ],
+    "features": [
+      "17.78 cm Full-Colour Touchscreen TFT Cluster (ST)",
+      "SmartXonnect with 118+ Connected Features & Alexa Integration",
+      "32-Litre Underseat Helmet Storage + USB Charging Port",
+      "Digital Document Storage & Tyre Pressure Monitoring (TPMS)",
+      "Q-Park Reverse & Forward Parking Assist",
+      "Geo-Fencing, Anti-Theft Alert & Crash/Fall Alert"
+    ],
+    "subCategoryId": "family-scooters",
+    "subCategory": "Family & Urban Scooters"
+  },
+  {
+    "id": "bajaj-chetak",
+    "brandId": "bajaj",
+    "brand": "Bajaj Auto",
+    "model": "Chetak 3501",
+    "fullName": "Bajaj Chetak 3501",
+    "categoryId": "two-wheelers",
+    "category": "2-Wheelers",
+    "isSampleData": true,
+    "sampleDataNote": "Sample reference data based on published manufacturer specifications. Verify city ex-showroom pricing and TecPac availability with dealer.",
+    "trending": false,
+    "popularity": 90,
+    "priceMin": 102000,
+    "priceMax": 135000,
+    "priceDisplay": "₹1.02 – ₹1.35 Lakh",
+    "batteryCapacityKwh": 3.5,
+    "batteryDisplay": "3.5 kWh",
+    "batteryChemistry": "IP67 Floorboard-Mounted Lithium-ion Battery",
+    "claimedRangeKm": 153,
+    "rangeDisplay": "153 km (IDC)",
+    "rangeStandard": "IDC Certified (35 Series)",
+    "topSpeedKmh": 73,
+    "topSpeedDisplay": "73 km/h",
+    "accelerationDisplay": "Not officially specified",
+    "chargingTimeDisplay": "3 hrs (0–80% via On-Board 950W Charger)",
+    "acChargingTime": "~3 hrs (0–80% via Integrated On-Board Charger)",
+    "dcChargingTime": "AC 3-Pin Home / Workplace Socket Charging",
+    "chargingConnector": "Standard 3-Pin Socket (On-Board Charger)",
+    "motorPowerKw": 4.0,
+    "motorPowerDisplay": "4.0 kW Peak",
+    "motorType": "Permanent Magnet Synchronous Side-Swingarm Motor",
+    "driveType": "Automated Geared Transmission",
+    "warrantyDisplay": "3 Years / 50,000 km",
+    "vehicleWarranty": "3 Years / 50,000 km Standard Warranty",
+    "image": "assets/images/vehicles/bajaj-chetak.webp",
+    "images": [
+      "assets/images/vehicles/bajaj-chetak.webp",
+      "assets/images/vehicles/bajaj-chetak-front.webp",
+      "assets/images/vehicles/bajaj-chetak-profile.webp"
+    ],
+    "galleryLabels": [
+      "3/4 Studio Exterior",
+      "Horseshoe LED Headlamp",
+      "Solid Steel Bodywork Profile"
+    ],
+    "overview": "Crafted with dent-resistant solid steel body panels, the updated Chetak 35 series relocates its 3.5 kWh battery into the floorboard to unlock a cavernous 35-litre underseat boot alongside an integrated on-board charger.",
+    "variants": [
+      {
+        "name": "Chetak 2903",
+        "battery": "2.9 kWh",
+        "range": "123 km (IDC)",
+        "price": "₹1.02 Lakh*"
+      },
+      {
+        "name": "Chetak 3502",
+        "battery": "3.5 kWh",
+        "range": "153 km (IDC)",
+        "price": "₹1.22 Lakh*"
+      },
+      {
+        "name": "Chetak 3501",
+        "battery": "3.5 kWh",
+        "range": "153 km (IDC)",
+        "price": "₹1.35 Lakh*"
+      }
+    ],
+    "features": [
+      "Signature Solid-Steel Monocoque Body Panels",
+      "35-Litre Underseat Boot Enabled by Floorboard Battery Layout",
+      "12.7 cm Touchscreen TFT Console with Integrated Maps (3501)",
+      "Built-In 950W On-Board Charger (Cable Only Required)",
+      "Hill Hold Assist, Reverse Mode & Sequential Blinkers (TecPac)",
+      "Overspeed Alert, Geo-Fencing & Music Control"
+    ],
+    "subCategoryId": "family-scooters",
+    "subCategory": "Family & Urban Scooters"
+  },
+  {
+    "id": "ola-s1-pro",
+    "brandId": "ola-electric",
+    "brand": "Ola Electric",
+    "model": "S1 Pro (Gen 2)",
+    "fullName": "Ola S1 Pro Gen 2",
+    "categoryId": "two-wheelers",
+    "category": "2-Wheelers",
+    "isSampleData": true,
+    "sampleDataNote": "Sample reference data based on published manufacturer specifications. Verify latest ex-showroom pricing and promotional offers.",
+    "trending": false,
+    "popularity": 88,
+    "priceMin": 129999,
+    "priceMax": 134999,
+    "priceDisplay": "₹1.30 – ₹1.35 Lakh",
+    "batteryCapacityKwh": 4.0,
+    "batteryDisplay": "4.0 kWh",
+    "batteryChemistry": "IP67 Fixed Lithium-ion Battery Pack",
+    "claimedRangeKm": 195,
+    "rangeDisplay": "195 km (IDC)",
+    "rangeStandard": "Certified IDC Range",
+    "topSpeedKmh": 120,
+    "topSpeedDisplay": "120 km/h",
+    "accelerationDisplay": "2.6 sec (0–40 km/h)",
+    "chargingTimeDisplay": "6 hrs 30 mins (0–100% via 750W Home Charger)",
+    "acChargingTime": "6 hrs 30 mins (0–100% via 750W Portable Charger)",
+    "dcChargingTime": "Compatible with Ola Hypercharger Network",
+    "chargingConnector": "Ola Proprietary / Hypercharger Port",
+    "motorPowerKw": 11.0,
+    "motorPowerDisplay": "11 kW Peak (5.5 kW Nominal)",
+    "motorType": "Mid-Drive Interior Permanent Magnet Motor",
+    "driveType": "Belt Final Drive",
+    "warrantyDisplay": "8 Years / 80,000 km (Battery Warranty)",
+    "vehicleWarranty": "3 Years / 40,000 km Vehicle Components",
+    "image": "assets/images/vehicles/ola-s1-pro.webp",
+    "images": [
+      "assets/images/vehicles/ola-s1-pro.webp",
+      "assets/images/vehicles/ola-s1-pro-front.webp",
+      "assets/images/vehicles/ola-s1-pro-profile.webp"
+    ],
+    "galleryLabels": [
+      "3/4 Studio Exterior",
+      "Twin-Pod Projector LED Lamp",
+      "Flat-Floorboard Gen-2 Chassis"
+    ],
+    "overview": "Built on Ola's Gen-2 twin-fork platform with a flat floorboard, 11 kW peak motor output, 34-litre boot space, and MoveOS software features including cruise control and digital key sharing.",
+    "variants": [
+      {
+        "name": "S1 Pro Gen 2 (4 kWh)",
+        "battery": "4.0 kWh",
+        "range": "195 km (IDC)",
+        "price": "₹1.35 Lakh*"
+      }
+    ],
+    "features": [
+      "17.78 cm Touchscreen Display Powered by MoveOS",
+      "Eco, Normal, Sport & Hyper Ride Modes",
+      "Flat Floorboard & 34-Litre Underseat Storage",
+      "Cruise Control, Hill Hold & Proximity Unlock",
+      "Twin Telescopic Front Suspension & Combined Disc Brakes",
+      "Party Mode Speakers & OTA Firmware Updates"
+    ],
+    "subCategoryId": "smart-scooters",
+    "subCategory": "Smart & High-Range Scooters"
+  },
+  {
+    "id": "ultraviolette-f77-mach-2",
+    "brandId": "ultraviolette",
+    "brand": "Ultraviolette",
+    "model": "F77 Mach 2",
+    "fullName": "Ultraviolette F77 Mach 2 Recon",
+    "categoryId": "two-wheelers",
+    "category": "2-Wheelers",
+    "isSampleData": true,
+    "sampleDataNote": "Sample reference data based on published manufacturer specifications. Verify Standard vs Recon variant pricing and UV Care warranty tiers.",
+    "trending": true,
+    "popularity": 91,
+    "priceMin": 299000,
+    "priceMax": 399000,
+    "priceDisplay": "₹2.99 – ₹3.99 Lakh",
+    "batteryCapacityKwh": 10.3,
+    "batteryDisplay": "10.3 kWh",
+    "batteryChemistry": "SRB10 Aluminum-Encased 21700 Lithium-ion Pack (IP67)",
+    "claimedRangeKm": 323,
+    "rangeDisplay": "323 km (IDC)",
+    "rangeStandard": "IDC Certified (Recon 10.3 kWh)",
+    "topSpeedKmh": 155,
+    "topSpeedDisplay": "155 km/h",
+    "accelerationDisplay": "2.8 sec (0–60 km/h) | 7.7 sec (0–100 km/h)",
+    "chargingTimeDisplay": "~3 hrs (20–80% Boost Charger) | ~60 mins (Supernova DC)",
+    "acChargingTime": "~3 hrs (20–80% via 3.0 kW Boost Charger) / ~5 hrs (Standard)",
+    "dcChargingTime": "~60 mins (20–80% via UV Supernova Plus Fast Charger)",
+    "chargingConnector": "IEC 62196-6 (IS 17017-2-6 Type 6)",
+    "motorPowerKw": 30.0,
+    "motorPowerDisplay": "30 kW (40.2 hp) / 100 Nm",
+    "motorType": "Permanent Magnet AC Mid-Drive Motor",
+    "driveType": "Chain Final Drive",
+    "warrantyDisplay": "Up to 8 Years / 8,00,000 km (UV Care Max Option)",
+    "vehicleWarranty": "3 Years / 30,000 km Vehicle (5 Yrs / 1,00,000 km Standard Recon Battery)",
+    "image": "assets/images/vehicles/ultraviolette-f77-mach-2.webp",
+    "images": [
+      "assets/images/vehicles/ultraviolette-f77-mach-2.webp",
+      "assets/images/vehicles/ultraviolette-f77-mach-2-front.webp",
+      "assets/images/vehicles/ultraviolette-f77-mach-2-profile.webp"
+    ],
+    "galleryLabels": [
+      "3/4 Studio Exterior",
+      "Aviation-Inspired Fairing & USD Forks",
+      "Performance Sportbike Stance"
+    ],
+    "overview": "Designed and engineered in Bengaluru, the F77 Mach 2 Recon is India's flagship performance electric motorcycle featuring a 10.3 kWh battery pack, 10 levels of regenerative braking, 4-level traction control, and Dual-Channel Bosch ABS.",
+    "variants": [
+      {
+        "name": "F77 Mach 2 Standard",
+        "battery": "7.1 kWh",
+        "range": "211 km (IDC)",
+        "price": "₹2.99 Lakh*"
+      },
+      {
+        "name": "F77 Mach 2 Recon",
+        "battery": "10.3 kWh",
+        "range": "323 km (IDC)",
+        "price": "₹3.99 Lakh*"
+      }
+    ],
+    "features": [
+      "12.7 cm (5-inch) Full-Colour Connected TFT Instrument Console",
+      "Glide, Combat & Ballistic Performance Ride Modes",
+      "10-Level Selectable Regenerative Braking",
+      "4-Level Traction Control & Dynamic Stability Control (DSC)",
+      "41 mm Preload-Adjustable USD Front Forks & Rear Monoshock",
+      "Dual-Channel Bosch ABS (320 mm Front / 230 mm Rear Disc)",
+      "Hill Hold, Park Assist & Violette AI Crash/Movement Telemetry"
+    ],
+    "subCategoryId": "performance-bikes",
+    "subCategory": "Performance Sportbikes"
+  },
+  {
+    "id": "revolt-rv400",
+    "brandId": "revolt",
+    "brand": "Revolt Motors",
+    "model": "RV400",
+    "fullName": "Revolt RV400",
+    "categoryId": "two-wheelers",
+    "category": "2-Wheelers",
+    "isSampleData": true,
+    "sampleDataNote": "Sample reference data based on published manufacturer specifications. Verify city ex-showroom pricing across BRZ and Standard trims.",
+    "trending": false,
+    "popularity": 84,
+    "priceMin": 119950,
+    "priceMax": 139950,
+    "priceDisplay": "₹1.20 – ₹1.40 Lakh",
+    "batteryCapacityKwh": 3.24,
+    "batteryDisplay": "3.24 kWh",
+    "batteryChemistry": "Removable IP67 Lithium-ion Battery (19 kg Portable Pack)",
+    "claimedRangeKm": 150,
+    "rangeDisplay": "150 km (Eco Mode)",
+    "rangeStandard": "ARAI / Eco Mode Certified (100 km Normal, 80 km Sport)",
+    "topSpeedKmh": 85,
+    "topSpeedDisplay": "85 km/h",
+    "accelerationDisplay": "Not officially specified",
+    "chargingTimeDisplay": "3 hrs 30 mins (0–80%) | ~80 mins (Fast Charger)",
+    "acChargingTime": "4 hrs 30 mins (0–100% via 15A Standard Socket)",
+    "dcChargingTime": "~80 mins (0–80% via Optional Off-Board Fast Charger)",
+    "chargingConnector": "15A Domestic Socket / Removable Battery Dock",
+    "motorPowerKw": 3.0,
+    "motorPowerDisplay": "3.0 kW Nominal / 170 Nm (at wheel)",
+    "motorType": "Mid-Drive Electric Motor",
+    "driveType": "Gates Carbon Belt Drive",
+    "warrantyDisplay": "5 Years / 75,000 km (Battery & Bike)",
+    "vehicleWarranty": "5 Years / 75,000 km Standard Warranty",
+    "image": "assets/images/vehicles/revolt-rv400.webp",
+    "images": [
+      "assets/images/vehicles/revolt-rv400.webp",
+      "assets/images/vehicles/revolt-rv400-front.webp",
+      "assets/images/vehicles/revolt-rv400-profile.webp"
+    ],
+    "galleryLabels": [
+      "3/4 Studio Exterior",
+      "Streetfighter Headlamp & USD Forks",
+      "Belt-Drive Commuter Chassis"
+    ],
+    "overview": "An accessible urban electric commuter motorcycle offering upright street ergonomics, upside-down front forks, clean belt drive, and a removable 3.24 kWh battery pack that can be charged indoors via a regular 15A plug.",
+    "variants": [
+      {
+        "name": "RV400 BRZ",
+        "battery": "3.24 kWh",
+        "range": "150 km (Eco)",
+        "price": "₹1.20 Lakh*"
+      },
+      {
+        "name": "RV400 Standard",
+        "battery": "3.24 kWh",
+        "range": "150 km (Eco)",
+        "price": "₹1.40 Lakh*"
+      }
+    ],
+    "features": [
+      "Removable 3.24 kWh Battery for Apartment / Office Charging",
+      "Eco, Normal & Sport Riding Modes",
+      "Upside-Down (USD) Front Forks & Adjustable Monoshock",
+      "Low-Maintenance Belt Final Drive & Combined Braking System (CBS)",
+      "MyRevolt App Connectivity, Geo-Fencing & Bike Diagnostics (Standard)",
+      "215 mm Ground Clearance Suited for Indian Speed Breakers"
+    ],
+    "subCategoryId": "commuter-bikes",
+    "subCategory": "Commuter Motorcycles"
+  },
+  {
+    "id": "oben-rorr",
+    "brandId": "oben",
+    "brand": "Oben Electric",
+    "model": "Rorr",
+    "fullName": "Oben Rorr",
+    "categoryId": "two-wheelers",
+    "category": "2-Wheelers",
+    "isSampleData": true,
+    "sampleDataNote": "Sample reference data based on published manufacturer specifications. Verify city availability and ex-showroom pricing with Oben Electric.",
+    "trending": false,
+    "popularity": 80,
+    "priceMin": 149999,
+    "priceMax": 149999,
+    "priceDisplay": "₹1.50 Lakh",
+    "batteryCapacityKwh": 4.4,
+    "batteryDisplay": "4.4 kWh",
+    "batteryChemistry": "Maximum Heat Exchanging (MHX) LFP Aluminum Pack (IP67)",
+    "claimedRangeKm": 187,
+    "rangeDisplay": "187 km (IDC)",
+    "rangeStandard": "IDC Certified",
+    "topSpeedKmh": 100,
+    "topSpeedDisplay": "100 km/h",
+    "accelerationDisplay": "3.0 sec (0–40 km/h)",
+    "chargingTimeDisplay": "~2 hrs (0–80% via 15A Home Socket)",
+    "acChargingTime": "~2 hrs (0–80% via Integrated On-Board Charger on 15A Plug)",
+    "dcChargingTime": "AC 15A Fast Home Charging Standard",
+    "chargingConnector": "Standard 15A 3-Pin Plug (On-Board Charger)",
+    "motorPowerKw": 8.0,
+    "motorPowerDisplay": "8.0 kW Peak / 52 Nm (at motor)",
+    "motorType": "Heavy-Duty IPMSM Mid-Drive Motor",
+    "driveType": "Belt Final Drive",
+    "warrantyDisplay": "3 Years / 60,000 km (Extendable to 8 Yrs / 80,000 km)",
+    "vehicleWarranty": "3 Years / 60,000 km Standard Warranty",
+    "image": "assets/images/vehicles/oben-rorr.webp",
+    "images": [
+      "assets/images/vehicles/oben-rorr.webp",
+      "assets/images/vehicles/oben-rorr-front.webp",
+      "assets/images/vehicles/oben-rorr-profile.webp"
+    ],
+    "galleryLabels": [
+      "3/4 Studio Exterior",
+      "Neo-Retro Circular LED Headlamp",
+      "ARX Frame & LFP Battery Housing"
+    ],
+    "overview": "A neo-retro urban street motorcycle engineered in India around a 4.4 kWh LFP battery pack designed for high ambient temperatures, offering a 100 km/h top speed and convenient 2-hour 0–80% charging from a 15A wall outlet.",
+    "variants": [
+      {
+        "name": "Rorr Standard",
+        "battery": "4.4 kWh",
+        "range": "187 km (IDC)",
+        "price": "₹1.50 Lakh*"
+      }
+    ],
+    "features": [
+      "4.4 kWh LFP Battery Engineered for High Thermal Stability",
+      "Built-In On-Board Charger Compatible with Any 15A Socket",
+      "Eco, City & Havoc Riding Modes",
+      "Driver Alert System (DAS) & Theft Protection Telemetry",
+      "230 mm Water-Wading Capability & 200 mm Ground Clearance",
+      "Unified Brake Assist (UBA) Front & Rear Disc Brakes"
+    ],
+    "subCategoryId": "commuter-bikes",
+    "subCategory": "Commuter Motorcycles"
+  },
+  {
+    "id": "tata-ace-ev",
+    "brandId": "tata-ev",
+    "brand": "Tata.ev",
+    "model": "Ace EV 1000",
+    "fullName": "Tata Ace EV 1000",
+    "categoryId": "commercial",
+    "category": "Commercial Vehicles",
+    "isSampleData": true,
+    "sampleDataNote": "Sample reference data based on published commercial vehicle specifications. Fleet pricing varies by body configuration, state incentives, and GVWR trim.",
+    "trending": false,
+    "popularity": 85,
+    "priceMin": 872000,
+    "priceMax": 1127000,
+    "priceDisplay": "₹8.72 – ₹11.27 Lakh",
+    "batteryCapacityKwh": 21.3,
+    "batteryDisplay": "21.3 kWh",
+    "batteryChemistry": "Evogen Liquid-Cooled Lithium Iron Phosphate (LFP), IP67",
+    "claimedRangeKm": 161,
+    "rangeDisplay": "161 km (Certified)",
+    "rangeStandard": "Certified Commercial Payload Cycle",
+    "topSpeedKmh": 60,
+    "topSpeedDisplay": "60 km/h",
+    "accelerationDisplay": "Not applicable (1-Tonne Commercial Cargo)",
+    "chargingTimeDisplay": "~105 mins (10–80% DC Fast) | ~6–7 hrs (15A AC)",
+    "acChargingTime": "~6 to 7 hrs (Regular 15A Industrial Socket)",
+    "dcChargingTime": "~105 mins (10–80% via DC Fast Charger)",
+    "chargingConnector": "CCS / Industrial 15A AC Dual-Mode",
+    "motorPowerKw": 27.0,
+    "motorPowerDisplay": "27 kW (36 hp) / 130 Nm",
+    "motorType": "Evogen AC Induction Powertrain",
+    "driveType": "Rear-Wheel Drive Rigid Axle",
+    "warrantyDisplay": "7 Years / 1,75,000 km (Battery Warranty)",
+    "vehicleWarranty": "3 Years / 1,25,000 km Vehicle & Drivetrain",
+    "image": "assets/images/vehicles/tata-ace-ev.webp",
+    "images": [
+      "assets/images/vehicles/tata-ace-ev.webp",
+      "assets/images/vehicles/tata-ace-ev-front.webp",
+      "assets/images/vehicles/tata-ace-ev-profile.webp"
+    ],
+    "galleryLabels": [
+      "3/4 Commercial Studio View",
+      "Aerodynamic Cab & Windshield",
+      "Enclosed Cargo Container Deck"
+    ],
+    "overview": "India's flagship four-wheel electric mini-truck engineered for e-commerce, FMCG, dairy, and municipal last-mile logistics with up to 1,000 kg rated payload capacity, Fleet Edge telematics, and dual AC/DC charging.",
+    "variants": [
+      {
+        "name": "Ace EV (600 kg Payload)",
+        "battery": "21.3 kWh",
+        "range": "154 km",
+        "price": "₹8.72 Lakh*"
+      },
+      {
+        "name": "Ace EV 1000 (1-Tonne Payload)",
+        "battery": "21.3 kWh",
+        "range": "161 km",
+        "price": "₹11.27 Lakh*"
+      }
+    ],
+    "features": [
+      "Up to 1,000 kg Rated Payload with 208 cu.ft Cargo Container Option",
+      "Evogen All-Weather Liquid-Cooled Battery Management System",
+      "Fleet Edge Connected Telematics for Uptime & Route Tracking",
+      "22% Gradeability for Flyovers & Basement Loading Ramps",
+      "Regenerative Braking & Tyre Pressure Monitoring System",
+      "7-inch Infotainment with Rear Parking Camera Assist"
+    ],
+    "subCategoryId": "mini-trucks",
+    "subCategory": "4W Mini-Trucks (SCV)"
+  },
+  {
+    "id": "mahindra-treo",
+    "brandId": "mahindra",
+    "brand": "Mahindra",
+    "model": "Treo Plus",
+    "fullName": "Mahindra Treo Plus",
+    "categoryId": "three-wheelers",
+    "category": "3-Wheelers",
+    "isSampleData": true,
+    "sampleDataNote": "Sample reference data based on published last-mile mobility specifications. Ex-showroom prices depend on state PM E-DRIVE / FAME applicability.",
+    "trending": false,
+    "popularity": 82,
+    "priceMin": 315000,
+    "priceMax": 358000,
+    "priceDisplay": "₹3.15 – ₹3.58 Lakh",
+    "batteryCapacityKwh": 10.24,
+    "batteryDisplay": "10.24 kWh",
+    "batteryChemistry": "Maintenance-Free IP67 Lithium-ion 48V Pack",
+    "claimedRangeKm": 150,
+    "rangeDisplay": "150 km (Certified)",
+    "rangeStandard": "ARAI Certified Range (Treo Plus)",
+    "topSpeedKmh": 55,
+    "topSpeedDisplay": "55 km/h",
+    "accelerationDisplay": "Not applicable (Passenger 3-Wheeler)",
+    "chargingTimeDisplay": "~4 hrs 20 mins (via 15A Portable Charger)",
+    "acChargingTime": "~4 hrs 20 mins (0–100% via 15A Off-Board Charger)",
+    "dcChargingTime": "AC 15A Socket Charging Standard",
+    "chargingConnector": "15A Industrial / Standard 3-Pin Socket",
+    "motorPowerKw": 8.0,
+    "motorPowerDisplay": "8.0 kW Peak / 42 Nm",
+    "motorType": "IP67 Direct-Drive AC Motor",
+    "driveType": "Clutchless Direct Rear Drive",
+    "warrantyDisplay": "5 Years / 1,20,000 km",
+    "vehicleWarranty": "5 Years / 1,20,000 km Standard Commercial Warranty",
+    "image": "assets/images/vehicles/mahindra-treo.webp",
+    "images": [
+      "assets/images/vehicles/mahindra-treo.webp",
+      "assets/images/vehicles/mahindra-treo-front.webp",
+      "assets/images/vehicles/mahindra-treo-profile.webp"
+    ],
+    "galleryLabels": [
+      "3/4 Commercial Exterior",
+      "Dent-Resistant Modular Front Cowl",
+      "Hardtop Canopy & Passenger Cabin"
+    ],
+    "overview": "India's highest-selling electric three-wheeler auto platform upgraded in the Treo Plus avatar with a 10.24 kWh lithium-ion battery, 2,073 mm long wheelbase for passenger legroom, and clutchless fatigue-free city operation.",
+    "variants": [
+      {
+        "name": "Treo Standard (SFT)",
+        "battery": "7.37 kWh",
+        "range": "130 km",
+        "price": "₹3.15 Lakh*"
+      },
+      {
+        "name": "Treo Plus Sheet Metal (HRT)",
+        "battery": "10.24 kWh",
+        "range": "150 km",
+        "price": "₹3.58 Lakh*"
+      }
+    ],
+    "features": [
+      "2,073 mm Class-Leading Wheelbase forD+3 Passenger Comfort",
+      "Clutchless Automatic Drive with Economy & Boost Modes",
+      "Hill Hold Assist & Regenerative Braking",
+      "Rust-Free SMC Modular Body Panels (Standard) / Sheet Metal Option",
+      "NEMO Connected Mobility Fleet Tracking Compatibility",
+      "Hydraulic Brakes & Helical Spring + Damper Front Suspension"
+    ],
+    "subCategoryId": "passenger-autos",
+    "subCategory": "Passenger E-Autos (L5M)"
+  },
+  {
+    "id": "piaggio-ape-e-city",
+    "brandId": "piaggio",
+    "brand": "Piaggio Vehicles",
+    "model": "Apé E-City FX Max",
+    "fullName": "Piaggio Apé E-City FX Max",
+    "categoryId": "three-wheelers",
+    "category": "3-Wheelers",
+    "isSampleData": true,
+    "sampleDataNote": "Sample reference data based on published commercial vehicle specifications. Verify state permit categories and ex-showroom pricing with dealer.",
+    "trending": false,
+    "popularity": 78,
+    "priceMin": 325000,
+    "priceMax": 330000,
+    "priceDisplay": "₹3.25 – ₹3.30 Lakh",
+    "batteryCapacityKwh": 8.0,
+    "batteryDisplay": "8.0 kWh",
+    "batteryChemistry": "Fixed Lithium-ion 51.2V Battery Pack",
+    "claimedRangeKm": 145,
+    "rangeDisplay": "145 km (±5 km Certified)",
+    "rangeStandard": "Certified Range",
+    "topSpeedKmh": 50,
+    "topSpeedDisplay": "50 km/h",
+    "accelerationDisplay": "Not applicable (Passenger 3-Wheeler)",
+    "chargingTimeDisplay": "~3 hrs 45 mins (0–100% via 3 kW Charger)",
+    "acChargingTime": "~3 hrs 45 mins (0–100% via 3,000W Off-Board Charger)",
+    "dcChargingTime": "AC Off-Board Industrial Charging Standard",
+    "chargingConnector": "IS 17017 / 15A Off-Board Charger",
+    "motorPowerKw": 5.4,
+    "motorPowerDisplay": "5.44 kW Peak / 29 Nm",
+    "motorType": "3-Phase Asynchronous Induction Motor",
+    "driveType": "Constant Mesh Integrated Differential",
+    "warrantyDisplay": "5 Years / 1,50,000 km (Super Warranty)",
+    "vehicleWarranty": "5 Years / 1,50,000 km Comprehensive Commercial Warranty",
+    "image": "assets/images/vehicles/piaggio-ape-e-city.webp",
+    "images": [
+      "assets/images/vehicles/piaggio-ape-e-city.webp",
+      "assets/images/vehicles/piaggio-ape-e-city-front.webp",
+      "assets/images/vehicles/piaggio-ape-e-city-profile.webp"
+    ],
+    "galleryLabels": [
+      "3/4 Commercial Exterior",
+      "Front Cowl & Headlamp Assembly",
+      "12-Inch Tyre Stance & Cabin"
+    ],
+    "overview": "Built on the proven Apé three-wheeler architecture, the E-City FX Max adds larger 12-inch tyres for rough urban roads, zero-gearshift electric convenience, 20% gradeability, and a 5-year / 1.5-lakh km commercial warranty.",
+    "variants": [
+      {
+        "name": "Apé E-City FX NE",
+        "battery": "7.5 kWh",
+        "range": "110 km",
+        "price": "₹3.25 Lakh*"
+      },
+      {
+        "name": "Apé E-City FX Max",
+        "battery": "8.0 kWh",
+        "range": "145 km",
+        "price": "₹3.30 Lakh*"
+      }
+    ],
+    "features": [
+      "12-Inch Wheels for Enhanced Ground Clearance & Pothole Stability",
+      "Full-Metal Body Shell with Weather-Sealed Passenger Doors",
+      "Advanced Telematics 2.0 GPS & Battery Health Monitoring",
+      "Zero Clutch & Gear Operation for Reduced Driver Fatigue",
+      "20% Flyover Gradeability with Full Passenger Load",
+      "Digital Instrument Cluster with State-of-Charge & Range Readout"
+    ],
+    "subCategoryId": "passenger-autos",
+    "subCategory": "Passenger E-Autos (L5M)"
+  },
+  {
+    "id": "hero-lectro-h5",
+    "brandId": "hero-lectro",
+    "brand": "Hero Lectro",
+    "model": "H5",
+    "fullName": "Hero Lectro H5",
+    "categoryId": "cycles",
+    "category": "Electric Cycles",
+    "subCategoryId": "city-commuter",
+    "subCategory": "City Commuter Cycles",
+    "isSampleData": true,
+    "sampleDataNote": "Sample reference data based on published Hero Lectro e-cycle specifications. Verify retail pricing and battery options with an authorized dealer.",
+    "trending": false,
+    "popularity": 83,
+    "priceMin": 28999,
+    "priceMax": 31999,
+    "priceDisplay": "₹28,999 – ₹31,999",
+    "batteryCapacityKwh": 0.28,
+    "batteryDisplay": "0.28 kWh (36V 7.8Ah)",
+    "batteryChemistry": "IP67 Intube Dust & Water-Protected Lithium-ion Pack",
+    "claimedRangeKm": 35,
+    "rangeDisplay": "Up to 35 km (Pedal-Assist)",
+    "rangeStandard": "Pedal-Assist Certified (~25 km Throttle)",
+    "topSpeedKmh": 25,
+    "topSpeedDisplay": "25 km/h (No License / RTO Required)",
+    "accelerationDisplay": "Pedal-Assist + Twist Throttle",
+    "chargingTimeDisplay": "~4 hrs (via Standard 5A Home Plug)",
+    "acChargingTime": "~4 hrs (0–100% via Portable Smart Charger)",
+    "dcChargingTime": "Domestic AC Charging Standard",
+    "chargingConnector": "Standard 5A Domestic Plug",
+    "motorPowerKw": 0.25,
+    "motorPowerDisplay": "250W BLDC Rear Hub (40 Nm)",
+    "motorType": "250W High-Torque BLDC Rear Hub Motor",
+    "driveType": "Single-Speed Chain + Electric Hub Assist",
+    "warrantyDisplay": "2 Years (Battery & Motor)",
+    "vehicleWarranty": "Lifetime Frame Warranty (Terms Apply) + 2 Yrs Electricals",
+    "image": "assets/images/vehicles/hero-lectro-h5.webp",
+    "images": [
+      "assets/images/vehicles/hero-lectro-h5.webp",
+      "assets/images/vehicles/hero-lectro-h5-front.webp",
+      "assets/images/vehicles/hero-lectro-h5-profile.webp"
+    ],
+    "galleryLabels": [
+      "3/4 Studio View",
+      "Front Fork, Disc Brake & LED Lamp",
+      "Integrated Downtube Frame & Carrier"
+    ],
+    "overview": "An accessible Indian urban commuter electric cycle featuring an IP67 concealed downtube battery, 250W BLDC rear hub motor, dual disc brakes, and license-free 25 km/h pedal-assist + throttle mobility.",
+    "variants": [
+      {
+        "name": "H5 Single Speed (5.8Ah)",
+        "battery": "36V 5.8Ah",
+        "range": "30 km (Pedelec)",
+        "price": "₹28,999*"
+      },
+      {
+        "name": "H5+ (7.8Ah)",
+        "battery": "36V 7.8Ah",
+        "range": "35–40 km (Pedelec)",
+        "price": "₹31,999*"
+      }
+    ],
+    "features": [
+      "No Driving License, Registration, or Insurance Required (25 km/h Cap)",
+      "4 Riding Modes: Pedal-Assist, Throttle, Cruise & Manual",
+      "LED Handlebar Display with Battery Level Indicator",
+      "Front & Rear Mechanical Disc Brakes with Auto Motor Cut-Off",
+      "IP67 Rated Concealed Lithium-ion Battery"
+    ]
+  },
+  {
+    "id": "emotorad-doodle-v3",
+    "brandId": "emotorad",
+    "brand": "EMotorad",
+    "model": "Doodle V3",
+    "fullName": "EMotorad Doodle V3",
+    "categoryId": "cycles",
+    "category": "Electric Cycles",
+    "subCategoryId": "folding-fat-tyre",
+    "subCategory": "Folding & Fat-Tyre Cycles",
+    "isSampleData": true,
+    "sampleDataNote": "Sample reference data based on published EMotorad specifications. Verify retail pricing and accessories with an authorized dealer.",
+    "trending": true,
+    "popularity": 86,
+    "priceMin": 52999,
+    "priceMax": 54999,
+    "priceDisplay": "₹52,999 – ₹54,999",
+    "batteryCapacityKwh": 0.46,
+    "batteryDisplay": "0.46 kWh (36V 12.75Ah)",
+    "batteryChemistry": "Removable Locking Lithium-ion Pack",
+    "claimedRangeKm": 60,
+    "rangeDisplay": "Up to 60 km (Pedal-Assist)",
+    "rangeStandard": "Pedal-Assist (~45 km Throttle)",
+    "topSpeedKmh": 25,
+    "topSpeedDisplay": "25 km/h (No License / RTO Required)",
+    "accelerationDisplay": "5-Level Pedal Assist + Twist Throttle",
+    "chargingTimeDisplay": "5 to 7 hrs (Removable Home Battery)",
+    "acChargingTime": "5–7 hrs via 2A Portable Charger on Any 5A Socket",
+    "dcChargingTime": "Removable Indoor AC Charging",
+    "chargingConnector": "Removable Pack / 5A Domestic Plug",
+    "motorPowerKw": 0.25,
+    "motorPowerDisplay": "250W Rear Hub Motor",
+    "motorType": "36V 250W Brushless Geared Rear Hub Motor",
+    "driveType": "Shimano Tourney 7-Speed + Hub Assist",
+    "warrantyDisplay": "2 Years Battery & Motor / 5 Years Frame",
+    "vehicleWarranty": "5 Years Aluminum Frame Warranty",
+    "image": "assets/images/vehicles/emotorad-doodle-v3.webp",
+    "images": [
+      "assets/images/vehicles/emotorad-doodle-v3.webp",
+      "assets/images/vehicles/emotorad-doodle-v3-front.webp",
+      "assets/images/vehicles/emotorad-doodle-v3-profile.webp"
+    ],
+    "galleryLabels": [
+      "3/4 Studio View",
+      "20x4-Inch Fat Tyres & Suspension",
+      "Foldable Aluminum Frame & Rear Rack"
+    ],
+    "overview": "India's iconic foldable fat-tyre electric cycle combining car-boot portability, 20x4-inch all-terrain tyres, Shimano 7-speed gearing, and a removable 12.75Ah battery delivering up to 60 km of pedal-assist range.",
+    "variants": [
+      {
+        "name": "Doodle V3 Standard",
+        "battery": "36V 12.75Ah",
+        "range": "60 km (PAS)",
+        "price": "₹52,999*"
+      }
+    ],
+    "features": [
+      "Quick-Fold Aluminum Alloy Frame (Fits SUV Boots & Lifts)",
+      "20 x 4.0-inch Puncture-Resistant Fat Tyres",
+      "Shimano 7-Speed Derailleur + 5-Level Pedal Assist",
+      "Cluster C6+ LCD Display with USB Phone Charging",
+      "60 mm Front Lockout Suspension & Mechanical Disc Brakes"
+    ]
+  },
+  {
+    "id": "euler-hiload-ev",
+    "brandId": "euler-motors",
+    "brand": "Euler Motors",
+    "model": "HiLoad EV",
+    "fullName": "Euler HiLoad EV",
+    "categoryId": "three-wheelers",
+    "category": "3-Wheelers",
+    "subCategoryId": "cargo-3w",
+    "subCategory": "3W Cargo Loaders (L5N)",
+    "isSampleData": true,
+    "sampleDataNote": "Sample reference data based on published Euler Motors L5N cargo specifications. Ex-showroom pricing varies by cargo body type and state incentives.",
+    "trending": false,
+    "popularity": 86,
+    "priceMin": 394000,
+    "priceMax": 432000,
+    "priceDisplay": "₹3.94 – ₹4.32 Lakh",
+    "batteryCapacityKwh": 13.0,
+    "batteryDisplay": "13 kWh (ArcReactor Liquid-Cooled)",
+    "batteryChemistry": "ArcReactor 100 Liquid-Cooled IP67 Lithium-ion Pack",
+    "claimedRangeKm": 170,
+    "rangeDisplay": "170 km (ARAI Certified)",
+    "rangeStandard": "ARAI Certified (100–120 km Real-World Payload)",
+    "topSpeedKmh": 45,
+    "topSpeedDisplay": "45 km/h (Loaded Cargo Spec)",
+    "accelerationDisplay": "88.55 Nm Instant Cargo Torque",
+    "chargingTimeDisplay": "15 mins for 50 km (Fast Charge) | ~3.5–4 hrs (AC)",
+    "acChargingTime": "~3.5 to 4 hrs via On-Board 3.3 kW Charger",
+    "dcChargingTime": "~15 mins for 50 km Range via Euler Charge Network",
+    "chargingConnector": "GB/T / Industrial 15A AC",
+    "motorPowerKw": 10.96,
+    "motorPowerDisplay": "10.96 kW Peak / 88.55 Nm",
+    "motorType": "AC Induction Motor",
+    "driveType": "Integrated Differential Rear Axle",
+    "warrantyDisplay": "3 Years / 80,000 km (Extendable Battery Cover)",
+    "vehicleWarranty": "3 Years / 80,000 km Commercial Warranty",
+    "image": "assets/images/vehicles/euler-hiload-ev.webp",
+    "images": [
+      "assets/images/vehicles/euler-hiload-ev.webp",
+      "assets/images/vehicles/euler-hiload-ev-front.webp",
+      "assets/images/vehicles/euler-hiload-ev-profile.webp"
+    ],
+    "galleryLabels": [
+      "3/4 Cargo Studio View",
+      "Reinforced Cab & Front Disc Brake",
+      "170 cu.ft High-Cube Cargo Container"
+    ],
+    "overview": "India's high-payload electric 3-wheeler cargo loader boasting a 688 kg rated payload, industry-first liquid-cooled 13 kWh ArcReactor battery, 200 mm front disc brake, and up to 170 cu.ft container volume.",
+    "variants": [
+      {
+        "name": "HiLoad EV PV (Pickup Deck)",
+        "battery": "13 kWh",
+        "range": "170 km (ARAI)",
+        "price": "₹3.94 Lakh*"
+      },
+      {
+        "name": "HiLoad EV DV (170 cu.ft Box)",
+        "battery": "13 kWh",
+        "range": "170 km (ARAI)",
+        "price": "₹4.32 Lakh*"
+      }
+    ],
+    "features": [
+      "688 kg Certified Payload Capacity",
+      "ArcReactor Liquid-Cooled Thermal Battery Management",
+      "200 mm Front Hydraulic Disc Brake for Loaded Stopping",
+      "Shepherd Fleet Telematics & Remote Diagnostics",
+      "300 mm Ground Clearance & IP67 Water Protection"
+    ]
+  },
+  {
+    "id": "switch-iev4",
+    "brandId": "switch-mobility",
+    "brand": "Switch Mobility",
+    "model": "IeV4",
+    "fullName": "Switch IeV4 Electric LCV",
+    "categoryId": "commercial",
+    "category": "Commercial Vehicles",
+    "subCategoryId": "electric-lcv",
+    "subCategory": "Electric LCV Pickups & Vans",
+    "isSampleData": true,
+    "sampleDataNote": "Sample reference data based on published Switch Mobility (Ashok Leyland) LCV specifications. Contact commercial dealership for fleet quotes.",
+    "trending": false,
+    "popularity": 84,
+    "priceMin": 1450000,
+    "priceMax": 1620000,
+    "priceDisplay": "₹14.50 – ₹16.20 Lakh",
+    "batteryCapacityKwh": 32.2,
+    "batteryDisplay": "32.2 kWh",
+    "batteryChemistry": "Modular Lithium Iron Phosphate (LFP)",
+    "claimedRangeKm": 130,
+    "rangeDisplay": "120–130 km (With Full 1.75T Payload)",
+    "rangeStandard": "Commercial Full-Load Duty Cycle",
+    "topSpeedKmh": 80,
+    "topSpeedDisplay": "80 km/h",
+    "accelerationDisplay": "230 Nm Commercial Torque",
+    "chargingTimeDisplay": "~60 mins (DC Fast Charge) | ~4–5 hrs (AC)",
+    "acChargingTime": "~4 to 5 hrs (AC Depot Charging)",
+    "dcChargingTime": "~60 mins via CCS2 DC Fast Charger",
+    "chargingConnector": "CCS2 Dual-Gun / AC",
+    "motorPowerKw": 60.0,
+    "motorPowerDisplay": "60 kW Peak / 230 Nm",
+    "motorType": "Permanent Magnet Synchronous Commercial Motor",
+    "driveType": "Rear-Wheel Drive Heavy-Duty Axle",
+    "warrantyDisplay": "5 Years / 2,00,000 km (Battery) & 3 Yrs / 1.5L km Vehicle",
+    "vehicleWarranty": "3 Years / 1,50,000 km Cabin & Chassis",
+    "image": "assets/images/vehicles/switch-iev4.webp",
+    "images": [
+      "assets/images/vehicles/switch-iev4.webp",
+      "assets/images/vehicles/switch-iev4-front.webp",
+      "assets/images/vehicles/switch-iev4-profile.webp"
+    ],
+    "galleryLabels": [
+      "3/4 Commercial LCV View",
+      "Aerodynamic Cab & EV Fascia",
+      "9.7-Ft Heavy-Duty Cargo Deck"
+    ],
+    "overview": "Engineered by Ashok Leyland's Switch Mobility arm, the IeV4 is a 3.49-tonne GVW intelligent electric LCV pickup delivering 1,700 kg payload capacity, 60 kW motor output, CCS2 1-hour fast charging, and SWITCH iON telematics.",
+    "variants": [
+      {
+        "name": "IeV4 CBC / FSD Deck",
+        "battery": "32.2 kWh",
+        "range": "130 km",
+        "price": "₹14.50 Lakh*"
+      },
+      {
+        "name": "IeV4 High-Deck Container",
+        "battery": "32.2 kWh",
+        "range": "125 km",
+        "price": "₹16.20 Lakh*"
+      }
+    ],
+    "features": [
+      "1,700 kg Rated Payload (3,490 kg GVW Commercial LCV)",
+      "SWITCH iON Real-Time Fleet Telematics (80+ Parameters)",
+      "3-Seater Walk-Through Ergonomic Cabin with Sliding Windows",
+      "Hill Hold Assist, Regenerative Braking & Electric Power Steering",
+      "260-Litre Parcel / Cold-Chain Container Compatibility"
+    ]
+  },
+  {
+    "id": "emotorad-trex-air",
+    "brandId": "emotorad",
+    "brand": "EMotorad",
+    "model": "T-Rex Air",
+    "fullName": "EMotorad T-Rex Air",
+    "categoryId": "cycles",
+    "category": "Electric Cycles",
+    "subCategoryId": "mtb-adventure",
+    "subCategory": "MTB & Trail E-Cycles",
+    "isSampleData": true,
+    "sampleDataNote": "Sample reference data based on published EMotorad MTB e-cycle specifications. Verify current retail pricing and wheel-size options.",
+    "trending": false,
+    "popularity": 84,
+    "priceMin": 34999,
+    "priceMax": 35999,
+    "priceDisplay": "₹34,999 – ₹35,999",
+    "batteryCapacityKwh": 0.37,
+    "batteryDisplay": "0.37 kWh (36V 10.2Ah)",
+    "batteryChemistry": "Removable Lithium-ion Battery Pack",
+    "claimedRangeKm": 50,
+    "rangeDisplay": "Up to 50 km (Pedal-Assist)",
+    "rangeStandard": "Pedal-Assist (~35 km Throttle)",
+    "topSpeedKmh": 25,
+    "topSpeedDisplay": "25 km/h (License-Free)",
+    "accelerationDisplay": "5-Level PAS + Shimano 21-Speed",
+    "chargingTimeDisplay": "4 to 5 hrs (5A Home Plug)",
+    "acChargingTime": "4–5 hrs via Portable 2A Home Charger",
+    "dcChargingTime": "Domestic AC Charging Standard",
+    "chargingConnector": "Removable Pack / 5A Socket",
+    "motorPowerKw": 0.25,
+    "motorPowerDisplay": "250W Rear Hub Motor",
+    "motorType": "36V 250W High-Torque Brushless Hub Motor",
+    "driveType": "Shimano Tourney 21-Speed + Electric Assist",
+    "warrantyDisplay": "2 Years Battery & Motor / Lifetime Frame*",
+    "vehicleWarranty": "Lifetime Frame Warranty (T&C) + 2 Yrs Electricals",
+    "image": "assets/images/vehicles/emotorad-trex-air.webp",
+    "images": [
+      "assets/images/vehicles/emotorad-trex-air.webp",
+      "assets/images/vehicles/emotorad-trex-air-front.webp",
+      "assets/images/vehicles/emotorad-trex-air-profile.webp"
+    ],
+    "galleryLabels": [
+      "3/4 MTB Studio View",
+      "100mm Front Suspension & Knobby Tyres",
+      "Hardtail Trail Geometry & Disc Brakes"
+    ],
+    "overview": "A versatile hardtail mountain electric cycle combining Shimano 21-speed gearing, 100 mm travel front suspension, 27.5/29-inch trail tyres, and a removable 10.2Ah battery for up to 50 km of pedal-assist range.",
+    "variants": [
+      {
+        "name": "T-Rex Air (27.5-inch)",
+        "battery": "36V 10.2Ah",
+        "range": "50 km (PAS)",
+        "price": "₹34,999*"
+      },
+      {
+        "name": "T-Rex Air (29-inch)",
+        "battery": "36V 10.2Ah",
+        "range": "50 km (PAS)",
+        "price": "₹35,999*"
+      }
+    ],
+    "features": [
+      "Shimano 21-Speed Drivetrain + 5-Level Pedal Assist",
+      "100 mm Travel Front Suspension Fork",
+      "Cluster C2+ Multi-Function LCD Display",
+      "Dual Mechanical Disc Brakes with Auto Cut-Off",
+      "Front LED Headlamp with Integrated Horn"
+    ]
+  },
+  {
+    "id": "kinetic-e-luna",
+    "brandId": "kinetic-green",
+    "brand": "Kinetic Green",
+    "model": "E-Luna",
+    "fullName": "Kinetic Green E-Luna",
+    "categoryId": "two-wheelers",
+    "category": "2-Wheelers",
+    "subCategoryId": "utility-mopeds",
+    "subCategory": "Utility Mopeds",
+    "isSampleData": true,
+    "sampleDataNote": "Sample reference data based on published Kinetic Green E-Luna specifications. Verify X1, X2, and X3 Pro battery pack pricing with dealer.",
+    "trending": true,
+    "popularity": 92,
+    "priceMin": 69990,
+    "priceMax": 82490,
+    "priceDisplay": "₹69,990 – ₹82,490",
+    "batteryCapacityKwh": 2.0,
+    "batteryDisplay": "2.0 kWh",
+    "batteryChemistry": "IP67 Lithium Iron Phosphate (LFP) Pack",
+    "claimedRangeKm": 110,
+    "rangeDisplay": "110 km (Certified)",
+    "rangeStandard": "Certified Range (2.0 kWh X2)",
+    "topSpeedKmh": 50,
+    "topSpeedDisplay": "50 km/h",
+    "accelerationDisplay": "22 Nm Utility Torque",
+    "chargingTimeDisplay": "~4 hrs (Portable Home Charger)",
+    "acChargingTime": "~4 hrs (0–100% via Portable 5A/15A Charger)",
+    "dcChargingTime": "AC Domestic Socket Charging",
+    "chargingConnector": "Portable Off-Board Plug",
+    "motorPowerKw": 1.2,
+    "motorPowerDisplay": "1.2 kW Hub Motor / 22 Nm",
+    "motorType": "BLDC Rear Hub Motor",
+    "driveType": "Direct Hub Drive",
+    "warrantyDisplay": "3 Years / 40,000 km (Extendable to 5 Yrs)",
+    "vehicleWarranty": "3 Years Standard Vehicle & Battery Warranty",
+    "image": "assets/images/vehicles/kinetic-e-luna.webp",
+    "images": [
+      "assets/images/vehicles/kinetic-e-luna.webp",
+      "assets/images/vehicles/kinetic-e-luna-front.webp",
+      "assets/images/vehicles/kinetic-e-luna-profile.webp"
+    ],
+    "galleryLabels": [
+      "3/4 Studio View",
+      "Tubular Steel Frame & Round Lamp",
+      "Removable Rear Seat Cargo Deck"
+    ],
+    "overview": "A modern electric rebirth of India's beloved utility moped—built on a rugged dual-tubular steel chassis with 16-inch spoked wheels, 150 kg payload capability, and a detachable rear seat for everyday family or delivery work.",
+    "variants": [
+      {
+        "name": "E-Luna X1 (1.7 kWh)",
+        "battery": "1.7 kWh",
+        "range": "90 km",
+        "price": "₹69,990*"
+      },
+      {
+        "name": "E-Luna X2 (2.0 kWh)",
+        "battery": "2.0 kWh",
+        "range": "110 km",
+        "price": "₹74,990*"
+      },
+      {
+        "name": "E-Luna X3 Pro (2.3 kWh)",
+        "battery": "2.3 kWh",
+        "range": "120 km",
+        "price": "₹82,490*"
+      }
+    ],
+    "features": [
+      "Heavy-Duty Dual-Tubular Steel Chassis (150 kg Payload)",
+      "Detachable Rear Pillion Seat Converts to Flat Cargo Carrier",
+      "16-Inch Large Diameter Wheels & Telescopic Front Suspension",
+      "Digital Speedometer, USB Charging Port & Side-Stand Sensor",
+      "Roughly ₹0.10–₹0.15/km Electricity Running Cost"
+    ]
+  },
+  {
+    "id": "mahindra-e-alfa-plus",
+    "brandId": "mahindra",
+    "brand": "Mahindra",
+    "model": "E-Alfa Plus",
+    "fullName": "Mahindra E-Alfa Plus",
+    "categoryId": "three-wheelers",
+    "category": "3-Wheelers",
+    "subCategoryId": "e-rickshaws",
+    "subCategory": "City E-Rickshaws",
+    "isSampleData": true,
+    "sampleDataNote": "Sample reference data based on published Mahindra L3 city passenger e-rickshaw specifications. Verify city availability and ex-showroom pricing.",
+    "trending": false,
+    "popularity": 81,
+    "priceMin": 161000,
+    "priceMax": 168000,
+    "priceDisplay": "₹1.61 – ₹1.68 Lakh",
+    "batteryCapacityKwh": 7.2,
+    "batteryDisplay": "150 Ah (48V Traction Pack)",
+    "batteryChemistry": "48V 150Ah Deep-Cycle / Li-ion Compatible Architecture",
+    "claimedRangeKm": 100,
+    "rangeDisplay": "100+ km (Certified)",
+    "rangeStandard": "ARAI Certified L3 Passenger Cycle",
+    "topSpeedKmh": 25,
+    "topSpeedDisplay": "25 km/h (L3 City Transit)",
+    "accelerationDisplay": "26.9 Nm City Torque",
+    "chargingTimeDisplay": "8–10 hrs (Overnight 15A Plug)",
+    "acChargingTime": "Overnight Off-Board Charger on Standard Socket",
+    "dcChargingTime": "Standard Depot / Home AC",
+    "chargingConnector": "Off-Board 15A Charger",
+    "motorPowerKw": 1.2,
+    "motorPowerDisplay": "1.2 kW PMSM / 26.9 Nm",
+    "motorType": "1.2 kW Brushless PMSM Motor",
+    "driveType": "Rear Differential Axle",
+    "warrantyDisplay": "18 Months / Unlimited km Vehicle + Battery Cover",
+    "vehicleWarranty": "18 Months Commercial Vehicle Warranty",
+    "image": "assets/images/vehicles/mahindra-e-alfa-plus.webp",
+    "images": [
+      "assets/images/vehicles/mahindra-e-alfa-plus.webp",
+      "assets/images/vehicles/mahindra-e-alfa-plus-front.webp",
+      "assets/images/vehicles/mahindra-e-alfa-plus-profile.webp"
+    ],
+    "galleryLabels": [
+      "3/4 City E-Rickshaw View",
+      "Metal Front Cowl & Windshield",
+      "D+4 Cushioned Passenger Cabin"
+    ],
+    "overview": "Designed for high-frequency metro feeder and neighbourhood passenger routes, the Mahindra E-Alfa Plus offers a full-metal body structure, Driver + 4 passenger seating, and over 100 km of certified daily range.",
+    "variants": [
+      {
+        "name": "E-Alfa Plus (D+4 Passenger)",
+        "battery": "48V 150Ah",
+        "range": "100+ km",
+        "price": "₹1.61 Lakh*"
+      }
+    ],
+    "features": [
+      "Driver + 4 Passenger Ergonomic Bench Seating",
+      "Sturdy Tubular Chassis & Weather-Resistant Canopy Roof",
+      "Telescopic Hydraulic Shock Absorbers for Rough Lanes",
+      "Low Acquisition & Daily Charging Cost for Owner-Drivers"
+    ]
+  },
+  {
+    "id": "olectra-k7-ev-bus",
+    "brandId": "olectra",
+    "brand": "Olectra Greentech",
+    "model": "eBuzz K7",
+    "fullName": "Olectra eBuzz K7 (9m City Bus)",
+    "categoryId": "commercial",
+    "category": "Commercial Vehicles",
+    "subCategoryId": "electric-buses",
+    "subCategory": "Electric Buses",
+    "isSampleData": true,
+    "sampleDataNote": "Sample institutional/fleet reference data for 9-metre AC electric transit bus. Actual pricing is determined by STU/corporate fleet tender specifications.",
+    "trending": false,
+    "popularity": 83,
+    "priceMin": 11500000,
+    "priceMax": 13500000,
+    "priceDisplay": "₹1.15 – ₹1.35 Cr (Fleet Est.)",
+    "batteryCapacityKwh": 180.0,
+    "batteryDisplay": "180 kWh",
+    "batteryChemistry": "High-Cycle Liquid-Cooled Lithium Iron Phosphate (LFP)",
+    "claimedRangeKm": 200,
+    "rangeDisplay": "Up to 200 km (Single Charge AC)",
+    "rangeStandard": "Urban Stop-and-Go Transit Cycle",
+    "topSpeedKmh": 75,
+    "topSpeedDisplay": "75 km/h (Speed Governed)",
+    "accelerationDisplay": "High-Torque Dual In-Wheel / Axle Drive",
+    "chargingTimeDisplay": "2 to 3 hrs (High-Power Dual-Gun DC)",
+    "acChargingTime": "Depot High-Capacity Charging",
+    "dcChargingTime": "~2–3 hrs via CCS2 / Heavy-Duty Depot DC",
+    "chargingConnector": "CCS2 Dual-Gun Heavy Commercial",
+    "motorPowerKw": 180.0,
+    "motorPowerDisplay": "180 kW Peak Electric Drive",
+    "motorType": "AC Synchronous Transit Traction Motor",
+    "driveType": "Rear Portal Electric Axle",
+    "warrantyDisplay": "Fleet AMC / Multi-Year High-Voltage Battery Cover",
+    "vehicleWarranty": "Customizable Municipal / Corporate Fleet Warranty",
+    "image": "assets/images/vehicles/olectra-k7-ev-bus.webp",
+    "images": [
+      "assets/images/vehicles/olectra-k7-ev-bus.webp",
+      "assets/images/vehicles/olectra-k7-ev-bus-front.webp",
+      "assets/images/vehicles/olectra-k7-ev-bus-profile.webp"
+    ],
+    "galleryLabels": [
+      "3/4 Transit Studio View",
+      "Panoramic Driver Cockpit & Kneeling Entry",
+      "9-Metre Air-Conditioned Low-Entry Cabin"
+    ],
+    "overview": "A 9-metre air-conditioned zero-emission electric city feeder and corporate shuttle bus seating 25 to 31 passengers with electronically controlled air suspension, regenerative braking, and 200 km urban range.",
+    "variants": [
+      {
+        "name": "eBuzz K7 9m AC City Feeder",
+        "battery": "180 kWh LFP",
+        "range": "200 km",
+        "price": "₹1.15 Cr* (Fleet)"
+      },
+      {
+        "name": "eBuzz K7 Corporate Tarmac/Shuttle",
+        "battery": "180 kWh LFP",
+        "range": "200 km",
+        "price": "₹1.35 Cr* (Fleet)"
+      }
+    ],
+    "features": [
+      "25+D to 31+D Air-Conditioned Low-Entry Passenger Seating",
+      "Electronically Controlled Air Suspension (ECAS) with Wheelchair Ramp",
+      "ITS Compliant Destination LED Boards, CCTV & Panic Buttons",
+      "Regenerative Braking Recovering up to 25% Kinetic Energy in Traffic"
+    ]
+  }
+]
