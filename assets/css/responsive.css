@@ -1,5 +1,5 @@
 /* ==========================================================================
-   EV Disha – Static Website Version 1.0
+   EV Disha – Electric Mobility Discovery & Comparison Platform
    All-Device Responsive Architecture (responsive.css)
    Device Tiers:
      1. Large Desktop & 4K:                  1440px and above
@@ -374,7 +374,7 @@
     font-size: clamp(1.6rem, 6.2vw, 2.05rem);
   }
 
-  .sample-data-banner {
+  .dealer-advisory-banner {
     padding: 12px 14px;
     font-size: 0.8125rem;
     margin-bottom: 20px;
@@ -904,5 +904,138 @@
 
   .tnc-clause-card {
     padding: 18px;
+  }
+}
+
+
+/* --------------------------------------------------------------------------
+   Location Selector & 5-Col Quick Search Responsive Rules
+   -------------------------------------------------------------------------- */
+@media (max-width: 1239px) {
+  .header-loc-btn {
+    max-width: 138px;
+    padding-inline: 10px;
+    font-size: 0.77rem;
+  }
+
+  .quick-search-form.quick-search-form-5col {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .quick-search-form.quick-search-form-5col > .btn {
+    grid-column: 1 / -1;
+    width: 100%;
+  }
+}
+
+@media (max-width: 767px) {
+  .header-loc-btn {
+    height: 38px;
+    padding: 0 9px;
+    max-width: 112px;
+    font-size: 0.73rem;
+  }
+
+  .quick-search-form.quick-search-form-5col {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .quick-search-form.quick-search-form-5col > .btn {
+    grid-column: auto;
+  }
+
+  .loc-state-city-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .loc-metro-chips {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 389px) {
+  .header-loc-btn span {
+    max-width: 62px;
+  }
+}
+
+
+/* --------------------------------------------------------------------------
+   Elastic Studio & Elastic Search Pills Responsive Rules
+   -------------------------------------------------------------------------- */
+@media (max-width: 1199px) {
+  .elastic-studio-shell {
+    grid-template-columns: 340px minmax(0, 1fr);
+    gap: 18px;
+  }
+
+  .elastic-kpi-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 991px) {
+  .elastic-studio-shell,
+  .details-elastic-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 18px;
+  }
+}
+
+@media (max-width: 767px) {
+  .quick-elastic-bar,
+  .elastic-suggestions-bar,
+  .elastic-modal-pills {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scrollbar-width: none;
+    padding-bottom: 4px;
+  }
+
+  .quick-elastic-bar::-webkit-scrollbar,
+  .elastic-suggestions-bar::-webkit-scrollbar,
+  .elastic-modal-pills::-webkit-scrollbar {
+    display: none;
+  }
+
+  .elastic-studio-controls,
+  .elastic-studio-results,
+  .details-elastic-card {
+    padding: 16px;
+    border-radius: 16px;
+  }
+
+  .elastic-two-col-controls {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 12px;
+  }
+
+  .elastic-kpi-grid,
+  .details-elastic-kpis {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  .elastic-kpi-value,
+  .det-kpi-tile strong {
+    font-size: 1.12rem;
+  }
+
+  .elastic-vehicle-banner-left img {
+    width: 72px;
+    height: 46px;
+  }
+}
+
+@media (max-width: 479px) {
+  .elastic-kpi-grid,
+  .details-elastic-kpis {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .elastic-vehicle-banner-actions {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }

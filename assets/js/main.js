@@ -54,6 +54,102 @@
     return loadJSON('assets/data/news.json');
   }
 
+  function getLocations() {
+    return loadJSON('assets/data/locations.json');
+  }
+
+  /* ------------------------------------------------------------------------
+     All-India Location Manager (State, City & 6-Digit PIN/Zipcode)
+     ------------------------------------------------------------------------ */
+  const LOC_STORAGE_KEY = 'evdisha_user_location_v1';
+
+  function getActiveLocation() {
+    try {
+      const raw = window.localStorage.getItem(LOC_STORAGE_KEY);
+      if (!raw) return null;
+      const parsed = JSON.parse(raw);
+      if (!parsed || typeof parsed !== 'object') return null;
+      return parsed;
+    } catch (_err) {
+      return null;
+    }
+  }
+
+  function setActiveLocation(locObj) {
+    try {
+      if (!locObj) {
+        window.localStorage.removeItem(LOC_STORAGE_KEY);
+      } else {
+        window.localStorage.setItem(LOC_STORAGE_KEY, JSON.stringify(locObj));
+      }
+    } catch (_err) {
+      // Ignore storage quota errors
+    }
+    syncHeaderLocationBtn();
+    window.dispatchEvent(new CustomEvent('evdisha:location-updated', { detail: { location: locObj || null } }));
+  }
+
+  function clearActiveLocation() {
+    setActiveLocation(null);
+  }
+
+  function resolvePinCode(rawPin, locationsData) {
+    const pin = String(rawPin || '').trim();
+    if (!/^[1-8]\d{5}$/.test(pin) || !locationsData) return null;
+
+    // 1. Check longest matching prefix across 49 major cities
+    let bestCity = null;
+    let bestLen = 0;
+    (locationsData.cities || []).forEach((city) => {
+      (city.pinPrefixes || []).forEach((prefix) => {
+        if (pin.startsWith(prefix) && prefix.length > bestLen) {
+          bestCity = city;
+          bestLen = prefix.length;
+        }
+      });
+    });
+
+    if (bestCity) {
+      return {
+        cityId: bestCity.id,
+        cityName: bestCity.name,
+        stateCode: bestCity.stateCode,
+        stateName: bestCity.state,
+        tier: bestCity.tier,
+        zip: pin
+      };
+    }
+
+    // 2. Fallback to 2-digit India Postal Circle state mapping
+    const circle = pin.slice(0, 2);
+    const stateCode = locationsData.pinCircles ? locationsData.pinCircles[circle] : null;
+    if (!stateCode) return null;
+    const stObj = (locationsData.states || []).find((s) => s.code === stateCode);
+    return {
+      cityId: '',
+      cityName: '',
+      stateCode,
+      stateName: stObj ? stObj.name : stateCode,
+      tier: 'tier3',
+      zip: pin
+    };
+  }
+
+  function syncHeaderLocationBtn() {
+    const loc = getActiveLocation();
+    document.querySelectorAll('.js-header-loc-label').forEach((el) => {
+      if (!loc) {
+        el.textContent = 'All India';
+      } else if (loc.cityName) {
+        el.textContent = loc.zip ? `${loc.cityName} (${loc.zip})` : loc.cityName;
+      } else if (loc.stateName) {
+        el.textContent = loc.zip ? `${loc.stateName} (${loc.zip})` : loc.stateName;
+      } else {
+        el.textContent = 'All India';
+      }
+    });
+  }
+
   function openVehicleDetails(vehicleId) {
     if (!vehicleId) return;
     window.location.href = `vehicle-details.html?id=${encodeURIComponent(vehicleId)}`;
@@ -357,15 +453,21 @@
             name="q"
             id="global-search-input"
             class="search-modal-input"
-            placeholder="Search EV model, brand, or category (e.g. Nexon, Ather, Scooter)..."
+            placeholder="Try 'SUV under 15 lakh', 'scooter 150+ km', 'Nexon', 'Rizta'..."
             autocomplete="off"
-            aria-label="Search EV model or brand"
+            aria-label="Search EV model, budget, or range"
           />
           <button type="button" class="btn btn-sm btn-outline" id="global-search-close">Esc</button>
         </form>
+        <div class="elastic-modal-pills" id="global-search-pills">
+          <button type="button" class="elastic-quick-pill" data-elastic-q="suv fast charging">⚡ Fast-Charging SUVs</button>
+          <button type="button" class="elastic-quick-pill" data-elastic-q="scooter under 1.3 lakh">💰 Scooters &lt; ₹1.3L</button>
+          <button type="button" class="elastic-quick-pill" data-elastic-q="above 400 km">🛣️ 400+ km Range</button>
+          <button type="button" class="elastic-quick-pill" data-elastic-q="no license cycle">🪪 License-Free</button>
+        </div>
         <div class="search-modal-results" id="global-search-results">
           <p style="padding:12px; font-size:0.88rem; color:var(--color-muted); margin:0;">
-            Start typing to search Indian electric cars, scooters, bikes, and commercial EVs...
+            Start typing to search Indian electric cycles, scooters, bikes, cars, and commercial EVs...
           </p>
         </div>
       </div>
@@ -374,24 +476,30 @@
 
     const input = modal.querySelector('#global-search-input');
     const closeBtn = modal.querySelector('#global-search-close');
+    const pillsRow = modal.querySelector('#global-search-pills');
     const resultsEl = modal.querySelector('#global-search-results');
     let cachedVehicles = null;
+
+    function fallbackElasticMatch(vehicles, q) {
+      const tokens = q.toLowerCase().split(/\s+/).filter(Boolean);
+      return vehicles.filter((v) => {
+        const hay = `${v.fullName} ${v.brand} ${v.model} ${v.category} ${v.subCategory || ''} ${(v.elasticTags || []).join(' ')}`.toLowerCase();
+        if (tokens.includes('no') && tokens.includes('license')) return Number(v.topSpeedKmh) <= 25;
+        return tokens.every((t) => hay.includes(t));
+      });
+    }
 
     async function renderInstantResults(term) {
       try {
         if (!cachedVehicles) {
           cachedVehicles = await getVehicles();
         }
-        const q = term.trim().toLowerCase();
+        const q = term.trim();
         const list = q
-          ? cachedVehicles.filter(
-              (v) =>
-                v.fullName.toLowerCase().includes(q) ||
-                v.brand.toLowerCase().includes(q) ||
-                v.model.toLowerCase().includes(q) ||
-                v.category.toLowerCase().includes(q)
-            )
-          : cachedVehicles.filter((v) => v.trending).slice(0, 5);
+          ? window.EVDisha && window.EVDisha.Filters && window.EVDisha.Filters.elasticSearchVehicles
+            ? window.EVDisha.Filters.elasticSearchVehicles(cachedVehicles, q)
+            : fallbackElasticMatch(cachedVehicles, q)
+          : cachedVehicles.filter((v) => v.trending).slice(0, 6);
 
         if (list.length === 0) {
           resultsEl.innerHTML = `
@@ -403,7 +511,7 @@
           return;
         }
 
-        const heading = q ? `Matching EVs (${list.length})` : 'Popular Searches';
+        const heading = q ? `Elastic Matches (${list.length})` : 'Trending EV Searches';
         resultsEl.innerHTML = `
           <div style="padding:6px 12px; font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:0.06em; color:var(--color-muted);">${heading}</div>
           ${list
@@ -415,7 +523,7 @@
                   <img src="${escapeHTML(v.image)}" alt="${escapeHTML(v.fullName)}" class="search-result-thumb" width="56" height="38" loading="lazy" />
                   <div>
                     <div class="search-result-title">${escapeHTML(v.fullName)}</div>
-                    <div class="search-result-meta">${escapeHTML(v.category)} • ${escapeHTML(v.rangeDisplay)}</div>
+                    <div class="search-result-meta">${escapeHTML(v.category)} &bull; ${escapeHTML(v.rangeDisplay)}${v.elasticMetrics && v.elasticMetrics.emiDisplay ? ` &bull; EMI ~${escapeHTML(v.elasticMetrics.emiDisplay)}` : ''}</div>
                   </div>
                 </div>
                 <span class="search-result-price">${escapeHTML(v.priceDisplay)}</span>
@@ -427,14 +535,14 @@
             q
               ? `<div style="padding:10px 12px 4px; border-top:1px solid var(--color-border); margin-top:6px;">
                    <a href="explore.html?q=${encodeURIComponent(term)}" style="font-size:0.86rem; font-weight:700; color:var(--color-navy);">
-                     View all catalogue results for "${escapeHTML(term)}" &rarr;
+                     View all ${list.length} catalogue results for "${escapeHTML(term)}" &rarr;
                    </a>
                  </div>`
               : ''
           }
         `;
       } catch (_err) {
-        resultsEl.innerHTML = `<p style="padding:14px; font-size:0.88rem; color:var(--color-danger);">Unable to load catalogue data. Please serve EV Disha via a static HTTP server.</p>`;
+        resultsEl.innerHTML = `<p style="padding:14px; font-size:0.88rem; color:var(--color-danger);">Unable to load EV catalogue right now. Please refresh the page and try again.</p>`;
       }
     }
 
@@ -456,6 +564,15 @@
       if (e.target === modal) closeModal();
     });
     input.addEventListener('input', () => renderInstantResults(input.value));
+    if (pillsRow) {
+      pillsRow.addEventListener('click', (e) => {
+        const pill = e.target.closest('[data-elastic-q]');
+        if (!pill) return;
+        input.value = pill.getAttribute('data-elastic-q') || '';
+        renderInstantResults(input.value);
+        input.focus();
+      });
+    }
 
     window.addEventListener('keydown', (e) => {
       if (e.key === 'Escape' && modal.classList.contains('is-open')) {
@@ -504,12 +621,12 @@
             return `
               <article class="brand-profile-card" id="brand-${escapeHTML(brand.id)}">
                 <div class="brand-profile-top">
-                  <img src="${escapeHTML(brand.logo)}" alt="${escapeHTML(brand.name)} logo" class="brand-profile-logo" width="148" height="59" loading="lazy" />
+                  <img src="${escapeHTML(brand.logo)}?v=1.8" alt="${escapeHTML(brand.name)} logo" class="brand-profile-logo" width="148" height="59" decoding="async" />
                   <div style="display:flex; flex-direction:column; align-items:flex-end; gap:5px;">
                     ${
                       brand.isIndianCompany
                         ? `<span class="badge badge-indian">Indian EV OEM</span>`
-                        : `<span class="badge badge-sample">India Operations</span>`
+                        : `<span class="badge badge-neutral">India Operations</span>`
                     }
                     ${
                       brandVehicles.length > 0
@@ -532,7 +649,7 @@
                       ? `<a href="explore.html?brand=${encodeURIComponent(brand.id)}" class="btn btn-sm btn-outline">
                            Explore ${escapeHTML(brand.name)} &rarr;
                          </a>`
-                      : `<span class="badge badge-sample">Directory Listed</span>`
+                      : `<span class="badge badge-neutral">OEM Directory</span>`
                   }
                 </div>
               </article>
@@ -714,12 +831,12 @@
         openArticle(initialArticle);
       }
     } catch (_err) {
-      grid.innerHTML = `<div class="empty-state" style="grid-column:1/-1;"><h3>Unable to Load EV News</h3><p>Please open EV Disha via a static HTTP web server.</p></div>`;
+      grid.innerHTML = `<div class="empty-state" style="grid-column:1/-1;"><h3>Unable to Load EV News</h3><p>Please refresh the page and try again shortly.</p></div>`;
     }
   }
 
   /* ------------------------------------------------------------------------
-     Contact Form Client-Side Validation & Transparent mailto Fallback
+     Contact Form Client-Side Validation & Direct Email Draft
      ------------------------------------------------------------------------ */
   function initContactForm() {
     const form = document.getElementById('evdisha-contact-form');
@@ -798,7 +915,7 @@
         statusBox.innerHTML = `
           <strong>Ready to send via your email app!</strong>
           <p style="margin:6px 0 12px;">
-            EV Disha is a static website and does not store personal messages on a server. Your email client is opening a pre-filled draft to <strong>${recipient}</strong>.
+            Your email client is opening a pre-filled inquiry draft addressed directly to <strong>${recipient}</strong> so you remain in full control of sending it.
           </p>
           <a href="${escapeHTML(mailtoHref)}" class="btn btn-sm btn-navy">Open Email Draft Again</a>
         `;
@@ -842,11 +959,11 @@
             ${isClone ? 'aria-hidden="true" tabindex="-1"' : `aria-label="${escapeHTML(brand.name)} – ${brand.isIndianCompany ? 'Indian EV Manufacturer' : 'EV Manufacturer in India'}"`}
           >
             <img
-              src="${escapeHTML(brand.logo)}"
+              src="${escapeHTML(brand.logo)}?v=1.8"
               alt="${isClone ? '' : `${escapeHTML(brand.name)} logo`}"
               width="156"
               height="62"
-              loading="lazy"
+              decoding="async"
             />
             <span class="marquee-origin-tag ${brand.isIndianCompany ? 'is-indian' : ''}">
               <span class="origin-dot" aria-hidden="true"></span>
@@ -916,6 +1033,304 @@
   }
 
   /* ------------------------------------------------------------------------
+     Global Header Location Pill & All-India City/State/PIN Modal
+     ------------------------------------------------------------------------ */
+  function initLocationModal() {
+    const headerActions = document.querySelector('.header-actions');
+    if (!headerActions || document.getElementById('header-location-btn')) return;
+
+    const locBtn = document.createElement('button');
+    locBtn.type = 'button';
+    locBtn.id = 'header-location-btn';
+    locBtn.className = 'header-loc-btn';
+    locBtn.setAttribute('aria-label', 'Select City, State, or PIN code');
+    locBtn.title = 'Filter EVs by Indian City, State, or 6-Digit PIN Code';
+    locBtn.innerHTML = `
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" aria-hidden="true">
+        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+        <circle cx="12" cy="10" r="3"></circle>
+      </svg>
+      <span class="js-header-loc-label">All India</span>
+    `;
+    headerActions.insertBefore(locBtn, headerActions.firstChild);
+    syncHeaderLocationBtn();
+
+    const modal = document.createElement('div');
+    modal.className = 'modal-overlay';
+    modal.id = 'global-location-modal';
+    modal.setAttribute('role', 'dialog');
+    modal.setAttribute('aria-modal', 'true');
+    modal.setAttribute('aria-labelledby', 'loc-modal-title');
+    modal.innerHTML = `
+      <div class="modal-card" style="max-width:660px;">
+        <div class="modal-header">
+          <div>
+            <h3 id="loc-modal-title">Select Your Location in India</h3>
+            <p style="font-size:0.78rem; color:var(--color-muted); margin:2px 0 0;">Auto-filter EVs by City, State, or 6-Digit PIN / Zipcode</p>
+          </div>
+          <button type="button" class="btn btn-sm btn-outline" id="loc-modal-close">Close</button>
+        </div>
+        <div class="modal-body" id="loc-modal-body">
+          <p style="font-size:0.88rem; color:var(--color-muted);">Loading Indian cities &amp; states...</p>
+        </div>
+      </div>
+    `;
+    document.body.appendChild(modal);
+
+    const bodyEl = modal.querySelector('#loc-modal-body');
+    const closeBtn = modal.querySelector('#loc-modal-close');
+    let locData = null;
+
+    async function renderModalUI() {
+      if (!locData) {
+        locData = await getLocations();
+      }
+      const current = getActiveLocation();
+      const metros = (locData.cities || []).filter((c) => c.popularMetro);
+
+      bodyEl.innerHTML = `
+        <div class="loc-pin-search-row">
+          <div class="form-field" style="flex:1;">
+            <label for="loc-pin-or-city-input" class="form-label">Search City or Enter 6-Digit PIN Code</label>
+            <input
+              type="text"
+              id="loc-pin-or-city-input"
+              class="form-control"
+              placeholder="e.g. 560001, 500081, Mumbai, Kochi, Jaipur..."
+              value="${current && current.zip ? escapeHTML(current.zip) : ''}"
+              autocomplete="off"
+            />
+          </div>
+          <button type="button" class="btn btn-sm btn-outline" id="loc-reset-pan-india" style="height:48px;">
+            All India
+          </button>
+        </div>
+
+        <div id="loc-pin-detected-box" class="loc-detected-banner" hidden></div>
+
+        <div class="loc-state-city-grid">
+          <div class="form-field">
+            <label for="loc-modal-state" class="form-label">Filter by State / UT</label>
+            <select id="loc-modal-state" class="form-control">
+              <option value="">All States &amp; UTs (25)</option>
+              ${(locData.states || [])
+                .map(
+                  (s) =>
+                    `<option value="${escapeHTML(s.code)}" ${current && current.stateCode === s.code ? 'selected' : ''}>${escapeHTML(s.name)}</option>`
+                )
+                .join('')}
+            </select>
+          </div>
+          <div class="form-field">
+            <label for="loc-modal-city" class="form-label">Select Major City</label>
+            <select id="loc-modal-city" class="form-control">
+              <option value="">All Cities in State</option>
+            </select>
+          </div>
+        </div>
+
+        <div style="margin-top:18px;">
+          <div class="subcat-showcase-label">Popular EV Metro Hubs</div>
+          <div class="loc-metro-chips" id="loc-metro-chips">
+            ${metros
+              .map(
+                (m) => `
+                <button
+                  type="button"
+                  class="loc-city-chip ${current && current.cityId === m.id ? 'is-active' : ''}"
+                  data-pick-city="${escapeHTML(m.id)}"
+                >
+                  <strong>${escapeHTML(m.name)}</strong>
+                  <span>${escapeHTML(m.stateCode)} &bull; ${escapeHTML(m.sampleZip)}</span>
+                </button>
+              `
+              )
+              .join('')}
+          </div>
+        </div>
+
+        <div style="margin-top:16px;">
+          <div class="subcat-showcase-label" id="loc-all-cities-heading">Major Tier-2 Cities</div>
+          <div class="loc-tier2-list" id="loc-filtered-cities-list"></div>
+        </div>
+      `;
+
+      const searchInput = bodyEl.querySelector('#loc-pin-or-city-input');
+      const detectedBox = bodyEl.querySelector('#loc-pin-detected-box');
+      const stateSelect = bodyEl.querySelector('#loc-modal-state');
+      const citySelect = bodyEl.querySelector('#loc-modal-city');
+      const resetBtn = bodyEl.querySelector('#loc-reset-pan-india');
+      const citiesListEl = bodyEl.querySelector('#loc-filtered-cities-list');
+      const citiesHeading = bodyEl.querySelector('#loc-all-cities-heading');
+
+      function populateCityDropdown(stateCode, selectedCityId) {
+        const matching = stateCode
+          ? locData.cities.filter((c) => c.stateCode === stateCode)
+          : locData.cities;
+        citySelect.innerHTML =
+          `<option value="">All Cities (${matching.length})</option>` +
+          matching
+            .map(
+              (c) =>
+                `<option value="${escapeHTML(c.id)}" ${selectedCityId === c.id ? 'selected' : ''}>${escapeHTML(c.name)} (${escapeHTML(c.sampleZip)})</option>`
+            )
+            .join('');
+      }
+
+      function renderFilteredCityPills(filterTerm = '', stateFilter = '') {
+        const term = filterTerm.trim().toLowerCase();
+        const pool = locData.cities.filter((c) => {
+          if (stateFilter && c.stateCode !== stateFilter) return false;
+          if (!term) return !c.popularMetro || Boolean(stateFilter);
+          return (
+            c.name.toLowerCase().includes(term) ||
+            c.state.toLowerCase().includes(term) ||
+            c.sampleZip.startsWith(term) ||
+            (c.pinPrefixes || []).some((p) => term.startsWith(p))
+          );
+        });
+
+        citiesHeading.textContent = term || stateFilter ? `Matching Cities (${pool.length})` : 'Major Tier-2 EV Cities';
+        if (pool.length === 0) {
+          citiesListEl.innerHTML = `<p style="font-size:0.82rem; color:var(--color-muted); margin:0;">No city matched directly—enter a valid 6-digit Indian PIN code above to auto-detect your state.</p>`;
+          return;
+        }
+        citiesListEl.innerHTML = pool
+          .map(
+            (c) => `
+            <button type="button" class="subcat-chip" data-pick-city="${escapeHTML(c.id)}">
+              ${escapeHTML(c.name)}, ${escapeHTML(c.stateCode)}
+            </button>
+          `
+          )
+          .join('');
+      }
+
+      populateCityDropdown(current ? current.stateCode : '', current ? current.cityId : '');
+      renderFilteredCityPills('', current ? current.stateCode : '');
+
+      function applyAndClose(locObj, labelMsg) {
+        setActiveLocation(locObj);
+        closeModal();
+        showToast(labelMsg);
+        if (document.body.dataset.page !== 'explore' && document.body.dataset.page !== 'home') {
+          // Stay on current page with updated location badge; on Explore/Home listeners auto-refresh!
+        }
+      }
+
+      searchInput.addEventListener('input', () => {
+        const val = searchInput.value.trim();
+        // Check 6-digit PIN auto-resolution
+        if (/^\d{6}$/.test(val)) {
+          const resolved = resolvePinCode(val, locData);
+          if (resolved) {
+            const locTitle = resolved.cityName
+              ? `${resolved.cityName}, ${resolved.stateName} (${resolved.zip})`
+              : `${resolved.stateName} Region (PIN ${resolved.zip})`;
+            detectedBox.hidden = false;
+            detectedBox.innerHTML = `
+              <div>
+                <strong>PIN Detected:</strong> ${escapeHTML(locTitle)}
+              </div>
+              <button type="button" class="btn btn-sm btn-primary" id="apply-detected-pin-btn">Apply Location</button>
+            `;
+            detectedBox.querySelector('#apply-detected-pin-btn').onclick = () => {
+              applyAndClose(resolved, `Location set to ${locTitle}`);
+            };
+          } else {
+            detectedBox.hidden = false;
+            detectedBox.innerHTML = `<span>Enter a valid Indian 6-digit PIN code (110001–855999).</span>`;
+          }
+        } else {
+          detectedBox.hidden = true;
+        }
+        renderFilteredCityPills(val, stateSelect.value);
+      });
+
+      stateSelect.addEventListener('change', () => {
+        const sc = stateSelect.value;
+        populateCityDropdown(sc, '');
+        renderFilteredCityPills(searchInput.value, sc);
+        if (sc) {
+          const stObj = locData.states.find((s) => s.code === sc);
+          setActiveLocation({
+            cityId: '',
+            cityName: '',
+            stateCode: sc,
+            stateName: stObj ? stObj.name : sc,
+            tier: 'tier2',
+            zip: ''
+          });
+          showToast(`Filtered by state: ${stObj ? stObj.name : sc}`);
+        }
+      });
+
+      citySelect.addEventListener('change', () => {
+        const cid = citySelect.value;
+        if (!cid) return;
+        const city = locData.cities.find((c) => c.id === cid);
+        if (!city) return;
+        applyAndClose(
+          {
+            cityId: city.id,
+            cityName: city.name,
+            stateCode: city.stateCode,
+            stateName: city.state,
+            tier: city.tier,
+            zip: city.sampleZip
+          },
+          `Location set to ${city.name}, ${city.state}`
+        );
+      });
+
+      bodyEl.addEventListener('click', (e) => {
+        const cityBtn = e.target.closest('[data-pick-city]');
+        if (!cityBtn) return;
+        const cid = cityBtn.getAttribute('data-pick-city');
+        const city = locData.cities.find((c) => c.id === cid);
+        if (!city) return;
+        applyAndClose(
+          {
+            cityId: city.id,
+            cityName: city.name,
+            stateCode: city.stateCode,
+            stateName: city.state,
+            tier: city.tier,
+            zip: city.sampleZip
+          },
+          `Location set to ${city.name} (${city.sampleZip})`
+        );
+      });
+
+      resetBtn.addEventListener('click', () => {
+        applyAndClose(null, 'Showing EVs across All India.');
+      });
+    }
+
+    function openModal() {
+      modal.classList.add('is-open');
+      document.body.classList.add('modal-open');
+      renderModalUI();
+    }
+
+    function closeModal() {
+      modal.classList.remove('is-open');
+      document.body.classList.remove('modal-open');
+    }
+
+    locBtn.addEventListener('click', openModal);
+    closeBtn.addEventListener('click', closeModal);
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) closeModal();
+    });
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && modal.classList.contains('is-open')) {
+        closeModal();
+      }
+    });
+  }
+
+  /* ------------------------------------------------------------------------
      Export Public Namespace & Boot
      ------------------------------------------------------------------------ */
   window.EVDisha = {
@@ -926,6 +1341,11 @@
     getBrands,
     getCategories,
     getNews,
+    getLocations,
+    getActiveLocation,
+    setActiveLocation,
+    clearActiveLocation,
+    resolvePinCode,
     openVehicleDetails,
     getCompareIds,
     isCompared,
@@ -938,6 +1358,7 @@
 
   document.addEventListener('DOMContentLoaded', () => {
     initMobileMenu();
+    initLocationModal();
     initSearchModal();
     initGlobalCompareEvents();
     syncCompareUI();

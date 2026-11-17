@@ -19,8 +19,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 
-  <link rel="stylesheet" href="assets/css/style.css?v=1.5" />
-  <link rel="stylesheet" href="assets/css/responsive.css?v=1.5" />
+  <link rel="stylesheet" href="assets/css/style.css?v=1.6" />
+  <link rel="stylesheet" href="assets/css/responsive.css?v=1.6" />
 
   <script type="application/ld+json">
   {
@@ -90,14 +90,14 @@
     <!-- Catalogue Section -->
     <section class="section">
       <div class="container">
-        <div class="sample-data-banner" role="note">
+        <div class="dealer-advisory-banner" role="note">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
             <circle cx="12" cy="12" r="10"></circle>
             <line x1="12" y1="8" x2="12" y2="12"></line>
             <line x1="12" y1="16" x2="12.01" y2="16"></line>
           </svg>
           <div>
-            <strong>Website Reference Data (T&amp;C Apply):</strong> Prices, specifications, range figures, and features below are indicative website reference data only. Please consult an <strong>authorized dealer or brand sales team</strong> for exact city pricing, live subsidies, and complete clarity. <a href="terms.html" style="font-weight:800; color:var(--color-navy); text-decoration:underline;">Terms &amp; Conditions</a>
+            <strong>Indicative Pricing &amp; Specification Advisory:</strong> Displayed ex-showroom prices, certified range ratings, and features vary by city, variant, and state EV policy. Please consult an <strong>authorized dealer or brand sales team</strong> for exact city quotes and live subsidies. <a href="terms.html" style="font-weight:800; color:var(--color-navy); text-decoration:underline;">Terms &amp; Conditions</a>
           </div>
         </div>
 
@@ -113,14 +113,47 @@
               </div>
             </div>
 
-            <!-- Search by Model or Brand -->
+            <!-- Location Auto-Filter (PIN Code, State & City) -->
             <div class="filter-group">
-              <label for="explore-search-input" class="filter-group-title" style="display:block;">Search Model or Brand</label>
+              <div class="filter-group-title">Location (State / City / PIN)</div>
+              <div style="display:flex; flex-direction:column; gap:9px;">
+                <div>
+                  <label for="filter-zip-input" class="sr-only">6-Digit Indian PIN / Zipcode</label>
+                  <input
+                    type="text"
+                    id="filter-zip-input"
+                    inputmode="numeric"
+                    maxlength="6"
+                    class="form-control"
+                    style="min-height:40px; padding:7px 11px; font-size:0.86rem;"
+                    placeholder="Enter 6-Digit PIN (e.g. 560001)"
+                    autocomplete="off"
+                  />
+                  <div id="filter-zip-hint" class="zip-auto-hint" aria-live="polite"></div>
+                </div>
+                <div>
+                  <label for="filter-state-select" class="sr-only">Select State</label>
+                  <select id="filter-state-select" class="form-control" style="min-height:40px; padding:7px 34px 7px 11px; font-size:0.86rem;">
+                    <option value="">All States &amp; UTs</option>
+                  </select>
+                </div>
+                <div>
+                  <label for="filter-city-select" class="sr-only">Select City</label>
+                  <select id="filter-city-select" class="form-control" style="min-height:40px; padding:7px 34px 7px 11px; font-size:0.86rem;">
+                    <option value="">All Major Cities</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <!-- Elastic Search by Model, Brand, Budget or Range -->
+            <div class="filter-group">
+              <label for="explore-search-input" class="filter-group-title" style="display:block;">Elastic Search (Model, Budget, Range)</label>
               <input
                 type="search"
                 id="explore-search-input"
                 class="form-control"
-                placeholder="e.g. Nexon, Rizta, BYD..."
+                placeholder="Try 'SUV under 15L', '400+ km', 'Nexon'..."
                 autocomplete="off"
               />
             </div>
@@ -162,7 +195,8 @@
 
           <!-- Results Area -->
           <div>
-            <div id="explore-top-cat-tabs" class="segment-filter-pills" style="margin-bottom:18px;" role="group" aria-label="Quick top category filter"></div>
+            <div id="explore-top-cat-tabs" class="segment-filter-pills" style="margin-bottom:12px;" role="group" aria-label="Quick top category filter"></div>
+            <div id="explore-elastic-suggestions" class="elastic-suggestions-bar" role="group" aria-label="Elastic quick filters"></div>
 
             <div class="explore-toolbar">
               <div id="explore-results-summary" class="results-summary" aria-live="polite">Loading electric vehicles...</div>
@@ -276,9 +310,9 @@
     </div>
   </footer>
 
-  <script src="assets/js/main.js?v=1.5" defer></script>
-  <script src="assets/js/ai-agent.js?v=1.5" defer></script>
-  <script src="assets/js/filters.js?v=1.5" defer></script>
-  <script src="assets/js/explore.js?v=1.5" defer></script>
+  <script src="assets/js/main.js?v=1.6" defer></script>
+  <script src="assets/js/ai-agent.js?v=1.6" defer></script>
+  <script src="assets/js/filters.js?v=1.6" defer></script>
+  <script src="assets/js/explore.js?v=1.6" defer></script>
 </body>
 </html>

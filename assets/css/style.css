@@ -1,5 +1,5 @@
 /* ==========================================================================
-   EV Disha – Static Website Version 1.0
+   EV Disha – Electric Mobility Discovery & Comparison Platform
    Core Design System & Component Styles (style.css)
    Palette:
      Primary Navy:     #092B55
@@ -1040,11 +1040,20 @@ select.form-control {
   color: var(--color-white);
 }
 
-.badge-sample {
-  background: rgba(255, 255, 255, 0.92);
+.badge-neutral {
+  background: rgba(255, 255, 255, 0.94);
   backdrop-filter: blur(6px);
-  color: var(--color-body);
+  color: var(--color-navy);
   border: 1px solid var(--color-border);
+}
+
+.badge-highlight {
+  background: rgba(236, 250, 241, 0.96);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  color: #0D6B2B;
+  border: 1px solid rgba(32, 201, 87, 0.45);
+  box-shadow: 0 2px 8px rgba(7, 29, 59, 0.08);
 }
 
 .vehicle-card-body {
@@ -1394,23 +1403,25 @@ select.form-control {
   color: var(--color-white);
 }
 
-/* Sample Data Notice Banner */
-.sample-data-banner {
+/* Dealer Verification & Pricing Advisory Banner */
+.dealer-advisory-banner {
   display: flex;
   align-items: flex-start;
   gap: 12px;
   padding: 14px 18px;
   border-radius: var(--radius-md);
-  background-color: var(--color-warning-bg);
-  border: 1px solid var(--color-warning-border);
-  color: var(--color-warning-text);
+  background: linear-gradient(135deg, #F4F8FC 0%, #EAF2FB 100%);
+  border: 1px solid var(--color-border-strong);
+  border-left: 4px solid var(--color-navy);
+  color: var(--color-body);
   font-size: 0.875rem;
   margin-bottom: 26px;
 }
 
-.sample-data-banner svg {
+.dealer-advisory-banner svg {
   flex-shrink: 0;
   margin-top: 2px;
+  color: var(--color-navy);
 }
 
 /* ==========================================================================
@@ -3507,16 +3518,9 @@ body:has(#floating-compare-bar:not([hidden])) .ev-ai-launcher {
 
 
 /* ==========================================================================
-   Strict Terms & Conditions (T&C) & Website Reference Data Disclaimers
+   Strict Terms & Conditions (T&C) & Dealer Advisory Disclaimers
    ========================================================================== */
-.sample-data-banner {
-  background: linear-gradient(135deg, #F4F8FC 0%, #EAF2FB 100%);
-  border: 1px solid var(--color-border-strong);
-  border-left: 4px solid var(--color-navy);
-  color: var(--color-body);
-}
-
-.sample-data-banner strong {
+.dealer-advisory-banner strong {
   color: var(--color-navy);
 }
 
@@ -3644,4 +3648,793 @@ body:has(#floating-compare-bar:not([hidden])) .ev-ai-launcher {
   flex-direction: column;
   gap: 7px;
   font-size: 0.92rem;
+}
+
+
+/* ==========================================================================
+   All-India Location Selector (Header Pill, Modal & Auto-Filter)
+   ========================================================================== */
+.header-loc-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  height: 40px;
+  padding: 0 12px;
+  border-radius: var(--radius-pill);
+  border: 1.5px solid var(--color-border);
+  background: var(--color-bg-light);
+  color: var(--color-navy);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  max-width: 175px;
+  transition: border-color var(--transition-fast), background-color var(--transition-fast);
+}
+
+.header-loc-btn svg {
+  color: #138036;
+  flex-shrink: 0;
+}
+
+.header-loc-btn span {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@media (hover: hover) {
+  .header-loc-btn:hover {
+    border-color: var(--color-navy);
+    background: var(--color-white);
+  }
+}
+
+.quick-search-form.quick-search-form-5col {
+  grid-template-columns: repeat(4, minmax(0, 1fr)) auto;
+}
+
+.loc-pin-search-row {
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.loc-detected-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  padding: 10px 14px;
+  border-radius: var(--radius-sm);
+  background: #ECFAF1;
+  border: 1px solid var(--color-green-border);
+  color: var(--color-dark-navy);
+  font-size: 0.84rem;
+  margin-bottom: 14px;
+}
+
+.loc-state-city-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.loc-metro-chips {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.loc-city-chip {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 8px 10px;
+  border-radius: 10px;
+  border: 1.5px solid var(--color-border);
+  background: var(--color-white);
+  text-align: left;
+  transition: border-color var(--transition-fast), background-color var(--transition-fast), transform var(--transition-fast);
+}
+
+@media (hover: hover) {
+  .loc-city-chip:hover {
+    border-color: var(--color-green);
+    transform: translateY(-2px);
+  }
+}
+
+.loc-city-chip.is-active {
+  border-color: var(--color-green);
+  background: #ECFAF1;
+}
+
+.loc-city-chip strong {
+  font-size: 0.8rem;
+  color: var(--color-navy);
+}
+
+.loc-city-chip span {
+  font-size: 0.68rem;
+  color: var(--color-muted);
+  font-weight: 600;
+}
+
+.loc-tier2-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  max-height: 150px;
+  overflow-y: auto;
+  padding-right: 4px;
+}
+
+.zip-auto-hint {
+  font-size: 0.73rem;
+  font-weight: 700;
+  color: #138036;
+  margin-top: 4px;
+  min-height: 16px;
+}
+
+.zip-auto-hint:empty {
+  display: none;
+}
+
+.zip-auto-hint.is-error {
+  color: var(--color-danger);
+}
+
+
+/* ==========================================================================
+   Elastic Data UI, Parametric Studio & Executive Visual Polish
+   ========================================================================== */
+
+/* Card Elastic EMI & Running-Cost Strip */
+.vehicle-elastic-strip {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 5px;
+  font-variant-numeric: tabular-nums;
+}
+
+.elastic-emi-chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 8px;
+  border-radius: 6px;
+  background: #ECFAF1;
+  border: 1px solid rgba(32, 201, 87, 0.34);
+  color: #0E6B2C;
+  font-size: 0.71rem;
+  font-weight: 800;
+}
+
+.elastic-run-chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 7px;
+  border-radius: 6px;
+  background: #F1F6FC;
+  border: 1px solid var(--color-border);
+  color: var(--color-navy);
+  font-size: 0.7rem;
+  font-weight: 700;
+}
+
+/* Quick Elastic Pills (Homepage Search, Global Search Modal & Explore Bar) */
+.quick-elastic-bar {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 14px;
+  padding-top: 13px;
+  border-top: 1px dashed var(--color-border);
+}
+
+.quick-elastic-label,
+.elastic-bar-prefix {
+  font-size: 0.74rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-muted);
+  margin-right: 2px;
+}
+
+.elastic-modal-pills {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 7px;
+  padding: 10px 16px;
+  background: #F7FAFE;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.elastic-suggestions-bar {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin-bottom: 16px;
+}
+
+.elastic-quick-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 5px 11px;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--color-border-strong);
+  background: var(--color-white);
+  color: var(--color-navy);
+  font-size: 0.76rem;
+  font-weight: 700;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: border-color var(--transition-fast), background-color var(--transition-fast), color var(--transition-fast), transform var(--transition-fast);
+}
+
+@media (hover: hover) {
+  .elastic-quick-pill:hover {
+    border-color: var(--color-green);
+    background: #ECFAF1;
+    color: #0D6B2B;
+    transform: translateY(-1px);
+  }
+}
+
+.elastic-quick-pill.is-active {
+  background: var(--color-navy);
+  border-color: var(--color-navy);
+  color: var(--color-white);
+}
+
+/* Live Elastic Facet Count Badges in Explore Sidebar */
+.facet-count-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 24px;
+  height: 20px;
+  padding: 0 6px;
+  border-radius: var(--radius-pill);
+  background: #EEF4FB;
+  color: var(--color-navy);
+  font-size: 0.72rem;
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+}
+
+.checkbox-item.is-dimmed {
+  opacity: 0.52;
+}
+
+/* Homepage Interactive Elastic EV Savings, EMI & Range Studio */
+.elastic-studio-section {
+  background:
+    radial-gradient(circle at 86% 16%, rgba(32, 201, 87, 0.18), transparent 44%),
+    radial-gradient(circle at 12% 88%, rgba(14, 59, 115, 0.6), transparent 50%),
+    linear-gradient(135deg, #061830 0%, #08264C 55%, #092B55 100%);
+  color: var(--color-white);
+  position: relative;
+}
+
+.elastic-eyebrow {
+  color: #6EF29A !important;
+}
+
+.elastic-studio-shell {
+  display: grid;
+  grid-template-columns: 390px minmax(0, 1fr);
+  gap: 24px;
+  align-items: stretch;
+}
+
+.elastic-studio-controls {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 20px;
+  padding: 22px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.elastic-seg-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 16px;
+}
+
+.elastic-seg-btn {
+  padding: 6px 11px;
+  border-radius: var(--radius-pill);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.06);
+  color: rgba(255, 255, 255, 0.84);
+  font-size: 0.75rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.elastic-seg-btn.is-active,
+.elastic-seg-btn:hover {
+  background: var(--color-green);
+  border-color: var(--color-green);
+  color: #052010;
+}
+
+.elastic-control-label {
+  display: block;
+  font-size: 0.77rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: rgba(255, 255, 255, 0.76);
+  margin-bottom: 7px;
+}
+
+.elastic-dark-select {
+  background-color: rgba(7, 29, 59, 0.88);
+  border-color: rgba(255, 255, 255, 0.22);
+  color: var(--color-white);
+  font-weight: 700;
+  font-size: 0.88rem;
+}
+
+.elastic-dark-select option,
+.elastic-dark-select optgroup {
+  background: #071D3B;
+  color: #FFFFFF;
+}
+
+.elastic-slider-block {
+  margin-bottom: 16px;
+}
+
+.elastic-slider-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 7px;
+  font-size: 0.84rem;
+}
+
+.elastic-slider-head label {
+  color: rgba(255, 255, 255, 0.85);
+  font-weight: 600;
+}
+
+.elastic-slider-head strong {
+  color: #6EF29A;
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+}
+
+.elastic-slider-block.is-light .elastic-slider-head label {
+  color: var(--color-body);
+}
+
+.elastic-slider-block.is-light .elastic-slider-head strong {
+  color: var(--color-navy);
+}
+
+.elastic-range-input {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 7px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.2);
+  outline: none;
+  cursor: pointer;
+}
+
+.elastic-range-input.is-light {
+  background: #DCE6F2;
+}
+
+.elastic-range-input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--color-green);
+  border: 3px solid #FFFFFF;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.28);
+  cursor: pointer;
+  transition: transform 0.15s ease;
+}
+
+.elastic-range-input::-webkit-slider-thumb:hover {
+  transform: scale(1.12);
+}
+
+.elastic-range-input::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--color-green);
+  border: 3px solid #FFFFFF;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.28);
+  cursor: pointer;
+}
+
+.elastic-slider-ticks {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5px;
+  font-size: 0.68rem;
+  color: rgba(255, 255, 255, 0.54);
+  font-variant-numeric: tabular-nums;
+}
+
+.elastic-tariff-presets {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 8px;
+}
+
+.elastic-tariff-presets button {
+  padding: 3px 9px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.07);
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 0.7rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color var(--transition-fast), border-color var(--transition-fast);
+}
+
+.elastic-tariff-presets button:hover {
+  background: rgba(32, 201, 87, 0.22);
+  border-color: var(--color-green);
+}
+
+.elastic-two-col-controls {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 14px;
+  align-items: end;
+  padding-top: 8px;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.elastic-mode-pills {
+  display: inline-flex;
+  background: rgba(7, 29, 59, 0.72);
+  padding: 3px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  gap: 3px;
+}
+
+.elastic-mode-pills.is-light {
+  background: #EDF3FA;
+  border-color: var(--color-border);
+}
+
+.elastic-mode-btn {
+  padding: 5px 10px;
+  border-radius: 7px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.78);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.elastic-mode-pills.is-light .elastic-mode-btn {
+  color: var(--color-body);
+}
+
+.elastic-mode-btn.is-active {
+  background: var(--color-green);
+  color: #052010;
+}
+
+.elastic-mode-pills.is-light .elastic-mode-btn.is-active {
+  background: var(--color-navy);
+  color: var(--color-white);
+}
+
+/* Studio Live Results Panel */
+.elastic-studio-results {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 20px;
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.elastic-vehicle-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  flex-wrap: wrap;
+  padding-bottom: 14px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.elastic-vehicle-banner-left {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-width: 0;
+}
+
+.elastic-vehicle-banner-left img {
+  width: 88px;
+  height: 56px;
+  object-fit: cover;
+  border-radius: 10px;
+  background: #FFFFFF;
+  padding: 2px;
+  flex-shrink: 0;
+}
+
+.elastic-veh-cat {
+  display: block;
+  font-size: 0.7rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #6EF29A;
+}
+
+.elastic-vehicle-banner-left h3 {
+  font-size: 1.16rem;
+  color: #FFFFFF;
+  margin: 1px 0 2px;
+}
+
+.elastic-vehicle-banner-left h3 a {
+  color: #FFFFFF;
+}
+
+.elastic-vehicle-banner-left h3 a:hover {
+  color: #6EF29A;
+}
+
+.elastic-veh-price {
+  font-size: 0.86rem;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.elastic-veh-price span {
+  font-weight: 500;
+  font-size: 0.78rem;
+  color: rgba(255, 255, 255, 0.68);
+}
+
+.elastic-vehicle-banner-actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.elastic-kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.elastic-kpi-card {
+  padding: 14px 15px;
+  border-radius: 14px;
+  background: rgba(7, 29, 59, 0.65);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  font-variant-numeric: tabular-nums;
+}
+
+.elastic-kpi-card.is-accent {
+  background: linear-gradient(135deg, rgba(32, 201, 87, 0.22) 0%, rgba(13, 107, 43, 0.28) 100%);
+  border-color: rgba(32, 201, 87, 0.45);
+}
+
+.elastic-kpi-label {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.72);
+  margin-bottom: 4px;
+}
+
+.elastic-kpi-value {
+  display: block;
+  font-size: 1.32rem;
+  font-weight: 800;
+  color: #FFFFFF;
+  line-height: 1.2;
+}
+
+.elastic-kpi-card.is-accent .elastic-kpi-value {
+  color: #6EF29A;
+}
+
+.elastic-kpi-value small {
+  font-size: 0.78rem;
+  font-weight: 700;
+  opacity: 0.85;
+}
+
+.elastic-kpi-sub {
+  display: block;
+  font-size: 0.7rem;
+  color: rgba(255, 255, 255, 0.64);
+  margin-top: 3px;
+}
+
+.elastic-cost-compare-bar {
+  padding: 13px 15px;
+  border-radius: 14px;
+  background: rgba(7, 29, 59, 0.58);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.elastic-bar-meta {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  font-size: 0.76rem;
+  color: rgba(255, 255, 255, 0.86);
+  margin-bottom: 5px;
+  font-variant-numeric: tabular-nums;
+}
+
+.elastic-bar-track {
+  height: 8px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.12);
+  overflow: hidden;
+}
+
+.elastic-bar-fill {
+  height: 100%;
+  border-radius: 999px;
+  transition: width 0.25s ease;
+}
+
+.elastic-bar-fill.is-ev {
+  background: linear-gradient(90deg, #20C957 0%, #6EF29A 100%);
+}
+
+.elastic-bar-fill.is-ice {
+  background: linear-gradient(90deg, #F59E0B 0%, #EF4444 100%);
+}
+
+.elastic-studio-disclaimer {
+  margin: 0;
+  font-size: 0.72rem;
+  color: rgba(255, 255, 255, 0.62);
+  line-height: 1.45;
+}
+
+.elastic-studio-disclaimer a {
+  color: #6EF29A;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+/* Vehicle Details Page Model-Specific Elastic Simulator Card */
+.details-elastic-card {
+  background: linear-gradient(180deg, #FFFFFF 0%, #F4F8FC 100%);
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius-lg);
+  padding: 24px 26px;
+  box-shadow: var(--shadow-xs);
+}
+
+.details-elastic-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.details-elastic-grid {
+  display: grid;
+  grid-template-columns: 340px minmax(0, 1fr);
+  gap: 24px;
+  align-items: center;
+}
+
+.details-elastic-kpis {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.det-kpi-tile {
+  padding: 15px 16px;
+  border-radius: 14px;
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  font-variant-numeric: tabular-nums;
+}
+
+.det-kpi-tile.is-green {
+  background: #ECFAF1;
+  border-color: rgba(32, 201, 87, 0.42);
+}
+
+.det-kpi-tile span {
+  display: block;
+  font-size: 0.74rem;
+  font-weight: 700;
+  color: var(--color-muted);
+  margin-bottom: 4px;
+}
+
+.det-kpi-tile strong {
+  display: block;
+  font-size: 1.24rem;
+  font-weight: 800;
+  color: var(--color-navy);
+}
+
+.det-kpi-tile.is-green strong {
+  color: #0D6B2B;
+}
+
+.det-kpi-tile small {
+  display: block;
+  font-size: 0.74rem;
+  color: var(--color-body);
+  margin-top: 3px;
+}
+
+
+/* Enhanced Brand Tile Caption under Popular EV Brands */
+.brand-tile {
+  padding: 12px 12px 10px;
+  gap: 8px;
+}
+
+.brand-tile-caption {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 6px;
+  padding-top: 7px;
+  border-top: 1px solid #EEF3FA;
+  font-size: 0.72rem;
+}
+
+.brand-tile-caption strong {
+  color: var(--color-navy);
+  font-weight: 800;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.brand-tile-caption span {
+  color: #148338;
+  font-weight: 700;
+  white-space: nowrap;
+  flex-shrink: 0;
 }

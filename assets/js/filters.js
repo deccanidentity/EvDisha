@@ -1,7 +1,10 @@
 /* ==========================================================================
-   EV Disha – Reusable Filtering, Sorting & Card Renderer (filters.js)
-   Supports 5 Top Categories + Nested Subcategories:
-     cycles | two-wheelers | three-wheelers | four-wheelers | commercial
+   EV Disha – Elastic Filtering, Fuzzy Search, Parametric Metrics & Cards (filters.js)
+   Supports:
+     - 5 Top Categories + 17 Nested Subcategories
+     - All-India Location Auto-Filter (State, City & 6-Digit PIN / Zipcode)
+     - Elastic Multi-Token Search (Synonyms, Natural Budget/Range Parsing & Typo Tolerance)
+     - Real-Time Parametric EV Ownership, Range, EMI & Running-Cost Engine
    ========================================================================== */
 
 (function () {
@@ -30,9 +33,293 @@
     { id: 'above-350', label: 'Above 350 km' }
   ];
 
+  const ELASTIC_SUGGESTIONS = [
+    { label: '⚡ Fast-Charging SUVs', query: 'suv fast charging' },
+    { label: '💰 Scooters under ₹1.3L', query: 'scooter under 1.3 lakh' },
+    { label: '🛣️ 400+ km Highway EVs', query: 'above 400 km' },
+    { label: '🪪 License-Free Cycles', query: 'no license cycle' },
+    { label: '📦 Commercial & Cargo', query: 'cargo fleet' }
+  ];
+
+  const SYNONYM_CATEGORY_MAP = {
+    car: 'four-wheelers',
+    cars: 'four-wheelers',
+    suv: 'four-wheelers',
+    suvs: 'four-wheelers',
+    cuv: 'four-wheelers',
+    hatchback: 'four-wheelers',
+    sedan: 'four-wheelers',
+    '4w': 'four-wheelers',
+    scooter: 'two-wheelers',
+    scooters: 'two-wheelers',
+    scooty: 'two-wheelers',
+    bike: 'two-wheelers',
+    bikes: 'two-wheelers',
+    motorcycle: 'two-wheelers',
+    motorcycles: 'two-wheelers',
+    moped: 'two-wheelers',
+    '2w': 'two-wheelers',
+    auto: 'three-wheelers',
+    autos: 'three-wheelers',
+    rickshaw: 'three-wheelers',
+    erickshaw: 'three-wheelers',
+    toto: 'three-wheelers',
+    '3w': 'three-wheelers',
+    cycle: 'cycles',
+    cycles: 'cycles',
+    bicycle: 'cycles',
+    bicycles: 'cycles',
+    ecycle: 'cycles',
+    ebike: 'cycles',
+    truck: 'commercial',
+    trucks: 'commercial',
+    lcv: 'commercial',
+    bus: 'commercial',
+    buses: 'commercial',
+    van: 'commercial'
+  };
+
+  const STOP_WORDS = new Set([
+    'in', 'for', 'with', 'and', 'the', 'best', 'good', 'ev', 'evs', 'electric', 'vehicle', 'vehicles',
+    'india', 'indian', 'price', 'model', 'models', 'show', 'find'
+  ]);
+
   function normalizeCategoryId(catId) {
     if (!catId) return '';
     return LEGACY_CATEGORY_MAP[catId] || catId;
+  }
+
+  /* ------------------------------------------------------------------------
+     Bounded Levenshtein Edit Distance for Typo-Tolerant Elastic Matching
+     ------------------------------------------------------------------------ */
+  function editDistanceWithin(a, b, maxDist) {
+    if (a === b) return 0;
+    const la = a.length;
+    const lb = b.length;
+    if (Math.abs(la - lb) > maxDist) return maxDist + 1;
+
+    const prev = new Array(lb + 1);
+    const curr = new Array(lb + 1);
+    for (let j = 0; j <= lb; j++) prev[j] = j;
+
+    for (let i = 1; i <= la; i++) {
+      curr[0] = i;
+      let rowMin = curr[0];
+      const ca = a.charCodeAt(i - 1);
+      for (let j = 1; j <= lb; j++) {
+        const cost = ca === b.charCodeAt(j - 1) ? 0 : 1;
+        const val = Math.min(prev[j] + 1, curr[j - 1] + 1, prev[j - 1] + cost);
+        curr[j] = val;
+        if (val < rowMin) rowMin = val;
+      }
+      if (rowMin > maxDist) return maxDist + 1;
+      for (let j = 0; j <= lb; j++) prev[j] = curr[j];
+    }
+    return prev[lb];
+  }
+
+  /* ------------------------------------------------------------------------
+     Parse Natural-Language Elastic Constraints ("suv under 15 lakh", "400+ km")
+     ------------------------------------------------------------------------ */
+  function parseElasticQuery(rawQuery) {
+    let cleaned = String(rawQuery || '').toLowerCase().trim();
+    const parsed = {
+      maxPrice: null,
+      minPrice: null,
+      minRange: null,
+      licenseFree: false,
+      fastCharging: false,
+      inferredCategory: null,
+      tokens: []
+    };
+
+    if (!cleaned) return parsed;
+
+    // License-free phrase
+    if (/\b(no\s*licen[cs]e|licen[cs]e[\s-]*free)\b/.test(cleaned)) {
+      parsed.licenseFree = true;
+      cleaned = cleaned.replace(/\b(no\s*licen[cs]e|licen[cs]e[\s-]*free)\b/g, ' ');
+    }
+
+    // Fast-charging phrase
+    if (/\b(fast\s*charg\w*|dc\s*fast|quick\s*charg\w*)\b/.test(cleaned)) {
+      parsed.fastCharging = true;
+      cleaned = cleaned.replace(/\b(fast\s*charg\w*|dc\s*fast|quick\s*charg\w*)\b/g, ' ');
+    }
+
+    // Budget ceiling: "under 15 lakh", "below 1.3l", "< 50000", "under 50k"
+    const maxPriceMatch = cleaned.match(/(?:under|below|less\s+than|upto|up\s+to|<|<=)\s*₹?\s*(\d+(?:\.\d+)?)\s*(lakh|lakhs|lac|l|cr|crore|k|thousand)?\b/);
+    if (maxPriceMatch) {
+      const num = parseFloat(maxPriceMatch[1]);
+      const unit = maxPriceMatch[2] || '';
+      if (!Number.isNaN(num)) {
+        if (unit.startsWith('cr')) parsed.maxPrice = num * 10000000;
+        else if (unit.startsWith('l') || (!unit && num <= 99)) parsed.maxPrice = num * 100000;
+        else if (unit === 'k' || unit === 'thousand') parsed.maxPrice = num * 1000;
+        else parsed.maxPrice = num;
+      }
+      cleaned = cleaned.replace(maxPriceMatch[0], ' ');
+    }
+
+    // Budget floor: "above 15 lakh", "over 10 lakh"
+    const minPriceMatch = cleaned.match(/(?:above|over|more\s+than|>|>=)\s*₹?\s*(\d+(?:\.\d+)?)\s*(lakh|lakhs|lac|l|cr|crore)\b/);
+    if (minPriceMatch) {
+      const num = parseFloat(minPriceMatch[1]);
+      const unit = minPriceMatch[2] || 'lakh';
+      if (!Number.isNaN(num)) {
+        parsed.minPrice = unit.startsWith('cr') ? num * 10000000 : num * 100000;
+      }
+      cleaned = cleaned.replace(minPriceMatch[0], ' ');
+    }
+
+    // Range floor: "above 400 km", "over 150 km", "400+ km", "300km+"
+    const rangeMatch =
+      cleaned.match(/(?:above|over|more\s+than|min|minimum|>|>=)\s*(\d{2,3})\s*(?:km|kms)\b/) ||
+      cleaned.match(/\b(\d{2,3})\s*\+\s*(?:km|kms)\b/) ||
+      cleaned.match(/\b(\d{2,3})\s*(?:km|kms)\s*\+/);
+    if (rangeMatch) {
+      parsed.minRange = parseInt(rangeMatch[1], 10);
+      cleaned = cleaned.replace(rangeMatch[0], ' ');
+    }
+
+    const rawTokens = cleaned
+      .replace(/[^a-z0-9.+-]+/g, ' ')
+      .split(/\s+/)
+      .filter(Boolean);
+
+    rawTokens.forEach((tok) => {
+      const normTok = tok.replace(/^[+-]+|[+-]+$/g, '');
+      if (!normTok) return;
+      if (SYNONYM_CATEGORY_MAP[normTok] && !parsed.inferredCategory) {
+        parsed.inferredCategory = SYNONYM_CATEGORY_MAP[normTok];
+      }
+      if (!STOP_WORDS.has(normTok)) {
+        parsed.tokens.push(normTok);
+      }
+    });
+
+    return parsed;
+  }
+
+  function buildVehicleIndexTokens(v) {
+    if (v._elasticCache) return v._elasticCache;
+    const tags = Array.isArray(v.elasticTags) ? v.elasticTags.join(' ') : '';
+    const feats = Array.isArray(v.features) ? v.features.join(' ') : '';
+    const fullText = [
+      v.fullName,
+      v.brand,
+      v.model,
+      v.category,
+      v.subCategory || '',
+      v.chargingConnector || '',
+      v.highlightTag || '',
+      tags,
+      feats
+    ]
+      .join(' ')
+      .toLowerCase();
+
+    const words = Array.from(
+      new Set(
+        fullText
+          .replace(/[^a-z0-9]+/g, ' ')
+          .split(/\s+/)
+          .filter((w) => w.length >= 2)
+      )
+    );
+
+    const cache = {
+      fullText,
+      titleText: `${v.fullName} ${v.brand} ${v.model}`.toLowerCase(),
+      words
+    };
+    Object.defineProperty(v, '_elasticCache', { value: cache, enumerable: false });
+    return cache;
+  }
+
+  function scoreVehicleElastic(vehicle, parsed) {
+    if (parsed.maxPrice !== null && Number(vehicle.priceMin) > parsed.maxPrice) return 0;
+    if (parsed.minPrice !== null && Number(vehicle.priceMax || vehicle.priceMin) < parsed.minPrice) return 0;
+    if (parsed.minRange !== null && Number(vehicle.claimedRangeKm) < parsed.minRange) return 0;
+    if (parsed.licenseFree && Number(vehicle.topSpeedKmh) > 25) return 0;
+    if (parsed.fastCharging) {
+      const dcText = `${vehicle.dcChargingTime || ''} ${vehicle.chargingConnector || ''}`.toLowerCase();
+      const hasDc =
+        dcText.includes('ccs2') ||
+        dcText.includes('dc') ||
+        dcText.includes('fast') ||
+        dcText.includes('mins') ||
+        dcText.includes('hypercharger');
+      if (!hasDc || dcText.includes('not applicable')) return 0;
+    }
+
+    let score = 10;
+    const idx = buildVehicleIndexTokens(vehicle);
+
+    if (parsed.inferredCategory && vehicle.categoryId === parsed.inferredCategory) {
+      score += 35;
+    }
+
+    for (const tok of parsed.tokens) {
+      // If token is purely a category synonym and already matched vehicle.categoryId, reward it
+      if (SYNONYM_CATEGORY_MAP[tok] && vehicle.categoryId === SYNONYM_CATEGORY_MAP[tok]) {
+        score += 25;
+        continue;
+      }
+
+      if (idx.titleText.includes(tok)) {
+        score += 50;
+        continue;
+      }
+
+      if (idx.fullText.includes(tok)) {
+        score += 26;
+        continue;
+      }
+
+      // Fuzzy Levenshtein typo tolerance for tokens >= 4 chars
+      if (tok.length >= 4) {
+        const maxDist = tok.length >= 6 ? 2 : 1;
+        let bestDist = maxDist + 1;
+        for (let i = 0; i < idx.words.length; i++) {
+          const w = idx.words[i];
+          if (w.startsWith(tok) || tok.startsWith(w)) {
+            bestDist = 1;
+            break;
+          }
+          const d = editDistanceWithin(tok, w, maxDist);
+          if (d < bestDist) {
+            bestDist = d;
+            if (bestDist === 1) break;
+          }
+        }
+        if (bestDist <= maxDist) {
+          score += bestDist === 1 ? 22 : 14;
+          continue;
+        }
+      }
+
+      // Hard miss on an explicit non-stopword token
+      return 0;
+    }
+
+    return score + (Number(vehicle.popularity) || 0) * 0.05;
+  }
+
+  function elasticSearchVehicles(vehicles, rawQuery) {
+    const q = String(rawQuery || '').trim();
+    if (!q) return [...vehicles];
+    const parsed = parseElasticQuery(q);
+    const scored = [];
+    for (let i = 0; i < vehicles.length; i++) {
+      const v = vehicles[i];
+      const s = scoreVehicleElastic(v, parsed);
+      if (s > 0) {
+        scored.push({ vehicle: v, score: s });
+      }
+    }
+    scored.sort((a, b) => b.score - a.score);
+    return scored.map((item) => item.vehicle);
   }
 
   function matchesPriceBucket(vehicle, bucketId) {
@@ -74,8 +361,35 @@
     }
   }
 
+  function matchesLocation(vehicle, loc) {
+    if (!loc || (!loc.stateCode && !loc.cityId && !loc.zip)) return true;
+    const scope = vehicle.availabilityScope || 'pan-india';
+    if (scope === 'pan-india') return true;
+
+    if (scope === 'tier1-2') {
+      if (loc.tier === 'tier1' || loc.tier === 'tier2') return true;
+      const wideStates = ['MH', 'KA', 'DL', 'TG', 'TN', 'GJ', 'UP', 'HR', 'KL', 'RJ', 'PB', 'WB', 'MP', 'AP', 'CH', 'GA'];
+      return !loc.stateCode || wideStates.includes(loc.stateCode);
+    }
+
+    if (scope === 'select-hubs') {
+      if (loc.cityId && Array.isArray(vehicle.availableCities) && vehicle.availableCities.includes(loc.cityId)) {
+        return true;
+      }
+      if (loc.stateCode && Array.isArray(vehicle.availableStates)) {
+        if (loc.cityId && Array.isArray(vehicle.availableCities)) {
+          return vehicle.availableCities.includes(loc.cityId);
+        }
+        return vehicle.availableStates.includes(loc.stateCode);
+      }
+      return false;
+    }
+
+    return true;
+  }
+
   function filterVehicles(vehicles, criteria = {}) {
-    const query = (criteria.query || '').trim().toLowerCase();
+    const query = (criteria.query || '').trim();
     const rawCats = Array.isArray(criteria.categories)
       ? criteria.categories.filter(Boolean)
       : criteria.category && criteria.category !== 'all'
@@ -97,13 +411,11 @@
 
     const priceBucket = criteria.priceBucket || 'all';
     const rangeBucket = criteria.rangeBucket || 'all';
+    const location = criteria.location || null;
 
-    return vehicles.filter((v) => {
-      if (query) {
-        const haystack = `${v.fullName} ${v.brand} ${v.model} ${v.category} ${v.subCategory || ''} ${v.chargingConnector}`.toLowerCase();
-        if (!haystack.includes(query)) return false;
-      }
+    const basePool = query ? elasticSearchVehicles(vehicles, query) : vehicles;
 
+    return basePool.filter((v) => {
       if (categories.length > 0 && !categories.includes(v.categoryId)) {
         return false;
       }
@@ -121,6 +433,10 @@
       }
 
       if (!matchesRangeBucket(v, rangeBucket)) {
+        return false;
+      }
+
+      if (!matchesLocation(v, location)) {
         return false;
       }
 
@@ -145,10 +461,97 @@
     }
   }
 
+  /* ------------------------------------------------------------------------
+     Real-Time Parametric Elastic EV Ownership, Range & EMI Calculator
+     ------------------------------------------------------------------------ */
+  function computeElasticOwnership(vehicle, options = {}) {
+    const em = vehicle.elasticMetrics || {};
+    const cat = vehicle.categoryId;
+    const pMin = Number(vehicle.priceMin) || 100000;
+    const kwh = Number(vehicle.batteryCapacityKwh) || 3.0;
+    const claimed = Number(vehicle.claimedRangeKm) || 100;
+
+    const dailyKm = Math.max(5, Number(options.dailyKm || em.typicalDailyKm || 35));
+    const tariffInr = Math.max(2, Number(options.tariffInr || 7.0));
+    const driveMode = options.driveMode || 'city';
+    const downPaymentPct = Math.min(80, Math.max(0, Number(options.downPaymentPct ?? 20)));
+    const defaultTenure = em.loanTenureMonths || (cat === 'four-wheelers' || cat === 'commercial' ? 60 : cat === 'cycles' ? 12 : 36);
+    const tenureMonths = Math.max(6, Number(options.tenureMonths || defaultTenure));
+    const interestRatePct = Number(options.interestRatePct || em.interestRatePct || 8.9);
+
+    const rwObj = em.realWorldRangeKm || {
+      eco: Math.round(claimed * 0.85),
+      city: Math.round(claimed * 0.77),
+      highway: Math.round(claimed * 0.68)
+    };
+    const realWorldRangeKm = rwObj[driveMode] || rwObj.city || claimed;
+    const daysBetweenCharges = Math.max(0.4, Math.round((realWorldRangeKm / Math.max(1, dailyKm)) * 10) / 10);
+
+    // Wall-to-wheel energy consumption (88% charger efficiency)
+    const wallUnitsPerFullCharge = kwh / 0.88;
+    const fullChargeCostInr = Math.round(wallUnitsPerFullCharge * tariffInr);
+    const evCostPerKm = Number(((wallUnitsPerFullCharge * tariffInr) / Math.max(1, realWorldRangeKm)).toFixed(2));
+    const iceCostPerKm = Number(
+      em.iceEquivalentCostPerKmInr ||
+        (cat === 'four-wheelers' ? 7.85 : cat === 'two-wheelers' ? 2.45 : cat === 'three-wheelers' ? 3.85 : cat === 'cycles' ? 1.6 : 9.4)
+    );
+
+    const monthlyKm = dailyKm * 26;
+    const monthlyChargingInr = Math.round(monthlyKm * evCostPerKm);
+    const monthlyFuelIceInr = Math.round(monthlyKm * iceCostPerKm);
+    const monthlySavingsInr = Math.max(0, monthlyFuelIceInr - monthlyChargingInr);
+    const fiveYearSavingsInr = monthlySavingsInr * 60;
+
+    // Loan EMI
+    const principal = pMin * (1 - downPaymentPct / 100);
+    const r = interestRatePct / 100 / 12;
+    const rawEmi =
+      r > 0
+        ? (principal * r * Math.pow(1 + r, tenureMonths)) / (Math.pow(1 + r, tenureMonths) - 1)
+        : principal / tenureMonths;
+    const emiInr = Math.round(rawEmi / 10) * 10;
+
+    const co2Factor =
+      cat === 'cycles' ? 0.045 : cat === 'two-wheelers' ? 0.095 : cat === 'three-wheelers' ? 0.135 : cat === 'four-wheelers' ? 0.165 : kwh >= 100 ? 0.78 : 0.23;
+    const co2SavedKgYr = Math.round(dailyKm * 312 * co2Factor);
+    const evCostRatioPct = Math.min(92, Math.max(6, Math.round((monthlyChargingInr / Math.max(1, monthlyFuelIceInr)) * 100)));
+
+    return {
+      dailyKm,
+      tariffInr,
+      driveMode,
+      realWorldRangeKm,
+      daysBetweenCharges,
+      fullChargeCostInr,
+      evCostPerKm,
+      iceCostPerKm,
+      monthlyChargingInr,
+      monthlyFuelIceInr,
+      monthlySavingsInr,
+      fiveYearSavingsInr,
+      emiInr,
+      tenureMonths,
+      interestRatePct,
+      downPaymentPct,
+      co2SavedKgYr,
+      evCostRatioPct
+    };
+  }
+
+  function formatInrNumber(num) {
+    return '₹' + Math.round(Number(num) || 0).toLocaleString('en-IN');
+  }
+
   function renderVehicleCard(vehicle) {
     const esc = window.EVDisha.escapeHTML;
     const selected = window.EVDisha.isCompared(vehicle.id);
     const detailsUrl = `vehicle-details.html?id=${encodeURIComponent(vehicle.id)}`;
+    const activeLoc = window.EVDisha.getActiveLocation ? window.EVDisha.getActiveLocation() : null;
+    const locLabel = activeLoc ? (activeLoc.cityName || activeLoc.stateName || '') : '';
+    const em = vehicle.elasticMetrics || {};
+    const emiDisp = em.emiDisplay || `${formatInrNumber(computeElasticOwnership(vehicle).emiInr)}/mo*`;
+    const runCost = em.runningCostPerKmInr != null ? `₹${em.runningCostPerKmInr}/km` : '';
+    const highlightTag = vehicle.highlightTag || '⚡ Verified Spec';
 
     return `
       <article class="vehicle-card" data-vehicle-id="${esc(vehicle.id)}">
@@ -162,11 +565,7 @@
           />
           <div class="vehicle-card-badges">
             <span class="badge badge-category">${esc(vehicle.category)}</span>
-            ${
-              vehicle.isSampleData
-                ? `<span class="badge badge-sample" title="Sample reference specifications – verify with authorized dealer">Sample Data</span>`
-                : ''
-            }
+            <span class="badge badge-highlight">${esc(highlightTag)}</span>
           </div>
         </a>
         <div class="vehicle-card-body">
@@ -182,7 +581,13 @@
             <a href="${detailsUrl}">${esc(vehicle.model)}</a>
           </h3>
           <div class="vehicle-card-price">${esc(vehicle.priceDisplay)}</div>
-          <div class="vehicle-card-price-note">Indicative ref. price* &bull; Verify with dealer</div>
+          <div class="vehicle-elastic-strip" title="Indicative green EV loan EMI &amp; home charging cost estimate">
+            <span class="elastic-emi-chip">EMI ~${esc(emiDisp)}</span>
+            ${runCost ? `<span class="elastic-run-chip">${esc(runCost)} run</span>` : ''}
+          </div>
+          <div class="vehicle-card-price-note">
+            ${locLabel ? `*Ex-showroom (${esc(locLabel)}) &bull; Ask dealer` : `*Indicative ex-showroom &bull; Verify with dealer`}
+          </div>
 
           <div class="vehicle-specs-strip vehicle-specs-3col">
             <div>
@@ -257,9 +662,15 @@
   window.EVDisha.Filters = {
     PRICE_BUCKETS,
     RANGE_BUCKETS,
+    ELASTIC_SUGGESTIONS,
     normalizeCategoryId,
+    parseElasticQuery,
+    elasticSearchVehicles,
+    computeElasticOwnership,
+    formatInrNumber,
     matchesPriceBucket,
     matchesRangeBucket,
+    matchesLocation,
     filterVehicles,
     sortVehicles,
     renderVehicleCard,

@@ -1,5 +1,5 @@
 /* ==========================================================================
-   EV Disha – Vehicle Details Controller (vehicle-details.js)
+   EV Disha – Vehicle Details & Elastic Ownership Controller (vehicle-details.js)
    Loads vehicle record dynamically via ?id=<vehicle-id>
    ========================================================================== */
 
@@ -26,9 +26,9 @@
         if (breadcrumbCurrent) breadcrumbCurrent.textContent = 'Vehicle Not Found';
         root.innerHTML = `
           <div class="empty-state">
-            <h1 style="font-size:1.65rem; margin-bottom:10px;">Vehicle Specification Record Not Found</h1>
+            <h1 style="font-size:1.65rem; margin-bottom:10px;">Vehicle Specification Not Found</h1>
             <p style="max-width:520px; margin-inline:auto; margin-bottom:22px;">
-              We could not find an electric vehicle matching ID "<strong>${esc(vehicleId)}</strong>" in our local catalogue.
+              We could not find an electric vehicle matching ID "<strong>${esc(vehicleId)}</strong>" in our catalogue.
             </p>
             <div style="display:flex; justify-content:center; gap:12px; flex-wrap:wrap;">
               <a href="explore.html" class="btn btn-primary">Explore All EVs</a>
@@ -46,7 +46,7 @@
       if (metaDesc) {
         metaDesc.setAttribute(
           'content',
-          `Explore ${vehicle.fullName} specifications on EV Disha: ${vehicle.priceDisplay} ex-showroom reference price, ${vehicle.rangeDisplay} claimed range, ${vehicle.batteryDisplay} battery, charging time, variants, and warranty.`
+          `Explore ${vehicle.fullName} specifications on EV Disha: ${vehicle.priceDisplay} indicative ex-showroom price, ${vehicle.rangeDisplay} claimed range, ${vehicle.batteryDisplay} battery, charging time, variants, and warranty.`
         );
       }
       if (breadcrumbCurrent) {
@@ -77,21 +77,23 @@
       });
       document.head.appendChild(ldScript);
 
-      const galleryImages = Array.isArray(vehicle.images) && vehicle.images.length > 0
-        ? vehicle.images
-        : [vehicle.image];
+      const galleryImages =
+        Array.isArray(vehicle.images) && vehicle.images.length > 0 ? vehicle.images : [vehicle.image];
       const galleryLabels = Array.isArray(vehicle.galleryLabels) ? vehicle.galleryLabels : [];
       const selected = window.EVDisha.isCompared(vehicle.id);
+      const em = vehicle.elasticMetrics || {};
+      const defaultDailyKm = em.typicalDailyKm || 40;
+      const defaultTenure = em.loanTenureMonths || 36;
 
       root.innerHTML = `
-        <div class="sample-data-banner" role="note">
+        <div class="dealer-advisory-banner" role="note">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
             <circle cx="12" cy="12" r="10"></circle>
             <line x1="12" y1="8" x2="12" y2="12"></line>
             <line x1="12" y1="16" x2="12.01" y2="16"></line>
           </svg>
           <div>
-            <strong>Website Reference Data (T&amp;C Apply):</strong> ${esc(vehicle.sampleDataNote)} Please ask an <strong>authorized dealer or brand sales team</strong> for exact city on-road pricing, features, and subsidy clarity. <a href="terms.html" style="font-weight:800; color:var(--color-navy); text-decoration:underline;">View T&amp;C</a>
+            <strong>Specification &amp; Pricing Advisory:</strong> ${esc(vehicle.advisoryNote || vehicle.sampleDataNote)} Consult an <strong>authorized dealer or brand sales team</strong> for exact city on-road pricing, live subsidies, and complete variant clarity. <a href="terms.html" style="font-weight:800; color:var(--color-navy); text-decoration:underline;">View T&amp;C</a>
           </div>
         </div>
 
@@ -136,7 +138,12 @@
                 <span class="badge badge-category">${esc(vehicle.category)}</span>
                 ${
                   vehicle.subCategory
-                    ? `<a href="explore.html?category=${encodeURIComponent(vehicle.categoryId)}&sub=${encodeURIComponent(vehicle.subCategoryId)}" class="badge badge-sample">${esc(vehicle.subCategory)}</a>`
+                    ? `<a href="explore.html?category=${encodeURIComponent(vehicle.categoryId)}&sub=${encodeURIComponent(vehicle.subCategoryId)}" class="badge badge-neutral">${esc(vehicle.subCategory)}</a>`
+                    : ''
+                }
+                ${
+                  vehicle.highlightTag
+                    ? `<span class="badge badge-highlight">${esc(vehicle.highlightTag)}</span>`
                     : ''
                 }
               </div>
@@ -147,11 +154,19 @@
 
             <div class="details-price-block">
               <span style="display:block; font-size:0.78rem; font-weight:700; text-transform:uppercase; color:var(--color-muted);">
-                Indicative Ex-Showroom Price Range (Reference Only)*
+                Indicative Ex-Showroom Price Range*
               </span>
               <div class="details-price-value">${esc(vehicle.priceDisplay)}</div>
+              ${
+                em.emiDisplay
+                  ? `<div class="vehicle-elastic-strip" style="margin-top:6px;">
+                       <span class="elastic-emi-chip">Green EMI ~${esc(em.emiDisplay)}</span>
+                       <span class="elastic-run-chip">~₹${esc(em.runningCostPerKmInr)}/km Home Charge</span>
+                     </div>`
+                  : ''
+              }
               <p class="details-tnc-micro">
-                *As per website reference data. Prices, subsidies &amp; features vary by city/variant—consult authorized dealer or sales team for exact clarity. <a href="terms.html">T&amp;C</a>
+                *Indicative ex-showroom figures. Prices, subsidies &amp; features vary by city and variant—consult an authorized dealer or sales team for exact clarity. <a href="terms.html">T&amp;C</a>
               </p>
             </div>
 
@@ -190,7 +205,7 @@
 
         <!-- Variants & Pricing -->
         <section style="margin-bottom:44px;" aria-labelledby="variants-heading">
-          <h2 id="variants-heading" style="font-size:1.4rem; margin-bottom:16px;">Variants &amp; Reference Prices</h2>
+          <h2 id="variants-heading" style="font-size:1.4rem; margin-bottom:16px;">Variants &amp; Indicative Ex-Showroom Prices</h2>
           <div class="variants-table-wrap">
             <table class="variants-table">
               <thead>
@@ -219,6 +234,54 @@
           </div>
         </section>
 
+        <!-- Interactive Elastic Range, Running-Cost & Green EMI Simulator -->
+        <section style="margin-bottom:44px;" aria-labelledby="details-elastic-heading">
+          <div class="details-elastic-card">
+            <div class="details-elastic-header">
+              <div>
+                <span class="eyebrow">Interactive Elastic Estimator</span>
+                <h2 id="details-elastic-heading" style="font-size:1.35rem; margin-bottom:4px;">${esc(vehicle.model)} Real-World Range, Savings &amp; EMI Calculator</h2>
+                <p style="font-size:0.88rem; color:var(--color-body);">Slide your daily distance, down payment, or driving style to compute live personalized ownership figures.</p>
+              </div>
+              <div class="elastic-mode-pills is-light" id="details-drive-modes" role="group" aria-label="Driving style">
+                <button type="button" class="elastic-mode-btn" data-det-mode="eco">Eco</button>
+                <button type="button" class="elastic-mode-btn is-active" data-det-mode="city">City</button>
+                <button type="button" class="elastic-mode-btn" data-det-mode="highway">Highway</button>
+              </div>
+            </div>
+
+            <div class="details-elastic-grid">
+              <div class="details-elastic-sliders">
+                <div class="elastic-slider-block is-light">
+                  <div class="elastic-slider-head">
+                    <label for="det-daily-km">Daily Usage</label>
+                    <strong id="det-daily-km-val">${defaultDailyKm} km / day</strong>
+                  </div>
+                  <input type="range" id="det-daily-km" class="elastic-range-input is-light" min="10" max="160" step="5" value="${Math.min(160, Math.max(10, defaultDailyKm))}" />
+                </div>
+
+                <div class="elastic-slider-block is-light">
+                  <div class="elastic-slider-head">
+                    <label for="det-down-pct">Down Payment</label>
+                    <strong id="det-down-pct-val">20%</strong>
+                  </div>
+                  <input type="range" id="det-down-pct" class="elastic-range-input is-light" min="10" max="50" step="5" value="20" />
+                </div>
+
+                <div class="elastic-slider-block is-light" style="margin-bottom:0;">
+                  <div class="elastic-slider-head">
+                    <label for="det-tenure">Green Loan Tenure</label>
+                    <strong id="det-tenure-val">${defaultTenure} months</strong>
+                  </div>
+                  <input type="range" id="det-tenure" class="elastic-range-input is-light" min="12" max="84" step="12" value="${defaultTenure}" />
+                </div>
+              </div>
+
+              <div class="details-elastic-kpis" id="details-elastic-kpis" aria-live="polite"></div>
+            </div>
+          </div>
+        </section>
+
         <!-- Technical Specifications Grid -->
         <section style="margin-bottom:44px;" aria-labelledby="tech-specs-heading">
           <h2 id="tech-specs-heading" style="font-size:1.4rem; margin-bottom:18px;">Detailed Technical Specifications</h2>
@@ -238,10 +301,10 @@
               <h3>Driving Range &amp; Performance</h3>
               <dl class="spec-dl">
                 <div class="spec-row"><dt>Claimed Range</dt><dd>${esc(vehicle.rangeDisplay)}</dd></div>
+                <div class="spec-row"><dt>Elastic City / Eco Est.</dt><dd>${em.realWorldRangeKm ? `~${em.realWorldRangeKm.city} km / ${em.realWorldRangeKm.eco} km` : '—'}</dd></div>
                 <div class="spec-row"><dt>Test Standard</dt><dd>${esc(vehicle.rangeStandard)}</dd></div>
                 <div class="spec-row"><dt>Top Speed</dt><dd>${esc(vehicle.topSpeedDisplay)}</dd></div>
                 <div class="spec-row"><dt>Acceleration</dt><dd>${esc(vehicle.accelerationDisplay)}</dd></div>
-                <div class="spec-row"><dt>Vehicle Category</dt><dd>${esc(vehicle.category)}${vehicle.subCategory ? ` • ${esc(vehicle.subCategory)}` : ''}</dd></div>
               </dl>
             </div>
 
@@ -255,11 +318,11 @@
             </div>
 
             <div class="spec-panel">
-              <h3>Warranty &amp; Peace of Mind</h3>
+              <h3>Warranty &amp; Ownership</h3>
               <dl class="spec-dl">
                 <div class="spec-row"><dt>Battery Warranty</dt><dd>${esc(vehicle.warrantyDisplay)}</dd></div>
                 <div class="spec-row"><dt>Standard Vehicle Warranty</dt><dd>${esc(vehicle.vehicleWarranty)}</dd></div>
-                <div class="spec-row"><dt>Record Status</dt><dd>Sample Data (Verify with Dealer)</dd></div>
+                <div class="spec-row"><dt>Dealer Verification</dt><dd>Confirm city on-road quote &amp; subsidy at dealership</dd></div>
               </dl>
             </div>
           </div>
@@ -284,6 +347,79 @@
           </ul>
         </section>
       `;
+
+      // Bind Interactive Model Elastic Calculator
+      if (window.EVDisha.Filters && window.EVDisha.Filters.computeElasticOwnership) {
+        let detMode = 'city';
+        const kmSlider = document.getElementById('det-daily-km');
+        const kmLabel = document.getElementById('det-daily-km-val');
+        const dpSlider = document.getElementById('det-down-pct');
+        const dpLabel = document.getElementById('det-down-pct-val');
+        const tenSlider = document.getElementById('det-tenure');
+        const tenLabel = document.getElementById('det-tenure-val');
+        const kpisBox = document.getElementById('details-elastic-kpis');
+        const modesWrap = document.getElementById('details-drive-modes');
+        const fmt = window.EVDisha.Filters.formatInrNumber;
+
+        function renderModelElastic() {
+          const dKm = parseInt(kmSlider.value, 10) || defaultDailyKm;
+          const dpPct = parseInt(dpSlider.value, 10) || 20;
+          const tenMo = parseInt(tenSlider.value, 10) || defaultTenure;
+
+          kmLabel.textContent = `${dKm} km / day`;
+          dpLabel.textContent = `${dpPct}%`;
+          tenLabel.textContent = `${tenMo} months`;
+
+          const c = window.EVDisha.Filters.computeElasticOwnership(vehicle, {
+            dailyKm: dKm,
+            tariffInr: 7.0,
+            driveMode: detMode,
+            downPaymentPct: dpPct,
+            tenureMonths: tenMo
+          });
+
+          kpisBox.innerHTML = `
+            <div class="det-kpi-tile is-green">
+              <span>Est. Real-World Range (${esc(detMode.toUpperCase())})</span>
+              <strong>${c.realWorldRangeKm} km / charge</strong>
+              <small>Charge once every ~${c.daysBetweenCharges} days</small>
+            </div>
+            <div class="det-kpi-tile is-green">
+              <span>Est. Monthly Fuel Savings</span>
+              <strong>${fmt(c.monthlySavingsInr)} / mo</strong>
+              <small>5-Yr Savings: ~${fmt(c.fiveYearSavingsInr)}</small>
+            </div>
+            <div class="det-kpi-tile">
+              <span>Home Charging Expense</span>
+              <strong>${fmt(c.monthlyChargingInr)} / mo</strong>
+              <small>~₹${c.evCostPerKm}/km (@ ₹7/kWh tariff)</small>
+            </div>
+            <div class="det-kpi-tile">
+              <span>Indicative Green Loan EMI*</span>
+              <strong>${fmt(c.emiInr)} / mo*</strong>
+              <small>${dpPct}% down &bull; ${tenMo} mo @ ${c.interestRatePct}% p.a.</small>
+            </div>
+          `;
+        }
+
+        [kmSlider, dpSlider, tenSlider].forEach((sl) => {
+          if (sl) sl.addEventListener('input', renderModelElastic);
+        });
+
+        if (modesWrap) {
+          modesWrap.addEventListener('click', (e) => {
+            const btn = e.target.closest('[data-det-mode]');
+            if (!btn) return;
+            detMode = btn.getAttribute('data-det-mode') || 'city';
+            modesWrap.querySelectorAll('[data-det-mode]').forEach((b) => {
+              b.classList.toggle('is-active', b === btn);
+            });
+            renderModelElastic();
+          });
+        }
+
+        renderModelElastic();
+      }
 
       // Gallery Thumbnail Interaction
       const mainImg = document.getElementById('details-main-img');
@@ -322,7 +458,7 @@
       root.innerHTML = `
         <div class="empty-state">
           <h3>Unable to Load Vehicle Details</h3>
-          <p>Please open EV Disha from a static HTTP server so local JSON data can be fetched.</p>
+          <p>Please refresh the page and try again shortly.</p>
         </div>
       `;
     }

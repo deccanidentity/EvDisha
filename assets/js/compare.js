@@ -8,8 +8,24 @@
   const SPEC_ROWS = [
     { key: 'category', label: 'Vehicle Category', format: (v) => (v.subCategory ? `${v.category} (${v.subCategory})` : v.category) },
     { key: 'priceDisplay', label: 'Ex-Showroom Price*' },
+    {
+      key: 'elasticOwnership',
+      label: 'Est. Running Cost & EMI*',
+      format: (v) =>
+        v.elasticMetrics
+          ? `₹${v.elasticMetrics.runningCostPerKmInr}/km • EMI ~${v.elasticMetrics.emiDisplay}`
+          : '—'
+    },
     { key: 'batteryDisplay', label: 'Battery Capacity' },
     { key: 'rangeDisplay', label: 'Claimed Range' },
+    {
+      key: 'realWorldRange',
+      label: 'Elastic Range (City / Eco)',
+      format: (v) =>
+        v.elasticMetrics && v.elasticMetrics.realWorldRangeKm
+          ? `~${v.elasticMetrics.realWorldRangeKm.city} km City / ${v.elasticMetrics.realWorldRangeKm.eco} km Eco`
+          : '—'
+    },
     { key: 'topSpeedDisplay', label: 'Top Speed' },
     { key: 'accelerationDisplay', label: 'Acceleration' },
     { key: 'chargingTimeDisplay', label: 'Charging Time' },
@@ -95,7 +111,7 @@
                     ${esc(vehicle.priceDisplay)}
                   </div>
                   <div class="compare-slot-meta">
-                    <span class="badge badge-sample">Sample Data</span>
+                    <span class="badge badge-highlight">${esc(vehicle.highlightTag || '⚡ Verified Spec')}</span>
                     <a href="vehicle-details.html?id=${encodeURIComponent(vehicle.id)}" class="compare-slot-link">
                       Full Specs &rarr;
                     </a>
@@ -202,18 +218,21 @@
 
       function renderPickerList() {
         if (!pickerList) return;
-        const term = pickerSearch ? pickerSearch.value.trim().toLowerCase() : '';
+        const term = pickerSearch ? pickerSearch.value.trim() : '';
         const currentIds = window.EVDisha.getCompareIds();
 
-        const filtered = vehicles.filter((v) => {
-          const catOk = pickerCategory === 'all' || v.categoryId === pickerCategory;
-          const termOk =
-            !term ||
-            v.fullName.toLowerCase().includes(term) ||
-            v.brand.toLowerCase().includes(term) ||
-            v.category.toLowerCase().includes(term);
-          return catOk && termOk;
-        });
+        const basePool =
+          term && window.EVDisha.Filters && window.EVDisha.Filters.elasticSearchVehicles
+            ? window.EVDisha.Filters.elasticSearchVehicles(vehicles, term)
+            : vehicles.filter(
+                (v) =>
+                  !term ||
+                  v.fullName.toLowerCase().includes(term.toLowerCase()) ||
+                  v.brand.toLowerCase().includes(term.toLowerCase()) ||
+                  v.category.toLowerCase().includes(term.toLowerCase())
+              );
+
+        const filtered = basePool.filter((v) => pickerCategory === 'all' || v.categoryId === pickerCategory);
 
         if (filtered.length === 0) {
           pickerList.innerHTML = `<p style="padding:18px; text-align:center; color:var(--color-muted);">No matching vehicles found.</p>`;
@@ -335,7 +354,7 @@
       slotsContainer.innerHTML = `
         <div class="empty-state" style="grid-column:1/-1;">
           <h3>Unable to Load Comparison Data</h3>
-          <p>Please open EV Disha via a static HTTP web server.</p>
+          <p>Please refresh the page and try again shortly.</p>
         </div>
       `;
     }

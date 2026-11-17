@@ -99,7 +99,7 @@
         </button>
       </form>
       <div class="ev-ai-tnc-note">
-        Reference data only &bull; Ask dealer/sales team for final clarity &bull; <a href="terms.html">T&amp;C</a>
+        Indicative EV data &bull; Verify final quotes with authorized dealer &bull; <a href="terms.html">T&amp;C</a>
       </div>
     `;
 
@@ -194,10 +194,14 @@
     function findMentionedVehicles(q) {
       const matches = [];
       const aliases = {
-        'hero-lectro-h5': ['lectro', 'hero lectro', 'h5'],
-        'emotorad-doodle-v3': ['emotorad', 'doodle', 'doodle v3'],
+        'hero-lectro-h5': ['lectro h5', 'h5'],
+        'hero-lectro-c8i': ['lectro c8i', 'c8i', 'step-through'],
+        'emotorad-doodle-v3': ['doodle', 'doodle v3'],
         'emotorad-trex-air': ['t-rex', 'trex', 't-rex air'],
         'kinetic-e-luna': ['e-luna', 'eluna', 'luna', 'kinetic luna'],
+        'tata-tiago-ev': ['tiago', 'tiago.ev', 'tiago ev'],
+        'mg-comet-ev': ['comet', 'mg comet'],
+        'tata-curvv-ev': ['curvv', 'curvv.ev', 'curvv ev'],
         'tata-nexon-ev': ['nexon', 'nexon.ev', 'nexon ev'],
         'mg-windsor-ev': ['windsor', 'mg windsor'],
         'tata-punch-ev': ['punch', 'punch.ev', 'punch ev'],
@@ -210,7 +214,8 @@
         'ultraviolette-f77-mach-2': ['f77', 'ultraviolette', 'mach 2'],
         'revolt-rv400': ['rv400', 'rv 400', 'revolt'],
         'oben-rorr': ['rorr', 'oben rorr'],
-        'tata-ace-ev': ['ace ev', 'tata ace', 'mini truck'],
+        'tata-ace-ev': ['ace ev', 'tata ace'],
+        'mahindra-zeo': ['zeo', 'mahindra zeo'],
         'switch-iev4': ['switch iev4', 'iev4', 'switch lcv'],
         'olectra-k7-ev-bus': ['ebuzz', 'k7', 'olectra bus', 'electric bus'],
         'euler-hiload-ev': ['hiload', 'euler hiload'],
@@ -455,7 +460,7 @@
 
         if (pool.length === 0) {
           return `
-            <p>No sample catalogue models matched that exact budget/segment combination (for example, electric cars start at ₹9.99 Lakh* while electric scooters start at ₹0.95 Lakh*).</p>
+            <p>No listed EV models matched that exact budget and segment combination (for example, electric 4-wheelers start at ₹6.99 Lakh* while electric 2-wheelers start at ₹69,990*).</p>
             <a href="explore.html" class="ev-ai-mini-btn is-primary" style="display:inline-block; margin-top:6px;">Open Full Filter Catalogue &rarr;</a>
           `;
         }
@@ -704,7 +709,7 @@
       } catch (_err) {
         typing.remove();
         appendMessage(
-          '<p>Unable to read local EV catalogue JSON. Please open EV Disha via a static HTTP server.</p>',
+          '<p>Unable to load EV catalogue data right now. Please refresh the page and try again.</p>',
           'bot'
         );
       }

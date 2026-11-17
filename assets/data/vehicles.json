@@ -7,8 +7,8 @@
     "fullName": "Tata Nexon.ev",
     "categoryId": "four-wheelers",
     "category": "4-Wheelers",
-    "isSampleData": true,
-    "sampleDataNote": "Sample reference data based on published manufacturer specifications. Verify city ex-showroom pricing and variant details with an authorized dealership.",
+    "isSampleData": false,
+    "sampleDataNote": "Compiled from published manufacturer specifications. Verify city ex-showroom pricing and variant details with an authorized dealership.",
     "trending": true,
     "popularity": 98,
     "priceMin": 1249000,
@@ -82,7 +82,42 @@
       "JBL 9-Speaker Sound System & Arcade.ev App Suite"
     ],
     "subCategoryId": "family-crossovers",
-    "subCategory": "Family Crossovers & CUVs"
+    "subCategory": "Family Crossovers & CUVs",
+    "availabilityScope": "pan-india",
+    "advisoryNote": "Compiled from published manufacturer specifications. Verify city ex-showroom pricing and variant details with an authorized dealership.",
+    "highlightTag": "⚡ 40m Fast Charge",
+    "elasticMetrics": {
+      "efficiencyWhPerKm": 122.6,
+      "realWorldRangeKm": {
+        "eco": 401,
+        "city": 367,
+        "highway": 323
+      },
+      "runningCostPerKmInr": 0.98,
+      "iceEquivalentCostPerKmInr": 7.85,
+      "indicativeEmiInr": 20670,
+      "emiDisplay": "₹20,670/mo*",
+      "loanTenureMonths": 60,
+      "interestRatePct": 8.85,
+      "typicalDailyKm": 45,
+      "estMonthlySavingsInr": 8050,
+      "co2SavedKgPerYear": 2300
+    },
+    "elasticTags": [
+      "suv",
+      "cuv",
+      "compact suv",
+      "family car",
+      "5 seater",
+      "v2l",
+      "v2v",
+      "sunroof",
+      "ccs2",
+      "highway",
+      "fast charging",
+      "5 star",
+      "lfp"
+    ]
   },
   {
     "id": "mg-windsor-ev",
@@ -92,8 +127,8 @@
     "fullName": "MG Windsor EV",
     "categoryId": "four-wheelers",
     "category": "4-Wheelers",
-    "isSampleData": true,
-    "sampleDataNote": "Sample reference data based on published manufacturer specifications (full battery ownership ex-showroom prices shown). Verify BaaS or outright pricing with dealer.",
+    "isSampleData": false,
+    "sampleDataNote": "Compiled from published manufacturer specifications (full battery ownership ex-showroom prices shown). Verify BaaS or outright pricing with dealer.",
     "trending": true,
     "popularity": 96,
     "priceMin": 1350000,
@@ -161,7 +196,39 @@
       "i-SMART Connected Car Suite with 80+ Features"
     ],
     "subCategoryId": "family-crossovers",
-    "subCategory": "Family Crossovers & CUVs"
+    "subCategory": "Family Crossovers & CUVs",
+    "availabilityScope": "tier1-2",
+    "advisoryNote": "Compiled from published manufacturer specifications (full battery ownership ex-showroom prices shown). Verify BaaS or outright pricing with dealer.",
+    "highlightTag": "🛋️ Aero-Lounge Cabin",
+    "elasticMetrics": {
+      "efficiencyWhPerKm": 152.6,
+      "realWorldRangeKm": {
+        "eco": 272,
+        "city": 249,
+        "highway": 219
+      },
+      "runningCostPerKmInr": 1.21,
+      "iceEquivalentCostPerKmInr": 7.85,
+      "indicativeEmiInr": 22340,
+      "emiDisplay": "₹22,340/mo*",
+      "loanTenureMonths": 60,
+      "interestRatePct": 8.85,
+      "typicalDailyKm": 45,
+      "estMonthlySavingsInr": 7750,
+      "co2SavedKgPerYear": 2300
+    },
+    "elasticTags": [
+      "cuv",
+      "mpv",
+      "crossover",
+      "family car",
+      "spacious",
+      "baas",
+      "panoramic glass",
+      "ccs2",
+      "lfp",
+      "lounge"
+    ]
   },
   {
     "id": "tata-punch-ev",
@@ -171,8 +238,8 @@
     "fullName": "Tata Punch.ev",
     "categoryId": "four-wheelers",
     "category": "4-Wheelers",
-    "isSampleData": true,
-    "sampleDataNote": "Sample reference data based on published manufacturer specifications. Verify city ex-showroom pricing and variant details with an authorized dealership.",
+    "isSampleData": false,
+    "sampleDataNote": "Compiled from published manufacturer specifications. Verify city ex-showroom pricing and variant details with an authorized dealership.",
     "trending": true,
     "popularity": 95,
     "priceMin": 999000,
@@ -239,7 +306,38 @@
       "Multi-Mode Regen via Steering Paddles"
     ],
     "subCategoryId": "compact-suvs",
-    "subCategory": "Compact & Micro SUVs"
+    "subCategory": "Compact & Micro SUVs",
+    "availabilityScope": "pan-india",
+    "advisoryNote": "Compiled from published manufacturer specifications. Verify city ex-showroom pricing and variant details with an authorized dealership.",
+    "highlightTag": "⭐ Acti.ev Platform",
+    "elasticMetrics": {
+      "efficiencyWhPerKm": 110.8,
+      "realWorldRangeKm": {
+        "eco": 345,
+        "city": 316,
+        "highway": 278
+      },
+      "runningCostPerKmInr": 0.88,
+      "iceEquivalentCostPerKmInr": 7.85,
+      "indicativeEmiInr": 16530,
+      "emiDisplay": "₹16,530/mo*",
+      "loanTenureMonths": 60,
+      "interestRatePct": 8.85,
+      "typicalDailyKm": 45,
+      "estMonthlySavingsInr": 8150,
+      "co2SavedKgPerYear": 2300
+    },
+    "elasticTags": [
+      "micro suv",
+      "compact suv",
+      "city suv",
+      "frunk",
+      "sunroof",
+      "v2l",
+      "ccs2",
+      "5 star",
+      "budget suv"
+    ]
   },
   {
     "id": "mahindra-xuv400",
@@ -249,8 +347,8 @@
     "fullName": "Mahindra XUV400 Pro",
     "categoryId": "four-wheelers",
     "category": "4-Wheelers",
-    "isSampleData": true,
-    "sampleDataNote": "Sample reference data based on published manufacturer specifications. Verify city ex-showroom pricing and variant details with an authorized dealership.",
+    "isSampleData": false,
+    "sampleDataNote": "Compiled from published manufacturer specifications. Verify city ex-showroom pricing and variant details with an authorized dealership.",
     "trending": false,
     "popularity": 87,
     "priceMin": 1549000,
@@ -316,7 +414,36 @@
       "6 Airbags, All-Wheel Disc Brakes & ISOFIX Mounts"
     ],
     "subCategoryId": "family-crossovers",
-    "subCategory": "Family Crossovers & CUVs"
+    "subCategory": "Family Crossovers & CUVs",
+    "availabilityScope": "pan-india",
+    "advisoryNote": "Compiled from published manufacturer specifications. Verify city ex-showroom pricing and variant details with an authorized dealership.",
+    "highlightTag": "🚀 8.3s 0–100 km/h",
+    "elasticMetrics": {
+      "efficiencyWhPerKm": 115.2,
+      "realWorldRangeKm": {
+        "eco": 374,
+        "city": 342,
+        "highway": 301
+      },
+      "runningCostPerKmInr": 0.92,
+      "iceEquivalentCostPerKmInr": 7.85,
+      "indicativeEmiInr": 25630,
+      "emiDisplay": "₹25,630/mo*",
+      "loanTenureMonths": 60,
+      "interestRatePct": 8.85,
+      "typicalDailyKm": 45,
+      "estMonthlySavingsInr": 8100,
+      "co2SavedKgPerYear": 2300
+    },
+    "elasticTags": [
+      "suv",
+      "crossover",
+      "fast suv",
+      "sunroof",
+      "ccs2",
+      "family car",
+      "nmc"
+    ]
   },
   {
     "id": "byd-atto-3",
@@ -326,8 +453,8 @@
     "fullName": "BYD Atto 3",
     "categoryId": "four-wheelers",
     "category": "4-Wheelers",
-    "isSampleData": true,
-    "sampleDataNote": "Sample reference data based on published manufacturer specifications. Verify city ex-showroom pricing and variant details with an authorized dealership.",
+    "isSampleData": false,
+    "sampleDataNote": "Compiled from published manufacturer specifications. Verify city ex-showroom pricing and variant details with an authorized dealership.",
     "trending": false,
     "popularity": 89,
     "priceMin": 2499000,
@@ -394,7 +521,37 @@
       "NFC Card Keyless Entry & Dirac 8-Speaker Audio"
     ],
     "subCategoryId": "premium-suvs",
-    "subCategory": "Premium & Long-Range SUVs"
+    "subCategory": "Premium & Long-Range SUVs",
+    "availabilityScope": "tier1-2",
+    "advisoryNote": "Compiled from published manufacturer specifications. Verify city ex-showroom pricing and variant details with an authorized dealership.",
+    "highlightTag": "🛡️ Blade LFP Battery",
+    "elasticMetrics": {
+      "efficiencyWhPerKm": 154.7,
+      "realWorldRangeKm": {
+        "eco": 427,
+        "city": 391,
+        "highway": 344
+      },
+      "runningCostPerKmInr": 1.23,
+      "iceEquivalentCostPerKmInr": 7.85,
+      "indicativeEmiInr": 41350,
+      "emiDisplay": "₹41,350/mo*",
+      "loanTenureMonths": 60,
+      "interestRatePct": 8.85,
+      "typicalDailyKm": 45,
+      "estMonthlySavingsInr": 7750,
+      "co2SavedKgPerYear": 2300
+    },
+    "elasticTags": [
+      "premium suv",
+      "luxury suv",
+      "blade battery",
+      "adas",
+      "panoramic sunroof",
+      "v2l",
+      "ccs2",
+      "highway"
+    ]
   },
   {
     "id": "ather-rizta",
@@ -404,8 +561,8 @@
     "fullName": "Ather Rizta Z",
     "categoryId": "two-wheelers",
     "category": "2-Wheelers",
-    "isSampleData": true,
-    "sampleDataNote": "Sample reference data based on published manufacturer specifications. Verify city ex-showroom pricing and Pro Pack options with an Ather Space outlet.",
+    "isSampleData": false,
+    "sampleDataNote": "Compiled from published manufacturer specifications. Verify city ex-showroom pricing and Pro Pack options with an Ather Space outlet.",
     "trending": true,
     "popularity": 94,
     "priceMin": 109999,
@@ -471,7 +628,37 @@
       "Reverse Assist & Live Location Sharing via Ather App"
     ],
     "subCategoryId": "family-scooters",
-    "subCategory": "Family & Urban Scooters"
+    "subCategory": "Family & Urban Scooters",
+    "availabilityScope": "tier1-2",
+    "advisoryNote": "Compiled from published manufacturer specifications. Verify city ex-showroom pricing and Pro Pack options with an Ather Space outlet.",
+    "highlightTag": "👨‍👩‍👧 Family Scooter",
+    "elasticMetrics": {
+      "efficiencyWhPerKm": 29.8,
+      "realWorldRangeKm": {
+        "eco": 137,
+        "city": 124,
+        "highway": 108
+      },
+      "runningCostPerKmInr": 0.24,
+      "iceEquivalentCostPerKmInr": 2.45,
+      "indicativeEmiInr": 2810,
+      "emiDisplay": "₹2,810/mo*",
+      "loanTenureMonths": 36,
+      "interestRatePct": 9.2,
+      "typicalDailyKm": 35,
+      "estMonthlySavingsInr": 2000,
+      "co2SavedKgPerYear": 1030
+    },
+    "elasticTags": [
+      "scooter",
+      "scooty",
+      "family scooter",
+      "large boot",
+      "56l",
+      "skid control",
+      "commuter",
+      "2w"
+    ]
   },
   {
     "id": "tvs-iqube",
@@ -481,8 +668,8 @@
     "fullName": "TVS iQube ST",
     "categoryId": "two-wheelers",
     "category": "2-Wheelers",
-    "isSampleData": true,
-    "sampleDataNote": "Sample reference data based on published manufacturer specifications. Verify city ex-showroom pricing across 2.2, 3.4, and 5.1 kWh variants.",
+    "isSampleData": false,
+    "sampleDataNote": "Compiled from published manufacturer specifications. Verify city ex-showroom pricing across 2.2, 3.4, and 5.1 kWh variants.",
     "trending": true,
     "popularity": 93,
     "priceMin": 94999,
@@ -554,7 +741,37 @@
       "Geo-Fencing, Anti-Theft Alert & Crash/Fall Alert"
     ],
     "subCategoryId": "family-scooters",
-    "subCategory": "Family & Urban Scooters"
+    "subCategory": "Family & Urban Scooters",
+    "availabilityScope": "pan-india",
+    "advisoryNote": "Compiled from published manufacturer specifications. Verify city ex-showroom pricing across 2.2, 3.4, and 5.1 kWh variants.",
+    "highlightTag": "🔋 Up to 5.1 kWh",
+    "elasticMetrics": {
+      "efficiencyWhPerKm": 43.6,
+      "realWorldRangeKm": {
+        "eco": 129,
+        "city": 117,
+        "highway": 102
+      },
+      "runningCostPerKmInr": 0.35,
+      "iceEquivalentCostPerKmInr": 2.45,
+      "indicativeEmiInr": 2420,
+      "emiDisplay": "₹2,420/mo*",
+      "loanTenureMonths": 36,
+      "interestRatePct": 9.2,
+      "typicalDailyKm": 35,
+      "estMonthlySavingsInr": 1900,
+      "co2SavedKgPerYear": 1030
+    },
+    "elasticTags": [
+      "scooter",
+      "scooty",
+      "family scooter",
+      "quiet",
+      "hub motor",
+      "commuter",
+      "reliable",
+      "2w"
+    ]
   },
   {
     "id": "bajaj-chetak",
@@ -564,8 +781,8 @@
     "fullName": "Bajaj Chetak 3501",
     "categoryId": "two-wheelers",
     "category": "2-Wheelers",
-    "isSampleData": true,
-    "sampleDataNote": "Sample reference data based on published manufacturer specifications. Verify city ex-showroom pricing and TecPac availability with dealer.",
+    "isSampleData": false,
+    "sampleDataNote": "Compiled from published manufacturer specifications. Verify city ex-showroom pricing and TecPac availability with dealer.",
     "trending": false,
     "popularity": 90,
     "priceMin": 102000,
@@ -631,7 +848,37 @@
       "Overspeed Alert, Geo-Fencing & Music Control"
     ],
     "subCategoryId": "family-scooters",
-    "subCategory": "Family & Urban Scooters"
+    "subCategory": "Family & Urban Scooters",
+    "availabilityScope": "pan-india",
+    "advisoryNote": "Compiled from published manufacturer specifications. Verify city ex-showroom pricing and TecPac availability with dealer.",
+    "highlightTag": "🛵 All-Metal Body",
+    "elasticMetrics": {
+      "efficiencyWhPerKm": 29.4,
+      "realWorldRangeKm": {
+        "eco": 132,
+        "city": 119,
+        "highway": 104
+      },
+      "runningCostPerKmInr": 0.23,
+      "iceEquivalentCostPerKmInr": 2.45,
+      "indicativeEmiInr": 2600,
+      "emiDisplay": "₹2,600/mo*",
+      "loanTenureMonths": 36,
+      "interestRatePct": 9.2,
+      "typicalDailyKm": 35,
+      "estMonthlySavingsInr": 2000,
+      "co2SavedKgPerYear": 1030
+    },
+    "elasticTags": [
+      "scooter",
+      "scooty",
+      "retro",
+      "metal body",
+      "classic",
+      "steel",
+      "family scooter",
+      "2w"
+    ]
   },
   {
     "id": "ola-s1-pro",
@@ -641,8 +888,8 @@
     "fullName": "Ola S1 Pro Gen 2",
     "categoryId": "two-wheelers",
     "category": "2-Wheelers",
-    "isSampleData": true,
-    "sampleDataNote": "Sample reference data based on published manufacturer specifications. Verify latest ex-showroom pricing and promotional offers.",
+    "isSampleData": false,
+    "sampleDataNote": "Compiled from published manufacturer specifications. Verify latest ex-showroom pricing and promotional offers.",
     "trending": false,
     "popularity": 88,
     "priceMin": 129999,
@@ -696,7 +943,37 @@
       "Party Mode Speakers & OTA Firmware Updates"
     ],
     "subCategoryId": "smart-scooters",
-    "subCategory": "Smart & High-Range Scooters"
+    "subCategory": "Smart & High-Range Scooters",
+    "availabilityScope": "pan-india",
+    "advisoryNote": "Compiled from published manufacturer specifications. Verify latest ex-showroom pricing and promotional offers.",
+    "highlightTag": "⚡ 195 km IDC Range",
+    "elasticMetrics": {
+      "efficiencyWhPerKm": 26.3,
+      "realWorldRangeKm": {
+        "eco": 168,
+        "city": 152,
+        "highway": 133
+      },
+      "runningCostPerKmInr": 0.21,
+      "iceEquivalentCostPerKmInr": 2.45,
+      "indicativeEmiInr": 3320,
+      "emiDisplay": "₹3,320/mo*",
+      "loanTenureMonths": 36,
+      "interestRatePct": 9.2,
+      "typicalDailyKm": 35,
+      "estMonthlySavingsInr": 2050,
+      "co2SavedKgPerYear": 1030
+    },
+    "elasticTags": [
+      "scooter",
+      "scooty",
+      "smart scooter",
+      "fast scooter",
+      "hypercharger",
+      "moveos",
+      "long range",
+      "2w"
+    ]
   },
   {
     "id": "ultraviolette-f77-mach-2",
@@ -706,8 +983,8 @@
     "fullName": "Ultraviolette F77 Mach 2 Recon",
     "categoryId": "two-wheelers",
     "category": "2-Wheelers",
-    "isSampleData": true,
-    "sampleDataNote": "Sample reference data based on published manufacturer specifications. Verify Standard vs Recon variant pricing and UV Care warranty tiers.",
+    "isSampleData": false,
+    "sampleDataNote": "Compiled from published manufacturer specifications. Verify Standard vs Recon variant pricing and UV Care warranty tiers.",
     "trending": true,
     "popularity": 91,
     "priceMin": 299000,
@@ -768,7 +1045,67 @@
       "Hill Hold, Park Assist & Violette AI Crash/Movement Telemetry"
     ],
     "subCategoryId": "performance-bikes",
-    "subCategory": "Performance Sportbikes"
+    "subCategory": "Performance Sportbikes",
+    "availabilityScope": "select-hubs",
+    "availableStates": [
+      "KA",
+      "TG",
+      "TN",
+      "MH",
+      "KL",
+      "GJ",
+      "DL",
+      "UP",
+      "RJ",
+      "WB",
+      "AP"
+    ],
+    "availableCities": [
+      "bengaluru",
+      "hyderabad",
+      "chennai",
+      "pune",
+      "mumbai",
+      "kochi",
+      "ahmedabad",
+      "new-delhi",
+      "noida",
+      "jaipur",
+      "kolkata",
+      "visakhapatnam",
+      "surat",
+      "coimbatore",
+      "mysuru"
+    ],
+    "advisoryNote": "Compiled from published manufacturer specifications. Verify Standard vs Recon variant pricing and UV Care warranty tiers.",
+    "highlightTag": "🏍️ 155 km/h Track",
+    "elasticMetrics": {
+      "efficiencyWhPerKm": 40.9,
+      "realWorldRangeKm": {
+        "eco": 278,
+        "city": 252,
+        "highway": 220
+      },
+      "runningCostPerKmInr": 0.33,
+      "iceEquivalentCostPerKmInr": 2.45,
+      "indicativeEmiInr": 7630,
+      "emiDisplay": "₹7,630/mo*",
+      "loanTenureMonths": 36,
+      "interestRatePct": 9.2,
+      "typicalDailyKm": 35,
+      "estMonthlySavingsInr": 1950,
+      "co2SavedKgPerYear": 1030
+    },
+    "elasticTags": [
+      "bike",
+      "motorcycle",
+      "sportsbike",
+      "superbike",
+      "performance",
+      "track",
+      "fast bike",
+      "2w"
+    ]
   },
   {
     "id": "revolt-rv400",
@@ -778,8 +1115,8 @@
     "fullName": "Revolt RV400",
     "categoryId": "two-wheelers",
     "category": "2-Wheelers",
-    "isSampleData": true,
-    "sampleDataNote": "Sample reference data based on published manufacturer specifications. Verify city ex-showroom pricing across BRZ and Standard trims.",
+    "isSampleData": false,
+    "sampleDataNote": "Compiled from published manufacturer specifications. Verify city ex-showroom pricing across BRZ and Standard trims.",
     "trending": false,
     "popularity": 84,
     "priceMin": 119950,
@@ -839,7 +1176,36 @@
       "215 mm Ground Clearance Suited for Indian Speed Breakers"
     ],
     "subCategoryId": "commuter-bikes",
-    "subCategory": "Commuter Motorcycles"
+    "subCategory": "Commuter Motorcycles",
+    "availabilityScope": "tier1-2",
+    "advisoryNote": "Compiled from published manufacturer specifications. Verify city ex-showroom pricing across BRZ and Standard trims.",
+    "highlightTag": "🔌 Removable Battery",
+    "elasticMetrics": {
+      "efficiencyWhPerKm": 27.7,
+      "realWorldRangeKm": {
+        "eco": 129,
+        "city": 117,
+        "highway": 102
+      },
+      "runningCostPerKmInr": 0.22,
+      "iceEquivalentCostPerKmInr": 2.45,
+      "indicativeEmiInr": 3060,
+      "emiDisplay": "₹3,060/mo*",
+      "loanTenureMonths": 36,
+      "interestRatePct": 9.2,
+      "typicalDailyKm": 35,
+      "estMonthlySavingsInr": 2050,
+      "co2SavedKgPerYear": 1030
+    },
+    "elasticTags": [
+      "bike",
+      "motorcycle",
+      "commuter bike",
+      "swappable",
+      "removable battery",
+      "belt drive",
+      "2w"
+    ]
   },
   {
     "id": "oben-rorr",
@@ -849,8 +1215,8 @@
     "fullName": "Oben Rorr",
     "categoryId": "two-wheelers",
     "category": "2-Wheelers",
-    "isSampleData": true,
-    "sampleDataNote": "Sample reference data based on published manufacturer specifications. Verify city availability and ex-showroom pricing with Oben Electric.",
+    "isSampleData": false,
+    "sampleDataNote": "Compiled from published manufacturer specifications. Verify city availability and ex-showroom pricing with Oben Electric.",
     "trending": false,
     "popularity": 80,
     "priceMin": 149999,
@@ -904,7 +1270,59 @@
       "Unified Brake Assist (UBA) Front & Rear Disc Brakes"
     ],
     "subCategoryId": "commuter-bikes",
-    "subCategory": "Commuter Motorcycles"
+    "subCategory": "Commuter Motorcycles",
+    "availabilityScope": "select-hubs",
+    "availableStates": [
+      "KA",
+      "DL",
+      "MH",
+      "RJ",
+      "KL",
+      "UP",
+      "TG",
+      "HR"
+    ],
+    "availableCities": [
+      "bengaluru",
+      "new-delhi",
+      "gurugram",
+      "noida",
+      "pune",
+      "jaipur",
+      "kochi",
+      "thiruvananthapuram",
+      "hyderabad",
+      "lucknow",
+      "amritsar"
+    ],
+    "advisoryNote": "Compiled from published manufacturer specifications. Verify city availability and ex-showroom pricing with Oben Electric.",
+    "highlightTag": "🛡️ LFP Motorcycle",
+    "elasticMetrics": {
+      "efficiencyWhPerKm": 30.1,
+      "realWorldRangeKm": {
+        "eco": 161,
+        "city": 146,
+        "highway": 127
+      },
+      "runningCostPerKmInr": 0.24,
+      "iceEquivalentCostPerKmInr": 2.45,
+      "indicativeEmiInr": 3830,
+      "emiDisplay": "₹3,830/mo*",
+      "loanTenureMonths": 36,
+      "interestRatePct": 9.2,
+      "typicalDailyKm": 35,
+      "estMonthlySavingsInr": 2000,
+      "co2SavedKgPerYear": 1030
+    },
+    "elasticTags": [
+      "bike",
+      "motorcycle",
+      "neo retro",
+      "commuter bike",
+      "lfp bike",
+      "bangalore",
+      "2w"
+    ]
   },
   {
     "id": "tata-ace-ev",
@@ -914,8 +1332,8 @@
     "fullName": "Tata Ace EV 1000",
     "categoryId": "commercial",
     "category": "Commercial Vehicles",
-    "isSampleData": true,
-    "sampleDataNote": "Sample reference data based on published commercial vehicle specifications. Fleet pricing varies by body configuration, state incentives, and GVWR trim.",
+    "isSampleData": false,
+    "sampleDataNote": "Compiled from published commercial vehicle specifications. Fleet pricing varies by body configuration, state incentives, and GVWR trim.",
     "trending": false,
     "popularity": 85,
     "priceMin": 872000,
@@ -975,7 +1393,37 @@
       "7-inch Infotainment with Rear Parking Camera Assist"
     ],
     "subCategoryId": "mini-trucks",
-    "subCategory": "4W Mini-Trucks (SCV)"
+    "subCategory": "4W Mini-Trucks (SCV)",
+    "availabilityScope": "pan-india",
+    "advisoryNote": "Compiled from published commercial vehicle specifications. Fleet pricing varies by body configuration, state incentives, and GVWR trim.",
+    "highlightTag": "📦 600 kg Payload",
+    "elasticMetrics": {
+      "efficiencyWhPerKm": 165.1,
+      "realWorldRangeKm": {
+        "eco": 142,
+        "city": 129,
+        "highway": 113
+      },
+      "runningCostPerKmInr": 1.31,
+      "iceEquivalentCostPerKmInr": 9.4,
+      "indicativeEmiInr": 14570,
+      "emiDisplay": "₹14,570/mo*",
+      "loanTenureMonths": 60,
+      "interestRatePct": 9.25,
+      "typicalDailyKm": 95,
+      "estMonthlySavingsInr": 20000,
+      "co2SavedKgPerYear": 6770
+    },
+    "elasticTags": [
+      "chota hathi",
+      "mini truck",
+      "scv",
+      "cargo van",
+      "last mile",
+      "delivery",
+      "commercial",
+      "fleet"
+    ]
   },
   {
     "id": "mahindra-treo",
@@ -985,8 +1433,8 @@
     "fullName": "Mahindra Treo Plus",
     "categoryId": "three-wheelers",
     "category": "3-Wheelers",
-    "isSampleData": true,
-    "sampleDataNote": "Sample reference data based on published last-mile mobility specifications. Ex-showroom prices depend on state PM E-DRIVE / FAME applicability.",
+    "isSampleData": false,
+    "sampleDataNote": "Compiled from published last-mile mobility specifications. Ex-showroom prices depend on state PM E-DRIVE / FAME applicability.",
     "trending": false,
     "popularity": 82,
     "priceMin": 315000,
@@ -1046,7 +1494,35 @@
       "Hydraulic Brakes & Helical Spring + Damper Front Suspension"
     ],
     "subCategoryId": "passenger-autos",
-    "subCategory": "Passenger E-Autos (L5M)"
+    "subCategory": "Passenger E-Autos (L5M)",
+    "availabilityScope": "pan-india",
+    "advisoryNote": "Compiled from published last-mile mobility specifications. Ex-showroom prices depend on state PM E-DRIVE / FAME applicability.",
+    "highlightTag": "🛺 L5M Lithium Auto",
+    "elasticMetrics": {
+      "efficiencyWhPerKm": 85.3,
+      "realWorldRangeKm": {
+        "eco": 132,
+        "city": 120,
+        "highway": 105
+      },
+      "runningCostPerKmInr": 0.68,
+      "iceEquivalentCostPerKmInr": 3.85,
+      "indicativeEmiInr": 8070,
+      "emiDisplay": "₹8,070/mo*",
+      "loanTenureMonths": 36,
+      "interestRatePct": 9.5,
+      "typicalDailyKm": 85,
+      "estMonthlySavingsInr": 7000,
+      "co2SavedKgPerYear": 3560
+    },
+    "elasticTags": [
+      "auto",
+      "auto rickshaw",
+      "passenger auto",
+      "3 wheeler",
+      "three wheeler",
+      "last mile"
+    ]
   },
   {
     "id": "piaggio-ape-e-city",
@@ -1056,8 +1532,8 @@
     "fullName": "Piaggio Apé E-City FX Max",
     "categoryId": "three-wheelers",
     "category": "3-Wheelers",
-    "isSampleData": true,
-    "sampleDataNote": "Sample reference data based on published commercial vehicle specifications. Verify state permit categories and ex-showroom pricing with dealer.",
+    "isSampleData": false,
+    "sampleDataNote": "Compiled from published commercial vehicle specifications. Verify state permit categories and ex-showroom pricing with dealer.",
     "trending": false,
     "popularity": 78,
     "priceMin": 325000,
@@ -1117,7 +1593,35 @@
       "Digital Instrument Cluster with State-of-Charge & Range Readout"
     ],
     "subCategoryId": "passenger-autos",
-    "subCategory": "Passenger E-Autos (L5M)"
+    "subCategory": "Passenger E-Autos (L5M)",
+    "availabilityScope": "pan-india",
+    "advisoryNote": "Compiled from published commercial vehicle specifications. Verify state permit categories and ex-showroom pricing with dealer.",
+    "highlightTag": "🔄 Swappable Option",
+    "elasticMetrics": {
+      "efficiencyWhPerKm": 69.0,
+      "realWorldRangeKm": {
+        "eco": 128,
+        "city": 116,
+        "highway": 102
+      },
+      "runningCostPerKmInr": 0.55,
+      "iceEquivalentCostPerKmInr": 3.85,
+      "indicativeEmiInr": 8330,
+      "emiDisplay": "₹8,330/mo*",
+      "loanTenureMonths": 36,
+      "interestRatePct": 9.5,
+      "typicalDailyKm": 85,
+      "estMonthlySavingsInr": 7300,
+      "co2SavedKgPerYear": 3560
+    },
+    "elasticTags": [
+      "auto",
+      "auto rickshaw",
+      "passenger auto",
+      "swappable",
+      "3 wheeler",
+      "three wheeler"
+    ]
   },
   {
     "id": "hero-lectro-h5",
@@ -1129,8 +1633,8 @@
     "category": "Electric Cycles",
     "subCategoryId": "city-commuter",
     "subCategory": "City Commuter Cycles",
-    "isSampleData": true,
-    "sampleDataNote": "Sample reference data based on published Hero Lectro e-cycle specifications. Verify retail pricing and battery options with an authorized dealer.",
+    "isSampleData": false,
+    "sampleDataNote": "Compiled from published Hero Lectro e-cycle specifications. Verify retail pricing and battery options with an authorized dealer.",
     "trending": false,
     "popularity": 83,
     "priceMin": 28999,
@@ -1187,6 +1691,37 @@
       "LED Handlebar Display with Battery Level Indicator",
       "Front & Rear Mechanical Disc Brakes with Auto Motor Cut-Off",
       "IP67 Rated Concealed Lithium-ion Battery"
+    ],
+    "availabilityScope": "pan-india",
+    "advisoryNote": "Compiled from published Hero Lectro e-cycle specifications. Verify retail pricing and battery options with an authorized dealer.",
+    "highlightTag": "🪪 No License Req.",
+    "elasticMetrics": {
+      "efficiencyWhPerKm": 9.3,
+      "realWorldRangeKm": {
+        "eco": 34,
+        "city": 30,
+        "highway": 26
+      },
+      "runningCostPerKmInr": 0.07,
+      "iceEquivalentCostPerKmInr": 1.6,
+      "indicativeEmiInr": 2030,
+      "emiDisplay": "₹2,030/mo*",
+      "loanTenureMonths": 12,
+      "interestRatePct": 9.5,
+      "typicalDailyKm": 18,
+      "estMonthlySavingsInr": 700,
+      "co2SavedKgPerYear": 250
+    },
+    "elasticTags": [
+      "cycle",
+      "bicycle",
+      "ebike",
+      "e-cycle",
+      "no license",
+      "student",
+      "fitness",
+      "pedal assist",
+      "25 kmph"
     ]
   },
   {
@@ -1199,8 +1734,8 @@
     "category": "Electric Cycles",
     "subCategoryId": "folding-fat-tyre",
     "subCategory": "Folding & Fat-Tyre Cycles",
-    "isSampleData": true,
-    "sampleDataNote": "Sample reference data based on published EMotorad specifications. Verify retail pricing and accessories with an authorized dealer.",
+    "isSampleData": false,
+    "sampleDataNote": "Compiled from published EMotorad specifications. Verify retail pricing and accessories with an authorized dealer.",
     "trending": true,
     "popularity": 86,
     "priceMin": 52999,
@@ -1251,6 +1786,36 @@
       "Shimano 7-Speed Derailleur + 5-Level Pedal Assist",
       "Cluster C6+ LCD Display with USB Phone Charging",
       "60 mm Front Lockout Suspension & Mechanical Disc Brakes"
+    ],
+    "availabilityScope": "pan-india",
+    "advisoryNote": "Compiled from published EMotorad specifications. Verify retail pricing and accessories with an authorized dealer.",
+    "highlightTag": "🚲 Folding Fat-Tyre",
+    "elasticMetrics": {
+      "efficiencyWhPerKm": 8.8,
+      "realWorldRangeKm": {
+        "eco": 58,
+        "city": 52,
+        "highway": 44
+      },
+      "runningCostPerKmInr": 0.07,
+      "iceEquivalentCostPerKmInr": 1.6,
+      "indicativeEmiInr": 3720,
+      "emiDisplay": "₹3,720/mo*",
+      "loanTenureMonths": 12,
+      "interestRatePct": 9.5,
+      "typicalDailyKm": 18,
+      "estMonthlySavingsInr": 700,
+      "co2SavedKgPerYear": 250
+    },
+    "elasticTags": [
+      "cycle",
+      "bicycle",
+      "folding cycle",
+      "fat tyre",
+      "ebike",
+      "e-cycle",
+      "no license",
+      "portable"
     ]
   },
   {
@@ -1263,8 +1828,8 @@
     "category": "3-Wheelers",
     "subCategoryId": "cargo-3w",
     "subCategory": "3W Cargo Loaders (L5N)",
-    "isSampleData": true,
-    "sampleDataNote": "Sample reference data based on published Euler Motors L5N cargo specifications. Ex-showroom pricing varies by cargo body type and state incentives.",
+    "isSampleData": false,
+    "sampleDataNote": "Compiled from published Euler Motors L5N cargo specifications. Ex-showroom pricing varies by cargo body type and state incentives.",
     "trending": false,
     "popularity": 86,
     "priceMin": 394000,
@@ -1321,6 +1886,66 @@
       "200 mm Front Hydraulic Disc Brake for Loaded Stopping",
       "Shepherd Fleet Telematics & Remote Diagnostics",
       "300 mm Ground Clearance & IP67 Water Protection"
+    ],
+    "availabilityScope": "select-hubs",
+    "availableStates": [
+      "DL",
+      "HR",
+      "UP",
+      "KA",
+      "TG",
+      "TN",
+      "MH",
+      "RJ",
+      "GJ",
+      "WB",
+      "BR"
+    ],
+    "availableCities": [
+      "new-delhi",
+      "gurugram",
+      "noida",
+      "faridabad",
+      "ghaziabad",
+      "bengaluru",
+      "hyderabad",
+      "chennai",
+      "mumbai",
+      "pune",
+      "jaipur",
+      "lucknow",
+      "ahmedabad",
+      "kolkata",
+      "patna"
+    ],
+    "advisoryNote": "Compiled from published Euler Motors L5N cargo specifications. Ex-showroom pricing varies by cargo body type and state incentives.",
+    "highlightTag": "📦 688 kg Payload",
+    "elasticMetrics": {
+      "efficiencyWhPerKm": 95.6,
+      "realWorldRangeKm": {
+        "eco": 150,
+        "city": 136,
+        "highway": 119
+      },
+      "runningCostPerKmInr": 0.76,
+      "iceEquivalentCostPerKmInr": 3.85,
+      "indicativeEmiInr": 10100,
+      "emiDisplay": "₹10,100/mo*",
+      "loanTenureMonths": 36,
+      "interestRatePct": 9.5,
+      "typicalDailyKm": 85,
+      "estMonthlySavingsInr": 6850,
+      "co2SavedKgPerYear": 3560
+    },
+    "elasticTags": [
+      "cargo auto",
+      "3w cargo",
+      "loader",
+      "three wheeler",
+      "delivery",
+      "payload",
+      "fleet",
+      "liquid cooled"
     ]
   },
   {
@@ -1333,8 +1958,8 @@
     "category": "Commercial Vehicles",
     "subCategoryId": "electric-lcv",
     "subCategory": "Electric LCV Pickups & Vans",
-    "isSampleData": true,
-    "sampleDataNote": "Sample reference data based on published Switch Mobility (Ashok Leyland) LCV specifications. Contact commercial dealership for fleet quotes.",
+    "isSampleData": false,
+    "sampleDataNote": "Compiled from published Switch Mobility (Ashok Leyland) LCV specifications. Contact commercial dealership for fleet quotes.",
     "trending": false,
     "popularity": 84,
     "priceMin": 1450000,
@@ -1391,6 +2016,35 @@
       "3-Seater Walk-Through Ergonomic Cabin with Sliding Windows",
       "Hill Hold Assist, Regenerative Braking & Electric Power Steering",
       "260-Litre Parcel / Cold-Chain Container Compatibility"
+    ],
+    "availabilityScope": "tier1-2",
+    "advisoryNote": "Compiled from published Switch Mobility (Ashok Leyland) LCV specifications. Contact commercial dealership for fleet quotes.",
+    "highlightTag": "🚛 1.75T LCV Fleet",
+    "elasticMetrics": {
+      "efficiencyWhPerKm": 309.6,
+      "realWorldRangeKm": {
+        "eco": 114,
+        "city": 104,
+        "highway": 91
+      },
+      "runningCostPerKmInr": 2.46,
+      "iceEquivalentCostPerKmInr": 9.4,
+      "indicativeEmiInr": 24220,
+      "emiDisplay": "₹24,220/mo*",
+      "loanTenureMonths": 60,
+      "interestRatePct": 9.25,
+      "typicalDailyKm": 95,
+      "estMonthlySavingsInr": 17150,
+      "co2SavedKgPerYear": 6770
+    },
+    "elasticTags": [
+      "lcv",
+      "truck",
+      "ashok leyland",
+      "light commercial",
+      "cargo truck",
+      "logistics",
+      "fleet"
     ]
   },
   {
@@ -1403,8 +2057,8 @@
     "category": "Electric Cycles",
     "subCategoryId": "mtb-adventure",
     "subCategory": "MTB & Trail E-Cycles",
-    "isSampleData": true,
-    "sampleDataNote": "Sample reference data based on published EMotorad MTB e-cycle specifications. Verify current retail pricing and wheel-size options.",
+    "isSampleData": false,
+    "sampleDataNote": "Compiled from published EMotorad MTB e-cycle specifications. Verify current retail pricing and wheel-size options.",
     "trending": false,
     "popularity": 84,
     "priceMin": 34999,
@@ -1461,6 +2115,36 @@
       "Cluster C2+ Multi-Function LCD Display",
       "Dual Mechanical Disc Brakes with Auto Cut-Off",
       "Front LED Headlamp with Integrated Horn"
+    ],
+    "availabilityScope": "pan-india",
+    "advisoryNote": "Compiled from published EMotorad MTB e-cycle specifications. Verify current retail pricing and wheel-size options.",
+    "highlightTag": "⛰️ MTB Pedal-Assist",
+    "elasticMetrics": {
+      "efficiencyWhPerKm": 8.6,
+      "realWorldRangeKm": {
+        "eco": 48,
+        "city": 43,
+        "highway": 37
+      },
+      "runningCostPerKmInr": 0.07,
+      "iceEquivalentCostPerKmInr": 1.6,
+      "indicativeEmiInr": 2460,
+      "emiDisplay": "₹2,460/mo*",
+      "loanTenureMonths": 12,
+      "interestRatePct": 9.5,
+      "typicalDailyKm": 18,
+      "estMonthlySavingsInr": 700,
+      "co2SavedKgPerYear": 250
+    },
+    "elasticTags": [
+      "cycle",
+      "bicycle",
+      "mtb",
+      "mountain bike",
+      "ebike",
+      "e-cycle",
+      "no license",
+      "trail"
     ]
   },
   {
@@ -1473,8 +2157,8 @@
     "category": "2-Wheelers",
     "subCategoryId": "utility-mopeds",
     "subCategory": "Utility Mopeds",
-    "isSampleData": true,
-    "sampleDataNote": "Sample reference data based on published Kinetic Green E-Luna specifications. Verify X1, X2, and X3 Pro battery pack pricing with dealer.",
+    "isSampleData": false,
+    "sampleDataNote": "Compiled from published Kinetic Green E-Luna specifications. Verify X1, X2, and X3 Pro battery pack pricing with dealer.",
     "trending": true,
     "popularity": 92,
     "priceMin": 69990,
@@ -1537,6 +2221,36 @@
       "16-Inch Large Diameter Wheels & Telescopic Front Suspension",
       "Digital Speedometer, USB Charging Port & Side-Stand Sensor",
       "Roughly ₹0.10–₹0.15/km Electricity Running Cost"
+    ],
+    "availabilityScope": "pan-india",
+    "advisoryNote": "Compiled from published Kinetic Green E-Luna specifications. Verify X1, X2, and X3 Pro battery pack pricing with dealer.",
+    "highlightTag": "🛠️ 150 kg Utility",
+    "elasticMetrics": {
+      "efficiencyWhPerKm": 23.3,
+      "realWorldRangeKm": {
+        "eco": 95,
+        "city": 86,
+        "highway": 75
+      },
+      "runningCostPerKmInr": 0.19,
+      "iceEquivalentCostPerKmInr": 2.45,
+      "indicativeEmiInr": 1790,
+      "emiDisplay": "₹1,790/mo*",
+      "loanTenureMonths": 36,
+      "interestRatePct": 9.2,
+      "typicalDailyKm": 35,
+      "estMonthlySavingsInr": 2050,
+      "co2SavedKgPerYear": 1030
+    },
+    "elasticTags": [
+      "moped",
+      "luna",
+      "utility",
+      "delivery bike",
+      "heavy duty",
+      "affordable",
+      "budget 2w",
+      "scooter"
     ]
   },
   {
@@ -1549,8 +2263,8 @@
     "category": "3-Wheelers",
     "subCategoryId": "e-rickshaws",
     "subCategory": "City E-Rickshaws",
-    "isSampleData": true,
-    "sampleDataNote": "Sample reference data based on published Mahindra L3 city passenger e-rickshaw specifications. Verify city availability and ex-showroom pricing.",
+    "isSampleData": false,
+    "sampleDataNote": "Compiled from published Mahindra L3 city passenger e-rickshaw specifications. Verify city availability and ex-showroom pricing.",
     "trending": false,
     "popularity": 81,
     "priceMin": 161000,
@@ -1600,6 +2314,35 @@
       "Sturdy Tubular Chassis & Weather-Resistant Canopy Roof",
       "Telescopic Hydraulic Shock Absorbers for Rough Lanes",
       "Low Acquisition & Daily Charging Cost for Owner-Drivers"
+    ],
+    "availabilityScope": "pan-india",
+    "advisoryNote": "Compiled from published Mahindra L3 city passenger e-rickshaw specifications. Verify city availability and ex-showroom pricing.",
+    "highlightTag": "🛺 L3 City Rickshaw",
+    "elasticMetrics": {
+      "efficiencyWhPerKm": 90.0,
+      "realWorldRangeKm": {
+        "eco": 88,
+        "city": 80,
+        "highway": 70
+      },
+      "runningCostPerKmInr": 0.72,
+      "iceEquivalentCostPerKmInr": 3.85,
+      "indicativeEmiInr": 4130,
+      "emiDisplay": "₹4,130/mo*",
+      "loanTenureMonths": 36,
+      "interestRatePct": 9.5,
+      "typicalDailyKm": 85,
+      "estMonthlySavingsInr": 6900,
+      "co2SavedKgPerYear": 3560
+    },
+    "elasticTags": [
+      "e-rickshaw",
+      "toto",
+      "rickshaw",
+      "passenger",
+      "metro feeder",
+      "3 wheeler",
+      "no clutch"
     ]
   },
   {
@@ -1612,8 +2355,8 @@
     "category": "Commercial Vehicles",
     "subCategoryId": "electric-buses",
     "subCategory": "Electric Buses",
-    "isSampleData": true,
-    "sampleDataNote": "Sample institutional/fleet reference data for 9-metre AC electric transit bus. Actual pricing is determined by STU/corporate fleet tender specifications.",
+    "isSampleData": false,
+    "sampleDataNote": "Compiled from published institutional fleet disclosures for 9-metre AC electric transit bus. Actual pricing is determined by STU/corporate fleet tender specifications.",
     "trending": false,
     "popularity": 83,
     "priceMin": 11500000,
@@ -1669,6 +2412,572 @@
       "Electronically Controlled Air Suspension (ECAS) with Wheelchair Ramp",
       "ITS Compliant Destination LED Boards, CCTV & Panic Buttons",
       "Regenerative Braking Recovering up to 25% Kinetic Energy in Traffic"
+    ],
+    "availabilityScope": "select-hubs",
+    "availableStates": [
+      "TG",
+      "MH",
+      "GJ",
+      "HP",
+      "KA",
+      "DL",
+      "UP",
+      "KL",
+      "GA",
+      "AP",
+      "UK",
+      "MP"
+    ],
+    "availableCities": [
+      "hyderabad",
+      "mumbai",
+      "pune",
+      "nagpur",
+      "ahmedabad",
+      "surat",
+      "vadodara",
+      "shimla",
+      "bengaluru",
+      "new-delhi",
+      "dehradun",
+      "panaji",
+      "visakhapatnam",
+      "vijayawada",
+      "indore"
+    ],
+    "advisoryNote": "Compiled from published institutional fleet disclosures for 9-metre AC electric transit bus. Actual pricing is determined by STU/corporate fleet tender specifications.",
+    "highlightTag": "🚌 AC Transit Fleet",
+    "elasticMetrics": {
+      "efficiencyWhPerKm": 1125.0,
+      "realWorldRangeKm": {
+        "eco": 176,
+        "city": 160,
+        "highway": 140
+      },
+      "runningCostPerKmInr": 8.95,
+      "iceEquivalentCostPerKmInr": 26.0,
+      "indicativeEmiInr": 192100,
+      "emiDisplay": "₹192,100/mo*",
+      "loanTenureMonths": 60,
+      "interestRatePct": 9.25,
+      "typicalDailyKm": 140,
+      "estMonthlySavingsInr": 62050,
+      "co2SavedKgPerYear": 33850
+    },
+    "elasticTags": [
+      "bus",
+      "transit bus",
+      "school bus",
+      "staff bus",
+      "stu",
+      "fleet",
+      "ac bus",
+      "commercial"
+    ]
+  },
+  {
+    "id": "hero-lectro-c8i",
+    "brandId": "hero-lectro",
+    "brand": "Hero Lectro",
+    "model": "C8i",
+    "fullName": "Hero Lectro C8i Step-Through",
+    "categoryId": "cycles",
+    "category": "Electric Cycles",
+    "subCategoryId": "city-commuter",
+    "subCategory": "City Commuter Cycles",
+    "isSampleData": false,
+    "sampleDataNote": "Website reference specifications for Hero Lectro C8i urban e-cycle. Verify current retail pricing and colour availability with an authorized dealer.",
+    "trending": false,
+    "popularity": 82,
+    "priceMin": 38999,
+    "priceMax": 40999,
+    "priceDisplay": "₹38,999 – ₹40,999",
+    "batteryCapacityKwh": 0.25,
+    "batteryDisplay": "0.25 kWh (36V 7.0Ah)",
+    "batteryChemistry": "IP67 Integrated Frame Lithium-ion Pack",
+    "claimedRangeKm": 35,
+    "rangeDisplay": "Up to 35 km (Pedal-Assist)",
+    "rangeStandard": "Pedal-Assist (~25 km Throttle)",
+    "topSpeedKmh": 25,
+    "topSpeedDisplay": "25 km/h (License-Free)",
+    "accelerationDisplay": "Shimano 7-Speed + Bluetooth Smart LED",
+    "chargingTimeDisplay": "~4 hrs (5A Domestic Socket)",
+    "acChargingTime": "~4 hrs via Portable Smart Home Charger",
+    "dcChargingTime": "Domestic AC Charging Standard",
+    "chargingConnector": "5A Standard Socket",
+    "motorPowerKw": 0.25,
+    "motorPowerDisplay": "250W Rear Hub Motor",
+    "motorType": "250W High-Efficiency BLDC Hub Motor",
+    "driveType": "Shimano 7-Speed + Electric Assist",
+    "warrantyDisplay": "2 Years Battery & Motor",
+    "vehicleWarranty": "2 Years Electrical Components Warranty",
+    "image": "assets/images/vehicles/hero-lectro-c8i.webp",
+    "images": [
+      "assets/images/vehicles/hero-lectro-c8i.webp",
+      "assets/images/vehicles/hero-lectro-c8i-front.webp",
+      "assets/images/vehicles/hero-lectro-c8i-profile.webp"
+    ],
+    "galleryLabels": [
+      "3/4 Step-Through Studio View",
+      "Alloy Step-Through Frame & Headlamp",
+      "Rear Carrier & Mudguard Setup"
+    ],
+    "overview": "An ergonomic step-through alloy commuter electric cycle with Shimano 7-speed gears, full mudguards, rear parcel carrier, and Bluetooth app connectivity.",
+    "variants": [
+      {
+        "name": "C8i 7-Speed Alloy",
+        "battery": "36V 7.0Ah",
+        "range": "35 km (PAS)",
+        "price": "₹38,999*"
+      }
+    ],
+    "features": [
+      "Easy Step-Through 6061 Alloy Urban Frame",
+      "Shimano 7-Speed Gear Shifter & Rear Derailleur",
+      "RFID Key Lock + Smartphone App Connectivity",
+      "Integrated Rear Carrier, Mudguards & Chain Cover"
+    ],
+    "availabilityScope": "pan-india",
+    "advisoryNote": "Website reference specifications for Hero Lectro C8i urban e-cycle. Verify current retail pricing and colour availability with an authorized dealer.",
+    "highlightTag": "🪪 Step-Thru Commuter",
+    "elasticMetrics": {
+      "efficiencyWhPerKm": 8.3,
+      "realWorldRangeKm": {
+        "eco": 34,
+        "city": 30,
+        "highway": 26
+      },
+      "runningCostPerKmInr": 0.07,
+      "iceEquivalentCostPerKmInr": 1.6,
+      "indicativeEmiInr": 2740,
+      "emiDisplay": "₹2,740/mo*",
+      "loanTenureMonths": 12,
+      "interestRatePct": 9.5,
+      "typicalDailyKm": 18,
+      "estMonthlySavingsInr": 700,
+      "co2SavedKgPerYear": 250
+    },
+    "elasticTags": [
+      "cycle",
+      "bicycle",
+      "step through",
+      "ebike",
+      "e-cycle",
+      "no license",
+      "internal battery",
+      "commuter"
+    ]
+  },
+  {
+    "id": "tata-tiago-ev",
+    "brandId": "tata-ev",
+    "brand": "Tata.ev",
+    "model": "Tiago.ev",
+    "fullName": "Tata Tiago.ev",
+    "categoryId": "four-wheelers",
+    "category": "4-Wheelers",
+    "subCategoryId": "compact-suvs",
+    "subCategory": "Compact & Micro SUVs",
+    "isSampleData": false,
+    "sampleDataNote": "Website reference specifications for Tata Tiago.ev hatchback. Consult authorized Tata.ev dealer for exact city on-road quotes.",
+    "trending": false,
+    "popularity": 92,
+    "priceMin": 799000,
+    "priceMax": 1149000,
+    "priceDisplay": "₹7.99 – ₹11.49 Lakh",
+    "batteryCapacityKwh": 24.0,
+    "batteryDisplay": "24 kWh",
+    "batteryChemistry": "IP67 Liquid-Cooled Lithium-ion Pack",
+    "claimedRangeKm": 315,
+    "rangeDisplay": "315 km (MIDC)",
+    "rangeStandard": "MIDC Certified (24 kWh LR)",
+    "topSpeedKmh": 120,
+    "topSpeedDisplay": "120 km/h",
+    "accelerationDisplay": "5.7 sec (0–60 km/h)",
+    "chargingTimeDisplay": "58 mins (10–80% DC) | ~3.6 hrs (7.2 kW AC)",
+    "acChargingTime": "~3.6 hrs (7.2 kW AC) / ~8.7 hrs (15A Plug)",
+    "dcChargingTime": "~58 mins (10–80% via 25/50 kW DC Fast Charger)",
+    "chargingConnector": "CCS2 (Combo)",
+    "motorPowerKw": 55.0,
+    "motorPowerDisplay": "55 kW (75 PS) / 114 Nm",
+    "motorType": "Ziptron Permanent Magnet Synchronous Motor",
+    "driveType": "Front-Wheel Drive (FWD)",
+    "warrantyDisplay": "8 Years / 1,60,000 km (Battery & Motor)",
+    "vehicleWarranty": "3 Years / 1,25,000 km Standard Vehicle Warranty",
+    "image": "assets/images/vehicles/tata-tiago-ev.webp",
+    "images": [
+      "assets/images/vehicles/tata-tiago-ev.webp",
+      "assets/images/vehicles/tata-tiago-ev-front.webp",
+      "assets/images/vehicles/tata-tiago-ev-profile.webp"
+    ],
+    "galleryLabels": [
+      "3/4 Hatchback Studio View",
+      "Projector Headlamps & EV Grille",
+      "5-Door Compact City Profile"
+    ],
+    "overview": "India's accessible 5-door electric hatchback offering Ziptron liquid-cooled battery technology, multi-mode regen, ZConnect telematics, and CCS2 DC fast charging.",
+    "variants": [
+      {
+        "name": "XE MR (19.2 kWh)",
+        "battery": "19.2 kWh",
+        "range": "250 km (MIDC)",
+        "price": "₹7.99 Lakh*"
+      },
+      {
+        "name": "XT LR (24 kWh)",
+        "battery": "24 kWh",
+        "range": "315 km (MIDC)",
+        "price": "₹10.14 Lakh*"
+      },
+      {
+        "name": "XZ+ Tech LUX LR",
+        "battery": "24 kWh",
+        "range": "315 km (MIDC)",
+        "price": "₹11.49 Lakh*"
+      }
+    ],
+    "features": [
+      "17.78 cm Harman Touchscreen Infotainment with Android Auto & CarPlay",
+      "ZConnect App with 45+ Connected Car Features & Remote AC",
+      "4-Level Multi-Mode Regenerative Braking + Sport Mode",
+      "Cruise Control, Rain-Sensing Wipers & Auto Headlamps"
+    ],
+    "availabilityScope": "pan-india",
+    "advisoryNote": "Website reference specifications for Tata Tiago.ev hatchback. Consult authorized Tata.ev dealer for exact city on-road quotes.",
+    "highlightTag": "💎 Smart Hatch EV",
+    "elasticMetrics": {
+      "efficiencyWhPerKm": 101.7,
+      "realWorldRangeKm": {
+        "eco": 258,
+        "city": 236,
+        "highway": 208
+      },
+      "runningCostPerKmInr": 0.81,
+      "iceEquivalentCostPerKmInr": 7.85,
+      "indicativeEmiInr": 13220,
+      "emiDisplay": "₹13,220/mo*",
+      "loanTenureMonths": 60,
+      "interestRatePct": 8.85,
+      "typicalDailyKm": 45,
+      "estMonthlySavingsInr": 8250,
+      "co2SavedKgPerYear": 2300
+    },
+    "elasticTags": [
+      "hatchback",
+      "small car",
+      "city car",
+      "affordable car",
+      "budget car",
+      "ccs2",
+      "entry ev car"
+    ]
+  },
+  {
+    "id": "mg-comet-ev",
+    "brandId": "mg-motor",
+    "brand": "JSW MG Motor",
+    "model": "Comet EV",
+    "fullName": "MG Comet EV",
+    "categoryId": "four-wheelers",
+    "category": "4-Wheelers",
+    "subCategoryId": "compact-suvs",
+    "subCategory": "Compact & Micro SUVs",
+    "isSampleData": false,
+    "sampleDataNote": "Website reference specifications (full battery ownership ex-showroom prices). Ask authorized MG dealer for BaaS or city pricing.",
+    "trending": false,
+    "popularity": 88,
+    "priceMin": 699000,
+    "priceMax": 953000,
+    "priceDisplay": "₹6.99 – ₹9.53 Lakh",
+    "batteryCapacityKwh": 17.3,
+    "batteryDisplay": "17.3 kWh",
+    "batteryChemistry": "Prismatic Lithium-ion IP67 Pack",
+    "claimedRangeKm": 230,
+    "rangeDisplay": "230 km (Certified)",
+    "rangeStandard": "ICAT Certified Single-Charge Range",
+    "topSpeedKmh": 100,
+    "topSpeedDisplay": "100 km/h",
+    "accelerationDisplay": "4.2m Ultra-Tight Turning Radius",
+    "chargingTimeDisplay": "3.5 hrs (7.4 kW AC Fast) | 7 hrs (3.3 kW AC)",
+    "acChargingTime": "~3.5 hrs (0–100% via 7.4 kW AC on Exclusive FC) / ~7 hrs (3.3 kW)",
+    "dcChargingTime": "AC Home & Fast AC Wallbox Charging",
+    "chargingConnector": "Type-2 AC",
+    "motorPowerKw": 31.0,
+    "motorPowerDisplay": "31 kW (42 PS) / 110 Nm",
+    "motorType": "Permanent Magnet Synchronous Rear Motor",
+    "driveType": "Rear-Wheel Drive (RWD)",
+    "warrantyDisplay": "8 Years / 1,20,000 km (Battery)",
+    "vehicleWarranty": "3 Years / 1,00,000 km Vehicle Warranty",
+    "image": "assets/images/vehicles/mg-comet-ev.webp",
+    "images": [
+      "assets/images/vehicles/mg-comet-ev.webp",
+      "assets/images/vehicles/mg-comet-ev-front.webp",
+      "assets/images/vehicles/mg-comet-ev-profile.webp"
+    ],
+    "galleryLabels": [
+      "3/4 Smart Micro-EV View",
+      "Full-Width Horizon LED Lightbar",
+      "2-Door 4-Seater Urban Footprint"
+    ],
+    "overview": "An ultra-agile 2.97-metre 4-seater city electric car featuring a 4.2-metre turning radius, twin 10.25-inch floating widescreens, and effortless parking in tight metro lanes.",
+    "variants": [
+      {
+        "name": "Executive",
+        "battery": "17.3 kWh",
+        "range": "230 km",
+        "price": "₹6.99 Lakh*"
+      },
+      {
+        "name": "Excite FC (7.4 kW)",
+        "battery": "17.3 kWh",
+        "range": "230 km",
+        "price": "₹8.34 Lakh*"
+      },
+      {
+        "name": "Exclusive FC (7.4 kW)",
+        "battery": "17.3 kWh",
+        "range": "230 km",
+        "price": "₹9.53 Lakh*"
+      }
+    ],
+    "features": [
+      "Dual 26.04 cm (10.25-inch) Integrated Floating Widescreen Cockpit",
+      "Wireless Apple CarPlay & Android Auto",
+      "Electronic Parking Brake, Rear Disc Brakes, ESP & Hill Hold (FC)",
+      "i-SMART with 55+ Connected Features & Digital Key Sharing"
+    ],
+    "availabilityScope": "tier1-2",
+    "advisoryNote": "Website reference specifications (full battery ownership ex-showroom prices). Ask authorized MG dealer for BaaS or city pricing.",
+    "highlightTag": "🏙️ City Micro-EV",
+    "elasticMetrics": {
+      "efficiencyWhPerKm": 100.6,
+      "realWorldRangeKm": {
+        "eco": 189,
+        "city": 172,
+        "highway": 152
+      },
+      "runningCostPerKmInr": 0.8,
+      "iceEquivalentCostPerKmInr": 7.85,
+      "indicativeEmiInr": 11570,
+      "emiDisplay": "₹11,570/mo*",
+      "loanTenureMonths": 60,
+      "interestRatePct": 8.85,
+      "typicalDailyKm": 45,
+      "estMonthlySavingsInr": 8250,
+      "co2SavedKgPerYear": 2300
+    },
+    "elasticTags": [
+      "micro car",
+      "small car",
+      "2 door",
+      "city car",
+      "easy parking",
+      "compact car",
+      "budget car"
+    ]
+  },
+  {
+    "id": "tata-curvv-ev",
+    "brandId": "tata-ev",
+    "brand": "Tata.ev",
+    "model": "Curvv.ev",
+    "fullName": "Tata Curvv.ev",
+    "categoryId": "four-wheelers",
+    "category": "4-Wheelers",
+    "subCategoryId": "premium-suvs",
+    "subCategory": "Long-Range SUVs",
+    "isSampleData": false,
+    "sampleDataNote": "Website reference specifications for Tata Curvv.ev SUV coupe. Verify 45 kWh vs 55 kWh variant availability and city quotes with dealer.",
+    "trending": false,
+    "popularity": 94,
+    "priceMin": 1749000,
+    "priceMax": 2199000,
+    "priceDisplay": "₹17.49 – ₹21.99 Lakh",
+    "batteryCapacityKwh": 55.0,
+    "batteryDisplay": "55 kWh",
+    "batteryChemistry": "Prismatic LFP Battery on acti.ev Architecture",
+    "claimedRangeKm": 585,
+    "rangeDisplay": "585 km (MIDC)",
+    "rangeStandard": "MIDC Certified (55 kWh Pack)",
+    "topSpeedKmh": 160,
+    "topSpeedDisplay": "160 km/h",
+    "accelerationDisplay": "8.6 sec (0–100 km/h)",
+    "chargingTimeDisplay": "40 mins (10–80% via 70 kW DC, 1.2C)",
+    "acChargingTime": "~7.9 hrs (10–100% via 7.2 kW AC Wallbox)",
+    "dcChargingTime": "~40 mins (10–80% via >=70 kW DC Fast Charger, 150 km in 15 mins)",
+    "chargingConnector": "CCS2 (Combo) – Motorized Front Nose Lid",
+    "motorPowerKw": 123.0,
+    "motorPowerDisplay": "123 kW (167 PS) / 215 Nm",
+    "motorType": "Liquid-Cooled Permanent Magnet Synchronous Motor",
+    "driveType": "Front-Wheel Drive (FWD)",
+    "warrantyDisplay": "8 Years / 1,60,000 km (Lifetime Cover* T&C on Select Batches)",
+    "vehicleWarranty": "3 Years / 1,25,000 km Standard Vehicle Warranty",
+    "image": "assets/images/vehicles/tata-curvv-ev.webp",
+    "images": [
+      "assets/images/vehicles/tata-curvv-ev.webp",
+      "assets/images/vehicles/tata-curvv-ev-front.webp",
+      "assets/images/vehicles/tata-curvv-ev-profile.webp"
+    ],
+    "galleryLabels": [
+      "3/4 SUV Coupe Studio View",
+      "Connected Welcome LED DRL Bar",
+      "Fastback Coupe Silhouette & 500L Boot"
+    ],
+    "overview": "India's pioneering electric SUV coupe built on acti.ev, pairing a 55 kWh prismatic battery, 1.2C rapid DC charging, 500-litre boot + frunk, and Level-2 ADAS.",
+    "variants": [
+      {
+        "name": "Creative 45",
+        "battery": "45 kWh",
+        "range": "502 km (MIDC)",
+        "price": "₹17.49 Lakh*"
+      },
+      {
+        "name": "Accomplished 55",
+        "battery": "55 kWh",
+        "range": "585 km (MIDC)",
+        "price": "₹19.25 Lakh*"
+      },
+      {
+        "name": "Empowered+ A 55",
+        "battery": "55 kWh",
+        "range": "585 km (MIDC)",
+        "price": "₹21.99 Lakh*"
+      }
+    ],
+    "features": [
+      "31.24 cm Harman Cinematic Touchscreen + JBL Sound Modes",
+      "20-Feature Level-2 ADAS Safety Suite & 6 Airbags Standard",
+      "Powered Tailgate with Gesture Activation & Panoramic Sunroof",
+      "Ventilated 6-Way Power Driver Seat & V2L / V2V Bi-Directional Power"
+    ],
+    "availabilityScope": "pan-india",
+    "advisoryNote": "Website reference specifications for Tata Curvv.ev SUV coupe. Verify 45 kWh vs 55 kWh variant availability and city quotes with dealer.",
+    "highlightTag": "🏆 585 km Range",
+    "elasticMetrics": {
+      "efficiencyWhPerKm": 125.3,
+      "realWorldRangeKm": {
+        "eco": 480,
+        "city": 439,
+        "highway": 386
+      },
+      "runningCostPerKmInr": 1.0,
+      "iceEquivalentCostPerKmInr": 7.85,
+      "indicativeEmiInr": 28940,
+      "emiDisplay": "₹28,940/mo*",
+      "loanTenureMonths": 60,
+      "interestRatePct": 8.85,
+      "typicalDailyKm": 45,
+      "estMonthlySavingsInr": 8000,
+      "co2SavedKgPerYear": 2300
+    },
+    "elasticTags": [
+      "suv coupe",
+      "coupe suv",
+      "long range",
+      "500 km",
+      "highway suv",
+      "adas",
+      "v2l",
+      "ccs2",
+      "flagship"
+    ]
+  },
+  {
+    "id": "mahindra-zeo",
+    "brandId": "mahindra",
+    "brand": "Mahindra",
+    "model": "Zeo (4W SCV)",
+    "fullName": "Mahindra Zeo Electric Mini-Truck",
+    "categoryId": "commercial",
+    "category": "Commercial Vehicles",
+    "subCategoryId": "mini-trucks",
+    "subCategory": "4W Mini-Trucks",
+    "isSampleData": false,
+    "sampleDataNote": "Website reference specifications for Mahindra Zeo 4W commercial cargo carrier. Contact Mahindra Last Mile Mobility dealer for fleet quotes.",
+    "trending": false,
+    "popularity": 85,
+    "priceMin": 752000,
+    "priceMax": 799000,
+    "priceDisplay": "₹7.52 – ₹7.99 Lakh",
+    "batteryCapacityKwh": 21.3,
+    "batteryDisplay": "21.3 kWh",
+    "batteryChemistry": "300V High-Voltage Liquid-Cooled LFP Pack (IP67)",
+    "claimedRangeKm": 160,
+    "rangeDisplay": "160 km (Certified)",
+    "rangeStandard": "Commercial Payload Cycle (18.4 & 21.3 kWh Options)",
+    "topSpeedKmh": 60,
+    "topSpeedDisplay": "60 km/h",
+    "accelerationDisplay": "114 Nm High-Voltage Torque (32% Gradeability)",
+    "chargingTimeDisplay": "60 mins for 100 km (DC Fast) | ~7 hrs (AC)",
+    "acChargingTime": "~6.5–7 hrs via 3.3 kW On-Board Charger",
+    "dcChargingTime": "~60 mins for 100 km Range via DC Fast Charger",
+    "chargingConnector": "CCS2 / Type-2 AC",
+    "motorPowerKw": 30.0,
+    "motorPowerDisplay": "30 kW / 114 Nm",
+    "motorType": "300V Permanent Magnet Synchronous Commercial Motor",
+    "driveType": "Rear-Wheel Drive Rigid Axle",
+    "warrantyDisplay": "7 Years / 1,50,000 km (Battery Warranty)",
+    "vehicleWarranty": "3 Years / 1,25,000 km Commercial Warranty",
+    "image": "assets/images/vehicles/mahindra-zeo.webp",
+    "images": [
+      "assets/images/vehicles/mahindra-zeo.webp",
+      "assets/images/vehicles/mahindra-zeo-front.webp",
+      "assets/images/vehicles/mahindra-zeo-profile.webp"
+    ],
+    "galleryLabels": [
+      "3/4 Commercial Studio View",
+      "Walk-Through Cab & ADAS Camera",
+      "765 kg Payload Cargo Deck"
+    ],
+    "overview": "Mahindra's 300V high-voltage 4-wheel electric small commercial vehicle offering up to 765 kg payload, 32% flyover gradeability, AI-enabled driver monitoring, and NEMO telematics.",
+    "variants": [
+      {
+        "name": "Zeo V1 (18.4 kWh FSD)",
+        "battery": "18.4 kWh",
+        "range": "135 km",
+        "price": "₹7.52 Lakh*"
+      },
+      {
+        "name": "Zeo V2 (21.3 kWh Delivery Box)",
+        "battery": "21.3 kWh",
+        "range": "160 km",
+        "price": "₹7.99 Lakh*"
+      }
+    ],
+    "features": [
+      "300V High-Voltage Architecture for Higher Energy Efficiency",
+      "Up to 765 kg Payload & 2,250 mm Cargo Load Deck",
+      "32% Gradeability + Hill Hold Assist for Steep Ramps",
+      "NEMO Fleet Telematics & Smart Regenerating Braking"
+    ],
+    "availabilityScope": "pan-india",
+    "advisoryNote": "Website reference specifications for Mahindra Zeo 4W commercial cargo carrier. Contact Mahindra Last Mile Mobility dealer for fleet quotes.",
+    "highlightTag": "⚡ 300V Mini-Truck",
+    "elasticMetrics": {
+      "efficiencyWhPerKm": 166.4,
+      "realWorldRangeKm": {
+        "eco": 141,
+        "city": 128,
+        "highway": 112
+      },
+      "runningCostPerKmInr": 1.32,
+      "iceEquivalentCostPerKmInr": 9.4,
+      "indicativeEmiInr": 12560,
+      "emiDisplay": "₹12,560/mo*",
+      "loanTenureMonths": 60,
+      "interestRatePct": 9.25,
+      "typicalDailyKm": 95,
+      "estMonthlySavingsInr": 19950,
+      "co2SavedKgPerYear": 6770
+    },
+    "elasticTags": [
+      "mini truck",
+      "scv",
+      "cargo",
+      "delivery truck",
+      "last mile",
+      "commercial",
+      "fleet"
     ]
   }
 ]
