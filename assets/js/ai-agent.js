@@ -75,6 +75,7 @@
         <button type="button" class="ev-ai-chip" data-ai-prompt="Suggest electric cars under 15 lakh">Cars &lt; ₹15L</button>
         <button type="button" class="ev-ai-chip" data-ai-prompt="Best family electric scooters">Best Scooters</button>
         <button type="button" class="ev-ai-chip" data-ai-prompt="Compare Nexon EV vs Windsor EV">Nexon vs Windsor</button>
+        <button type="button" class="ev-ai-chip" data-ai-prompt="EV charging stations and tariffs in Bengaluru">Charging Hubs</button>
         <button type="button" class="ev-ai-chip" data-ai-prompt="EV sales process, subsidies &amp; green loans">Sales &amp; Subsidy</button>
         <button type="button" class="ev-ai-chip" data-ai-prompt="Calculate EV running cost vs petrol">Running Cost</button>
         <button type="button" class="ev-ai-chip" data-ai-prompt="Show top Indian EV companies">Indian EV Brands</button>
@@ -187,7 +188,7 @@
   /* ------------------------------------------------------------------------
      Natural Language EV & Sales Knowledge Engine
      ------------------------------------------------------------------------ */
-  function createAdvisorBrain(vehicles, brands) {
+  function createAdvisorBrain(vehicles, brands, chargingData) {
     const esc = window.EVDisha.escapeHTML;
 
     // Detect vehicles mentioned in text
@@ -360,18 +361,35 @@
         `;
       }
 
-      // 5. Charging, Apartment RWA, Wallbox & Battery Chemistry
-      if (/\b(charg|wallbox|apartment|society|rwa|ccs2|fast charg|lfp|nmc|battery life|degradation)\b/.test(q)) {
+      // 5. Charging Stations, Networks, Highway Corridors, Wallbox & Battery Chemistry
+      if (/\b(charg|station|stations|wallbox|apartment|society|rwa|ccs2|leccs|fast charg|lfp|nmc|battery life|degradation|tata power|statiq|chargezone|zeon|ather grid|jio-bp|tariff)\b/.test(q)) {
+        const hubs = (chargingData && chargingData.cityHubs) || [];
+        const matchedCity = hubs.find((h) => q.includes(h.cityName.toLowerCase()) || q.includes(h.cityId.toLowerCase()));
+        if (matchedCity) {
+          return `
+            <p><strong>EV Charging in ${esc(matchedCity.cityName)}, ${esc(matchedCity.stateName)}:</strong></p>
+            <ul style="margin:6px 0 10px; padding-left:16px; list-style:disc;">
+              <li><strong>Public Stations:</strong> ${matchedCity.publicStations.toLocaleString('en-IN')}+ public &amp; semi-public sites (${matchedCity.fastDcHubs}+ Fast DC hubs)</li>
+              <li><strong>Active Networks:</strong> ${esc((matchedCity.networks || []).join(', '))}</li>
+              <li><strong>Key Charging Zones:</strong> ${esc((matchedCity.keyZones || []).join(' • '))}</li>
+              <li><strong>Home Residential Tariff:</strong> ~₹${Number(matchedCity.homeTariffInr).toFixed(1)}/kWh &bull; Public DC Fast: ₹15–₹26/kWh</li>
+            </ul>
+            <div style="display:flex; gap:6px; flex-wrap:wrap;">
+              <a href="charging.html?city=${encodeURIComponent(matchedCity.cityId)}" class="ev-ai-mini-btn is-primary">Open ${esc(matchedCity.cityName)} Charging Hub &rarr;</a>
+              <a href="charging.html#charging-calculator" class="ev-ai-mini-btn">Charge Time Calculator</a>
+            </div>
+          `;
+        }
         return `
-          <p><strong>Charging &amp; Battery Advisory:</strong></p>
+          <p><strong>India EV Charging Ecosystem (52,000+ Public Stations):</strong></p>
           <ul style="margin:6px 0 10px; padding-left:16px; list-style:disc;">
-            <li><strong>Home Charging:</strong> Scooters &amp; commuter bikes plug into a 5A/15A socket (3–6 hrs). Electric cars use a 3.3 kW box or 7.2 kW AC wallbox overnight.</li>
-            <li><strong>Highway Fast Charging:</strong> Electric cars in India standardize on <strong>CCS2</strong>, topping 10%–80% in ~40–56 minutes on 50–80 kW DC chargers.</li>
-            <li><strong>LFP vs NMC:</strong> LFP batteries (used in Nexon.ev, Punch.ev, Windsor, Atto 3, Oben Rorr, Ace EV) excel in high Indian summer temperatures and offer 2,000+ charge cycles.</li>
+            <li><strong>Home AC Charging:</strong> ₹3–₹10/kWh (~₹0.25/km for 2W, ~₹1.15/km for 4W via 15A socket or 7.2 kW wallbox).</li>
+            <li><strong>Public DC Fast Charging (CCS2 / LECCS):</strong> ₹15–₹26/kWh (+GST); 20%–80% in 30–55 mins on 30–120 kW highway chargers.</li>
+            <li><strong>Top Networks:</strong> Tata Power EZ Charge (7,000+), ChargeZone (13,500+), Statiq (10,000+), Jio-bp pulse (7,000+), Zeon Charging &amp; Ather Grid (LECCS).</li>
           </ul>
           <div style="display:flex; gap:6px; flex-wrap:wrap;">
-            <a href="news.html?article=apartment-home-ev-charger-rwa-checklist" class="ev-ai-mini-btn is-primary">RWA Charger Guide</a>
-            <a href="news.html?article=india-highway-dc-fast-charging-guide" class="ev-ai-mini-btn">Highway CCS2 Guide</a>
+            <a href="charging.html" class="ev-ai-mini-btn is-primary">Explore EV Charging Hub &rarr;</a>
+            <a href="charging.html#charging-calculator" class="ev-ai-mini-btn">Charge Time Calculator</a>
           </div>
         `;
       }
@@ -689,11 +707,12 @@
 
       try {
         if (!advisorReplyFn) {
-          const [vehicles, brands] = await Promise.all([
+          const [vehicles, brands, chargingData] = await Promise.all([
             window.EVDisha.getVehicles(),
-            window.EVDisha.getBrands()
+            window.EVDisha.getBrands(),
+            window.EVDisha.getCharging ? window.EVDisha.getCharging().catch(() => null) : Promise.resolve(null)
           ]);
-          advisorReplyFn = createAdvisorBrain(vehicles, brands);
+          advisorReplyFn = createAdvisorBrain(vehicles, brands, chargingData);
         }
 
         window.setTimeout(() => {

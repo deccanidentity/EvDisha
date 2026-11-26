@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EV Charging Stations, Networks, Tariffs &amp; Time Calculator in India | EV Disha</title>
+  <meta name="description" content="Explore 52,000+ public EV charging stations across Indian states and 32+ cities. Compare Tata Power EZ Charge, ChargeZone, Statiq, Jio-bp pulse, Zeon, Ather Grid, BIS connectors, highway corridors, and calculate EV charging time &amp; cost." />
+  <link rel="canonical" href="https://evdisha.com/charging.html" />
+
+  <meta property="og:site_name" content="EV Disha" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="India EV Charging Hub – Stations, Networks, Tariffs &amp; Calculator | EV Disha" />
+  <meta property="og:description" content="Check public EV charging readiness across Indian cities, highway DC fast-charge corridors, BIS IS 17017 connectors, and calculate exact charge times &amp; costs." />
+  <meta property="og:url" content="https://evdisha.com/charging.html" />
+  <meta property="og:image" content="https://evdisha.com/assets/images/banners/hero-ev.webp" />
+
+  <link rel="icon" type="image/png" href="assets/images/logo/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="assets/css/style.css?v=3.0" />
+  <link rel="stylesheet" href="assets/css/responsive.css?v=3.0" />
+  <link rel="stylesheet" href="assets/css/modern-ui.css?v=3.0" />
+</head>
+<body data-page="charging">
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand-logo" aria-label="EV Disha Home">
+        <img src="assets/images/logo/ev-disha-logo.webp" alt="EV Disha – देखो • Compare • Go Electric" width="186" height="62" />
+      </a>
+
+      <nav class="primary-nav" id="primary-nav" aria-label="Main navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="explore.html" class="nav-link">Explore EVs</a>
+        <a href="charging.html" class="nav-link active" aria-current="page">Charging <span class="nav-badge-new">Hub</span></a>
+        <a href="compare.html" class="nav-link">
+          <span>Compare</span>
+          <span class="nav-compare-badge js-compare-count" hidden>0</span>
+        </a>
+        <a href="brands.html" class="nav-link">Brands</a>
+        <a href="news.html" class="nav-link">News</a>
+      </nav>
+
+      <div class="header-actions">
+        <button type="button" class="header-search-pill js-open-search" aria-label="Search EVs, brands, or charging hubs">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" aria-hidden="true">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <span class="pill-text">Search EVs, brands, chargers...</span>
+          <kbd>Ctrl K</kbd>
+        </button>
+        <button type="button" class="icon-btn js-open-search" aria-label="Search electric vehicles" title="Search EVs (Ctrl+K)">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+        </button>
+        <button type="button" class="icon-btn mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="primary-nav">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true">
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+  <div class="nav-backdrop" id="nav-backdrop"></div>
+
+  <main id="main-content">
+    <!-- Hero -->
+    <section class="chg-page-hero" aria-labelledby="chg-page-heading">
+      <div class="container">
+        <div class="breadcrumb" style="color:rgba(255,255,255,0.72); margin-bottom:14px;">
+          <a href="index.html" style="color:#79F6A4;">Home</a>
+          <span aria-hidden="true">/</span>
+          <span>EV Charging Hub</span>
+        </div>
+        <span class="cd-hero-badge" style="margin-bottom:12px;">⚡ India Public EV Charging Intelligence (BIS IS 17017 &amp; PM E-DRIVE)</span>
+        <h1 id="chg-page-heading">EV Charging Stations, Networks &amp; Tariffs Across India</h1>
+        <p>
+          Explore state &amp; city public charging density, compare 12 major Indian CPO networks, check highway DC fast-charging corridors, and estimate exact charging time &amp; cost for any electric vehicle.
+        </p>
+
+        <div class="chg-kpi-strip" id="chg-hero-kpis" style="margin-top:24px; margin-bottom:0;"></div>
+      </div>
+    </section>
+
+    <!-- 1. State -> City Cascading Charging Hub Finder -->
+    <section class="cd-section cd-section-canvas" id="city-hubs" aria-labelledby="city-hubs-heading">
+      <div class="container">
+        <div class="cd-shelf-head" style="margin-bottom:18px;">
+          <div>
+            <span class="eyebrow">City &amp; State Directory</span>
+            <h2 id="city-hubs-heading">Public EV Charging Hubs by State &amp; City</h2>
+            <p>Select a state to narrow down respective cities, or filter by CPO network and connector type.</p>
+          </div>
+          <div id="chg-city-count-label" style="font-size:0.88rem; font-weight:800; color:var(--color-navy);"></div>
+        </div>
+
+        <div class="chg-filter-card" role="region" aria-label="Filter Indian EV charging cities">
+          <div class="form-field">
+            <label for="chg-state-select" class="form-label">State / UT</label>
+            <select id="chg-state-select" class="form-control">
+              <option value="all">All Indian States</option>
+            </select>
+          </div>
+          <div class="form-field">
+            <label for="chg-city-select" class="form-label">City</label>
+            <select id="chg-city-select" class="form-control">
+              <option value="all">All Tracked Cities</option>
+            </select>
+          </div>
+          <div class="form-field">
+            <label for="chg-network-select" class="form-label">Charging Network (CPO)</label>
+            <select id="chg-network-select" class="form-control">
+              <option value="all">All 12 Networks</option>
+            </select>
+          </div>
+          <div class="form-field">
+            <label for="chg-connector-select" class="form-label">Connector Standard</label>
+            <select id="chg-connector-select" class="form-control">
+              <option value="all">All Connectors</option>
+              <option value="CCS2">CCS2 (4W DC Fast)</option>
+              <option value="Type 2 AC">Type 2 (AC Wallbox)</option>
+              <option value="LECCS">LECCS (2W/3W Fast)</option>
+              <option value="15A Smart AC">15A Smart AC</option>
+            </select>
+          </div>
+          <button type="button" id="chg-reset-btn" class="btn btn-outline" style="min-height:44px;">Reset</button>
+        </div>
+
+        <div id="chg-city-grid" class="chg-city-grid" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <!-- 2. Interactive EV Charging Time & Cost Calculator -->
+    <section class="cd-section" id="charging-calculator" aria-labelledby="chg-calc-heading">
+      <div class="container">
+        <div class="cd-shelf-head" style="margin-bottom:22px;">
+          <div>
+            <span class="eyebrow">Interactive Utility</span>
+            <h2 id="chg-calc-heading">EV Charging Time &amp; Cost Calculator</h2>
+            <p>Pick any of our 187 verified EVs and simulate Home AC vs Public AC vs Highway DC fast charging.</p>
+          </div>
+        </div>
+
+        <div class="chg-calc-grid">
+          <div class="chg-calc-panel">
+            <div class="form-field" style="margin-bottom:14px;">
+              <label for="calc-ev-select" class="form-label">Select Electric Vehicle</label>
+              <select id="calc-ev-select" class="form-control"></select>
+            </div>
+
+            <div class="form-field" style="margin-bottom:14px;">
+              <label for="calc-charger-type" class="form-label">Charger Type &amp; Power Rating</label>
+              <select id="calc-charger-type" class="form-control">
+                <option value="home-3.3">Home 15A Socket / Portable AC (3.3 kW) — ~₹7.5/kWh</option>
+                <option value="home-7.2">Home AC Wallbox Type 2 (7.2 kW) — ~₹7.5/kWh</option>
+                <option value="pub-22">Public Destination AC Type 2 (22 kW) — ~₹13/kWh</option>
+                <option value="leccs-12">LECCS Light EV Fast DC (12 kW) — ~₹14/kWh</option>
+                <option value="dc-30">Public DC Fast CCS2 (30 kW) — ~₹20/kWh</option>
+                <option value="dc-60" selected>Highway DC Fast CCS2 (60 kW) — ~₹21/kWh</option>
+                <option value="dc-120">Ultra-Fast Highway DC CCS2 (120 kW) — ~₹24/kWh</option>
+              </select>
+            </div>
+
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-bottom:14px;">
+              <div>
+                <div style="display:flex; justify-content:space-between; font-size:0.84rem; font-weight:700; margin-bottom:4px;">
+                  <label for="calc-start-soc">Start Battery</label>
+                  <strong id="calc-start-soc-val">20%</strong>
+                </div>
+                <input type="range" id="calc-start-soc" min="0" max="80" step="5" value="20" style="width:100%;" />
+              </div>
+              <div>
+                <div style="display:flex; justify-content:space-between; font-size:0.84rem; font-weight:700; margin-bottom:4px;">
+                  <label for="calc-end-soc">Target Battery</label>
+                  <strong id="calc-end-soc-val">80%</strong>
+                </div>
+                <input type="range" id="calc-end-soc" min="20" max="100" step="5" value="80" style="width:100%;" />
+              </div>
+            </div>
+
+            <div>
+              <div style="display:flex; justify-content:space-between; font-size:0.84rem; font-weight:700; margin-bottom:4px;">
+                <label for="calc-tariff">Electricity Tariff (₹/kWh)</label>
+                <strong id="calc-tariff-val">₹21.0 / kWh</strong>
+              </div>
+              <input type="range" id="calc-tariff" min="3" max="30" step="0.5" value="21" style="width:100%;" />
+            </div>
+          </div>
+
+          <div class="chg-calc-results" id="calc-results-box" aria-live="polite"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Major Indian EV Charging Networks (CPOs) -->
+    <section class="cd-section cd-section-canvas" id="charging-networks" aria-labelledby="networks-heading">
+      <div class="container">
+        <div class="cd-shelf-head" style="margin-bottom:18px;">
+          <div>
+            <span class="eyebrow">CPO Ecosystem</span>
+            <h2 id="networks-heading">Top 12 EV Charging Networks in India</h2>
+            <p>Compare footprint, peak DC power, supported connectors, and typical per-kWh tariffs.</p>
+          </div>
+          <div class="segment-filter-pills" id="chg-network-seg-pills" style="margin-bottom:0;">
+            <button type="button" class="pill-btn is-active" data-net-seg="all">All Networks</button>
+            <button type="button" class="pill-btn" data-net-seg="four-wheelers">4W Cars</button>
+            <button type="button" class="pill-btn" data-net-seg="two-wheelers">2W Scooters/Bikes</button>
+            <button type="button" class="pill-btn" data-net-seg="commercial">Commercial / Fleet</button>
+          </div>
+        </div>
+
+        <div id="chg-networks-grid" class="chg-network-grid" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <!-- 4. EV Highway Corridors -->
+    <section class="cd-section" id="highway-corridors" aria-labelledby="corridors-heading">
+      <div class="container">
+        <div class="cd-shelf-head" style="margin-bottom:22px;">
+          <div>
+            <span class="eyebrow">Intercity Travel</span>
+            <h2 id="corridors-heading">India's EV-Ready Highway Fast-Charging Corridors</h2>
+            <p>Major expressways and national highways equipped with CCS2 DC fast chargers every 20–40 km.</p>
+          </div>
+        </div>
+
+        <div id="chg-corridors-grid" class="chg-corridor-grid"></div>
+      </div>
+    </section>
+
+    <!-- 5. BIS IS 17017 Connectors & Tariff Benchmarks -->
+    <section class="cd-section cd-section-canvas" id="connectors-tariffs" aria-labelledby="connectors-heading">
+      <div class="container">
+        <div class="cd-shelf-head" style="margin-bottom:22px;">
+          <div>
+            <span class="eyebrow">Standards &amp; Pricing</span>
+            <h2 id="connectors-heading">BIS IS 17017 Charging Connectors &amp; India Tariff Benchmarks</h2>
+            <p>Understand plug compatibility across electric cars, scooters, and commercial fleets.</p>
+          </div>
+        </div>
+
+        <div id="chg-tariffs-strip" class="chg-city-grid" style="margin-bottom:24px;"></div>
+        <div id="chg-connectors-grid" class="chg-connector-grid"></div>
+      </div>
+    </section>
+
+    <!-- 6. State-Wise Charging Infrastructure Leaderboard -->
+    <section class="cd-section" id="state-leaderboard" aria-labelledby="states-heading">
+      <div class="container">
+        <div class="cd-shelf-head" style="margin-bottom:22px;">
+          <div>
+            <span class="eyebrow">BEE / MHI Baseline</span>
+            <h2 id="states-heading">State-Wise Public EV Charging Infrastructure</h2>
+            <p>Click any state to filter city charging hubs above. Baseline figures compiled from BEE &amp; Ministry of Power disclosures.</p>
+          </div>
+        </div>
+
+        <div id="chg-state-bars" class="chg-state-bars"></div>
+        <div id="chg-sources-note" class="dealer-advisory-banner" style="margin-top:24px;" role="note"></div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="index.html" class="footer-logo-plate" aria-label="EV Disha Home">
+            <img src="assets/images/logo/ev-disha-logo.webp" alt="EV Disha – देखो • Compare • Go Electric" width="192" height="64" />
+          </a>
+          <div class="footer-tagline">देखो &bull; Compare &bull; Go Electric</div>
+          <p class="footer-desc">
+            EV Disha is an independent Indian electric vehicle discovery, comparison, and EV charging guide helping buyers evaluate cars, scooters, bikes, and commercial EVs clearly.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h3>Navigation</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="explore.html">Explore EVs</a></li>
+            <li><a href="charging.html">EV Charging Hub</a></li>
+            <li><a href="compare.html">Compare Vehicles</a></li>
+            <li><a href="brands.html">EV Brands</a></li>
+            <li><a href="news.html">News &amp; Reviews</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h3>Vehicle Categories</h3>
+          <ul class="footer-links">
+            <li><a href="explore.html?category=four-wheelers">Electric 4-Wheelers</a></li>
+            <li><a href="explore.html?category=two-wheelers">Electric 2-Wheelers</a></li>
+            <li><a href="explore.html?category=three-wheelers">Electric 3-Wheelers</a></li>
+            <li><a href="explore.html?category=commercial">Commercial Vehicles</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h3>About &amp; Legal</h3>
+          <ul class="footer-links">
+            <li><a href="about.html">About EV Disha</a></li>
+            <li><a href="terms.html">Terms &amp; Disclaimer</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="mailto:hello@evdisha.com">hello@evdisha.com</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>&copy; 2026 EV Disha. All rights reserved.</span>
+        <div class="footer-legal-links">
+          <a href="terms.html">Terms &amp; Conditions</a>
+          <span aria-hidden="true">&bull;</span>
+          <a href="about.html#data-methodology">Data Policy</a>
+          <span aria-hidden="true">&bull;</span>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js?v=3.0" defer></script>
+  <script src="assets/js/ai-agent.js?v=3.0" defer></script>
+  <script src="assets/js/filters.js?v=3.0" defer></script>
+  <script src="assets/js/charging.js?v=3.0" defer></script>
+</body>
+</html>

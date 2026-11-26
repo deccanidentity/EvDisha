@@ -58,6 +58,10 @@
     return loadJSON('assets/data/locations.json');
   }
 
+  function getCharging() {
+    return loadJSON('assets/data/charging.json');
+  }
+
   /* ------------------------------------------------------------------------
      All-India Location Manager (State, City & 6-Digit PIN/Zipcode)
      ------------------------------------------------------------------------ */
@@ -309,7 +313,7 @@
           .map(
             (v) => `
               <span class="compare-mini-pill">
-                <span>${escapeHTML(v.brand)} ${escapeHTML(v.model)}</span>
+                <span>${escapeHTML(v.fullName)}</span>
                 <button type="button" data-remove-compare="${escapeHTML(v.id)}" aria-label="Remove ${escapeHTML(v.fullName)} from compare">&times;</button>
               </span>
             `
@@ -1381,6 +1385,7 @@
     getCategories,
     getNews,
     getLocations,
+    getCharging,
     getActiveLocation,
     setActiveLocation,
     clearActiveLocation,

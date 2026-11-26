@@ -19,7 +19,10 @@
     const vehicleId = params.get('id');
 
     try {
-      const vehicles = await window.EVDisha.getVehicles();
+      const [vehicles, chargingData] = await Promise.all([
+        window.EVDisha.getVehicles(),
+        window.EVDisha.getCharging ? window.EVDisha.getCharging().catch(() => null) : Promise.resolve(null)
+      ]);
       const vehicle = vehicleId ? vehicles.find((v) => v.id === vehicleId) : vehicles[0];
 
       if (!vehicle) {
@@ -330,6 +333,46 @@
               </dl>
             </div>
           </div>
+
+          ${(() => {
+            if (!chargingData) return '';
+            const batKwh = Number(vehicle.batteryCapacityKwh) || 0;
+            const homeFull = batKwh > 0 ? Math.round(batKwh * 1.1 * 7.5) : null;
+            const dcFastTopup = batKwh > 0 ? Math.round(batKwh * 0.6 * 1.1 * 21) : null;
+            const compatNets = (chargingData.networks || [])
+              .filter((n) => (n.segments || []).includes(vehicle.categoryId))
+              .slice(0, 6);
+            return `
+              <div class="vd-charging-panel" aria-label="India EV charging compatibility">
+                <div class="vd-charging-panel-head">
+                  <div>
+                    <span class="eyebrow" style="margin-bottom:6px;">⚡ India Public Charging Readiness</span>
+                    <h3 style="margin:0; font-size:1.18rem;">Charging Cost &amp; Compatible Networks for ${esc(vehicle.model)}</h3>
+                  </div>
+                  <a href="charging.html?ev=${encodeURIComponent(vehicle.id)}#charging-calculator" class="btn btn-sm btn-navy">
+                    Calculate Exact Charge Time &rarr;
+                  </a>
+                </div>
+                <div class="vd-charging-metrics">
+                  <div class="vd-charging-metric">
+                    <span>Home 0–100% Est. Cost</span>
+                    <strong>${homeFull !== null ? `~₹${homeFull.toLocaleString('en-IN')}` : 'Depends on battery'}</strong>
+                  </div>
+                  <div class="vd-charging-metric">
+                    <span>Public DC 20–80% Est.</span>
+                    <strong>${dcFastTopup !== null ? `~₹${dcFastTopup.toLocaleString('en-IN')}` : 'Check CPO tariff'}</strong>
+                  </div>
+                  <div class="vd-charging-metric">
+                    <span>India Public Network</span>
+                    <strong>${esc((chargingData.nationalStats && chargingData.nationalStats.publicStationsDisplay) || '52,000+')} Stations</strong>
+                  </div>
+                </div>
+                <div class="chg-tag-row">
+                  ${compatNets.map((n) => `<a href="charging.html#charging-networks" class="chg-tag is-green">${esc(n.shortName)} (${esc(n.pointsDisplay)})</a>`).join('')}
+                </div>
+              </div>
+            `;
+          })()}
         </section>
 
         <!-- Key Features -->

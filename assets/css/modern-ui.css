@@ -1,0 +1,1111 @@
+/* ==========================================================================
+   EV Disha – Modern CarDekho / BikeDekho-Inspired UI System & EV Charging Hub
+   Clean Light-First Automotive Discovery Aesthetics (modern-ui.css v3.0)
+   ========================================================================== */
+
+:root {
+  --cd-canvas: #F6F8FC;
+  --cd-surface: #FFFFFF;
+  --cd-border: #E2E9F3;
+  --cd-border-hover: #BACAE0;
+  --cd-accent: #16A34A;
+  --cd-accent-bright: #20C957;
+  --cd-accent-soft: #ECFDF3;
+  --cd-warm: #F97316;
+  --cd-warm-soft: #FFF7ED;
+  --cd-navy-deep: #071A34;
+  --cd-shadow-card: 0 2px 10px rgba(9, 43, 85, 0.05);
+  --cd-shadow-hover: 0 12px 28px rgba(9, 43, 85, 0.11);
+}
+
+/* --------------------------------------------------------------------------
+   1. Refined Sticky Header & Inline CarDekho-Style Search Pill
+   -------------------------------------------------------------------------- */
+.site-header {
+  height: 76px;
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--cd-border);
+  box-shadow: 0 1px 12px rgba(7, 29, 59, 0.04);
+}
+
+.header-search-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  height: 42px;
+  min-width: 220px;
+  max-width: 280px;
+  padding: 0 12px 0 14px;
+  border-radius: 999px;
+  border: 1.5px solid var(--cd-border);
+  background: var(--cd-canvas);
+  color: var(--color-muted);
+  font-size: 0.84rem;
+  font-weight: 600;
+  transition: border-color var(--transition-fast), background-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.header-search-pill:hover {
+  border-color: var(--color-navy);
+  background: var(--cd-surface);
+  color: var(--color-navy);
+  box-shadow: 0 2px 8px rgba(9, 43, 85, 0.07);
+}
+
+.header-search-pill span.pill-text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  flex: 1;
+  text-align: left;
+}
+
+.header-search-pill kbd {
+  font-family: inherit;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 2px 7px;
+  border-radius: 6px;
+  background: var(--cd-surface);
+  border: 1px solid var(--cd-border);
+  color: var(--color-muted);
+}
+
+@media (min-width: 992px) {
+  .header-actions .icon-btn.js-open-search {
+    display: none;
+  }
+}
+
+.nav-badge-new {
+  display: inline-flex;
+  align-items: center;
+  padding: 1px 6px;
+  border-radius: 999px;
+  font-size: 0.64rem;
+  font-weight: 800;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  background: var(--cd-accent-soft);
+  color: #15803D;
+  border: 1px solid rgba(22, 163, 74, 0.25);
+  margin-left: 4px;
+}
+
+/* --------------------------------------------------------------------------
+   2. CarDekho-Style Split Hero with Floating "Find Your Right EV" Card
+   -------------------------------------------------------------------------- */
+.cd-hero {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(125deg, #06172E 0%, #0B2C58 55%, #0D3B66 100%);
+  padding-block: 38px 46px;
+  color: #FFFFFF;
+}
+
+.cd-hero-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.cd-hero-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.28;
+  filter: saturate(1.1);
+}
+
+.cd-hero-bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(95deg, rgba(6, 23, 46, 0.94) 0%, rgba(9, 43, 85, 0.80) 52%, rgba(6, 23, 46, 0.70) 100%);
+}
+
+.cd-hero-grid {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 420px minmax(0, 1fr);
+  gap: 36px;
+  align-items: center;
+}
+
+/* Floating White Finder Card (CarDekho Signature) */
+.cd-finder-card {
+  background: var(--cd-surface);
+  color: var(--color-navy);
+  border-radius: 20px;
+  padding: 22px 22px 20px;
+  box-shadow: 0 24px 54px rgba(4, 16, 34, 0.34);
+  border: 1px solid rgba(255, 255, 255, 0.85);
+}
+
+.cd-finder-title {
+  font-size: 1.32rem;
+  font-weight: 800;
+  color: var(--color-navy);
+  margin-bottom: 14px;
+  letter-spacing: -0.02em;
+}
+
+.cd-seg-tabs {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 6px;
+  padding: 4px;
+  border-radius: 12px;
+  background: var(--cd-canvas);
+  border: 1px solid var(--cd-border);
+  margin-bottom: 14px;
+}
+
+.cd-seg-tab {
+  border: 0;
+  background: transparent;
+  color: var(--color-body);
+  font-size: 0.78rem;
+  font-weight: 700;
+  padding: 8px 6px;
+  border-radius: 9px;
+  transition: all var(--transition-fast);
+  text-align: center;
+}
+
+.cd-seg-tab:hover {
+  color: var(--color-navy);
+}
+
+.cd-seg-tab.is-active {
+  background: var(--color-navy);
+  color: #FFFFFF;
+  box-shadow: 0 3px 10px rgba(9, 43, 85, 0.22);
+}
+
+.cd-mode-row {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 14px;
+}
+
+.cd-mode-radio {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 0.86rem;
+  font-weight: 700;
+  color: var(--color-body);
+  cursor: pointer;
+}
+
+.cd-mode-radio input {
+  accent-color: var(--color-navy);
+  width: 16px;
+  height: 16px;
+  margin: 0;
+}
+
+.cd-mode-radio.is-active {
+  color: var(--color-navy);
+}
+
+.cd-finder-fields {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.cd-finder-fields .form-control {
+  min-height: 44px;
+  border-radius: 11px;
+  border: 1.5px solid var(--cd-border);
+  background-color: #FFFFFF;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--color-navy);
+}
+
+.cd-finder-fields .form-control:focus {
+  border-color: var(--color-navy);
+  box-shadow: 0 0 0 3px rgba(9, 43, 85, 0.09);
+}
+
+.cd-finder-cta {
+  width: 100%;
+  min-height: 48px;
+  border-radius: 12px;
+  font-size: 0.96rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #20C957 0%, #16A34A 100%);
+  color: #052010;
+  border: 0;
+  box-shadow: 0 8px 20px rgba(32, 201, 87, 0.30);
+}
+
+.cd-finder-cta:hover {
+  filter: brightness(0.96);
+  transform: translateY(-1px);
+}
+
+.cd-finder-footer-links {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-top: 12px;
+  padding-top: 10px;
+  border-top: 1px solid var(--cd-border);
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.cd-finder-footer-links a {
+  color: var(--color-navy);
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.cd-finder-footer-links a:hover {
+  color: #15803D;
+  text-decoration: underline;
+}
+
+/* Hero Right Editorial Column */
+.cd-hero-editorial {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.cd-hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: rgba(32, 201, 87, 0.16);
+  border: 1px solid rgba(32, 201, 87, 0.40);
+  color: #79F6A4;
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+}
+
+.cd-hero-editorial h1 {
+  color: #FFFFFF;
+  font-size: clamp(1.95rem, 3.2vw, 2.85rem);
+  line-height: 1.12;
+  margin: 0;
+}
+
+.cd-hero-editorial p {
+  color: rgba(255, 255, 255, 0.84);
+  font-size: 1.02rem;
+  max-width: 580px;
+  margin: 0;
+}
+
+.cd-hero-stats {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+  width: 100%;
+  margin-top: 4px;
+}
+
+.cd-hero-stat {
+  background: rgba(255, 255, 255, 0.09);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 14px;
+  padding: 12px 14px;
+}
+
+.cd-hero-stat strong {
+  display: block;
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #FFFFFF;
+  line-height: 1.2;
+}
+
+.cd-hero-stat span {
+  font-size: 0.76rem;
+  color: rgba(255, 255, 255, 0.78);
+  font-weight: 600;
+}
+
+.cd-quick-pills-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 2px;
+}
+
+.cd-hero-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 13px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.11);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  color: #FFFFFF;
+  font-size: 0.8rem;
+  font-weight: 700;
+  transition: all var(--transition-fast);
+}
+
+.cd-hero-chip:hover {
+  background: #20C957;
+  border-color: #20C957;
+  color: #062111;
+}
+
+/* --------------------------------------------------------------------------
+   3. CarDekho / BikeDekho Tabbed Shelves & Refined Cards
+   -------------------------------------------------------------------------- */
+.cd-section {
+  padding-block: 56px;
+}
+
+.cd-section-canvas {
+  background: var(--cd-canvas);
+}
+
+.cd-shelf-box {
+  background: var(--cd-surface);
+  border: 1px solid var(--cd-border);
+  border-radius: 20px;
+  padding: 26px 26px 28px;
+  box-shadow: var(--cd-shadow-card);
+}
+
+.cd-shelf-head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 18px;
+}
+
+.cd-shelf-head h2 {
+  font-size: clamp(1.38rem, 2.2vw, 1.72rem);
+  margin: 0 0 4px;
+}
+
+.cd-shelf-head p {
+  font-size: 0.9rem;
+  color: var(--color-muted);
+  margin: 0;
+}
+
+.cd-tab-strip {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  border-bottom: 1.5px solid var(--cd-border);
+  margin-bottom: 22px;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.cd-tab-strip::-webkit-scrollbar {
+  display: none;
+}
+
+.cd-tab-btn {
+  position: relative;
+  border: 0;
+  background: transparent;
+  padding: 10px 16px 12px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--color-muted);
+  white-space: nowrap;
+  transition: color var(--transition-fast);
+}
+
+.cd-tab-btn:hover {
+  color: var(--color-navy);
+}
+
+.cd-tab-btn.is-active {
+  color: var(--color-navy);
+}
+
+.cd-tab-btn.is-active::after {
+  content: '';
+  position: absolute;
+  left: 12px;
+  right: 12px;
+  bottom: -1.5px;
+  height: 3px;
+  border-radius: 3px 3px 0 0;
+  background: var(--color-green);
+}
+
+.cd-shelf-footer {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.cd-view-all-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.92rem;
+  font-weight: 800;
+  color: #15803D;
+}
+
+.cd-view-all-link:hover {
+  color: var(--color-navy);
+  text-decoration: underline;
+}
+
+/* Refined Vehicle Card Aesthetics */
+.vehicle-card {
+  background: var(--cd-surface);
+  border: 1px solid var(--cd-border);
+  border-radius: 16px;
+  box-shadow: var(--cd-shadow-card);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast), border-color var(--transition-fast);
+}
+
+@media (hover: hover) {
+  .vehicle-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--cd-shadow-hover);
+    border-color: var(--cd-border-hover);
+  }
+}
+
+.vehicle-card-media {
+  background: linear-gradient(180deg, #F8FAFD 0%, #EEF3FA 100%);
+  border-bottom: 1px solid #EEF2F8;
+}
+
+.vehicle-card-price {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--color-navy);
+}
+
+.vehicle-specs-strip {
+  background: var(--cd-canvas);
+  border: 1px solid #E9EFF7;
+  border-radius: 11px;
+}
+
+/* --------------------------------------------------------------------------
+   4. CarDekho-Style Popular "VS" Comparison Pair Cards
+   -------------------------------------------------------------------------- */
+.cd-vs-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.cd-vs-card {
+  background: var(--cd-surface);
+  border: 1px solid var(--cd-border);
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--cd-shadow-card);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast), border-color var(--transition-fast);
+}
+
+.cd-vs-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--cd-shadow-hover);
+  border-color: var(--cd-border-hover);
+}
+
+.cd-vs-media {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2px;
+  background: var(--cd-border);
+  aspect-ratio: 16 / 8.5;
+}
+
+.cd-vs-media-half {
+  background: #F4F7FB;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cd-vs-media-half img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cd-vs-badge {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: var(--color-navy);
+  color: #FFFFFF;
+  border: 2.5px solid #FFFFFF;
+  font-size: 0.72rem;
+  font-weight: 900;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(7, 29, 59, 0.28);
+}
+
+.cd-vs-body {
+  padding: 14px 14px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex: 1;
+}
+
+.cd-vs-names {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.cd-vs-side {
+  min-width: 0;
+}
+
+.cd-vs-side:last-child {
+  text-align: right;
+  border-left: 1px solid var(--cd-border);
+  padding-left: 10px;
+}
+
+.cd-vs-brand {
+  display: block;
+  font-size: 0.68rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #15803D;
+}
+
+.cd-vs-model {
+  display: block;
+  font-size: 0.88rem;
+  font-weight: 800;
+  color: var(--color-navy);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.cd-vs-price {
+  display: block;
+  font-size: 0.76rem;
+  font-weight: 700;
+  color: var(--color-body);
+  margin-top: 2px;
+}
+
+.cd-vs-btn {
+  margin-top: auto;
+  width: 100%;
+  min-height: 38px;
+  font-size: 0.82rem;
+  border-radius: 10px;
+}
+
+/* --------------------------------------------------------------------------
+   5. EV Charging Hub (Homepage Preview + Full charging.html Experience)
+   -------------------------------------------------------------------------- */
+.chg-preview-shell {
+  background: linear-gradient(135deg, #071D3B 0%, #0C2F5E 100%);
+  border-radius: 22px;
+  padding: 32px;
+  color: #FFFFFF;
+  box-shadow: 0 18px 42px rgba(7, 29, 59, 0.16);
+}
+
+.chg-preview-top {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+}
+
+.chg-preview-top h2 {
+  color: #FFFFFF;
+  margin: 0 0 6px;
+}
+
+.chg-preview-top p {
+  color: rgba(255, 255, 255, 0.78);
+  max-width: 620px;
+  margin: 0;
+}
+
+.chg-kpi-strip {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+  margin-bottom: 22px;
+}
+
+.chg-kpi-tile {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 14px;
+  padding: 16px 18px;
+}
+
+.chg-kpi-tile strong {
+  display: block;
+  font-size: 1.55rem;
+  font-weight: 800;
+  color: #5CF08E;
+  line-height: 1.15;
+}
+
+.chg-kpi-tile span {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.82);
+  font-weight: 600;
+}
+
+.chg-preview-finder {
+  background: #FFFFFF;
+  color: var(--color-navy);
+  border-radius: 16px;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 300px minmax(0, 1fr);
+  gap: 20px;
+  align-items: center;
+}
+
+.chg-preview-result {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.chg-mini-stat {
+  background: var(--cd-canvas);
+  border: 1px solid var(--cd-border);
+  border-radius: 12px;
+  padding: 12px 14px;
+}
+
+.chg-mini-stat small {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--color-muted);
+}
+
+.chg-mini-stat strong {
+  display: block;
+  font-size: 1.12rem;
+  font-weight: 800;
+  color: var(--color-navy);
+  margin-top: 2px;
+}
+
+/* Full charging.html Page Components */
+.chg-page-hero {
+  background: linear-gradient(125deg, #061A35 0%, #0B3161 60%, #0E4A5C 100%);
+  color: #FFFFFF;
+  padding-block: 44px 48px;
+}
+
+.chg-page-hero h1 {
+  color: #FFFFFF;
+  font-size: clamp(1.85rem, 3vw, 2.55rem);
+  margin-bottom: 10px;
+}
+
+.chg-page-hero p {
+  color: rgba(255, 255, 255, 0.82);
+  max-width: 720px;
+}
+
+.chg-filter-card {
+  background: #FFFFFF;
+  border: 1px solid var(--cd-border);
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: var(--cd-shadow-card);
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr)) auto;
+  gap: 12px;
+  align-items: end;
+  margin-bottom: 24px;
+}
+
+.chg-city-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.chg-city-card {
+  background: #FFFFFF;
+  border: 1px solid var(--cd-border);
+  border-radius: 16px;
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  box-shadow: var(--cd-shadow-card);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.chg-city-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--cd-shadow-hover);
+}
+
+.chg-city-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.chg-city-head h3 {
+  font-size: 1.08rem;
+  margin: 0;
+}
+
+.chg-city-stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+  background: var(--cd-canvas);
+  border: 1px solid #E9EFF7;
+  border-radius: 12px;
+  padding: 10px;
+}
+
+.chg-city-stats span {
+  display: block;
+  font-size: 0.68rem;
+  font-weight: 700;
+  color: var(--color-muted);
+  text-transform: uppercase;
+}
+
+.chg-city-stats strong {
+  display: block;
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: var(--color-navy);
+}
+
+.chg-tag-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.chg-tag {
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 3px 9px;
+  border-radius: 999px;
+  background: var(--cd-canvas);
+  border: 1px solid var(--cd-border);
+  color: var(--color-navy);
+}
+
+.chg-tag.is-green {
+  background: var(--cd-accent-soft);
+  border-color: rgba(22, 163, 74, 0.28);
+  color: #15803D;
+}
+
+/* Charging Time & Cost Calculator */
+.chg-calc-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
+  gap: 24px;
+  align-items: start;
+}
+
+.chg-calc-panel {
+  background: #FFFFFF;
+  border: 1px solid var(--cd-border);
+  border-radius: 18px;
+  padding: 24px;
+  box-shadow: var(--cd-shadow-card);
+}
+
+.chg-calc-results {
+  background: linear-gradient(145deg, #071D3B 0%, #0D3264 100%);
+  color: #FFFFFF;
+  border-radius: 18px;
+  padding: 24px;
+}
+
+.chg-calc-results h3 {
+  color: #FFFFFF;
+}
+
+.chg-calc-kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin-block: 16px;
+}
+
+.chg-calc-kpi {
+  background: rgba(255, 255, 255, 0.09);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 13px;
+  padding: 14px;
+}
+
+.chg-calc-kpi span {
+  display: block;
+  font-size: 0.74rem;
+  color: rgba(255, 255, 255, 0.75);
+  font-weight: 600;
+}
+
+.chg-calc-kpi strong {
+  display: block;
+  font-size: 1.38rem;
+  font-weight: 800;
+  color: #5CF08E;
+  margin-top: 2px;
+}
+
+/* Networks, Connectors, States & Corridors Grids */
+.chg-network-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.chg-network-card,
+.chg-connector-card,
+.chg-corridor-card {
+  background: #FFFFFF;
+  border: 1px solid var(--cd-border);
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: var(--cd-shadow-card);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.chg-connector-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.chg-corridor-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.chg-state-bars {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px 24px;
+}
+
+.chg-state-bar-item {
+  background: #FFFFFF;
+  border: 1px solid var(--cd-border);
+  border-radius: 13px;
+  padding: 13px 16px;
+}
+
+.chg-state-bar-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 6px;
+  font-size: 0.9rem;
+}
+
+.chg-state-bar-track {
+  height: 8px;
+  border-radius: 999px;
+  background: var(--cd-canvas);
+  overflow: hidden;
+  margin-bottom: 6px;
+}
+
+.chg-state-bar-fill {
+  height: 100%;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #092B55 0%, #20C957 100%);
+}
+
+/* Vehicle Details Charging Network Compatibility Panel */
+.vd-charging-panel {
+  margin-top: 28px;
+  background: linear-gradient(135deg, #F6FAFF 0%, #EEF9F2 100%);
+  border: 1.5px solid #D5E8DC;
+  border-radius: 18px;
+  padding: 22px 24px;
+}
+
+.vd-charging-panel-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-bottom: 14px;
+}
+
+.vd-charging-metrics {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.vd-charging-metric {
+  background: #FFFFFF;
+  border: 1px solid var(--cd-border);
+  border-radius: 12px;
+  padding: 12px 14px;
+}
+
+.vd-charging-metric span {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--color-muted);
+}
+
+.vd-charging-metric strong {
+  display: block;
+  font-size: 1rem;
+  font-weight: 800;
+  color: var(--color-navy);
+  margin-top: 2px;
+}
+
+/* --------------------------------------------------------------------------
+   6. Responsive Breakpoints for Modern UI & EV Charging Hub
+   -------------------------------------------------------------------------- */
+@media (max-width: 1180px) {
+  .header-search-pill {
+    min-width: 170px;
+    max-width: 210px;
+  }
+
+  .cd-hero-grid {
+    grid-template-columns: 380px minmax(0, 1fr);
+    gap: 26px;
+  }
+
+  .cd-vs-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .chg-city-grid,
+  .chg-network-grid,
+  .chg-connector-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 991px) {
+  .header-search-pill {
+    display: none;
+  }
+
+  .cd-hero-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .cd-hero-editorial {
+    order: -1;
+  }
+
+  .cd-hero-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .chg-kpi-strip {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .chg-preview-finder,
+  .chg-calc-grid,
+  .chg-corridor-grid,
+  .chg-state-bars {
+    grid-template-columns: 1fr;
+  }
+
+  .chg-filter-card {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 680px) {
+  .cd-section {
+    padding-block: 38px;
+  }
+
+  .cd-shelf-box {
+    padding: 18px 16px 20px;
+    border-radius: 16px;
+  }
+
+  .cd-vs-grid,
+  .chg-city-grid,
+  .chg-network-grid,
+  .chg-connector-grid,
+  .chg-preview-result,
+  .vd-charging-metrics,
+  .chg-filter-card {
+    grid-template-columns: 1fr;
+  }
+
+  .chg-preview-shell {
+    padding: 20px 16px;
+  }
+
+  .chg-calc-kpi-grid {
+    grid-template-columns: 1fr;
+  }
+}
