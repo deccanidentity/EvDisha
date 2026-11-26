@@ -14,19 +14,26 @@
   const POS_STORAGE_KEY = 'evdisha_robot_pos_v2';
 
   const ROBOT_SVG = `
-    <svg class="ev-ai-bot-svg" width="22" height="22" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <circle class="robot-antenna-glow" cx="18" cy="3.5" r="3.6" fill="#20C957" opacity="0.35"/>
-      <line x1="18" y1="4" x2="18" y2="8.5" stroke="#20C957" stroke-width="2.2" stroke-linecap="round"/>
-      <circle cx="18" cy="3.5" r="2.1" fill="#74F39E"/>
-      <rect x="6.5" y="8.5" width="23" height="19.5" rx="7" fill="#092B55" stroke="#20C957" stroke-width="1.7"/>
-      <rect x="10" y="13" width="16" height="8.5" rx="4.2" fill="#041326"/>
+    <svg class="ev-ai-bot-svg" width="30" height="30" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <circle class="robot-antenna-glow" cx="18" cy="4.2" r="3.4" fill="#20C957" opacity="0.35"/>
+      <line x1="18" y1="4.8" x2="18" y2="8.8" stroke="#20C957" stroke-width="2" stroke-linecap="round"/>
+      <circle cx="18" cy="4.2" r="1.8" fill="#74F39E"/>
+      <rect x="8.5" y="8.8" width="19" height="14.5" rx="6" fill="#0B2D59" stroke="#20C957" stroke-width="1.6"/>
+      <rect x="11.2" y="12.2" width="13.6" height="6.8" rx="3.4" fill="#041326"/>
       <g class="robot-visor-eyes">
-        <circle cx="14.3" cy="17.2" r="2" fill="#20C957"/>
-        <circle cx="21.7" cy="17.2" r="2" fill="#20C957"/>
+        <circle cx="14.8" cy="15.6" r="1.7" fill="#20C957"/>
+        <circle cx="21.2" cy="15.6" r="1.7" fill="#20C957"/>
       </g>
-      <path d="M15 24C16.2 24.8 19.8 24.8 21 24" stroke="#74F39E" stroke-width="1.6" stroke-linecap="round"/>
-      <rect x="4" y="15.5" width="2.5" height="5.5" rx="1.2" fill="#20C957"/>
-      <rect x="29.5" y="15.5" width="2.5" height="5.5" rx="1.2" fill="#20C957"/>
+      <path d="M15.4 20.8C16.6 21.6 19.4 21.6 20.6 20.8" stroke="#74F39E" stroke-width="1.35" stroke-linecap="round"/>
+      <rect x="6.4" y="13.5" width="2.1" height="4.8" rx="1" fill="#20C957"/>
+      <rect x="27.5" y="13.5" width="2.1" height="4.8" rx="1" fill="#20C957"/>
+      <rect x="11.5" y="24.2" width="13" height="9.2" rx="4.2" fill="#0B2D59" stroke="#20C957" stroke-width="1.5"/>
+      <rect x="15.4" y="27.2" width="5.2" height="3" rx="1.5" fill="#20C957" opacity="0.85"/>
+      <path d="M11.2 26.2C9.2 26.8 8.2 28.4 8.2 30.2" stroke="#74F39E" stroke-width="2.1" stroke-linecap="round"/>
+      <g class="robot-wave-hand">
+        <path d="M24.8 25.8C27.5 25.4 30.2 23.2 32.2 19.4" stroke="#74F39E" stroke-width="2.2" stroke-linecap="round"/>
+        <circle cx="32.8" cy="18.2" r="2.2" fill="#20C957" stroke="#041326" stroke-width="0.9"/>
+      </g>
     </svg>
   `;
 

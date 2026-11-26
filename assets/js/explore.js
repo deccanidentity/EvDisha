@@ -9,7 +9,7 @@
 (function () {
   'use strict';
 
-  const PAGE_SIZE = 12;
+  const PAGE_SIZE = 24;
 
   document.addEventListener('DOMContentLoaded', async () => {
     const esc = window.EVDisha.escapeHTML;

@@ -359,6 +359,46 @@
   }
 
   /* ------------------------------------------------------------------------
+     Canonical Navigation Synchronizer (Single Source of Truth Across Pages)
+     Guarantees identical 6-item nav order even if an HTML page is browser-cached
+     ------------------------------------------------------------------------ */
+  function syncCanonicalNav() {
+    const nav = document.getElementById('primary-nav');
+    if (!nav) return;
+
+    const pageAttr = (document.body && document.body.dataset.page) || '';
+    const path = (window.location.pathname || '').toLowerCase();
+    let activeKey = '';
+    if (pageAttr === 'home' || path.endsWith('/') || path.endsWith('/index.html')) activeKey = 'home';
+    else if (pageAttr === 'explore' || pageAttr === 'vehicle-details' || path.includes('explore.html') || path.includes('vehicle-details.html')) activeKey = 'explore';
+    else if (pageAttr === 'compare' || path.includes('compare.html')) activeKey = 'compare';
+    else if (pageAttr === 'tools' || path.includes('tools.html')) activeKey = 'tools';
+    else if (pageAttr === 'news' || path.includes('news.html')) activeKey = 'news';
+    else if (pageAttr === 'charging' || path.includes('charging.html')) activeKey = 'charging';
+
+    const items = [
+      { key: 'home', href: 'index.html', label: 'Home' },
+      { key: 'explore', href: 'explore.html', label: 'Explore EVs' },
+      { key: 'compare', href: 'compare.html', label: 'Compare', isCompare: true },
+      { key: 'tools', href: 'tools.html', label: 'Tools' },
+      { key: 'news', href: 'news.html', label: 'News' },
+      { key: 'charging', href: 'charging.html', label: '⚡ Charging Hub', isCharging: true }
+    ];
+
+    nav.innerHTML = items
+      .map((item) => {
+        const active = item.key === activeKey;
+        const cls = `nav-link${item.isCharging ? ' nav-link-charging' : ''}${active ? ' active' : ''}`;
+        const aria = active ? ' aria-current="page"' : '';
+        if (item.isCompare) {
+          return `<a href="${item.href}" class="${cls}"${aria}><span>${item.label}</span><span class="nav-compare-badge js-compare-count" hidden>0</span></a>`;
+        }
+        return `<a href="${item.href}" class="${cls}"${aria}>${item.label}</a>`;
+      })
+      .join('');
+  }
+
+  /* ------------------------------------------------------------------------
      Mobile Navigation Drawer
      ------------------------------------------------------------------------ */
   function initMobileMenu() {
@@ -1401,6 +1441,7 @@
   };
 
   document.addEventListener('DOMContentLoaded', () => {
+    syncCanonicalNav();
     initMobileMenu();
     initLocationModal();
     initSearchModal();
