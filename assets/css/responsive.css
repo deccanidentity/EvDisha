@@ -28,13 +28,13 @@
    -------------------------------------------------------------------------- */
 @media (max-width: 1239px) {
   .brand-logo img {
-    height: 52px;
-    max-width: 196px;
+    height: 43px;
+    max-width: 142px;
   }
 
   .nav-link {
-    padding: 8px 11px;
-    font-size: 0.89rem;
+    padding: 7px 11px;
+    font-size: 0.88rem;
   }
 
   .categories-grid {
@@ -67,12 +67,12 @@
    -------------------------------------------------------------------------- */
 @media (max-width: 991px) {
   :root {
-    --header-height: 78px;
+    --header-height: 60px;
   }
 
   .brand-logo img {
-    height: 52px;
-    max-width: 198px;
+    height: 38px;
+    max-width: 128px;
   }
 
   .mobile-menu-toggle {
@@ -273,7 +273,7 @@
    -------------------------------------------------------------------------- */
 @media (max-width: 767px) {
   :root {
-    --header-height: 70px;
+    --header-height: 60px;
   }
 
   .container {
@@ -291,8 +291,8 @@
   }
 
   .brand-logo img {
-    height: 44px;
-    max-width: 162px;
+    height: 38px;
+    max-width: 128px;
   }
 
   .header-actions {
@@ -739,12 +739,12 @@
    -------------------------------------------------------------------------- */
 @media (max-width: 389px) {
   :root {
-    --header-height: 64px;
+    --header-height: 58px;
   }
 
   .brand-logo img {
-    height: 38px;
-    max-width: 144px;
+    height: 34px;
+    max-width: 116px;
   }
 
   .hero-cta-group,
