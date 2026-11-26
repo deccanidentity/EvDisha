@@ -993,7 +993,7 @@
         const hasModels = brandsWithModels.has(brand.id);
         const href = hasModels
           ? `explore.html?brand=${encodeURIComponent(brand.id)}`
-          : `brands.html#brand-${encodeURIComponent(brand.id)}`;
+          : `explore.html?q=${encodeURIComponent(brand.name)}`;
 
         return `
           <a
@@ -1044,7 +1044,7 @@
                 >
                   Indian Companies (${indianCount})
                 </button>
-                <a href="brands.html" class="btn btn-sm btn-outline">Directory &rarr;</a>
+                <a href="explore.html" class="btn btn-sm btn-outline">Explore EVs &rarr;</a>
               </div>
             </div>
           </div>

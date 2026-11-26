@@ -410,7 +410,7 @@
           ${
             bModels.length > 0
               ? renderMiniCards(bModels.slice(0, 3))
-              : `<a href="brands.html#brand-${encodeURIComponent(matchedBrand.id)}" class="ev-ai-mini-btn is-primary" style="display:inline-block; margin-top:4px;">View ${esc(matchedBrand.name)} in Directory &rarr;</a>`
+              : `<a href="explore.html?q=${encodeURIComponent(matchedBrand.name)}" class="ev-ai-mini-btn is-primary" style="display:inline-block; margin-top:4px;">Explore ${esc(matchedBrand.name)} EVs &rarr;</a>`
           }
         `;
       }
@@ -423,7 +423,7 @@
           <p style="margin:6px 0;">
             Leading Indian EV companies include <strong>${esc(topNames)}</strong>, plus Euler Motors, Altigreen, Matter, Tork, Kinetic Green, Switch Mobility, Olectra &amp; JBM Electric!
           </p>
-          <a href="brands.html" class="ev-ai-mini-btn is-primary" style="display:inline-block;">Explore All ${indianBrands.length} Indian EV Brands &rarr;</a>
+          <a href="explore.html" class="ev-ai-mini-btn is-primary" style="display:inline-block;">Explore All ${indianBrands.length} Indian EV Brands &rarr;</a>
         `;
       }
 

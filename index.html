@@ -28,9 +28,9 @@
     rel="stylesheet" />
 
   <!-- Stylesheets -->
-  <link rel="stylesheet" href="assets/css/style.css?v=3.1" />
-  <link rel="stylesheet" href="assets/css/responsive.css?v=3.1" />
-  <link rel="stylesheet" href="assets/css/modern-ui.css?v=3.1" />
+  <link rel="stylesheet" href="assets/css/style.css?v=3.2" />
+  <link rel="stylesheet" href="assets/css/responsive.css?v=3.2" />
+  <link rel="stylesheet" href="assets/css/modern-ui.css?v=3.2" />
 
   <!-- JSON-LD Structured Data -->
   <script type="application/ld+json">
@@ -73,14 +73,13 @@
       <nav class="primary-nav" id="primary-nav" aria-label="Main navigation">
         <a href="index.html" class="nav-link active" aria-current="page">Home</a>
         <a href="explore.html" class="nav-link">Explore EVs</a>
-        <a href="charging.html" class="nav-link">Charging</a>
         <a href="compare.html" class="nav-link">
           <span>Compare</span>
           <span class="nav-compare-badge js-compare-count" hidden>0</span>
         </a>
-        <a href="brands.html" class="nav-link">Brands</a>
+        <a href="tools.html" class="nav-link">Tools</a>
         <a href="news.html" class="nav-link">News</a>
-        <a href="about.html" class="nav-link">About</a>
+        <a href="charging.html" class="nav-link nav-link-charging">⚡ Charging Hub</a>
       </nav>
 
       <div class="header-actions">
@@ -356,7 +355,7 @@
               city electricity tariff, and driving mode to compute real-time savings and EMI.
             </p>
           </div>
-          <a href="charging.html#charging-calculator" class="btn btn-outline-light">Charging Time Calculator &rarr;</a>
+          <a href="tools.html#emi-calculator" class="btn btn-outline-light">Open Full EMI &amp; Savings Tools &rarr;</a>
         </div>
 
         <div id="home-elastic-studio">
@@ -374,7 +373,7 @@
             <h2 id="brands-heading" class="section-title">Popular EV Brands in India</h2>
             <p class="section-subtitle">Explore electric lineups from leading Indian and global EV OEMs.</p>
           </div>
-          <a href="brands.html" class="btn btn-outline">View All 82 Brands</a>
+          <a href="explore.html" class="btn btn-outline">Explore All 82 Brands &rarr;</a>
         </div>
 
         <div id="home-brands-grid" class="brands-logo-grid">
@@ -400,6 +399,46 @@
         </div>
       </div>
     </section>
+
+    <!-- K. About EV Disha (Merged into Home Bottom) -->
+    <section class="cd-section" id="about-evdisha" aria-labelledby="about-home-heading">
+      <div class="container">
+        <div class="home-about-shell" id="data-methodology">
+          <div class="home-about-grid">
+            <div>
+              <span class="eyebrow">About EV Disha</span>
+              <h2 id="about-home-heading" class="section-title" style="margin-bottom:12px;">Clarity for Every Electric Journey</h2>
+              <p style="font-size:0.95rem; color:var(--color-body);">
+                <strong>EV Disha</strong> (<em>"Disha"</em> meaning direction) is an independent Indian electric mobility guide uniting 187+ electric cars, scooters, motorcycles, 3-wheelers, and commercial EVs with real India charging infrastructure, green loan EMI, and fuel-savings tools.
+              </p>
+              <p style="font-size:0.9rem; color:var(--color-muted);">
+                Zero sign-up walls, zero ad clutter, and standardized manufacturer &amp; BIS IS 17017 charging data—built so buyers can evaluate specs transparently before visiting an authorized dealership.
+              </p>
+              <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:18px;">
+                <a href="tools.html" class="btn btn-sm btn-primary">EMI &amp; Fuel Savings Tools</a>
+                <a href="charging.html" class="btn btn-sm btn-navy">Explore Charging Hub</a>
+                <a href="contact.html" class="btn btn-sm btn-outline">Contact &amp; Feedback</a>
+              </div>
+            </div>
+
+            <div class="home-about-pillars">
+              <div class="home-about-pillar">
+                <strong>01 &bull; देखो (Discover Verified EVs)</strong>
+                <p>Filter 187+ electric vehicles across 82 brands by budget, segment, driving range, state, city, and PIN code.</p>
+              </div>
+              <div class="home-about-pillar">
+                <strong>02 &bull; Compare &amp; Calculate</strong>
+                <p>Run 3-way side-by-side spec comparisons, green loan EMI schedules, and 5-year EV vs petrol savings.</p>
+              </div>
+              <div class="home-about-pillar">
+                <strong>03 &bull; Charge with Confidence</strong>
+                <p>Inspect 52,000+ Indian public charging stations across 32+ cities, 12 CPO networks, and 10 highway corridors.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 
   <!-- Footer -->
@@ -412,7 +451,7 @@
           </a>
           <div class="footer-tagline">देखो &bull; Compare &bull; Go Electric</div>
           <p class="footer-desc">
-            EV Disha is an independent Indian electric vehicle discovery, comparison, and EV charging guide helping buyers evaluate cars, scooters, bikes, and commercial EVs clearly.
+            EV Disha is an independent Indian electric vehicle discovery, comparison, tools, and EV charging guide helping buyers evaluate cars, scooters, bikes, and commercial EVs clearly.
           </p>
           <div class="social-links" aria-label="Social media channels">
             <a href="contact.html#social-channels" class="social-link" aria-label="EV Disha on X (Twitter)" title="Official Social Channels">
@@ -435,16 +474,18 @@
           <ul class="footer-links">
             <li><a href="index.html">Home</a></li>
             <li><a href="explore.html">Explore EVs</a></li>
-            <li><a href="charging.html">EV Charging Hub</a></li>
             <li><a href="compare.html">Compare Vehicles</a></li>
-            <li><a href="brands.html">EV Brands</a></li>
+            <li><a href="tools.html">EV Tools &amp; Calculators</a></li>
             <li><a href="news.html">News &amp; Reviews</a></li>
+            <li><a href="charging.html">EV Charging Hub</a></li>
           </ul>
         </div>
 
         <div class="footer-col">
-          <h3>Vehicle Categories</h3>
+          <h3>EV Tools &amp; Segments</h3>
           <ul class="footer-links">
+            <li><a href="tools.html#emi-calculator">EV EMI Calculator</a></li>
+            <li><a href="tools.html#fuel-savings">Fuel Savings Calculator</a></li>
             <li><a href="explore.html?category=four-wheelers">Electric 4-Wheelers</a></li>
             <li><a href="explore.html?category=two-wheelers">Electric 2-Wheelers</a></li>
             <li><a href="explore.html?category=three-wheelers">Electric 3-Wheelers</a></li>
@@ -455,7 +496,7 @@
         <div class="footer-col">
           <h3>About &amp; Legal</h3>
           <ul class="footer-links">
-            <li><a href="about.html">About EV Disha</a></li>
+            <li><a href="index.html#about-evdisha">About EV Disha</a></li>
             <li><a href="terms.html">Terms &amp; Disclaimer</a></li>
             <li><a href="contact.html">Contact Us</a></li>
             <li><a href="mailto:hello@evdisha.com">hello@evdisha.com</a></li>
@@ -472,7 +513,7 @@
         <div class="footer-legal-links">
           <a href="terms.html">Terms &amp; Conditions</a>
           <span aria-hidden="true">&bull;</span>
-          <a href="about.html#data-methodology">Data Policy</a>
+          <a href="index.html#data-methodology">Data Policy</a>
           <span aria-hidden="true">&bull;</span>
           <a href="contact.html">Contact</a>
         </div>
@@ -481,10 +522,10 @@
   </footer>
 
   <!-- Scripts -->
-  <script src="assets/js/main.js?v=3.1" defer></script>
-  <script src="assets/js/ai-agent.js?v=3.1" defer></script>
-  <script src="assets/js/filters.js?v=3.1" defer></script>
-  <script src="assets/js/home.js?v=3.1" defer></script>
+  <script src="assets/js/main.js?v=3.2" defer></script>
+  <script src="assets/js/ai-agent.js?v=3.2" defer></script>
+  <script src="assets/js/filters.js?v=3.2" defer></script>
+  <script src="assets/js/home.js?v=3.2" defer></script>
 </body>
 
 </html>
