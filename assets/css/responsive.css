@@ -913,9 +913,9 @@
    -------------------------------------------------------------------------- */
 @media (max-width: 1239px) {
   .header-loc-btn {
-    max-width: 138px;
-    padding-inline: 10px;
-    font-size: 0.77rem;
+    max-width: 230px;
+    padding-inline: 11px;
+    font-size: 0.78rem;
   }
 
   .quick-search-form.quick-search-form-5col {
@@ -930,9 +930,10 @@
 
 @media (max-width: 767px) {
   .header-loc-btn {
-    height: 38px;
+    height: 36px;
     padding: 0 9px;
-    max-width: 112px;
+    gap: 5px;
+    max-width: 178px;
     font-size: 0.73rem;
   }
 
@@ -954,8 +955,13 @@
 }
 
 @media (max-width: 389px) {
+  .header-loc-btn {
+    max-width: 152px;
+    padding: 0 8px;
+    font-size: 0.7rem;
+  }
   .header-loc-btn span {
-    max-width: 62px;
+    max-width: none;
   }
 }
 

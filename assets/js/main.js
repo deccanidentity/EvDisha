@@ -141,15 +141,22 @@
 
   function syncHeaderLocationBtn() {
     const loc = getActiveLocation();
-    document.querySelectorAll('.js-header-loc-label').forEach((el) => {
-      if (!loc) {
-        el.textContent = 'All India';
-      } else if (loc.cityName) {
-        el.textContent = loc.zip ? `${loc.cityName} (${loc.zip})` : loc.cityName;
+    let label = 'All India';
+    if (loc) {
+      if (loc.cityName) {
+        label = loc.zip ? `${loc.cityName} (${loc.zip})` : loc.cityName;
       } else if (loc.stateName) {
-        el.textContent = loc.zip ? `${loc.stateName} (${loc.zip})` : loc.stateName;
-      } else {
-        el.textContent = 'All India';
+        label = loc.zip ? `${loc.stateName} (${loc.zip})` : loc.stateName;
+      }
+    }
+    document.querySelectorAll('.js-header-loc-label').forEach((el) => {
+      el.textContent = label;
+      const btn = el.closest('.header-loc-btn');
+      if (btn) {
+        btn.classList.toggle('is-active-loc', Boolean(loc));
+        btn.title = loc
+          ? `Location: ${label} — Click to change city or PIN`
+          : 'Select your city or 6-digit PIN code';
       }
     });
   }

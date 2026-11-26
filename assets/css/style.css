@@ -3704,16 +3704,23 @@ body:has(#floating-compare-bar:not([hidden])) .ev-ai-launcher {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  height: 40px;
-  padding: 0 12px;
+  height: 38px;
+  padding: 0 13px;
   border-radius: var(--radius-pill);
   border: 1.5px solid var(--color-border);
   background: var(--color-bg-light);
   color: var(--color-navy);
   font-size: 0.8125rem;
   font-weight: 700;
-  max-width: 175px;
-  transition: border-color var(--transition-fast), background-color var(--transition-fast);
+  max-width: 260px;
+  flex-shrink: 0;
+  transition: border-color var(--transition-fast), background-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.header-loc-btn.is-active-loc {
+  background: #F0FDF4;
+  border-color: rgba(22, 163, 74, 0.42);
+  color: #092B55;
 }
 
 .header-loc-btn svg {
