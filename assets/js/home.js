@@ -72,12 +72,9 @@
          -------------------------------------------------------------------- */
       if (qsCategory && qsBrand && qsBudget) {
         qsCategory.innerHTML =
-          `<option value="all">All ${categories.length} EV Categories (${vehicles.length})</option>` +
+          `<option value="all">All EV Categories</option>` +
           categories
-            .map((c) => {
-              const cnt = vehicles.filter((v) => v.categoryId === c.id).length;
-              return `<option value="${esc(c.id)}">${esc(c.name)} (${cnt})</option>`;
-            })
+            .map((c) => `<option value="${esc(c.id)}">${esc(c.name)}</option>`)
             .join('');
 
         qsBudget.innerHTML = window.EVDisha.Filters.PRICE_BUCKETS.map(
@@ -88,9 +85,9 @@
           const metros = (locationsData.cities || []).filter((c) => c.popularMetro);
           const others = (locationsData.cities || []).filter((c) => !c.popularMetro);
           qsCity.innerHTML = `
-            <option value="all">All India (${(locationsData.cities || []).length} Cities)</option>
+            <option value="all">All India</option>
             <optgroup label="Popular EV Metro Hubs">
-              ${metros.map((c) => `<option value="${esc(c.id)}">${esc(c.name)}, ${esc(c.stateCode)} (${esc(c.sampleZip)})</option>`).join('')}
+              ${metros.map((c) => `<option value="${esc(c.id)}">${esc(c.name)}, ${esc(c.stateCode)}</option>`).join('')}
             </optgroup>
             <optgroup label="Major Tier-2 Cities">
               ${others.map((c) => `<option value="${esc(c.id)}">${esc(c.name)}, ${esc(c.stateCode)}</option>`).join('')}
@@ -119,16 +116,7 @@
 
         function updateSubmitLabel() {
           if (!qsSubmitLabel) return;
-          const catId = qsCategory.value;
-          const matching = vehicles.filter((v) => {
-            if (catId && catId !== 'all' && v.categoryId !== catId) return false;
-            if (finderMode === 'brand' && qsBrand.value && qsBrand.value !== 'all' && v.brandId !== qsBrand.value) return false;
-            if (finderMode === 'budget' && qsBudget.value && qsBudget.value !== 'all') {
-              if (!window.EVDisha.Filters.matchesPriceBucket(v, qsBudget.value)) return false;
-            }
-            return true;
-          });
-          qsSubmitLabel.textContent = `Search ${matching.length} Verified ${matching.length === 1 ? 'EV' : 'EVs'}`;
+          qsSubmitLabel.textContent = 'Search Verified EVs';
         }
 
         function populateBrandsForCategory(catId) {
@@ -141,7 +129,7 @@
                 );
 
           qsBrand.innerHTML =
-            `<option value="all">All Brands (${matchingBrands.length})</option>` +
+            `<option value="all">All Brands</option>` +
             matchingBrands
               .map((b) => `<option value="${esc(b.id)}">${esc(b.name)}</option>`)
               .join('');
@@ -482,17 +470,16 @@
           if (categoryTabsEl) {
             categoryTabsEl.innerHTML = `
               <button type="button" class="pill-btn ${activeTab === 'all' ? 'is-active' : ''}" data-home-cat="all">
-                All ${categories.length} Segments (${vehicles.length})
+                All Segments
               </button>
               ${categories
-                .map((cat) => {
-                  const cnt = vehicles.filter((v) => v.categoryId === cat.id).length;
-                  return `
+                .map(
+                  (cat) => `
                     <button type="button" class="pill-btn ${activeTab === cat.id ? 'is-active' : ''}" data-home-cat="${esc(cat.id)}">
-                      ${esc(cat.shortName)} (${cnt})
+                      ${esc(cat.shortName)}
                     </button>
-                  `;
-                })
+                  `
+                )
                 .join('')}
             `;
           }
