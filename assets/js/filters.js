@@ -18,11 +18,11 @@
 
   const PRICE_BUCKETS = [
     { id: 'all', label: 'All Budgets' },
-    { id: 'under-1l', label: 'Under ₹1 Lakh (Cycles & Entry)' },
-    { id: '1l-2l', label: '₹1 Lakh – ₹2 Lakh' },
-    { id: '2l-5l', label: '₹2 Lakh – ₹5 Lakh' },
+    { id: 'under-1.5l', label: 'Under ₹1.5 Lakh (2W & Entry)' },
+    { id: '1.5l-5l', label: '₹1.5 Lakh – ₹5 Lakh' },
     { id: '5l-15l', label: '₹5 Lakh – ₹15 Lakh' },
-    { id: 'above-15l', label: 'Above ₹15 Lakh' }
+    { id: '15l-30l', label: '₹15 Lakh – ₹30 Lakh' },
+    { id: 'above-30l', label: 'Above ₹30 Lakh (Premium)' }
   ];
 
   const RANGE_BUCKETS = [
@@ -35,9 +35,9 @@
 
   const ELASTIC_SUGGESTIONS = [
     { label: '⚡ Fast-Charging SUVs', query: 'suv fast charging' },
-    { label: '💰 Scooters under ₹1.3L', query: 'scooter under 1.3 lakh' },
-    { label: '🛣️ 400+ km Highway EVs', query: 'above 400 km' },
-    { label: '🪪 License-Free Cycles', query: 'no license cycle' },
+    { label: '💰 Scooters under ₹1.5L', query: 'scooter under 1.5 lakh' },
+    { label: '🛣️ 450+ km Highway EVs', query: 'above 450 km' },
+    { label: '🏍️ Electric Motorcycles', query: 'motorcycle' },
     { label: '📦 Commercial & Cargo', query: 'cargo fleet' }
   ];
 
@@ -325,18 +325,27 @@
   function matchesPriceBucket(vehicle, bucketId) {
     if (!bucketId || bucketId === 'all') return true;
     const p = Number(vehicle.priceMin) || 0;
+    if (p <= 0) return false;
     switch (bucketId) {
       case 'under-1l':
         return p < 100000;
+      case 'under-1.5l':
+        return p < 150000;
       case '1l-2l':
       case 'under-2l':
         return bucketId === 'under-2l' ? p < 200000 : p >= 100000 && p < 200000;
+      case '1.5l-5l':
+        return p >= 150000 && p < 500000;
       case '2l-5l':
         return p >= 200000 && p < 500000;
       case '5l-15l':
         return p >= 500000 && p <= 1500000;
+      case '15l-30l':
+        return p > 1500000 && p <= 3000000;
       case 'above-15l':
         return p > 1500000;
+      case 'above-30l':
+        return p > 3000000;
       default:
         return true;
     }
@@ -549,13 +558,19 @@
     const activeLoc = window.EVDisha.getActiveLocation ? window.EVDisha.getActiveLocation() : null;
     const locLabel = activeLoc ? (activeLoc.cityName || activeLoc.stateName || '') : '';
     const em = vehicle.elasticMetrics || {};
-    const emiDisp = em.emiDisplay || `${formatInrNumber(computeElasticOwnership(vehicle).emiInr)}/mo*`;
+    const hasPrice = Number(vehicle.priceMin) > 0;
+    const emiDisp = hasPrice ? (em.emiDisplay || `${formatInrNumber(computeElasticOwnership(vehicle).emiInr)}/mo*`) : '';
     const runCost = em.runningCostPerKmInr != null ? `₹${em.runningCostPerKmInr}/km` : '';
-    const highlightTag = vehicle.highlightTag || '⚡ Verified Spec';
+    const highlightTag = vehicle.highlightTag || '✓ Verified Spec';
+    const rangeTxt = vehicle.claimedRangeKm ? `${esc(vehicle.claimedRangeKm)} km` : '—';
+    const batTxt = vehicle.batteryCapacityKwh ? `${esc(vehicle.batteryCapacityKwh)} kWh` : '—';
+    const speedTxt = vehicle.topSpeedKmh ? `${esc(vehicle.topSpeedKmh)} km/h` : (vehicle.motorPowerKw ? `${esc(vehicle.motorPowerKw)} kW` : '—');
+    const speedLabel = vehicle.topSpeedKmh ? 'Top Speed' : (vehicle.motorPowerKw ? 'Power' : 'Top Speed');
+    const isSvgFallback = String(vehicle.image || '').endsWith('.svg');
 
     return `
       <article class="vehicle-card" data-vehicle-id="${esc(vehicle.id)}">
-        <a href="${detailsUrl}" class="vehicle-card-media" aria-label="View ${esc(vehicle.fullName)} specifications">
+        <a href="${detailsUrl}" class="vehicle-card-media ${isSvgFallback ? 'is-fallback' : ''}" aria-label="View ${esc(vehicle.fullName)} specifications">
           <img
             src="${esc(vehicle.image)}"
             alt="${esc(vehicle.fullName)} – ${esc(vehicle.category)}"
@@ -582,7 +597,7 @@
           </h3>
           <div class="vehicle-card-price">${esc(vehicle.priceDisplay)}</div>
           <div class="vehicle-elastic-strip" title="Indicative green EV loan EMI &amp; home charging cost estimate">
-            <span class="elastic-emi-chip">EMI ~${esc(emiDisp)}</span>
+            ${emiDisp ? `<span class="elastic-emi-chip">EMI ~${esc(emiDisp)}</span>` : '<span class="elastic-emi-chip">Price TBA</span>'}
             ${runCost ? `<span class="elastic-run-chip">${esc(runCost)} run</span>` : ''}
           </div>
           <div class="vehicle-card-price-note">
@@ -592,15 +607,15 @@
           <div class="vehicle-specs-strip vehicle-specs-3col">
             <div>
               <span class="spec-pill-label">Range</span>
-              <span class="spec-pill-value">${esc(vehicle.claimedRangeKm)} km</span>
+              <span class="spec-pill-value">${rangeTxt}</span>
             </div>
             <div>
               <span class="spec-pill-label">Battery</span>
-              <span class="spec-pill-value">${esc(vehicle.batteryCapacityKwh)} kWh</span>
+              <span class="spec-pill-value">${batTxt}</span>
             </div>
             <div>
-              <span class="spec-pill-label">Top Speed</span>
-              <span class="spec-pill-value">${esc(vehicle.topSpeedKmh)} km/h</span>
+              <span class="spec-pill-label">${speedLabel}</span>
+              <span class="spec-pill-value">${speedTxt}</span>
             </div>
           </div>
 

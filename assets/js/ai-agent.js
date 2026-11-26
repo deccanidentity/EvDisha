@@ -194,34 +194,31 @@
     function findMentionedVehicles(q) {
       const matches = [];
       const aliases = {
-        'hero-lectro-h5': ['lectro h5', 'h5'],
-        'hero-lectro-c8i': ['lectro c8i', 'c8i', 'step-through'],
-        'emotorad-doodle-v3': ['doodle', 'doodle v3'],
-        'emotorad-trex-air': ['t-rex', 'trex', 't-rex air'],
-        'kinetic-e-luna': ['e-luna', 'eluna', 'luna', 'kinetic luna'],
         'tata-tiago-ev': ['tiago', 'tiago.ev', 'tiago ev'],
         'mg-comet-ev': ['comet', 'mg comet'],
         'tata-curvv-ev': ['curvv', 'curvv.ev', 'curvv ev'],
         'tata-nexon-ev': ['nexon', 'nexon.ev', 'nexon ev'],
         'mg-windsor-ev': ['windsor', 'mg windsor'],
         'tata-punch-ev': ['punch', 'punch.ev', 'punch ev'],
-        'mahindra-xuv400': ['xuv400', 'xuv 400'],
+        'mahindra-be-6': ['be 6', 'be6', 'mahindra be 6'],
+        'mahindra-xev-9e': ['xev 9e', 'xev9e', 'mahindra xev'],
+        'hyundai-creta-electric': ['creta electric', 'creta ev'],
+        'maruti-e-vitara': ['e vitara', 'evitara', 'maruti ev'],
         'byd-atto-3': ['atto 3', 'atto3', 'atto'],
+        'byd-seal': ['byd seal', 'seal'],
+        'ather-450x': ['450x', 'ather 450x'],
         'ather-rizta': ['rizta', 'ather rizta'],
         'tvs-iqube': ['iqube', 'i-qube', 'tvs iqube'],
-        'bajaj-chetak': ['chetak', 'bajaj chetak', '3501'],
-        'ola-s1-pro': ['s1 pro', 'ola s1', 's1'],
-        'ultraviolette-f77-mach-2': ['f77', 'ultraviolette', 'mach 2'],
+        'bajaj-chetak': ['chetak', 'bajaj chetak'],
+        'ola-s1-pro': ['s1 pro', 'ola s1'],
+        'ola-roadster': ['roadster', 'ola roadster'],
+        'ultraviolette-f77': ['f77', 'ultraviolette'],
         'revolt-rv400': ['rv400', 'rv 400', 'revolt'],
-        'oben-rorr': ['rorr', 'oben rorr'],
         'tata-ace-ev': ['ace ev', 'tata ace'],
-        'mahindra-zeo': ['zeo', 'mahindra zeo'],
         'switch-iev4': ['switch iev4', 'iev4', 'switch lcv'],
-        'olectra-k7-ev-bus': ['ebuzz', 'k7', 'olectra bus', 'electric bus'],
-        'euler-hiload-ev': ['hiload', 'euler hiload'],
+        'euler-hiload': ['hiload', 'euler hiload'],
         'mahindra-treo': ['treo', 'mahindra treo'],
-        'mahindra-e-alfa-plus': ['e-alfa', 'ealfa', 'alfa plus'],
-        'piaggio-ape-e-city': ['ape e-city', 'ape ev', 'piaggio ape']
+        'kinetic-safar': ['safar', 'kinetic safar']
       };
 
       vehicles.forEach((v) => {
@@ -256,7 +253,7 @@
                 <img src="${esc(v.image)}" alt="${esc(v.fullName)}" width="58" height="38" loading="lazy" />
                 <div class="ev-ai-rec-meta">
                   <h4>${esc(v.fullName)}</h4>
-                  <span>${esc(v.priceDisplay)} &bull; ${esc(v.claimedRangeKm)} km &bull; ${esc(v.batteryDisplay)}</span>
+                  <span>${esc(v.priceDisplay)} &bull; ${esc(v.rangeDisplay || '—')} &bull; ${esc(v.batteryDisplay || '—')}</span>
                 </div>
                 <div class="ev-ai-rec-actions">
                   <a href="vehicle-details.html?id=${encodeURIComponent(v.id)}" class="ev-ai-mini-btn is-primary">Specs</a>
@@ -417,9 +414,7 @@
       const budgetInr = extractBudgetInr(q);
       let catFilter = null;
       let subFilter = null;
-      if (/\b(cycle|cycles|e-cycle|ecycle|bicycle|bicycles|fat tyre|folding)\b/.test(q)) {
-        catFilter = 'cycles';
-      } else if (/\b(car|cars|suv|suvs|crossover|hatchback|4-wheeler|4 wheeler|four wheeler)\b/.test(q)) {
+      if (/\b(car|cars|suv|suvs|crossover|hatchback|4-wheeler|4 wheeler|four wheeler)\b/.test(q)) {
         catFilter = 'four-wheelers';
       } else if (/\b(scooter|scooters|scooty|family scooter)\b/.test(q)) {
         catFilter = 'two-wheelers';
@@ -427,7 +422,7 @@
       } else if (/\b(bike|bikes|motorcycle|sportbike)\b/.test(q)) {
         catFilter = 'two-wheelers';
         subFilter = ['commuter-bikes', 'performance-bikes'];
-      } else if (/\b(2-wheeler|2 wheeler|two wheeler)\b/.test(q)) {
+      } else if (/\b(2-wheeler|2 wheeler|two wheeler|cycle|e-cycle|moped)\b/.test(q)) {
         catFilter = 'two-wheelers';
       } else if (/\b(3-wheeler|3 wheeler|three wheeler|auto|e-auto|rickshaw|3w)\b/.test(q)) {
         catFilter = 'three-wheelers';
@@ -445,7 +440,7 @@
         }
         if (budgetInr) {
           const isAbove = /\b(above|over|more than)\b/.test(q);
-          pool = pool.filter((v) => (isAbove ? v.priceMin >= budgetInr : v.priceMin <= budgetInr));
+          pool = pool.filter((v) => (isAbove ? v.priceMin >= budgetInr : v.priceMin > 0 && v.priceMin <= budgetInr));
         }
 
         if (/\b(cheapest|lowest price|affordable|budget)\b/.test(q)) {

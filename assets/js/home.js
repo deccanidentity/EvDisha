@@ -54,7 +54,7 @@
       // 1. Populate Quick Vehicle Search
       if (qsCategory && qsBrand && qsBudget) {
         qsCategory.innerHTML =
-          `<option value="all">All 5 EV Categories</option>` +
+          `<option value="all">All ${categories.length} EV Categories</option>` +
           categories
             .map((c) => `<option value="${esc(c.id)}">${esc(c.name)}</option>`)
             .join('');
@@ -67,7 +67,7 @@
           const metros = (locationsData.cities || []).filter((c) => c.popularMetro);
           const others = (locationsData.cities || []).filter((c) => !c.popularMetro);
           qsCity.innerHTML = `
-            <option value="all">All India (49+ Cities)</option>
+            <option value="all">All India (${(locationsData.cities || []).length} Cities)</option>
             <optgroup label="Popular EV Metro Hubs">
               ${metros.map((c) => `<option value="${esc(c.id)}">${esc(c.name)}, ${esc(c.stateCode)} (${esc(c.sampleZip)})</option>`).join('')}
             </optgroup>
@@ -91,8 +91,8 @@
             !catId || catId === 'all'
               ? activeCatalogueBrands
               : activeCatalogueBrands.filter((b) =>
-                  vehicles.some((v) => v.brandId === b.id && v.categoryId === catId)
-                );
+                vehicles.some((v) => v.brandId === b.id && v.categoryId === catId)
+              );
 
           qsBrand.innerHTML =
             `<option value="all">All Brands</option>` +
@@ -172,11 +172,11 @@
 
                 <div class="category-subpills" aria-label="${esc(cat.name)} subcategories">
                   ${subs
-                    .map((sub) => {
-                      const subUrl = `explore.html?category=${encodeURIComponent(cat.id)}&sub=${encodeURIComponent(sub.id)}`;
-                      return `<a href="${subUrl}" class="subcat-chip">${esc(sub.name)}</a>`;
-                    })
-                    .join('')}
+              .map((sub) => {
+                const subUrl = `explore.html?category=${encodeURIComponent(cat.id)}&sub=${encodeURIComponent(sub.id)}`;
+                return `<a href="${subUrl}" class="subcat-chip">${esc(sub.name)}</a>`;
+              })
+              .join('')}
                 </div>
 
                 <div class="category-card-footer">
@@ -273,9 +273,9 @@
 
             <div class="vehicles-grid vehicles-grid-compact">
               ${catVehicles
-                .slice(0, 4)
-                .map((v) => window.EVDisha.Filters.renderVehicleCard(v))
-                .join('')}
+              .slice(0, 4)
+              .map((v) => window.EVDisha.Filters.renderVehicleCard(v))
+              .join('')}
             </div>
           `;
           window.EVDisha.syncCompareUI();
@@ -319,15 +319,20 @@
 
       // 4. Interactive Elastic EV Savings, EMI & Real-World Range Studio
       if (elasticStudioRoot && window.EVDisha.Filters.computeElasticOwnership) {
+        const pickFirstInSeg = (segId, preferredId) => {
+          const hit = vehicles.find((v) => v.id === preferredId && v.priceMin > 0);
+          if (hit) return hit.id;
+          const first = vehicles.find((v) => v.categoryId === segId && v.priceMin > 0 && v.claimedRangeKm > 0);
+          return (first && first.id) || (vehicles[0] && vehicles[0].id) || '';
+        };
         const segmentDefaults = {
-          'four-wheelers': 'tata-nexon-ev',
-          'two-wheelers': 'ather-rizta',
-          'three-wheelers': 'mahindra-treo',
-          cycles: 'emotorad-doodle-v3',
-          commercial: 'tata-ace-ev'
+          'four-wheelers': pickFirstInSeg('four-wheelers', 'tata-nexon-ev'),
+          'two-wheelers': pickFirstInSeg('two-wheelers', 'ather-rizta'),
+          'three-wheelers': pickFirstInSeg('three-wheelers', 'mahindra-treo'),
+          commercial: pickFirstInSeg('commercial', 'tata-ace-ev')
         };
 
-        let selectedVehicleId = 'tata-nexon-ev';
+        let selectedVehicleId = segmentDefaults['four-wheelers'];
         let dailyKm = 45;
         let tariffInr = 7.0;
         let driveMode = 'city';
@@ -335,15 +340,15 @@
 
         const groupedOptionsHTML = categories
           .map((cat) => {
-            const catModels = vehicles.filter((v) => v.categoryId === cat.id);
+            const catModels = vehicles.filter((v) => v.categoryId === cat.id && v.priceMin > 0);
             return `
-              <optgroup label="${esc(cat.name)}">
+              <optgroup label="${esc(cat.name)} (${catModels.length})">
                 ${catModels
-                  .map(
-                    (v) =>
-                      `<option value="${esc(v.id)}" ${v.id === selectedVehicleId ? 'selected' : ''}>${esc(v.fullName)} (${esc(v.priceDisplay)})</option>`
-                  )
-                  .join('')}
+                .map(
+                  (v) =>
+                    `<option value="${esc(v.id)}" ${v.id === selectedVehicleId ? 'selected' : ''}>${esc(v.fullName)} (${esc(v.priceDisplay)})</option>`
+                )
+                .join('')}
               </optgroup>
             `;
           })
@@ -354,8 +359,7 @@
             <div class="elastic-studio-controls">
               <div class="elastic-seg-row" role="group" aria-label="Quick select EV category">
                 <button type="button" class="elastic-seg-btn is-active" data-studio-seg="four-wheelers">4W SUV</button>
-                <button type="button" class="elastic-seg-btn" data-studio-seg="two-wheelers">2W Scooter</button>
-                <button type="button" class="elastic-seg-btn" data-studio-seg="cycles">E-Cycle</button>
+                <button type="button" class="elastic-seg-btn" data-studio-seg="two-wheelers">2W EV</button>
                 <button type="button" class="elastic-seg-btn" data-studio-seg="three-wheelers">3-Wheeler</button>
                 <button type="button" class="elastic-seg-btn" data-studio-seg="commercial">Commercial</button>
               </div>
@@ -607,7 +611,7 @@
             const mCount = vehicles.filter((v) => v.brandId === b.id).length;
             return `
               <a href="explore.html?brand=${encodeURIComponent(b.id)}" class="brand-tile" aria-label="Explore ${esc(b.name)} electric vehicles">
-                <img src="${esc(b.logo)}?v=1.8" alt="${esc(b.name)} logo" width="220" height="88" decoding="async" />
+                <img src="${esc(b.logo)}?v=2.0" alt="${esc(b.name)} logo" width="220" height="88" decoding="async" />
                 <div class="brand-tile-caption">
                   <strong>${esc(b.name)}</strong>
                   <span>${mCount > 0 ? `${mCount} ${mCount === 1 ? 'Model' : 'Models'}` : 'View OEM'} &rarr;</span>

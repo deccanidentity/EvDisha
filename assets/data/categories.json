@@ -1,146 +1,119 @@
 [
   {
-    "id": "cycles",
-    "name": "Electric Cycles",
-    "shortName": "Cycles",
-    "tagline": "Commuter, Folding & MTB",
-    "description": "License-free pedal-assist and throttle e-cycles for fitness, campus commutes, and daily city rides.",
-    "priceStarting": "From ₹28,999*",
-    "image": "assets/images/vehicles/hero-lectro-h5.webp",
-    "icon": "cycle",
-    "subcategories": [
-      {
-        "id": "city-commuter",
-        "name": "City Commuter Cycles",
-        "image": "assets/images/vehicles/hero-lectro-h5.webp"
-      },
-      {
-        "id": "folding-fat-tyre",
-        "name": "Folding & Fat-Tyre",
-        "image": "assets/images/vehicles/emotorad-doodle-v3.webp"
-      },
-      {
-        "id": "mtb-adventure",
-        "name": "MTB & Trail E-Cycles",
-        "image": "assets/images/vehicles/emotorad-trex-air.webp"
-      }
-    ]
-  },
-  {
     "id": "two-wheelers",
-    "name": "2-Wheelers",
+    "name": "Electric 2-Wheelers",
     "shortName": "2-Wheelers",
-    "tagline": "Scooters, Bikes & Mopeds",
-    "description": "Practical family scooters, smart high-range commuters, electric motorcycles, and heavy-duty utility mopeds.",
-    "priceStarting": "From ₹69,990*",
-    "image": "assets/images/vehicles/ather-rizta.webp",
+    "tagline": "Scooters & Electric Motorcycles",
+    "description": "Smart electric scooters, family commuters, and performance e-motorcycles across India.",
+    "priceStarting": "From ₹55,999*",
+    "image": "assets/images/vehicles/ather/ather-450x/hero.webp",
     "icon": "two-wheeler",
     "subcategories": [
       {
         "id": "family-scooters",
-        "name": "Family Scooters",
-        "image": "assets/images/vehicles/ather-rizta.webp"
+        "name": "Family & City Scooters",
+        "image": "assets/images/vehicles/chetak/bajaj-chetak/hero.webp"
       },
       {
         "id": "smart-scooters",
-        "name": "Smart High-Range Scooters",
-        "image": "assets/images/vehicles/ola-s1-pro.webp"
+        "name": "Smart & Performance Scooters",
+        "image": "assets/images/vehicles/ather/ather-450x/hero.webp"
       },
       {
         "id": "commuter-bikes",
-        "name": "Commuter Bikes",
-        "image": "assets/images/vehicles/oben-rorr.webp"
+        "name": "Electric Motorcycles",
+        "image": "assets/images/vehicles/revolt/revolt-rv400/hero.webp"
       },
       {
         "id": "performance-bikes",
-        "name": "Performance Sportbikes",
-        "image": "assets/images/vehicles/ultraviolette-f77-mach-2.webp"
-      },
-      {
-        "id": "utility-mopeds",
-        "name": "Utility Mopeds",
-        "image": "assets/images/vehicles/kinetic-e-luna.webp"
+        "name": "Performance E-Bikes",
+        "image": "assets/images/vehicles/ola-electric/ola-roadster/hero.webp"
       }
     ]
   },
   {
     "id": "three-wheelers",
-    "name": "3-Wheelers",
+    "name": "Electric 3-Wheelers",
     "shortName": "3-Wheelers",
     "tagline": "E-Autos, Cargo & E-Rickshaws",
-    "description": "Low-running-cost passenger auto-rickshaws, city e-rickshaws, and liquid-cooled 3W cargo loaders.",
-    "priceStarting": "From ₹1.61 Lakh*",
-    "image": "assets/images/vehicles/mahindra-treo.webp",
+    "description": "High-uptime passenger e-autos and last-mile electric cargo three-wheelers built for Indian cities.",
+    "priceStarting": "From ₹41,967*",
+    "image": "assets/images/vehicles/mahindra-treo/mahindra-treo/hero.webp",
     "icon": "three-wheeler",
     "subcategories": [
       {
         "id": "passenger-autos",
         "name": "Passenger E-Autos",
-        "image": "assets/images/vehicles/mahindra-treo.webp"
+        "image": "assets/images/vehicles/mahindra-treo/mahindra-treo/hero.webp"
       },
       {
         "id": "cargo-3w",
-        "name": "3W Cargo Loaders",
-        "image": "assets/images/vehicles/euler-hiload-ev.webp"
+        "name": "Cargo 3-Wheelers",
+        "image": "assets/images/vehicles/euler/euler-hiload/hero.webp"
       },
       {
         "id": "e-rickshaws",
-        "name": "City E-Rickshaws",
-        "image": "assets/images/vehicles/mahindra-e-alfa-plus.webp"
+        "name": "E-Rickshaws",
+        "image": "assets/images/vehicles/kinetic-green/kinetic-safar/hero.webp"
       }
     ]
   },
   {
     "id": "four-wheelers",
-    "name": "4-Wheelers",
+    "name": "Electric 4-Wheelers",
     "shortName": "4-Wheelers",
-    "tagline": "Compact SUVs, CUVs & Luxury",
-    "description": "Connected city SUVs, Aero-Lounge family crossovers, and long-range highway electric cars with CCS2 fast charging.",
-    "priceStarting": "From ₹6.99 Lakh*",
-    "image": "assets/images/vehicles/tata-nexon-ev.webp",
+    "tagline": "Hatchbacks, SUVs & Luxury EVs",
+    "description": "City electric hatchbacks, highway-ready family SUVs, crossovers, sedans, and luxury EVs.",
+    "priceStarting": "From ₹3.50 Lakh*",
+    "image": "assets/images/vehicles/byd/byd-atto-3/hero.webp",
     "icon": "four-wheeler",
     "subcategories": [
       {
         "id": "compact-suvs",
-        "name": "Compact & Micro SUVs",
-        "image": "assets/images/vehicles/tata-punch-ev.webp"
+        "name": "Compact EVs & Hatchbacks",
+        "image": "assets/images/vehicles/tata-ev/punch-ev/hero.webp"
       },
       {
         "id": "family-crossovers",
-        "name": "Family Crossovers",
-        "image": "assets/images/vehicles/tata-nexon-ev.webp"
+        "name": "Family EV SUVs & Crossovers",
+        "image": "assets/images/vehicles/byd/byd-atto-3/hero.webp"
+      },
+      {
+        "id": "electric-sedans",
+        "name": "Electric Sedans & GT",
+        "image": "assets/images/vehicles/bmw/i5-lwb/hero.webp"
       },
       {
         "id": "premium-suvs",
-        "name": "Long-Range SUVs",
-        "image": "assets/images/vehicles/byd-atto-3.webp"
+        "name": "Premium & Luxury EVs",
+        "image": "assets/images/vehicles/hyundai/hyundai-creta-electric/hero.webp"
       }
     ]
   },
   {
     "id": "commercial",
-    "name": "Commercial Vehicles",
+    "name": "Commercial EVs",
     "shortName": "Commercial",
-    "tagline": "Mini-Trucks, LCVs & E-Buses",
-    "description": "Four-wheel urban mini-trucks, 1.75-tonne LCV pickups, and zero-emission electric city transit buses.",
-    "priceStarting": "From ₹7.52 Lakh*",
-    "image": "assets/images/vehicles/tata-ace-ev.webp",
+    "tagline": "Mini-Trucks, LCVs & Electric Buses",
+    "description": "Zero-emission urban cargo SCVs, heavy electric trucks, and electric buses for fleets and transit.",
+    "priceStarting": "From ₹10.51 Lakh*",
+    "image": "assets/images/vehicles/tata-motors/tata-ace-ev/hero.webp",
     "icon": "commercial",
     "subcategories": [
       {
         "id": "mini-trucks",
-        "name": "4W Mini-Trucks",
-        "image": "assets/images/vehicles/tata-ace-ev.webp"
+        "name": "Electric Mini-Trucks & SCVs",
+        "image": "assets/images/vehicles/tata-motors/tata-ace-ev/hero.webp"
       },
       {
         "id": "electric-lcv",
-        "name": "Electric LCV Pickups",
-        "image": "assets/images/vehicles/switch-iev4.webp"
+        "name": "Electric Trucks & LCVs",
+        "image": "assets/images/vehicles/montra-electric/montra-rhino-2838-ev/hero.webp"
       },
       {
         "id": "electric-buses",
         "name": "Electric Buses",
-        "image": "assets/images/vehicles/olectra-k7-ev-bus.webp"
+        "image": "assets/images/vehicles/olectra/olectra-meghaetron/hero.webp"
       }
     ]
   }

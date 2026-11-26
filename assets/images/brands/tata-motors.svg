@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 88" width="220" height="88" role="img" aria-label="TATA.ev">
+  <rect x="1" y="1" width="218" height="86" rx="14" fill="#FFFFFF" stroke="#DCE6F2" stroke-width="1.5"/>
+  
+    <rect x="16" y="23" width="42" height="42" rx="12" fill="#08284F" />
+    <ellipse cx="37" cy="44" rx="15.5" ry="10.5" fill="none" stroke="#20C957" stroke-width="1.8" />
+    <text x="37" y="47.5" text-anchor="middle" font-family="Manrope, Inter, Segoe UI, Arial, sans-serif" font-size="9.5" font-weight="800" fill="#FFFFFF">T.ev</text>
+  <text x="68" y="42" text-anchor="start" font-family="Manrope, Inter, Segoe UI, Arial, sans-serif" font-size="16.2" font-weight="800" letter-spacing="0.8" fill="#092B55">TATA.ev</text>
+  <rect x="68" y="49" width="38" height="2.6" rx="1.3" fill="#08284F"/>
+  <text x="68" y="64" text-anchor="start" font-family="Manrope, Inter, Segoe UI, Arial, sans-serif" font-size="7.6" font-weight="700" letter-spacing="0.55" fill="#526176">INDIA • 4W &amp; COMMERCIAL</text>
+</svg>

@@ -1,299 +1,1233 @@
 [
   {
+    "id": "ola-electric",
+    "name": "Ola Electric",
+    "manufacturer": "Ola Electric Mobility",
+    "logo": "assets/images/brands/ola-electric.svg",
+    "headquarters": "Bengaluru, Karnataka",
+    "isIndianCompany": true,
+    "categories": [
+      "two-wheelers"
+    ],
+    "modelCount": 10,
+    "popular": true,
+    "summary": "Ola Electric (Ola Electric Mobility) offers 10 verified electric models in India across 2-Wheelers.",
+    "website": "Verified OEM Directory"
+  },
+  {
+    "id": "odysse-electric",
+    "name": "Odysse Electric",
+    "manufacturer": "Odysse Electric",
+    "logo": "assets/images/brands/odysse-electric.svg",
+    "headquarters": "India",
+    "isIndianCompany": true,
+    "categories": [
+      "two-wheelers"
+    ],
+    "modelCount": 8,
+    "popular": true,
+    "summary": "Odysse Electric (Odysse Electric) offers 8 verified electric models in India across 2-Wheelers.",
+    "website": "Verified OEM Directory"
+  },
+  {
     "id": "tata-ev",
     "name": "Tata.ev",
+    "manufacturer": "Tata Passenger Electric Mobility",
     "logo": "assets/images/brands/tata-ev.svg",
     "headquarters": "Mumbai, Maharashtra",
     "isIndianCompany": true,
-    "categories": ["four-wheelers", "commercial"],
+    "categories": [
+      "four-wheelers"
+    ],
+    "modelCount": 8,
     "popular": true,
-    "summary": "India's flagship electric passenger 4-wheeler and commercial vehicle leader offering electric hatchbacks, SUVs, and urban cargo mini-trucks backed by nationwide service.",
-    "website": "ev.tatamotors.com"
+    "summary": "Tata.ev (Tata Passenger Electric Mobility) offers 8 verified electric models in India across 4-Wheelers.",
+    "website": "Verified OEM Directory"
+  },
+  {
+    "id": "mercedes-benz",
+    "name": "Mercedes-Benz",
+    "manufacturer": "Mercedes-Benz",
+    "logo": "assets/images/brands/mercedes-benz.svg",
+    "headquarters": "India",
+    "isIndianCompany": false,
+    "categories": [
+      "four-wheelers"
+    ],
+    "modelCount": 7,
+    "popular": true,
+    "summary": "Mercedes-Benz (Mercedes-Benz) offers 7 verified electric models in India across 4-Wheelers.",
+    "website": "Verified OEM Directory"
+  },
+  {
+    "id": "bmw",
+    "name": "BMW",
+    "manufacturer": "BMW",
+    "logo": "assets/images/brands/bmw.svg",
+    "headquarters": "India",
+    "isIndianCompany": false,
+    "categories": [
+      "four-wheelers"
+    ],
+    "modelCount": 6,
+    "popular": true,
+    "summary": "BMW (BMW) offers 6 verified electric models in India across 4-Wheelers.",
+    "website": "Verified OEM Directory"
+  },
+  {
+    "id": "mg",
+    "name": "MG",
+    "manufacturer": "JSW MG Motor India",
+    "logo": "assets/images/brands/mg.svg",
+    "headquarters": "Gurugram, Haryana",
+    "isIndianCompany": false,
+    "categories": [
+      "four-wheelers"
+    ],
+    "modelCount": 6,
+    "popular": true,
+    "summary": "MG (JSW MG Motor India) offers 6 verified electric models in India across 4-Wheelers.",
+    "website": "Verified OEM Directory"
+  },
+  {
+    "id": "ather",
+    "name": "Ather",
+    "manufacturer": "Ather Energy",
+    "logo": "assets/images/brands/ather.svg",
+    "headquarters": "Bengaluru, Karnataka",
+    "isIndianCompany": true,
+    "categories": [
+      "two-wheelers"
+    ],
+    "modelCount": 5,
+    "popular": true,
+    "summary": "Ather (Ather Energy) offers 5 verified electric models in India across 2-Wheelers.",
+    "website": "Verified OEM Directory"
+  },
+  {
+    "id": "mahindra-be",
+    "name": "Mahindra BE",
+    "manufacturer": "Mahindra Electric Automobile",
+    "logo": "assets/images/brands/mahindra-be.svg",
+    "headquarters": "Mumbai, Maharashtra",
+    "isIndianCompany": true,
+    "categories": [
+      "four-wheelers"
+    ],
+    "modelCount": 5,
+    "popular": true,
+    "summary": "Mahindra BE (Mahindra Electric Automobile) offers 5 verified electric models in India across 4-Wheelers.",
+    "website": "Verified OEM Directory"
+  },
+  {
+    "id": "vida",
+    "name": "VIDA",
+    "manufacturer": "Hero MotoCorp",
+    "logo": "assets/images/brands/vida.svg",
+    "headquarters": "New Delhi, Delhi",
+    "isIndianCompany": true,
+    "categories": [
+      "two-wheelers"
+    ],
+    "modelCount": 5,
+    "popular": true,
+    "summary": "VIDA (Hero MotoCorp) offers 5 verified electric models in India across 2-Wheelers.",
+    "website": "Verified OEM Directory"
+  },
+  {
+    "id": "byd",
+    "name": "BYD",
+    "manufacturer": "BYD India",
+    "logo": "assets/images/brands/byd.svg",
+    "headquarters": "Chennai, Tamil Nadu",
+    "isIndianCompany": false,
+    "categories": [
+      "four-wheelers"
+    ],
+    "modelCount": 4,
+    "popular": true,
+    "summary": "BYD (BYD India) offers 4 verified electric models in India across 4-Wheelers.",
+    "website": "Verified OEM Directory"
+  },
+  {
+    "id": "honda",
+    "name": "Honda",
+    "manufacturer": "Honda",
+    "logo": "assets/images/brands/honda.svg",
+    "headquarters": "India",
+    "isIndianCompany": false,
+    "categories": [
+      "two-wheelers"
+    ],
+    "modelCount": 4,
+    "popular": true,
+    "summary": "Honda (Honda) offers 4 verified electric models in India across 2-Wheelers.",
+    "website": "Verified OEM Directory"
+  },
+  {
+    "id": "kia",
+    "name": "Kia",
+    "manufacturer": "Kia",
+    "logo": "assets/images/brands/kia.svg",
+    "headquarters": "India",
+    "isIndianCompany": false,
+    "categories": [
+      "four-wheelers"
+    ],
+    "modelCount": 4,
+    "popular": true,
+    "summary": "Kia (Kia) offers 4 verified electric models in India across 4-Wheelers.",
+    "website": "Verified OEM Directory"
+  },
+  {
+    "id": "komaki",
+    "name": "Komaki",
+    "manufacturer": "Komaki",
+    "logo": "assets/images/brands/komaki.svg",
+    "headquarters": "India",
+    "isIndianCompany": true,
+    "categories": [
+      "two-wheelers"
+    ],
+    "modelCount": 4,
+    "popular": true,
+    "summary": "Komaki (Komaki) offers 4 verified electric models in India across 2-Wheelers.",
+    "website": "Verified OEM Directory"
+  },
+  {
+    "id": "vinfast",
+    "name": "VinFast",
+    "manufacturer": "VinFast India",
+    "logo": "assets/images/brands/vinfast.svg",
+    "headquarters": "Thoothukudi, Tamil Nadu",
+    "isIndianCompany": false,
+    "categories": [
+      "four-wheelers"
+    ],
+    "modelCount": 4,
+    "popular": true,
+    "summary": "VinFast (VinFast India) offers 4 verified electric models in India across 4-Wheelers.",
+    "website": "Verified OEM Directory"
+  },
+  {
+    "id": "volvo",
+    "name": "Volvo",
+    "manufacturer": "Volvo",
+    "logo": "assets/images/brands/volvo.svg",
+    "headquarters": "India",
+    "isIndianCompany": false,
+    "categories": [
+      "four-wheelers"
+    ],
+    "modelCount": 4,
+    "popular": true,
+    "summary": "Volvo (Volvo) offers 4 verified electric models in India across 4-Wheelers.",
+    "website": "Verified OEM Directory"
+  },
+  {
+    "id": "ampere",
+    "name": "Ampere",
+    "manufacturer": "Greaves Electric Mobility",
+    "logo": "assets/images/brands/ampere.svg",
+    "headquarters": "Mumbai, Maharashtra",
+    "isIndianCompany": true,
+    "categories": [
+      "two-wheelers"
+    ],
+    "modelCount": 3,
+    "popular": true,
+    "summary": "Ampere (Greaves Electric Mobility) offers 3 verified electric models in India across 2-Wheelers.",
+    "website": "Verified OEM Directory"
+  },
+  {
+    "id": "avore",
+    "name": "Avore",
+    "manufacturer": "Avore",
+    "logo": "assets/images/brands/avore.svg",
+    "headquarters": "India",
+    "isIndianCompany": true,
+    "categories": [
+      "two-wheelers"
+    ],
+    "modelCount": 3,
+    "popular": true,
+    "summary": "Avore (Avore) offers 3 verified electric models in India across 2-Wheelers.",
+    "website": "Verified OEM Directory"
+  },
+  {
+    "id": "jhev",
+    "name": "JHEV",
+    "manufacturer": "JHEV",
+    "logo": "assets/images/brands/jhev.svg",
+    "headquarters": "India",
+    "isIndianCompany": true,
+    "categories": [
+      "two-wheelers"
+    ],
+    "modelCount": 3,
+    "popular": true,
+    "summary": "JHEV (JHEV) offers 3 verified electric models in India across 2-Wheelers.",
+    "website": "Verified OEM Directory"
+  },
+  {
+    "id": "joy-e-bike",
+    "name": "Joy e-bike",
+    "manufacturer": "Joy e-bike",
+    "logo": "assets/images/brands/joy-e-bike.svg",
+    "headquarters": "India",
+    "isIndianCompany": true,
+    "categories": [
+      "two-wheelers"
+    ],
+    "modelCount": 3,
+    "popular": true,
+    "summary": "Joy e-bike (Joy e-bike) offers 3 verified electric models in India across 2-Wheelers.",
+    "website": "Verified OEM Directory"
   },
   {
     "id": "mahindra",
     "name": "Mahindra",
+    "manufacturer": "Mahindra Electric Automobile",
     "logo": "assets/images/brands/mahindra.svg",
     "headquarters": "Mumbai, Maharashtra",
     "isIndianCompany": true,
-    "categories": ["four-wheelers", "three-wheelers", "commercial"],
+    "categories": [
+      "four-wheelers"
+    ],
+    "modelCount": 3,
     "popular": true,
-    "summary": "Homegrown Indian automotive powerhouse pioneering Born Electric passenger 4W SUVs alongside India's largest electric 3-wheeler auto and cargo fleet.",
-    "website": "mahindraelectricautomobile.com"
+    "summary": "Mahindra (Mahindra Electric Automobile) offers 3 verified electric models in India across 4-Wheelers.",
+    "website": "Verified OEM Directory"
   },
   {
-    "id": "ather",
-    "name": "Ather Energy",
-    "logo": "assets/images/brands/ather.svg",
-    "headquarters": "Bengaluru, Karnataka",
-    "isIndianCompany": true,
-    "categories": ["two-wheelers"],
+    "id": "porsche",
+    "name": "Porsche",
+    "manufacturer": "Porsche",
+    "logo": "assets/images/brands/porsche.svg",
+    "headquarters": "India",
+    "isIndianCompany": false,
+    "categories": [
+      "four-wheelers"
+    ],
+    "modelCount": 3,
     "popular": true,
-    "summary": "Bengaluru-founded smart electric 2-wheeler pioneer renowned for the 450 performance series, Rizta family scooter, and the Ather Grid fast-charging network.",
-    "website": "atherenergy.com"
-  },
-  {
-    "id": "tvs",
-    "name": "TVS Motor",
-    "logo": "assets/images/brands/tvs.svg",
-    "headquarters": "Chennai, Tamil Nadu",
-    "isIndianCompany": true,
-    "categories": ["two-wheelers", "three-wheelers"],
-    "popular": true,
-    "summary": "Iconic Indian manufacturer delivering refined, practical electric 2-wheelers through the TVS iQube lineup and expanding into electric 3-wheelers.",
-    "website": "tvsmotor.com"
-  },
-  {
-    "id": "bajaj",
-    "name": "Bajaj Chetak",
-    "logo": "assets/images/brands/bajaj.svg",
-    "headquarters": "Pune, Maharashtra",
-    "isIndianCompany": true,
-    "categories": ["two-wheelers", "three-wheelers"],
-    "popular": true,
-    "summary": "Blends solid-steel Indian heritage with modern electric drivetrains across the Bajaj Chetak 2-wheeler scooter range and GoGo electric 3-wheelers.",
-    "website": "chetak.com"
-  },
-  {
-    "id": "ola-electric",
-    "name": "Ola Electric",
-    "logo": "assets/images/brands/ola-electric.svg",
-    "headquarters": "Bengaluru, Karnataka",
-    "isIndianCompany": true,
-    "categories": ["two-wheelers"],
-    "popular": true,
-    "summary": "High-scale Indian EV manufacturer building S1 electric scooters and Roadster electric motorcycles with MoveOS software at its Futurefactory.",
-    "website": "olaelectric.com"
-  },
-  {
-    "id": "hero-lectro",
-    "name": "Hero Lectro",
-    "logo": "assets/images/brands/hero-lectro.svg",
-    "headquarters": "Ludhiana / Gurugram, India",
-    "isIndianCompany": true,
-    "categories": ["cycles"],
-    "popular": true,
-    "summary": "The electric cycle division of Hero Cycles—India's largest e-cycle manufacturer offering city commuter, MTB, and cargo pedal-assist electric bicycles.",
-    "website": "herolectro.com"
-  },
-  {
-    "id": "emotorad",
-    "name": "EMotorad",
-    "logo": "assets/images/brands/emotorad.svg",
-    "headquarters": "Pune, Maharashtra",
-    "isIndianCompany": true,
-    "categories": ["cycles"],
-    "popular": true,
-    "summary": "Pune-headquartered Indian electric cycle innovator building smart commuter, folding fat-tyre, and adventure e-cycles exported globally.",
-    "website": "emotorad.com"
-  },
-  {
-    "id": "hero-vida",
-    "name": "Hero VIDA",
-    "logo": "assets/images/brands/hero-vida.svg",
-    "headquarters": "New Delhi / Jaipur, India",
-    "isIndianCompany": true,
-    "categories": ["two-wheelers"],
-    "popular": false,
-    "summary": "Powered by Hero MotoCorp, VIDA offers Indian electric 2-wheeler scooters with removable dual-battery convenience and wide fast-charging access.",
-    "website": "vidaworld.com"
-  },
-  {
-    "id": "ultraviolette",
-    "name": "Ultraviolette",
-    "logo": "assets/images/brands/ultraviolette.svg",
-    "headquarters": "Bengaluru, Karnataka",
-    "isIndianCompany": true,
-    "categories": ["two-wheelers"],
-    "popular": true,
-    "summary": "Indigenous aerospace-inspired performance 2-wheeler EV maker engineering the flagship F77 Mach 2 electric sportbike and high-density SRB battery systems.",
-    "website": "ultraviolette.com"
+    "summary": "Porsche (Porsche) offers 3 verified electric models in India across 4-Wheelers.",
+    "website": "Verified OEM Directory"
   },
   {
     "id": "revolt",
-    "name": "Revolt Motors",
+    "name": "Revolt",
+    "manufacturer": "Revolt Motors",
     "logo": "assets/images/brands/revolt.svg",
-    "headquarters": "Manesar, Haryana",
+    "headquarters": "Gurugram, Haryana",
     "isIndianCompany": true,
-    "categories": ["two-wheelers"],
-    "popular": false,
-    "summary": "One of India's earliest commuter electric motorcycle brands delivering everyday 2-wheeler street bikes with portable home-chargeable lithium-ion packs.",
-    "website": "revoltmotors.com"
+    "categories": [
+      "two-wheelers"
+    ],
+    "modelCount": 3,
+    "popular": true,
+    "summary": "Revolt (Revolt Motors) offers 3 verified electric models in India across 2-Wheelers.",
+    "website": "Verified OEM Directory"
   },
   {
-    "id": "oben",
-    "name": "Oben Electric",
-    "logo": "assets/images/brands/oben.svg",
-    "headquarters": "Bengaluru, Karnataka",
+    "id": "seeka",
+    "name": "Seeka",
+    "manufacturer": "Seeka",
+    "logo": "assets/images/brands/seeka.svg",
+    "headquarters": "India",
     "isIndianCompany": true,
-    "categories": ["two-wheelers"],
-    "popular": false,
-    "summary": "Homegrown R&D-driven EV motorcycle company designing the Rorr street bike around high-heat-tolerant LFP battery packs built for Indian traffic.",
-    "website": "obenelectric.com"
-  },
-  {
-    "id": "river",
-    "name": "River Mobility",
-    "logo": "assets/images/brands/river.svg",
-    "headquarters": "Bengaluru, Karnataka",
-    "isIndianCompany": true,
-    "categories": ["two-wheelers"],
-    "popular": false,
-    "summary": "Indian electric 2-wheeler company behind the River Indie—known as the 'SUV of scooters' for its 14-inch wheels, crash guards, and 43L underseat storage.",
-    "website": "rideriver.com"
-  },
-  {
-    "id": "ampere",
-    "name": "Ampere (Greaves)",
-    "logo": "assets/images/brands/ampere.svg",
-    "headquarters": "Bengaluru / Ranipet, India",
-    "isIndianCompany": true,
-    "categories": ["two-wheelers", "three-wheelers"],
-    "popular": false,
-    "summary": "Backed by Greaves Cotton, Ampere builds family electric 2-wheelers (Nexus, Magnus) alongside Greaves 3-wheeler electric passenger and cargo vehicles.",
-    "website": "amperevehicles.com"
+    "categories": [
+      "two-wheelers"
+    ],
+    "modelCount": 3,
+    "popular": true,
+    "summary": "Seeka (Seeka) offers 3 verified electric models in India across 2-Wheelers.",
+    "website": "Verified OEM Directory"
   },
   {
     "id": "simple-energy",
     "name": "Simple Energy",
+    "manufacturer": "Simple Energy",
     "logo": "assets/images/brands/simple-energy.svg",
-    "headquarters": "Bengaluru / Hosur, India",
+    "headquarters": "India",
     "isIndianCompany": true,
-    "categories": ["two-wheelers"],
+    "categories": [
+      "two-wheelers"
+    ],
+    "modelCount": 3,
+    "popular": true,
+    "summary": "Simple Energy (Simple Energy) offers 3 verified electric models in India across 2-Wheelers.",
+    "website": "Verified OEM Directory"
+  },
+  {
+    "id": "tvs-iqube",
+    "name": "TVS iQube",
+    "manufacturer": "TVS Motor Company",
+    "logo": "assets/images/brands/tvs-iqube.svg",
+    "headquarters": "Chennai, Tamil Nadu",
+    "isIndianCompany": true,
+    "categories": [
+      "two-wheelers"
+    ],
+    "modelCount": 3,
+    "popular": true,
+    "summary": "TVS iQube (TVS Motor Company) offers 3 verified electric models in India across 2-Wheelers.",
+    "website": "Verified OEM Directory"
+  },
+  {
+    "id": "ultraviolette",
+    "name": "Ultraviolette",
+    "manufacturer": "Ultraviolette Automotive",
+    "logo": "assets/images/brands/ultraviolette.svg",
+    "headquarters": "Bengaluru, Karnataka",
+    "isIndianCompany": true,
+    "categories": [
+      "two-wheelers"
+    ],
+    "modelCount": 3,
+    "popular": true,
+    "summary": "Ultraviolette (Ultraviolette Automotive) offers 3 verified electric models in India across 2-Wheelers.",
+    "website": "Verified OEM Directory"
+  },
+  {
+    "id": "aoki",
+    "name": "Aoki",
+    "manufacturer": "Aoki",
+    "logo": "assets/images/brands/aoki.svg",
+    "headquarters": "India",
+    "isIndianCompany": true,
+    "categories": [
+      "two-wheelers"
+    ],
+    "modelCount": 2,
     "popular": false,
-    "summary": "Indian clean-mobility company engineering high-range connected electric 2-wheeler scooters with in-house motor and dual-battery pack designs.",
-    "website": "simpleenergy.in"
+    "summary": "Aoki (Aoki) offers 2 verified electric models in India across 2-Wheelers.",
+    "website": "Verified OEM Directory"
+  },
+  {
+    "id": "chetak",
+    "name": "Chetak",
+    "manufacturer": "Bajaj Auto",
+    "logo": "assets/images/brands/chetak.svg",
+    "headquarters": "Pune, Maharashtra",
+    "isIndianCompany": true,
+    "categories": [
+      "two-wheelers"
+    ],
+    "modelCount": 2,
+    "popular": true,
+    "summary": "Chetak (Bajaj Auto) offers 2 verified electric models in India across 2-Wheelers.",
+    "website": "Verified OEM Directory"
+  },
+  {
+    "id": "denza",
+    "name": "Denza",
+    "manufacturer": "Denza",
+    "logo": "assets/images/brands/denza.svg",
+    "headquarters": "India",
+    "isIndianCompany": false,
+    "categories": [
+      "four-wheelers"
+    ],
+    "modelCount": 2,
+    "popular": false,
+    "summary": "Denza (Denza) offers 2 verified electric models in India across 4-Wheelers.",
+    "website": "Verified OEM Directory"
+  },
+  {
+    "id": "emotorad",
+    "name": "EMotorad",
+    "manufacturer": "EMotorad",
+    "logo": "assets/images/brands/emotorad.svg",
+    "headquarters": "India",
+    "isIndianCompany": true,
+    "categories": [
+      "two-wheelers"
+    ],
+    "modelCount": 2,
+    "popular": false,
+    "summary": "EMotorad (EMotorad) offers 2 verified electric models in India across 2-Wheelers.",
+    "website": "Verified OEM Directory"
+  },
+  {
+    "id": "hero-electric",
+    "name": "Hero Electric",
+    "manufacturer": "Hero Electric",
+    "logo": "assets/images/brands/hero-electric.svg",
+    "headquarters": "New Delhi, Delhi",
+    "isIndianCompany": true,
+    "categories": [
+      "two-wheelers"
+    ],
+    "modelCount": 2,
+    "popular": false,
+    "summary": "Hero Electric (Hero Electric) offers 2 verified electric models in India across 2-Wheelers.",
+    "website": "Verified OEM Directory"
+  },
+  {
+    "id": "hop-electric",
+    "name": "Hop Electric",
+    "manufacturer": "Hop Electric",
+    "logo": "assets/images/brands/hop-electric.svg",
+    "headquarters": "India",
+    "isIndianCompany": true,
+    "categories": [
+      "two-wheelers"
+    ],
+    "modelCount": 2,
+    "popular": false,
+    "summary": "Hop Electric (Hop Electric) offers 2 verified electric models in India across 2-Wheelers.",
+    "website": "Verified OEM Directory"
+  },
+  {
+    "id": "hyundai",
+    "name": "Hyundai",
+    "manufacturer": "Hyundai Motor India",
+    "logo": "assets/images/brands/hyundai.svg",
+    "headquarters": "Chennai, Tamil Nadu",
+    "isIndianCompany": false,
+    "categories": [
+      "four-wheelers"
+    ],
+    "modelCount": 2,
+    "popular": true,
+    "summary": "Hyundai (Hyundai Motor India) offers 2 verified electric models in India across 4-Wheelers.",
+    "website": "Verified OEM Directory"
+  },
+  {
+    "id": "kabira-mobility",
+    "name": "Kabira Mobility",
+    "manufacturer": "Kabira Mobility",
+    "logo": "assets/images/brands/kabira-mobility.svg",
+    "headquarters": "India",
+    "isIndianCompany": true,
+    "categories": [
+      "two-wheelers"
+    ],
+    "modelCount": 2,
+    "popular": false,
+    "summary": "Kabira Mobility (Kabira Mobility) offers 2 verified electric models in India across 2-Wheelers.",
+    "website": "Verified OEM Directory"
   },
   {
     "id": "kinetic-green",
     "name": "Kinetic Green",
+    "manufacturer": "Kinetic Green",
     "logo": "assets/images/brands/kinetic-green.svg",
     "headquarters": "Pune, Maharashtra",
     "isIndianCompany": true,
-    "categories": ["two-wheelers", "three-wheelers"],
+    "categories": [
+      "three-wheelers",
+      "two-wheelers"
+    ],
+    "modelCount": 2,
     "popular": false,
-    "summary": "Indian EV maker offering the utility-focused Kinetic E-Luna moped alongside Safar electric passenger e-rickshaws and 3-wheeler cargo loaders.",
-    "website": "kineticgreenvehicles.com"
+    "summary": "Kinetic Green (Kinetic Green) offers 2 verified electric models in India across 3-Wheelers, 2-Wheelers.",
+    "website": "Verified OEM Directory"
+  },
+  {
+    "id": "lotus",
+    "name": "Lotus",
+    "manufacturer": "Lotus",
+    "logo": "assets/images/brands/lotus.svg",
+    "headquarters": "India",
+    "isIndianCompany": false,
+    "categories": [
+      "four-wheelers"
+    ],
+    "modelCount": 2,
+    "popular": false,
+    "summary": "Lotus (Lotus) offers 2 verified electric models in India across 4-Wheelers.",
+    "website": "Verified OEM Directory"
+  },
+  {
+    "id": "mx-moto",
+    "name": "MX Moto",
+    "manufacturer": "MX Moto",
+    "logo": "assets/images/brands/mx-moto.svg",
+    "headquarters": "India",
+    "isIndianCompany": true,
+    "categories": [
+      "two-wheelers"
+    ],
+    "modelCount": 2,
+    "popular": false,
+    "summary": "MX Moto (MX Moto) offers 2 verified electric models in India across 2-Wheelers.",
+    "website": "Verified OEM Directory"
+  },
+  {
+    "id": "oben-electric",
+    "name": "Oben Electric",
+    "manufacturer": "Oben Electric",
+    "logo": "assets/images/brands/oben-electric.svg",
+    "headquarters": "India",
+    "isIndianCompany": true,
+    "categories": [
+      "two-wheelers"
+    ],
+    "modelCount": 2,
+    "popular": false,
+    "summary": "Oben Electric (Oben Electric) offers 2 verified electric models in India across 2-Wheelers.",
+    "website": "Verified OEM Directory"
+  },
+  {
+    "id": "pure-ev",
+    "name": "PURE EV",
+    "manufacturer": "PURE EV",
+    "logo": "assets/images/brands/pure-ev.svg",
+    "headquarters": "India",
+    "isIndianCompany": true,
+    "categories": [
+      "two-wheelers"
+    ],
+    "modelCount": 2,
+    "popular": false,
+    "summary": "PURE EV (PURE EV) offers 2 verified electric models in India across 2-Wheelers.",
+    "website": "Verified OEM Directory"
+  },
+  {
+    "id": "royal-enfield",
+    "name": "Royal Enfield",
+    "manufacturer": "Royal Enfield",
+    "logo": "assets/images/brands/royal-enfield.svg",
+    "headquarters": "India",
+    "isIndianCompany": true,
+    "categories": [
+      "two-wheelers"
+    ],
+    "modelCount": 2,
+    "popular": false,
+    "summary": "Royal Enfield (Royal Enfield) offers 2 verified electric models in India across 2-Wheelers.",
+    "website": "Verified OEM Directory"
+  },
+  {
+    "id": "switch",
+    "name": "Switch",
+    "manufacturer": "Switch Mobility",
+    "logo": "assets/images/brands/switch.svg",
+    "headquarters": "Chennai, Tamil Nadu",
+    "isIndianCompany": true,
+    "categories": [
+      "commercial"
+    ],
+    "modelCount": 2,
+    "popular": false,
+    "summary": "Switch (Switch Mobility) offers 2 verified electric models in India across Commercial Vehicles.",
+    "website": "Verified OEM Directory"
+  },
+  {
+    "id": "tesla",
+    "name": "Tesla",
+    "manufacturer": "Tesla",
+    "logo": "assets/images/brands/tesla.svg",
+    "headquarters": "India",
+    "isIndianCompany": false,
+    "categories": [
+      "four-wheelers"
+    ],
+    "modelCount": 2,
+    "popular": false,
+    "summary": "Tesla (Tesla) offers 2 verified electric models in India across 4-Wheelers.",
+    "website": "Verified OEM Directory"
+  },
+  {
+    "id": "91-electric",
+    "name": "91 Electric",
+    "manufacturer": "91 Electric",
+    "logo": "assets/images/brands/91-electric.svg",
+    "headquarters": "India",
+    "isIndianCompany": true,
+    "categories": [
+      "two-wheelers"
+    ],
+    "modelCount": 1,
+    "popular": false,
+    "summary": "91 Electric (91 Electric) offers 1 verified electric model in India across 2-Wheelers.",
+    "website": "Verified OEM Directory"
+  },
+  {
+    "id": "abzo",
+    "name": "ABZO",
+    "manufacturer": "ABZO",
+    "logo": "assets/images/brands/abzo.svg",
+    "headquarters": "India",
+    "isIndianCompany": true,
+    "categories": [
+      "two-wheelers"
+    ],
+    "modelCount": 1,
+    "popular": false,
+    "summary": "ABZO (ABZO) offers 1 verified electric model in India across 2-Wheelers.",
+    "website": "Verified OEM Directory"
+  },
+  {
+    "id": "adms",
+    "name": "ADMS",
+    "manufacturer": "ADMS",
+    "logo": "assets/images/brands/adms.svg",
+    "headquarters": "India",
+    "isIndianCompany": true,
+    "categories": [
+      "two-wheelers"
+    ],
+    "modelCount": 1,
+    "popular": false,
+    "summary": "ADMS (ADMS) offers 1 verified electric model in India across 2-Wheelers.",
+    "website": "Verified OEM Directory"
+  },
+  {
+    "id": "amo-electric",
+    "name": "AMO Electric",
+    "manufacturer": "AMO Electric",
+    "logo": "assets/images/brands/amo-electric.svg",
+    "headquarters": "India",
+    "isIndianCompany": true,
+    "categories": [
+      "two-wheelers"
+    ],
+    "modelCount": 1,
+    "popular": false,
+    "summary": "AMO Electric (AMO Electric) offers 1 verified electric model in India across 2-Wheelers.",
+    "website": "Verified OEM Directory"
+  },
+  {
+    "id": "blinq-mobility",
+    "name": "Blinq Mobility",
+    "manufacturer": "Blinq Mobility",
+    "logo": "assets/images/brands/blinq-mobility.svg",
+    "headquarters": "India",
+    "isIndianCompany": true,
+    "categories": [
+      "four-wheelers"
+    ],
+    "modelCount": 1,
+    "popular": false,
+    "summary": "Blinq Mobility (Blinq Mobility) offers 1 verified electric model in India across 4-Wheelers.",
+    "website": "Verified OEM Directory"
+  },
+  {
+    "id": "citroen",
+    "name": "Citroen",
+    "manufacturer": "Citroen",
+    "logo": "assets/images/brands/citroen.svg",
+    "headquarters": "India",
+    "isIndianCompany": false,
+    "categories": [
+      "four-wheelers"
+    ],
+    "modelCount": 1,
+    "popular": false,
+    "summary": "Citroen (Citroen) offers 1 verified electric model in India across 4-Wheelers.",
+    "website": "Verified OEM Directory"
+  },
+  {
+    "id": "e3-electric",
+    "name": "E3 Electric",
+    "manufacturer": "E3 Electric",
+    "logo": "assets/images/brands/e3-electric.svg",
+    "headquarters": "India",
+    "isIndianCompany": true,
+    "categories": [
+      "two-wheelers"
+    ],
+    "modelCount": 1,
+    "popular": false,
+    "summary": "E3 Electric (E3 Electric) offers 1 verified electric model in India across 2-Wheelers.",
+    "website": "Verified OEM Directory"
+  },
+  {
+    "id": "eeve",
+    "name": "EeVe",
+    "manufacturer": "EeVe",
+    "logo": "assets/images/brands/eeve.svg",
+    "headquarters": "India",
+    "isIndianCompany": true,
+    "categories": [
+      "two-wheelers"
+    ],
+    "modelCount": 1,
+    "popular": false,
+    "summary": "EeVe (EeVe) offers 1 verified electric model in India across 2-Wheelers.",
+    "website": "Verified OEM Directory"
+  },
+  {
+    "id": "euler",
+    "name": "Euler",
+    "manufacturer": "Euler Motors",
+    "logo": "assets/images/brands/euler.svg",
+    "headquarters": "New Delhi, Delhi",
+    "isIndianCompany": true,
+    "categories": [
+      "three-wheelers"
+    ],
+    "modelCount": 1,
+    "popular": false,
+    "summary": "Euler (Euler Motors) offers 1 verified electric model in India across 3-Wheelers.",
+    "website": "Verified OEM Directory"
+  },
+  {
+    "id": "kinetic",
+    "name": "Kinetic",
+    "manufacturer": "Kinetic",
+    "logo": "assets/images/brands/kinetic.svg",
+    "headquarters": "India",
+    "isIndianCompany": true,
+    "categories": [
+      "two-wheelers"
+    ],
+    "modelCount": 1,
+    "popular": false,
+    "summary": "Kinetic (Kinetic) offers 1 verified electric model in India across 2-Wheelers.",
+    "website": "Verified OEM Directory"
+  },
+  {
+    "id": "ktm",
+    "name": "KTM",
+    "manufacturer": "KTM",
+    "logo": "assets/images/brands/ktm.svg",
+    "headquarters": "India",
+    "isIndianCompany": true,
+    "categories": [
+      "two-wheelers"
+    ],
+    "modelCount": 1,
+    "popular": false,
+    "summary": "KTM (KTM) offers 1 verified electric model in India across 2-Wheelers.",
+    "website": "Verified OEM Directory"
+  },
+  {
+    "id": "lexus",
+    "name": "Lexus",
+    "manufacturer": "Lexus",
+    "logo": "assets/images/brands/lexus.svg",
+    "headquarters": "India",
+    "isIndianCompany": false,
+    "categories": [
+      "four-wheelers"
+    ],
+    "modelCount": 1,
+    "popular": false,
+    "summary": "Lexus (Lexus) offers 1 verified electric model in India across 4-Wheelers.",
+    "website": "Verified OEM Directory"
+  },
+  {
+    "id": "mahindra-treo",
+    "name": "Mahindra Treo",
+    "manufacturer": "Mahindra Last Mile Mobility",
+    "logo": "assets/images/brands/mahindra-treo.svg",
+    "headquarters": "Bengaluru, Karnataka",
+    "isIndianCompany": true,
+    "categories": [
+      "three-wheelers"
+    ],
+    "modelCount": 1,
+    "popular": false,
+    "summary": "Mahindra Treo (Mahindra Last Mile Mobility) offers 1 verified electric model in India across 3-Wheelers.",
+    "website": "Verified OEM Directory"
+  },
+  {
+    "id": "mahindra-xev",
+    "name": "Mahindra XEV",
+    "manufacturer": "Mahindra Electric Automobile",
+    "logo": "assets/images/brands/mahindra-xev.svg",
+    "headquarters": "Mumbai, Maharashtra",
+    "isIndianCompany": true,
+    "categories": [
+      "four-wheelers"
+    ],
+    "modelCount": 1,
+    "popular": false,
+    "summary": "Mahindra XEV (Mahindra Electric Automobile) offers 1 verified electric model in India across 4-Wheelers.",
+    "website": "Verified OEM Directory"
+  },
+  {
+    "id": "maruthisan",
+    "name": "Maruthisan",
+    "manufacturer": "Maruthisan",
+    "logo": "assets/images/brands/maruthisan.svg",
+    "headquarters": "India",
+    "isIndianCompany": true,
+    "categories": [
+      "two-wheelers"
+    ],
+    "modelCount": 1,
+    "popular": false,
+    "summary": "Maruthisan (Maruthisan) offers 1 verified electric model in India across 2-Wheelers.",
+    "website": "Verified OEM Directory"
+  },
+  {
+    "id": "maruti-suzuki",
+    "name": "Maruti Suzuki",
+    "manufacturer": "Maruti Suzuki India",
+    "logo": "assets/images/brands/maruti-suzuki.svg",
+    "headquarters": "New Delhi, Delhi",
+    "isIndianCompany": true,
+    "categories": [
+      "four-wheelers"
+    ],
+    "modelCount": 1,
+    "popular": true,
+    "summary": "Maruti Suzuki (Maruti Suzuki India) offers 1 verified electric model in India across 4-Wheelers.",
+    "website": "Verified OEM Directory"
+  },
+  {
+    "id": "maserati",
+    "name": "Maserati",
+    "manufacturer": "Maserati",
+    "logo": "assets/images/brands/maserati.svg",
+    "headquarters": "India",
+    "isIndianCompany": false,
+    "categories": [
+      "four-wheelers"
+    ],
+    "modelCount": 1,
+    "popular": false,
+    "summary": "Maserati (Maserati) offers 1 verified electric model in India across 4-Wheelers.",
+    "website": "Verified OEM Directory"
   },
   {
     "id": "matter",
     "name": "Matter",
+    "manufacturer": "Matter",
     "logo": "assets/images/brands/matter.svg",
-    "headquarters": "Ahmedabad, Gujarat",
+    "headquarters": "India",
     "isIndianCompany": true,
-    "categories": ["two-wheelers"],
+    "categories": [
+      "two-wheelers"
+    ],
+    "modelCount": 1,
     "popular": false,
-    "summary": "Gujarat-headquartered EV technology innovator creator of the Matter Aera—India's liquid-cooled 4-speed hyper-shift geared electric motorcycle.",
-    "website": "matter.in"
+    "summary": "Matter (Matter) offers 1 verified electric model in India across 2-Wheelers.",
+    "website": "Verified OEM Directory"
   },
   {
-    "id": "tork-motors",
-    "name": "Tork Motors",
-    "logo": "assets/images/brands/tork-motors.svg",
-    "headquarters": "Pune, Maharashtra",
-    "isIndianCompany": true,
-    "categories": ["two-wheelers"],
+    "id": "mini",
+    "name": "Mini",
+    "manufacturer": "Mini",
+    "logo": "assets/images/brands/mini.svg",
+    "headquarters": "India",
+    "isIndianCompany": false,
+    "categories": [
+      "four-wheelers"
+    ],
+    "modelCount": 1,
     "popular": false,
-    "summary": "Pune-born electric 2-wheeler company developing axial-flux motor drivetrains and the Kratos R urban electric streetfighter.",
-    "website": "torkmotors.com"
+    "summary": "Mini (Mini) offers 1 verified electric model in India across 4-Wheelers.",
+    "website": "Verified OEM Directory"
   },
   {
-    "id": "euler-motors",
-    "name": "Euler Motors",
-    "logo": "assets/images/brands/euler-motors.svg",
-    "headquarters": "New Delhi, India",
-    "isIndianCompany": true,
-    "categories": ["three-wheelers", "commercial"],
-    "popular": true,
-    "summary": "Indian EV specialist building liquid-cooled heavy-payload 3-wheeler cargo loaders (HiLoad EV) and compact 4-wheel commercial trucks (Storm EV).",
-    "website": "eulermotors.com"
-  },
-  {
-    "id": "altigreen",
-    "name": "Altigreen",
-    "logo": "assets/images/brands/altigreen.svg",
-    "headquarters": "Bengaluru, Karnataka",
-    "isIndianCompany": true,
-    "categories": ["three-wheelers"],
-    "popular": false,
-    "summary": "Indigenous EV manufacturer designing high-volumetric neEV electric 3-wheeler cargo loaders purpose-built for Indian urban delivery fleets.",
-    "website": "altigreen.com"
-  },
-  {
-    "id": "osm",
-    "name": "Omega Seiki Mobility",
-    "logo": "assets/images/brands/osm.svg",
-    "headquarters": "Faridabad, Haryana",
-    "isIndianCompany": true,
-    "categories": ["three-wheelers", "commercial"],
-    "popular": false,
-    "summary": "Indian clean-logistics OEM producing the Rage+ electric 3-wheeler series and urban electric commercial trucks for e-commerce and cold-chain fleets.",
-    "website": "omegaseikimobility.com"
-  },
-  {
-    "id": "switch-mobility",
-    "name": "Switch Mobility",
-    "logo": "assets/images/brands/switch-mobility.svg",
+    "id": "montra-electric",
+    "name": "Montra Electric",
+    "manufacturer": "TI Clean Mobility",
+    "logo": "assets/images/brands/montra-electric.svg",
     "headquarters": "Chennai, Tamil Nadu",
     "isIndianCompany": true,
-    "categories": ["commercial"],
-    "popular": true,
-    "summary": "The electric commercial vehicle arm of Hinduja Group's Ashok Leyland, manufacturing IeV4 electric LCV pickups and EiV electric city buses in India.",
-    "website": "switchmobilityev.com"
+    "categories": [
+      "commercial"
+    ],
+    "modelCount": 1,
+    "popular": false,
+    "summary": "Montra Electric (TI Clean Mobility) offers 1 verified electric model in India across Commercial Vehicles.",
+    "website": "Verified OEM Directory"
+  },
+  {
+    "id": "motovolt",
+    "name": "Motovolt",
+    "manufacturer": "Motovolt",
+    "logo": "assets/images/brands/motovolt.svg",
+    "headquarters": "India",
+    "isIndianCompany": true,
+    "categories": [
+      "two-wheelers"
+    ],
+    "modelCount": 1,
+    "popular": false,
+    "summary": "Motovolt (Motovolt) offers 1 verified electric model in India across 2-Wheelers.",
+    "website": "Verified OEM Directory"
   },
   {
     "id": "olectra",
-    "name": "Olectra Greentech",
+    "name": "Olectra",
+    "manufacturer": "Olectra Greentech",
     "logo": "assets/images/brands/olectra.svg",
     "headquarters": "Hyderabad, Telangana",
     "isIndianCompany": true,
-    "categories": ["commercial"],
+    "categories": [
+      "commercial"
+    ],
+    "modelCount": 1,
     "popular": false,
-    "summary": "Hyderabad-headquartered commercial EV leader operating thousands of electric city buses, intercity coaches, and heavy electric tippers across India.",
-    "website": "olectra.com"
+    "summary": "Olectra (Olectra Greentech) offers 1 verified electric model in India across Commercial Vehicles.",
+    "website": "Verified OEM Directory"
   },
   {
-    "id": "jbm-electric",
-    "name": "JBM Electric Vehicles",
-    "logo": "assets/images/brands/jbm-electric.svg",
+    "id": "opg-mobility",
+    "name": "OPG Mobility",
+    "manufacturer": "OPG Mobility",
+    "logo": "assets/images/brands/opg-mobility.svg",
+    "headquarters": "India",
+    "isIndianCompany": true,
+    "categories": [
+      "two-wheelers"
+    ],
+    "modelCount": 1,
+    "popular": false,
+    "summary": "OPG Mobility (OPG Mobility) offers 1 verified electric model in India across 2-Wheelers.",
+    "website": "Verified OEM Directory"
+  },
+  {
+    "id": "orxa-energies",
+    "name": "Orxa Energies",
+    "manufacturer": "Orxa Energies",
+    "logo": "assets/images/brands/orxa-energies.svg",
+    "headquarters": "India",
+    "isIndianCompany": true,
+    "categories": [
+      "two-wheelers"
+    ],
+    "modelCount": 1,
+    "popular": false,
+    "summary": "Orxa Energies (Orxa Energies) offers 1 verified electric model in India across 2-Wheelers.",
+    "website": "Verified OEM Directory"
+  },
+  {
+    "id": "pmv",
+    "name": "PMV",
+    "manufacturer": "PMV",
+    "logo": "assets/images/brands/pmv.svg",
+    "headquarters": "India",
+    "isIndianCompany": true,
+    "categories": [
+      "four-wheelers"
+    ],
+    "modelCount": 1,
+    "popular": false,
+    "summary": "PMV (PMV) offers 1 verified electric model in India across 4-Wheelers.",
+    "website": "Verified OEM Directory"
+  },
+  {
+    "id": "pravaig",
+    "name": "Pravaig",
+    "manufacturer": "Pravaig",
+    "logo": "assets/images/brands/pravaig.svg",
+    "headquarters": "India",
+    "isIndianCompany": true,
+    "categories": [
+      "four-wheelers"
+    ],
+    "modelCount": 1,
+    "popular": false,
+    "summary": "Pravaig (Pravaig) offers 1 verified electric model in India across 4-Wheelers.",
+    "website": "Verified OEM Directory"
+  },
+  {
+    "id": "raptee-motors",
+    "name": "Raptee Motors",
+    "manufacturer": "Raptee Motors",
+    "logo": "assets/images/brands/raptee-motors.svg",
+    "headquarters": "India",
+    "isIndianCompany": true,
+    "categories": [
+      "two-wheelers"
+    ],
+    "modelCount": 1,
+    "popular": false,
+    "summary": "Raptee Motors (Raptee Motors) offers 1 verified electric model in India across 2-Wheelers.",
+    "website": "Verified OEM Directory"
+  },
+  {
+    "id": "reva",
+    "name": "Reva",
+    "manufacturer": "Reva Electric Car Company",
+    "logo": "assets/images/brands/reva.svg",
+    "headquarters": "Bengaluru, Karnataka",
+    "isIndianCompany": true,
+    "categories": [
+      "four-wheelers"
+    ],
+    "modelCount": 1,
+    "popular": false,
+    "summary": "Reva (Reva Electric Car Company) offers 1 verified electric model in India across 4-Wheelers.",
+    "website": "Verified OEM Directory"
+  },
+  {
+    "id": "river",
+    "name": "River",
+    "manufacturer": "River Mobility",
+    "logo": "assets/images/brands/river.svg",
+    "headquarters": "Bengaluru, Karnataka",
+    "isIndianCompany": true,
+    "categories": [
+      "two-wheelers"
+    ],
+    "modelCount": 1,
+    "popular": false,
+    "summary": "River (River Mobility) offers 1 verified electric model in India across 2-Wheelers.",
+    "website": "Verified OEM Directory"
+  },
+  {
+    "id": "rolls-royce",
+    "name": "Rolls-Royce",
+    "manufacturer": "Rolls-Royce",
+    "logo": "assets/images/brands/rolls-royce.svg",
+    "headquarters": "India",
+    "isIndianCompany": false,
+    "categories": [
+      "four-wheelers"
+    ],
+    "modelCount": 1,
+    "popular": false,
+    "summary": "Rolls-Royce (Rolls-Royce) offers 1 verified electric model in India across 4-Wheelers.",
+    "website": "Verified OEM Directory"
+  },
+  {
+    "id": "srivaru-motors",
+    "name": "Srivaru Motors",
+    "manufacturer": "Srivaru Motors",
+    "logo": "assets/images/brands/srivaru-motors.svg",
+    "headquarters": "India",
+    "isIndianCompany": true,
+    "categories": [
+      "two-wheelers"
+    ],
+    "modelCount": 1,
+    "popular": false,
+    "summary": "Srivaru Motors (Srivaru Motors) offers 1 verified electric model in India across 2-Wheelers.",
+    "website": "Verified OEM Directory"
+  },
+  {
+    "id": "strom-motors",
+    "name": "Strom Motors",
+    "manufacturer": "Strom Motors",
+    "logo": "assets/images/brands/strom-motors.svg",
+    "headquarters": "India",
+    "isIndianCompany": true,
+    "categories": [
+      "four-wheelers"
+    ],
+    "modelCount": 1,
+    "popular": false,
+    "summary": "Strom Motors (Strom Motors) offers 1 verified electric model in India across 4-Wheelers.",
+    "website": "Verified OEM Directory"
+  },
+  {
+    "id": "svitch-bike",
+    "name": "SVITCH BIKE",
+    "manufacturer": "SVITCH BIKE",
+    "logo": "assets/images/brands/svitch-bike.svg",
+    "headquarters": "India",
+    "isIndianCompany": true,
+    "categories": [
+      "two-wheelers"
+    ],
+    "modelCount": 1,
+    "popular": false,
+    "summary": "SVITCH BIKE (SVITCH BIKE) offers 1 verified electric model in India across 2-Wheelers.",
+    "website": "Verified OEM Directory"
+  },
+  {
+    "id": "tata-motors",
+    "name": "Tata Motors",
+    "manufacturer": "Tata Passenger Electric Mobility",
+    "logo": "assets/images/brands/tata-motors.svg",
+    "headquarters": "Mumbai, Maharashtra",
+    "isIndianCompany": true,
+    "categories": [
+      "commercial"
+    ],
+    "modelCount": 1,
+    "popular": false,
+    "summary": "Tata Motors (Tata Passenger Electric Mobility) offers 1 verified electric model in India across Commercial Vehicles.",
+    "website": "Verified OEM Directory"
+  },
+  {
+    "id": "tvs",
+    "name": "TVS",
+    "manufacturer": "TVS Motor Company",
+    "logo": "assets/images/brands/tvs.svg",
+    "headquarters": "Chennai, Tamil Nadu",
+    "isIndianCompany": true,
+    "categories": [
+      "two-wheelers"
+    ],
+    "modelCount": 1,
+    "popular": false,
+    "summary": "TVS (TVS Motor Company) offers 1 verified electric model in India across 2-Wheelers.",
+    "website": "Verified OEM Directory"
+  },
+  {
+    "id": "vayve-mobility",
+    "name": "Vayve Mobility",
+    "manufacturer": "Vayve Mobility",
+    "logo": "assets/images/brands/vayve-mobility.svg",
+    "headquarters": "India",
+    "isIndianCompany": true,
+    "categories": [
+      "four-wheelers"
+    ],
+    "modelCount": 1,
+    "popular": false,
+    "summary": "Vayve Mobility (Vayve Mobility) offers 1 verified electric model in India across 4-Wheelers.",
+    "website": "Verified OEM Directory"
+  },
+  {
+    "id": "vespa",
+    "name": "Vespa",
+    "manufacturer": "Vespa",
+    "logo": "assets/images/brands/vespa.svg",
+    "headquarters": "India",
+    "isIndianCompany": false,
+    "categories": [
+      "two-wheelers"
+    ],
+    "modelCount": 1,
+    "popular": false,
+    "summary": "Vespa (Vespa) offers 1 verified electric model in India across 2-Wheelers.",
+    "website": "Verified OEM Directory"
+  },
+  {
+    "id": "yakuza-electric",
+    "name": "Yakuza Electric",
+    "manufacturer": "Yakuza Electric",
+    "logo": "assets/images/brands/yakuza-electric.svg",
+    "headquarters": "India",
+    "isIndianCompany": true,
+    "categories": [
+      "two-wheelers"
+    ],
+    "modelCount": 1,
+    "popular": false,
+    "summary": "Yakuza Electric (Yakuza Electric) offers 1 verified electric model in India across 2-Wheelers.",
+    "website": "Verified OEM Directory"
+  },
+  {
+    "id": "jbm",
+    "name": "JBM",
+    "manufacturer": "JBM Electric Vehicles",
+    "logo": "assets/images/brands/jbm.svg",
     "headquarters": "Gurugram, Haryana",
     "isIndianCompany": true,
-    "categories": ["commercial"],
+    "categories": [
+      "four-wheelers"
+    ],
+    "modelCount": 0,
     "popular": false,
-    "summary": "Indian commercial electric bus and charging infrastructure manufacturer producing zero-emission Ecolife city, airport tarmac, and luxury coach EVs.",
-    "website": "jbmbuses.com"
+    "summary": "JBM is a tracked electric vehicle brand operating in India.",
+    "website": "Verified OEM Directory"
   },
   {
-    "id": "mg-motor",
-    "name": "JSW MG Motor",
-    "logo": "assets/images/brands/mg-motor.svg",
-    "headquarters": "Gurugram / Halol, India",
-    "isIndianCompany": false,
-    "categories": ["four-wheelers"],
-    "popular": true,
-    "summary": "Indo-global joint venture (JSW MG Motor India) offering connected electric 4-wheeler crossovers and city EVs including the Windsor EV, ZS EV, and Comet EV.",
-    "website": "mgmotor.co.in"
-  },
-  {
-    "id": "byd",
-    "name": "BYD India",
-    "logo": "assets/images/brands/byd.svg",
-    "headquarters": "Chennai, Tamil Nadu",
-    "isIndianCompany": false,
-    "categories": ["four-wheelers"],
+    "id": "vikram",
+    "name": "Vikram",
+    "manufacturer": "Scooters India Limited",
+    "logo": "assets/images/brands/vikram.svg",
+    "headquarters": "Lucknow, Uttar Pradesh",
+    "isIndianCompany": true,
+    "categories": [
+      "four-wheelers"
+    ],
+    "modelCount": 0,
     "popular": false,
-    "summary": "Global new-energy vehicle manufacturer retailing Blade LFP battery electric 4-wheeler SUVs and MPVs in India.",
-    "website": "bydautoindia.com"
-  },
-  {
-    "id": "piaggio",
-    "name": "Piaggio Vehicles",
-    "logo": "assets/images/brands/piaggio.svg",
-    "headquarters": "Baramati, Maharashtra",
-    "isIndianCompany": false,
-    "categories": ["three-wheelers"],
-    "popular": false,
-    "summary": "Three-wheeler specialist producing the Apé Electrik range of passenger e-autos and cargo 3-wheelers at its Baramati plant in Maharashtra.",
-    "website": "piaggio-cv.co.in"
+    "summary": "Vikram is a tracked electric vehicle brand operating in India.",
+    "website": "Verified OEM Directory"
   }
 ]

@@ -19,8 +19,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 
-  <link rel="stylesheet" href="assets/css/style.css?v=1.8" />
-  <link rel="stylesheet" href="assets/css/responsive.css?v=1.8" />
+  <link rel="stylesheet" href="assets/css/style.css?v=2.0" />
+  <link rel="stylesheet" href="assets/css/responsive.css?v=2.0" />
 </head>
 <body data-page="brands">
   <a href="#main-content" class="skip-link">Skip to main content</a>
@@ -78,14 +78,19 @@
 
     <section class="section">
       <div class="container">
-        <div class="segment-filter-pills" id="brands-category-pills" role="group" aria-label="Filter brands by vehicle segment">
-          <button type="button" class="pill-btn is-active" data-brand-cat="all">All Manufacturers (27)</button>
-          <button type="button" class="pill-btn" data-brand-cat="indian">Indian EV Companies (24)</button>
-          <button type="button" class="pill-btn" data-brand-cat="cycles">Cycles</button>
-          <button type="button" class="pill-btn" data-brand-cat="two-wheelers">2-Wheelers</button>
-          <button type="button" class="pill-btn" data-brand-cat="three-wheelers">3-Wheelers</button>
-          <button type="button" class="pill-btn" data-brand-cat="four-wheelers">4-Wheelers</button>
-          <button type="button" class="pill-btn" data-brand-cat="commercial">Commercial Vehicles</button>
+        <div class="brands-toolbar">
+          <div class="segment-filter-pills" id="brands-category-pills" role="group" aria-label="Filter brands by vehicle segment">
+            <button type="button" class="pill-btn is-active" data-brand-cat="all">All Manufacturers</button>
+            <button type="button" class="pill-btn" data-brand-cat="indian">Indian EV OEMs</button>
+            <button type="button" class="pill-btn" data-brand-cat="two-wheelers">2-Wheelers</button>
+            <button type="button" class="pill-btn" data-brand-cat="three-wheelers">3-Wheelers</button>
+            <button type="button" class="pill-btn" data-brand-cat="four-wheelers">4-Wheelers</button>
+            <button type="button" class="pill-btn" data-brand-cat="commercial">Commercial Vehicles</button>
+          </div>
+          <div class="brands-search-box">
+            <label for="brands-search-input" class="sr-only">Search EV brands</label>
+            <input type="search" id="brands-search-input" class="form-control" placeholder="Search 82 EV brands or HQ city..." autocomplete="off" />
+          </div>
         </div>
 
         <div id="brands-directory-grid" class="brands-directory-grid" aria-live="polite">
@@ -137,7 +142,6 @@
         <div class="footer-col">
           <h3>Vehicle Categories</h3>
           <ul class="footer-links">
-            <li><a href="explore.html?category=cycles">Electric Cycles</a></li>
             <li><a href="explore.html?category=two-wheelers">Electric 2-Wheelers</a></li>
             <li><a href="explore.html?category=three-wheelers">Electric 3-Wheelers</a></li>
             <li><a href="explore.html?category=four-wheelers">Electric 4-Wheelers</a></li>
@@ -173,8 +177,8 @@
     </div>
   </footer>
 
-  <script src="assets/js/main.js?v=1.8" defer></script>
-  <script src="assets/js/ai-agent.js?v=1.8" defer></script>
-  <script src="assets/js/filters.js?v=1.8" defer></script>
+  <script src="assets/js/main.js?v=2.0" defer></script>
+  <script src="assets/js/ai-agent.js?v=2.0" defer></script>
+  <script src="assets/js/filters.js?v=2.0" defer></script>
 </body>
 </html>

@@ -31,3 +31,6 @@ __pycache__/
 # Environment & Local Secrets (never commit)
 .env
 .env.*
+
+# Raw Agent Export Drop Folder (never commit)
+/agent/*

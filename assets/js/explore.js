@@ -24,6 +24,7 @@
     const catListEl = document.getElementById('filter-categories-list');
     const subCatGroupEl = document.getElementById('filter-subcategories-group');
     const subCatListEl = document.getElementById('filter-subcategories-list');
+    const brandSearchInput = document.getElementById('filter-brand-search');
     const brandListEl = document.getElementById('filter-brands-list');
     const priceListEl = document.getElementById('filter-price-list');
     const rangeListEl = document.getElementById('filter-range-list');
@@ -168,8 +169,12 @@
             loc && loc.stateCode
               ? (locationsData.cities || []).filter((c) => c.stateCode === loc.stateCode)
               : locationsData.cities || [];
+          const cityHeader =
+            loc && loc.stateName
+              ? `All ${loc.stateName} Cities (${matchingCities.length})`
+              : `All India Cities (${matchingCities.length})`;
           citySelect.innerHTML =
-            `<option value="">All Major Cities (${matchingCities.length})</option>` +
+            `<option value="">${esc(cityHeader)}</option>` +
             matchingCities
               .map(
                 (c) =>
@@ -296,22 +301,46 @@
         }
 
         if (brandListEl) {
-          const catalogueBrands = brands.filter((b) =>
-            vehicles.some((v) => v.brandId === b.id)
-          );
-          brandListEl.innerHTML = catalogueBrands
-            .map((b) => {
-              const count = brandContextPool.filter((v) => v.brandId === b.id).length;
-              const checked = state.brands.includes(b.id) ? 'checked' : '';
-              return `
-                <label class="checkbox-item ${count === 0 && !checked ? 'is-dimmed' : ''}">
-                  <input type="checkbox" name="brand" value="${esc(b.id)}" ${checked} />
-                  <span style="flex:1;">${esc(b.name)}</span>
-                  <span class="facet-count-pill">${count}</span>
-                </label>
-              `;
+          const brandQuery = ((brandSearchInput && brandSearchInput.value) || '').trim().toLowerCase();
+          const catalogueBrands = brands
+            .filter((b) => {
+              if (!vehicles.some((v) => v.brandId === b.id)) return false;
+              // Dependent Category -> Brand filter: show brands active in selected categories (or already checked)
+              if (state.categories.length > 0 && !state.brands.includes(b.id)) {
+                const inCat = vehicles.some((v) => v.brandId === b.id && state.categories.includes(v.categoryId));
+                if (!inCat) return false;
+              }
+              if (brandQuery && !String(b.name || '').toLowerCase().includes(brandQuery)) {
+                return false;
+              }
+              return true;
             })
-            .join('');
+            .map((b) => ({
+              brand: b,
+              count: brandContextPool.filter((v) => v.brandId === b.id).length
+            }))
+            .sort((a, b) => {
+              const aChecked = state.brands.includes(a.brand.id) ? 1 : 0;
+              const bChecked = state.brands.includes(b.brand.id) ? 1 : 0;
+              if (bChecked !== aChecked) return bChecked - aChecked;
+              if (b.count !== a.count) return b.count - a.count;
+              return String(a.brand.name).localeCompare(String(b.brand.name));
+            });
+
+          brandListEl.innerHTML = catalogueBrands.length
+            ? catalogueBrands
+                .map(({ brand: b, count }) => {
+                  const checked = state.brands.includes(b.id) ? 'checked' : '';
+                  return `
+                    <label class="checkbox-item ${count === 0 && !checked ? 'is-dimmed' : ''}">
+                      <input type="checkbox" name="brand" value="${esc(b.id)}" ${checked} />
+                      <span style="flex:1;">${esc(b.name)}</span>
+                      <span class="facet-count-pill">${count}</span>
+                    </label>
+                  `;
+                })
+                .join('')
+            : `<div style="font-size:0.82rem; color:var(--color-muted); padding:6px 2px;">No matching brands.</div>`;
         }
 
         if (priceListEl) {
@@ -620,6 +649,12 @@
           state.subCategories = [];
           renderSidebarControls();
           updateCatalogue(true);
+        });
+      }
+
+      if (brandSearchInput) {
+        brandSearchInput.addEventListener('input', () => {
+          renderSidebarControls();
         });
       }
 

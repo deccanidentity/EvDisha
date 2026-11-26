@@ -306,15 +306,15 @@
         <div class="compare-bar-items">
           <strong style="font-size:0.88rem; margin-right:4px;">Compare (${selectedVehicles.length}/${MAX_COMPARE}):</strong>
           ${selectedVehicles
-            .map(
-              (v) => `
+          .map(
+            (v) => `
               <span class="compare-mini-pill">
                 <span>${escapeHTML(v.brand)} ${escapeHTML(v.model)}</span>
                 <button type="button" data-remove-compare="${escapeHTML(v.id)}" aria-label="Remove ${escapeHTML(v.fullName)} from compare">&times;</button>
               </span>
             `
-            )
-            .join('')}
+          )
+          .join('')}
         </div>
         <div style="display:flex; align-items:center; gap:10px;">
           <button type="button" class="btn btn-sm btn-outline-light" id="tray-clear-compare">Clear</button>
@@ -531,14 +531,13 @@
             `
             )
             .join('')}
-          ${
-            q
-              ? `<div style="padding:10px 12px 4px; border-top:1px solid var(--color-border); margin-top:6px;">
+          ${q
+            ? `<div style="padding:10px 12px 4px; border-top:1px solid var(--color-border); margin-top:6px;">
                    <a href="explore.html?q=${encodeURIComponent(term)}" style="font-size:0.86rem; font-weight:700; color:var(--color-navy);">
                      View all ${list.length} catalogue results for "${escapeHTML(term)}" &rarr;
                    </a>
                  </div>`
-              : ''
+            : ''
           }
         `;
       } catch (_err) {
@@ -600,15 +599,51 @@
         getCategories()
       ]);
 
+      const brandSearchInput = document.getElementById('brands-search-input');
       let activeCategory = 'all';
+      let brandQuery = '';
+
+      // Dynamically populate accurate brand counts on segment filter pills
+      if (filterRow) {
+        const countBy = {
+          all: brands.length,
+          indian: brands.filter((b) => b.isIndianCompany).length,
+          'two-wheelers': brands.filter((b) => (b.categories || []).includes('two-wheelers')).length,
+          'three-wheelers': brands.filter((b) => (b.categories || []).includes('three-wheelers')).length,
+          'four-wheelers': brands.filter((b) => (b.categories || []).includes('four-wheelers')).length,
+          commercial: brands.filter((b) => (b.categories || []).includes('commercial')).length
+        };
+        const labelBy = {
+          all: 'All Manufacturers',
+          indian: 'Indian EV OEMs',
+          'two-wheelers': '2-Wheelers',
+          'three-wheelers': '3-Wheelers',
+          'four-wheelers': '4-Wheelers',
+          commercial: 'Commercial'
+        };
+        filterRow.querySelectorAll('[data-brand-cat]').forEach((btn) => {
+          const k = btn.getAttribute('data-brand-cat');
+          if (labelBy[k]) btn.textContent = `${labelBy[k]} (${countBy[k] ?? 0})`;
+        });
+      }
 
       function renderBrands() {
-        const filtered =
+        const q = brandQuery.trim().toLowerCase();
+        const filtered = (
           activeCategory === 'all'
             ? brands
             : activeCategory === 'indian'
-            ? brands.filter((b) => b.isIndianCompany)
-            : brands.filter((b) => Array.isArray(b.categories) && b.categories.includes(activeCategory));
+              ? brands.filter((b) => b.isIndianCompany)
+              : brands.filter((b) => Array.isArray(b.categories) && b.categories.includes(activeCategory))
+        ).filter((b) => {
+          if (!q) return true;
+          return `${b.name} ${b.manufacturer || ''} ${b.headquarters || ''}`.toLowerCase().includes(q);
+        });
+
+        if (!filtered.length) {
+          grid.innerHTML = `<div class="empty-state" style="grid-column:1/-1;"><h3>No EV Brands Match "${escapeHTML(brandQuery)}"</h3><p>Try clearing your search or switching segment filters.</p></div>`;
+          return;
+        }
 
         grid.innerHTML = filtered
           .map((brand) => {
@@ -621,18 +656,16 @@
             return `
               <article class="brand-profile-card" id="brand-${escapeHTML(brand.id)}">
                 <div class="brand-profile-top">
-                  <img src="${escapeHTML(brand.logo)}?v=1.8" alt="${escapeHTML(brand.name)} logo" class="brand-profile-logo" width="148" height="59" decoding="async" />
+                  <img src="${escapeHTML(brand.logo)}?v=2.0" alt="${escapeHTML(brand.name)} logo" class="brand-profile-logo" width="148" height="59" decoding="async" />
                   <div style="display:flex; flex-direction:column; align-items:flex-end; gap:5px;">
-                    ${
-                      brand.isIndianCompany
-                        ? `<span class="badge badge-indian">Indian EV OEM</span>`
-                        : `<span class="badge badge-neutral">India Operations</span>`
-                    }
-                    ${
-                      brandVehicles.length > 0
-                        ? `<span style="font-size:0.74rem; font-weight:700; color:var(--color-muted);">${brandVehicles.length} ${brandVehicles.length === 1 ? 'Model' : 'Models'} Listed</span>`
-                        : ''
-                    }
+                    ${brand.isIndianCompany
+                ? `<span class="badge badge-indian">Indian EV OEM</span>`
+                : `<span class="badge badge-neutral">India Operations</span>`
+              }
+                    ${brandVehicles.length > 0
+                ? `<span style="font-size:0.74rem; font-weight:700; color:var(--color-muted);">${brandVehicles.length} ${brandVehicles.length === 1 ? 'Model' : 'Models'} Listed</span>`
+                : ''
+              }
                   </div>
                 </div>
                 <div>
@@ -644,13 +677,12 @@
                 </div>
                 <div style="margin-top:auto; padding-top:12px; border-top:1px solid var(--color-border); display:flex; align-items:center; justify-content:space-between; gap:12px; flex-wrap:wrap;">
                   <span style="font-size:0.8rem; color:var(--color-muted);">${escapeHTML(brand.website)}</span>
-                  ${
-                    brandVehicles.length > 0
-                      ? `<a href="explore.html?brand=${encodeURIComponent(brand.id)}" class="btn btn-sm btn-outline">
+                  ${brandVehicles.length > 0
+                ? `<a href="explore.html?brand=${encodeURIComponent(brand.id)}" class="btn btn-sm btn-outline">
                            Explore ${escapeHTML(brand.name)} &rarr;
                          </a>`
-                      : `<span class="badge badge-neutral">OEM Directory</span>`
-                  }
+                : `<span class="badge badge-neutral">OEM Directory</span>`
+              }
                 </div>
               </article>
             `;
@@ -666,6 +698,13 @@
           filterRow.querySelectorAll('.pill-btn').forEach((b) => {
             b.classList.toggle('is-active', b === btn);
           });
+          renderBrands();
+        });
+      }
+
+      if (brandSearchInput) {
+        brandSearchInput.addEventListener('input', () => {
+          brandQuery = brandSearchInput.value || '';
           renderBrands();
         });
       }
@@ -748,13 +787,13 @@
           <img src="${escapeHTML(article.image)}" alt="${escapeHTML(article.title)}" style="width:100%; aspect-ratio:16/9; object-fit:cover; border-radius:var(--radius-md); margin-bottom:22px;" />
           <div class="article-prose">
             ${article.content
-              .map((block) => {
-                if (block.startsWith('### ')) {
-                  return `<h4 style="font-size:1.12rem; margin-top:20px; margin-bottom:8px;">${escapeHTML(block.slice(4))}</h4>`;
-                }
-                return `<p style="margin-bottom:14px; line-height:1.72;">${escapeHTML(block)}</p>`;
-              })
-              .join('')}
+            .map((block) => {
+              if (block.startsWith('### ')) {
+                return `<h4 style="font-size:1.12rem; margin-top:20px; margin-bottom:8px;">${escapeHTML(block.slice(4))}</h4>`;
+              }
+              return `<p style="margin-bottom:14px; line-height:1.72;">${escapeHTML(block)}</p>`;
+            })
+            .join('')}
           </div>
         `;
         modal.classList.add('is-open');
@@ -959,7 +998,7 @@
             ${isClone ? 'aria-hidden="true" tabindex="-1"' : `aria-label="${escapeHTML(brand.name)} – ${brand.isIndianCompany ? 'Indian EV Manufacturer' : 'EV Manufacturer in India'}"`}
           >
             <img
-              src="${escapeHTML(brand.logo)}?v=1.8"
+              src="${escapeHTML(brand.logo)}?v=2.0"
               alt="${isClone ? '' : `${escapeHTML(brand.name)} logo`}"
               width="156"
               height="62"
@@ -1114,11 +1153,11 @@
             <select id="loc-modal-state" class="form-control">
               <option value="">All States &amp; UTs (25)</option>
               ${(locData.states || [])
-                .map(
-                  (s) =>
-                    `<option value="${escapeHTML(s.code)}" ${current && current.stateCode === s.code ? 'selected' : ''}>${escapeHTML(s.name)}</option>`
-                )
-                .join('')}
+          .map(
+            (s) =>
+              `<option value="${escapeHTML(s.code)}" ${current && current.stateCode === s.code ? 'selected' : ''}>${escapeHTML(s.name)}</option>`
+          )
+          .join('')}
             </select>
           </div>
           <div class="form-field">
@@ -1133,8 +1172,8 @@
           <div class="subcat-showcase-label">Popular EV Metro Hubs</div>
           <div class="loc-metro-chips" id="loc-metro-chips">
             ${metros
-              .map(
-                (m) => `
+          .map(
+            (m) => `
                 <button
                   type="button"
                   class="loc-city-chip ${current && current.cityId === m.id ? 'is-active' : ''}"
@@ -1144,8 +1183,8 @@
                   <span>${escapeHTML(m.stateCode)} &bull; ${escapeHTML(m.sampleZip)}</span>
                 </button>
               `
-              )
-              .join('')}
+          )
+          .join('')}
           </div>
         </div>
 

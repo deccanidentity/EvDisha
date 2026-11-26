@@ -109,23 +109,27 @@
                 height="450"
               />
             </div>
-            <div class="gallery-thumbs" role="group" aria-label="Vehicle photo gallery views">
-              ${galleryImages
-                .map(
-                  (imgSrc, idx) => `
-                  <button
-                    type="button"
-                    class="gallery-thumb-btn ${idx === 0 ? 'is-active' : ''}"
-                    data-gallery-src="${esc(imgSrc)}"
-                    data-gallery-alt="${esc(vehicle.fullName)} – ${esc(galleryLabels[idx] || `View ${idx + 1}`)}"
-                    aria-label="${esc(galleryLabels[idx] || `Gallery view ${idx + 1}`)}"
-                  >
-                    <img src="${esc(imgSrc)}" alt="${esc(galleryLabels[idx] || `View ${idx + 1}`)}" width="220" height="138" loading="lazy" />
-                  </button>
-                `
-                )
-                .join('')}
-            </div>
+            ${
+              galleryImages.length > 1
+                ? `<div class="gallery-thumbs" role="group" aria-label="Vehicle photo gallery views">
+                    ${galleryImages
+                      .map(
+                        (imgSrc, idx) => `
+                        <button
+                          type="button"
+                          class="gallery-thumb-btn ${idx === 0 ? 'is-active' : ''}"
+                          data-gallery-src="${esc(imgSrc)}"
+                          data-gallery-alt="${esc(vehicle.fullName)} – ${esc(galleryLabels[idx] || `View ${idx + 1}`)}"
+                          aria-label="${esc(galleryLabels[idx] || `Gallery view ${idx + 1}`)}"
+                        >
+                          <img src="${esc(imgSrc)}" alt="${esc(galleryLabels[idx] || `View ${idx + 1}`)}" width="220" height="138" loading="lazy" />
+                        </button>
+                      `
+                      )
+                      .join('')}
+                  </div>`
+                : ''
+            }
           </div>
 
           <!-- Summary Card -->
