@@ -440,13 +440,16 @@ body[data-page="explore"] .explore-toolbar {
 }
 
 /* --------------------------------------------------------------------------
-   2. CarDekho-Style Split Hero with Floating "Find Your Right EV" Card
+   2. CarDekho-Style Compact Hero Showcasing Combined 5-EV Bridge Panorama
    -------------------------------------------------------------------------- */
 .cd-hero {
   position: relative;
   overflow: hidden;
-  background: linear-gradient(125deg, #06172E 0%, #0B2C58 55%, #0D3B66 100%);
-  padding-block: 38px 46px;
+  background: #06172E;
+  padding-block: 26px 32px;
+  min-height: 410px;
+  display: flex;
+  align-items: center;
   color: #FFFFFF;
 }
 
@@ -461,65 +464,71 @@ body[data-page="explore"] .explore-toolbar {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  opacity: 0.28;
-  filter: saturate(1.1);
+  object-position: center 62%;
+  opacity: 0.96;
+  filter: saturate(1.06) contrast(1.03);
 }
 
+/* Directional Scrim: protects left finder & top-left copy while keeping the 5-EV bridge vivid */
 .cd-hero-bg::after {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(95deg, rgba(6, 23, 46, 0.94) 0%, rgba(9, 43, 85, 0.80) 52%, rgba(6, 23, 46, 0.70) 100%);
+  background:
+    linear-gradient(92deg, rgba(5, 18, 38, 0.74) 0%, rgba(7, 25, 50, 0.34) 38%, rgba(7, 25, 50, 0.08) 68%, rgba(5, 18, 38, 0.16) 100%),
+    linear-gradient(180deg, rgba(5, 18, 38, 0.44) 0%, rgba(5, 18, 38, 0.06) 45%, rgba(5, 18, 38, 0.56) 100%);
 }
 
 .cd-hero-grid {
   position: relative;
   z-index: 1;
   display: grid;
-  grid-template-columns: 420px minmax(0, 1fr);
-  gap: 36px;
-  align-items: center;
+  grid-template-columns: 326px minmax(0, 1fr);
+  gap: 28px;
+  align-items: end;
 }
 
-/* Floating White Finder Card (CarDekho Signature) */
+/* Compact Minimized Floating White Finder Card */
 .cd-finder-card {
-  background: var(--cd-surface);
+  background: rgba(255, 255, 255, 0.97);
+  backdrop-filter: blur(8px);
   color: var(--color-navy);
-  border-radius: 20px;
-  padding: 22px 22px 20px;
-  box-shadow: 0 24px 54px rgba(4, 16, 34, 0.34);
-  border: 1px solid rgba(255, 255, 255, 0.85);
+  border-radius: 16px;
+  padding: 14px 15px 13px;
+  box-shadow: 0 18px 42px rgba(4, 16, 34, 0.36);
+  border: 1px solid rgba(255, 255, 255, 0.92);
 }
 
 .cd-finder-title {
-  font-size: 1.32rem;
+  font-size: 1.06rem;
   font-weight: 800;
   color: var(--color-navy);
-  margin-bottom: 14px;
+  margin-bottom: 10px;
   letter-spacing: -0.02em;
 }
 
 .cd-seg-tabs {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 6px;
-  padding: 4px;
-  border-radius: 12px;
+  gap: 4px;
+  padding: 3px;
+  border-radius: 10px;
   background: var(--cd-canvas);
   border: 1px solid var(--cd-border);
-  margin-bottom: 14px;
+  margin-bottom: 9px;
 }
 
 .cd-seg-tab {
   border: 0;
   background: transparent;
   color: var(--color-body);
-  font-size: 0.78rem;
+  font-size: 0.72rem;
   font-weight: 700;
-  padding: 8px 6px;
-  border-radius: 9px;
+  padding: 6px 4px;
+  border-radius: 7px;
   transition: all var(--transition-fast);
   text-align: center;
+  white-space: nowrap;
 }
 
 .cd-seg-tab:hover {
@@ -529,21 +538,21 @@ body[data-page="explore"] .explore-toolbar {
 .cd-seg-tab.is-active {
   background: var(--color-navy);
   color: #FFFFFF;
-  box-shadow: 0 3px 10px rgba(9, 43, 85, 0.22);
+  box-shadow: 0 2px 8px rgba(9, 43, 85, 0.22);
 }
 
 .cd-mode-row {
   display: flex;
   align-items: center;
-  gap: 18px;
-  margin-bottom: 14px;
+  gap: 14px;
+  margin-bottom: 9px;
 }
 
 .cd-mode-radio {
   display: inline-flex;
   align-items: center;
-  gap: 7px;
-  font-size: 0.86rem;
+  gap: 6px;
+  font-size: 0.78rem;
   font-weight: 700;
   color: var(--color-body);
   cursor: pointer;
@@ -551,8 +560,8 @@ body[data-page="explore"] .explore-toolbar {
 
 .cd-mode-radio input {
   accent-color: var(--color-navy);
-  width: 16px;
-  height: 16px;
+  width: 14px;
+  height: 14px;
   margin: 0;
 }
 
@@ -563,16 +572,17 @@ body[data-page="explore"] .explore-toolbar {
 .cd-finder-fields {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 10px;
-  margin-bottom: 14px;
+  gap: 7px;
+  margin-bottom: 10px;
 }
 
 .cd-finder-fields .form-control {
-  min-height: 44px;
-  border-radius: 11px;
+  min-height: 36px;
+  padding: 5px 30px 5px 10px;
+  border-radius: 9px;
   border: 1.5px solid var(--cd-border);
   background-color: #FFFFFF;
-  font-size: 0.9rem;
+  font-size: 0.82rem;
   font-weight: 600;
   color: var(--color-navy);
 }
@@ -584,14 +594,15 @@ body[data-page="explore"] .explore-toolbar {
 
 .cd-finder-cta {
   width: 100%;
-  min-height: 48px;
-  border-radius: 12px;
-  font-size: 0.96rem;
+  min-height: 40px;
+  padding: 8px 14px;
+  border-radius: 10px;
+  font-size: 0.86rem;
   font-weight: 800;
   background: linear-gradient(135deg, #20C957 0%, #16A34A 100%);
   color: #052010;
   border: 0;
-  box-shadow: 0 8px 20px rgba(32, 201, 87, 0.30);
+  box-shadow: 0 6px 16px rgba(32, 201, 87, 0.30);
 }
 
 .cd-finder-cta:hover {
@@ -604,10 +615,10 @@ body[data-page="explore"] .explore-toolbar {
   align-items: center;
   justify-content: space-between;
   gap: 8px;
-  margin-top: 12px;
-  padding-top: 10px;
+  margin-top: 9px;
+  padding-top: 8px;
   border-top: 1px solid var(--cd-border);
-  font-size: 0.78rem;
+  font-size: 0.72rem;
   font-weight: 700;
 }
 
@@ -623,89 +634,98 @@ body[data-page="explore"] .explore-toolbar {
   text-decoration: underline;
 }
 
-/* Hero Right Editorial Column */
+/* Hero Right Editorial Column — Compact Top & Bottom Bar Leaving Center Bridge Panorama Wide Open */
 .cd-hero-editorial {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 16px;
+  justify-content: space-between;
+  min-height: 326px;
+  gap: 8px;
 }
 
 .cd-hero-badge {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  padding: 6px 14px;
+  gap: 6px;
+  padding: 4px 11px;
   border-radius: 999px;
-  background: rgba(32, 201, 87, 0.16);
-  border: 1px solid rgba(32, 201, 87, 0.40);
+  background: rgba(6, 22, 44, 0.68);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(32, 201, 87, 0.50);
   color: #79F6A4;
-  font-size: 0.8rem;
+  font-size: 0.72rem;
   font-weight: 800;
   letter-spacing: 0.04em;
 }
 
 .cd-hero-editorial h1 {
   color: #FFFFFF;
-  font-size: clamp(1.95rem, 3.2vw, 2.85rem);
-  line-height: 1.12;
+  font-size: clamp(1.42rem, 2.2vw, 1.92rem);
+  line-height: 1.15;
   margin: 0;
+  max-width: 470px;
+  text-shadow: 0 2px 16px rgba(4, 15, 32, 0.75);
 }
 
 .cd-hero-editorial p {
-  color: rgba(255, 255, 255, 0.84);
-  font-size: 1.02rem;
-  max-width: 580px;
+  color: rgba(255, 255, 255, 0.90);
+  font-size: 0.84rem;
+  max-width: 420px;
   margin: 0;
+  text-shadow: 0 1px 10px rgba(4, 15, 32, 0.75);
 }
 
 .cd-hero-stats {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 12px;
-  width: 100%;
-  margin-top: 4px;
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  width: auto;
+  margin-top: auto;
 }
 
 .cd-hero-stat {
-  background: rgba(255, 255, 255, 0.09);
-  backdrop-filter: blur(8px);
-  border: 1px solid rgba(255, 255, 255, 0.16);
-  border-radius: 14px;
-  padding: 12px 14px;
+  background: rgba(6, 22, 44, 0.68);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 10px;
+  padding: 6px 11px;
+  display: inline-flex;
+  align-items: baseline;
+  gap: 5px;
 }
 
 .cd-hero-stat strong {
-  display: block;
-  font-size: 1.25rem;
+  display: inline;
+  font-size: 0.92rem;
   font-weight: 800;
-  color: #FFFFFF;
-  line-height: 1.2;
+  color: #79F6A4;
+  line-height: 1.1;
 }
 
 .cd-hero-stat span {
-  font-size: 0.76rem;
-  color: rgba(255, 255, 255, 0.78);
+  font-size: 0.72rem;
+  color: rgba(255, 255, 255, 0.90);
   font-weight: 600;
 }
 
 .cd-quick-pills-bar {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
-  margin-top: 2px;
+  gap: 6px;
 }
 
 .cd-hero-chip {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
-  padding: 7px 13px;
+  gap: 5px;
+  padding: 5px 11px;
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.11);
-  border: 1px solid rgba(255, 255, 255, 0.22);
+  background: rgba(6, 22, 44, 0.64);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.28);
   color: #FFFFFF;
-  font-size: 0.8rem;
+  font-size: 0.74rem;
   font-weight: 700;
   transition: all var(--transition-fast);
 }
