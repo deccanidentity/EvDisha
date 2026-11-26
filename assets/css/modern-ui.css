@@ -19,78 +19,116 @@
 }
 
 /* --------------------------------------------------------------------------
-   1. Refined Sticky Header & Inline CarDekho-Style Search Pill
+   1. Unified Crisp Sticky Header, Consistent Nav & Simple Search Icon
    -------------------------------------------------------------------------- */
 .site-header {
   height: 76px;
-  background: rgba(255, 255, 255, 0.96);
+  background: rgba(255, 255, 255, 0.97);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--cd-border);
   box-shadow: 0 1px 12px rgba(7, 29, 59, 0.04);
 }
 
-.header-search-pill {
-  display: inline-flex;
-  align-items: center;
+.site-header .header-inner {
+  gap: 16px;
+}
+
+.site-header .primary-nav {
+  gap: 4px;
+}
+
+.site-header .nav-link {
+  font-size: 0.92rem;
+  font-weight: 700;
+  padding: 9px 13px;
+  border-radius: 10px;
+  white-space: nowrap;
+  color: var(--color-body);
+}
+
+.site-header .nav-link:hover {
+  color: var(--color-navy);
+  background: var(--cd-canvas);
+}
+
+.site-header .nav-link.active {
+  color: var(--color-navy);
+  background: var(--cd-accent-soft);
+}
+
+.site-header .header-actions {
   gap: 10px;
+}
+
+.site-header .icon-btn.js-open-search {
+  width: 42px;
   height: 42px;
-  min-width: 220px;
-  max-width: 280px;
-  padding: 0 12px 0 14px;
   border-radius: 999px;
   border: 1.5px solid var(--cd-border);
   background: var(--cd-canvas);
-  color: var(--color-muted);
-  font-size: 0.84rem;
-  font-weight: 600;
-  transition: border-color var(--transition-fast), background-color var(--transition-fast), box-shadow var(--transition-fast);
+  color: var(--color-navy);
+  transition: all var(--transition-fast);
 }
 
-.header-search-pill:hover {
+.site-header .icon-btn.js-open-search:hover {
   border-color: var(--color-navy);
   background: var(--cd-surface);
-  color: var(--color-navy);
-  box-shadow: 0 2px 8px rgba(9, 43, 85, 0.07);
+  box-shadow: 0 2px 8px rgba(9, 43, 85, 0.08);
 }
 
-.header-search-pill span.pill-text {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  flex: 1;
-  text-align: left;
+/* Unified Subpage Hero & Modern Card Surface Consistency Across All 11 Pages */
+.page-hero {
+  background: linear-gradient(125deg, #061A35 0%, #0B3161 60%, #0E4A5C 100%);
+  color: #FFFFFF;
+  padding-block: 38px 42px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-.header-search-pill kbd {
-  font-family: inherit;
-  font-size: 0.72rem;
+.page-hero .breadcrumb {
+  color: rgba(255, 255, 255, 0.72);
+  margin-bottom: 12px;
+}
+
+.page-hero .breadcrumb a {
+  color: #79F6A4;
   font-weight: 700;
-  padding: 2px 7px;
-  border-radius: 6px;
+}
+
+.page-hero h1 {
+  color: #FFFFFF;
+  font-size: clamp(1.75rem, 2.8vw, 2.4rem);
+  margin-bottom: 8px;
+}
+
+.page-hero p {
+  color: rgba(255, 255, 255, 0.82);
+  max-width: 700px;
+  font-size: 0.98rem;
+}
+
+body:not([data-page="home"]) main > .section {
+  background: var(--cd-canvas);
+  padding-block: 44px 56px;
+}
+
+body:not([data-page="home"]) main > .section.section-light {
+  background: var(--cd-surface);
+}
+
+.brand-profile-card,
+.news-card,
+.compare-slot-card,
+.spec-panel,
+.details-summary-card,
+.filter-sidebar,
+.benefit-card,
+.info-card,
+.contact-card,
+.legal-card {
   background: var(--cd-surface);
   border: 1px solid var(--cd-border);
-  color: var(--color-muted);
-}
-
-@media (min-width: 992px) {
-  .header-actions .icon-btn.js-open-search {
-    display: none;
-  }
-}
-
-.nav-badge-new {
-  display: inline-flex;
-  align-items: center;
-  padding: 1px 6px;
-  border-radius: 999px;
-  font-size: 0.64rem;
-  font-weight: 800;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  background: var(--cd-accent-soft);
-  color: #15803D;
-  border: 1px solid rgba(22, 163, 74, 0.25);
-  margin-left: 4px;
+  border-radius: 16px;
+  box-shadow: var(--cd-shadow-card);
 }
 
 /* --------------------------------------------------------------------------
@@ -1107,5 +1145,63 @@
 
   .chg-calc-kpi-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   7. Compact Icon-Only Robotic EV AI Launcher (Bottom-Right Default)
+   -------------------------------------------------------------------------- */
+.ev-ai-launcher {
+  left: auto;
+  right: 18px;
+  bottom: max(18px, env(safe-area-inset-bottom));
+  width: 46px;
+  height: 46px;
+  padding: 0;
+  gap: 0;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.ev-ai-launcher .ev-ai-robot-orb {
+  width: 38px;
+  height: 38px;
+  border-width: 0;
+  background: transparent;
+}
+
+.ev-ai-launcher .ev-ai-bot-svg {
+  width: 24px;
+  height: 24px;
+}
+
+.ev-ai-launcher .ev-ai-status-ping {
+  top: 2px;
+  right: 2px;
+  width: 8px;
+  height: 8px;
+}
+
+.ev-ai-panel {
+  left: auto;
+  right: 18px;
+  bottom: 74px;
+  transform-origin: bottom right;
+}
+
+body:has(#floating-compare-bar:not([hidden])) .ev-ai-launcher {
+  bottom: max(92px, calc(82px + env(safe-area-inset-bottom)));
+}
+
+@media (max-width: 767px) {
+  .ev-ai-launcher {
+    right: 14px;
+    bottom: max(14px, env(safe-area-inset-bottom));
+    width: 44px;
+    height: 44px;
+  }
+
+  body:has(#floating-compare-bar:not([hidden])) .ev-ai-launcher {
+    bottom: max(142px, calc(134px + env(safe-area-inset-bottom)));
   }
 }

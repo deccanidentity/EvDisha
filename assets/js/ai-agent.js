@@ -11,7 +11,7 @@
 (function () {
   'use strict';
 
-  const POS_STORAGE_KEY = 'evdisha_robot_pos_v1';
+  const POS_STORAGE_KEY = 'evdisha_robot_pos_v2';
 
   const ROBOT_SVG = `
     <svg class="ev-ai-bot-svg" width="22" height="22" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -46,7 +46,6 @@
         ${ROBOT_SVG}
         <span class="ev-ai-status-ping" aria-hidden="true"></span>
       </span>
-      <span class="ev-ai-launcher-title">Ask EV AI</span>
     `;
 
     const panel = document.createElement('section');
@@ -65,7 +64,7 @@
           </div>
         </div>
         <div class="ev-ai-header-actions">
-          <button type="button" class="ev-ai-hdr-btn" id="ev-ai-reset-pos" title="Snap back to bottom-left corner" aria-label="Snap agent back to bottom-left corner">&#8601;</button>
+          <button type="button" class="ev-ai-hdr-btn" id="ev-ai-reset-pos" title="Snap back to bottom-right corner" aria-label="Snap agent back to bottom-right corner">&#8600;</button>
           <button type="button" class="ev-ai-hdr-btn" id="ev-ai-clear-btn" title="Reset conversation" aria-label="Reset conversation">&#8635;</button>
           <button type="button" class="ev-ai-hdr-btn" id="ev-ai-close-btn" title="Minimize AI Advisor" aria-label="Close AI Advisor">&times;</button>
         </div>
@@ -563,7 +562,7 @@
       }
     }
 
-    function resetToBottomLeft() {
+    function resetToBottomRight() {
       try {
         window.sessionStorage.removeItem(POS_STORAGE_KEY);
       } catch (_err) {
@@ -580,7 +579,7 @@
       panel.style.right = '';
 
       if (window.EVDisha && window.EVDisha.showToast) {
-        window.EVDisha.showToast('AI Advisor snapped back to bottom-left corner.');
+        window.EVDisha.showToast('AI Advisor snapped back to bottom-right corner.');
       }
     }
 
@@ -594,7 +593,9 @@
       const pHeight = Math.min(550, window.innerHeight - 110);
       const pad = 12;
 
-      let left = lRect.left;
+      // Align panel to the right edge of the launcher when on the right half, else left edge
+      const onRightHalf = lRect.left + lRect.width / 2 > window.innerWidth / 2;
+      let left = onRightHalf ? lRect.right - pWidth : lRect.left;
       if (left + pWidth > window.innerWidth - pad) {
         left = window.innerWidth - pWidth - pad;
       }
@@ -655,7 +656,7 @@
     });
 
     closeBtn.addEventListener('click', () => setOpen(false));
-    resetPosBtn.addEventListener('click', resetToBottomLeft);
+    resetPosBtn.addEventListener('click', resetToBottomRight);
 
     window.addEventListener('keydown', (e) => {
       if (e.key === 'Escape' && panel.classList.contains('is-open')) {
