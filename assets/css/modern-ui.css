@@ -1661,3 +1661,359 @@ body:has(#floating-compare-bar:not([hidden])) .ev-ai-launcher {
     bottom: max(142px, calc(134px + env(safe-area-inset-bottom)));
   }
 }
+
+/* --------------------------------------------------------------------------
+   8. Comprehensive iOS, Android, Tablet & iPad Responsive Hardening (v4.0)
+   -------------------------------------------------------------------------- */
+
+/* Eliminate 300ms mobile tap delay & honor safe-area insets globally */
+a,
+button,
+input,
+select,
+textarea,
+label {
+  touch-action: manipulation;
+}
+
+.site-footer {
+  padding-bottom: max(28px, env(safe-area-inset-bottom));
+}
+
+.compare-table-wrapper,
+.cd-tab-strip,
+.tools-hero-tabs {
+  -webkit-overflow-scrolling: touch;
+}
+
+/* iPad Pro Portrait (992px – 1140px): Prevent cramped 3-col beside Explore sidebar */
+@media (min-width: 992px) and (max-width: 1140px) {
+  .site-header .container {
+    padding-inline: 16px !important;
+  }
+
+  .site-header .nav-link {
+    padding: 7px 9px;
+    font-size: 0.85rem;
+  }
+
+  .site-header .nav-link-charging {
+    padding: 5px 10px;
+    font-size: 0.8rem;
+  }
+
+  .header-loc-btn {
+    max-width: 195px;
+    padding: 0 10px;
+    font-size: 0.76rem;
+  }
+
+  body[data-page="explore"] .explore-layout {
+    grid-template-columns: 256px minmax(0, 1fr);
+    gap: 14px;
+  }
+
+  body[data-page="explore"] #explore-vehicles-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+  }
+
+  .cd-hero-grid {
+    grid-template-columns: 312px minmax(0, 1fr);
+    gap: 20px;
+  }
+}
+
+/* iPad Portrait & Android Tablets (768px – 991px): Keep crisp 2-col hero & 2-col grids */
+@media (min-width: 768px) and (max-width: 991px) {
+  .cd-hero {
+    min-height: 360px;
+    padding-block: 22px 26px;
+  }
+
+  .cd-hero-grid {
+    grid-template-columns: 296px minmax(0, 1fr);
+    gap: 18px;
+    align-items: center;
+  }
+
+  .cd-hero-editorial {
+    order: 0;
+    min-height: auto;
+    gap: 10px;
+  }
+
+  .cd-hero-editorial h1 {
+    font-size: 1.48rem;
+  }
+
+  .cd-hero-editorial p {
+    font-size: 0.82rem;
+  }
+
+  .cd-hero-stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .cd-vs-grid,
+  .chg-city-grid,
+  .chg-network-grid,
+  .chg-connector-grid,
+  .chg-corridor-grid,
+  .chg-state-bars,
+  .vehicles-grid,
+  .vehicles-grid-compact,
+  .news-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+  }
+
+  .chg-filter-card {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .chg-filter-card #chg-reset-btn {
+    grid-column: 1 / -1;
+  }
+
+  .chg-calc-grid,
+  .home-about-grid,
+  .details-hero-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .vd-charging-metrics {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+/* Standard iOS & Android Smartphones (<= 767px) */
+@media (max-width: 767px) {
+  /* Prevent jarring iOS Safari auto-zoom when focusing inputs/selects */
+  input[type="text"],
+  input[type="search"],
+  input[type="email"],
+  input[type="tel"],
+  select.form-control,
+  textarea.form-control {
+    font-size: 16px;
+  }
+
+  .site-header .container {
+    padding-inline: 12px !important;
+  }
+
+  .site-header .header-inner {
+    gap: 8px;
+  }
+
+  .site-header .brand-logo img {
+    height: 34px;
+    max-width: 108px;
+  }
+
+  .site-header .header-actions {
+    gap: 6px;
+  }
+
+  .site-header .icon-btn,
+  .site-header .icon-btn.js-open-search {
+    width: 36px;
+    height: 36px;
+  }
+
+  .header-loc-btn {
+    height: 34px;
+    max-width: 166px;
+    padding: 0 9px;
+    font-size: 0.72rem;
+    gap: 4px;
+  }
+
+  /* Compact, vivid mobile hero with zero awkward blank height */
+  .cd-hero {
+    min-height: auto;
+    padding-block: 18px 24px;
+  }
+
+  .cd-hero-bg img {
+    object-position: 68% 55%;
+  }
+
+  .cd-hero-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .cd-hero-editorial {
+    order: -1;
+    min-height: auto;
+    gap: 10px;
+  }
+
+  .cd-hero-editorial h1 {
+    font-size: 1.48rem;
+  }
+
+  .cd-hero-editorial p {
+    font-size: 0.85rem;
+  }
+
+  .cd-hero-stats {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    width: 100%;
+    gap: 6px;
+  }
+
+  .cd-hero-stat {
+    padding: 7px 10px;
+    justify-content: flex-start;
+  }
+
+  .cd-finder-card {
+    width: 100%;
+    padding: 14px;
+  }
+
+  .cd-finder-fields .form-control {
+    font-size: 15px;
+    min-height: 40px;
+  }
+
+  /* Mobile horizontal-scroll pill bars */
+  .tools-hero-tabs {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scrollbar-width: none;
+    padding-bottom: 2px;
+  }
+
+  .tools-hero-tabs::-webkit-scrollbar {
+    display: none;
+  }
+
+  .tools-hero-tab {
+    flex-shrink: 0;
+    padding: 8px 14px;
+    font-size: 0.82rem;
+  }
+
+  .home-about-shell {
+    padding: 20px 16px;
+  }
+
+  .chg-calc-panel,
+  .chg-calc-results {
+    padding: 18px 16px;
+  }
+
+  .vd-charging-panel {
+    padding: 16px;
+  }
+
+  /* Full-width bottom-sheet AI chat panel safe for iOS/Android dynamic viewport */
+  .ev-ai-panel {
+    left: 10px;
+    right: 10px;
+    width: auto;
+    max-width: none;
+    bottom: calc(74px + env(safe-area-inset-bottom));
+    height: min(500px, calc(100dvh - 110px));
+    max-height: calc(100dvh - 100px);
+    border-radius: 18px;
+  }
+
+  /* Explore page mobile spacing */
+  body[data-page="explore"] .page-hero .container,
+  body[data-page="explore"] main > .section .container {
+    padding-inline: 12px;
+  }
+
+  body[data-page="explore"] .explore-toolbar {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  body[data-page="explore"] #explore-vehicles-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+}
+
+/* Large Phablets (540px – 767px): 2-column EV cards */
+@media (min-width: 540px) and (max-width: 767px) {
+  body[data-page="explore"] #explore-vehicles-grid,
+  .vehicles-grid,
+  .vehicles-grid-compact {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+}
+
+/* Ultra-Compact Phones (320px – 374px — iPhone SE / Compact Android): Zero Header Overflow */
+@media (max-width: 374px) {
+  :root {
+    --header-height: 54px;
+  }
+
+  .site-header .container {
+    padding-inline: 8px !important;
+  }
+
+  .site-header .header-inner {
+    gap: 5px;
+  }
+
+  .site-header .brand-logo img {
+    height: 28px;
+    max-width: 88px;
+  }
+
+  .site-header .header-actions {
+    gap: 4px;
+  }
+
+  .site-header .icon-btn,
+  .site-header .icon-btn.js-open-search {
+    width: 32px;
+    height: 32px;
+  }
+
+  .header-loc-btn {
+    height: 32px;
+    max-width: 118px;
+    padding: 0 7px;
+    font-size: 0.68rem;
+    gap: 3px;
+  }
+
+  .header-loc-btn svg {
+    width: 13px;
+    height: 13px;
+  }
+
+  .cd-seg-tab {
+    font-size: 0.68rem;
+    padding: 6px 2px;
+  }
+
+  .cd-hero-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .ev-ai-launcher {
+    right: 10px;
+    bottom: max(10px, env(safe-area-inset-bottom));
+    width: 46px;
+    height: 46px;
+  }
+
+  .ev-ai-launcher .ev-ai-bot-svg {
+    width: 32px;
+    height: 32px;
+  }
+}
