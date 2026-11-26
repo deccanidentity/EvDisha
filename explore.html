@@ -19,9 +19,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 
-  <link rel="stylesheet" href="assets/css/style.css?v=3.4" />
-  <link rel="stylesheet" href="assets/css/responsive.css?v=3.4" />
-  <link rel="stylesheet" href="assets/css/modern-ui.css?v=3.4" />
+  <link rel="stylesheet" href="assets/css/style.css?v=3.5" />
+  <link rel="stylesheet" href="assets/css/responsive.css?v=3.5" />
+  <link rel="stylesheet" href="assets/css/modern-ui.css?v=3.5" />
 
   <script type="application/ld+json">
   {
@@ -91,20 +91,9 @@
     <!-- Catalogue Section -->
     <section class="section">
       <div class="container">
-        <div class="dealer-advisory-banner" role="note">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-            <circle cx="12" cy="12" r="10"></circle>
-            <line x1="12" y1="8" x2="12" y2="12"></line>
-            <line x1="12" y1="16" x2="12.01" y2="16"></line>
-          </svg>
-          <div>
-            <strong>Indicative Pricing &amp; Specification Advisory:</strong> Displayed ex-showroom prices, certified range ratings, and features vary by city, variant, and state EV policy. Please consult an <strong>authorized dealer or brand sales team</strong> for exact city quotes and live subsidies. <a href="terms.html" style="font-weight:800; color:var(--color-navy); text-decoration:underline;">Terms &amp; Conditions</a>
-          </div>
-        </div>
-
         <div class="filter-backdrop" id="filter-backdrop"></div>
         <div class="explore-layout">
-          <!-- Filter Sidebar / Mobile Drawer -->
+          <!-- Filter Sidebar / Mobile Drawer (All Filters & Quick Chips Docked Left) -->
           <aside class="filter-sidebar" id="explore-filter-sidebar" aria-label="Catalogue filters">
             <div class="filter-sidebar-header">
               <h2>Filters</h2>
@@ -114,37 +103,16 @@
               </div>
             </div>
 
-            <!-- Location Auto-Filter (PIN Code, State & City) -->
+            <!-- Quick Segment Pills (Moved to Left Sidebar) -->
             <div class="filter-group">
-              <div class="filter-group-title">Location (State / City / PIN)</div>
-              <div style="display:flex; flex-direction:column; gap:9px;">
-                <div>
-                  <label for="filter-zip-input" class="sr-only">6-Digit Indian PIN / Zipcode</label>
-                  <input
-                    type="text"
-                    id="filter-zip-input"
-                    inputmode="numeric"
-                    maxlength="6"
-                    class="form-control"
-                    style="min-height:40px; padding:7px 11px; font-size:0.86rem;"
-                    placeholder="Enter 6-Digit PIN (e.g. 560001)"
-                    autocomplete="off"
-                  />
-                  <div id="filter-zip-hint" class="zip-auto-hint" aria-live="polite"></div>
-                </div>
-                <div>
-                  <label for="filter-state-select" class="sr-only">Select State</label>
-                  <select id="filter-state-select" class="form-control" style="min-height:40px; padding:7px 34px 7px 11px; font-size:0.86rem;">
-                    <option value="">All States &amp; UTs</option>
-                  </select>
-                </div>
-                <div>
-                  <label for="filter-city-select" class="sr-only">Select City</label>
-                  <select id="filter-city-select" class="form-control" style="min-height:40px; padding:7px 34px 7px 11px; font-size:0.86rem;">
-                    <option value="">All Major Cities</option>
-                  </select>
-                </div>
-              </div>
+              <div class="filter-group-title">EV Segment</div>
+              <div id="explore-top-cat-tabs" class="sidebar-pill-wrap" role="group" aria-label="Quick top category filter"></div>
+            </div>
+
+            <!-- Elastic Quick Filters (Moved to Left Sidebar) -->
+            <div class="filter-group">
+              <div class="filter-group-title">Elastic Quick Filters</div>
+              <div id="explore-elastic-suggestions" class="sidebar-elastic-wrap" role="group" aria-label="Elastic quick filters"></div>
             </div>
 
             <!-- Elastic Search by Model, Brand, Budget or Range -->
@@ -154,9 +122,43 @@
                 type="search"
                 id="explore-search-input"
                 class="form-control"
+                style="min-height:38px; padding:6px 10px; font-size:0.84rem;"
                 placeholder="Try 'SUV under 15L', '400+ km', 'Nexon'..."
                 autocomplete="off"
               />
+            </div>
+
+            <!-- Location Auto-Filter (PIN Code, State & City) -->
+            <div class="filter-group">
+              <div class="filter-group-title">Location (State / City / PIN)</div>
+              <div style="display:flex; flex-direction:column; gap:8px;">
+                <div>
+                  <label for="filter-zip-input" class="sr-only">6-Digit Indian PIN / Zipcode</label>
+                  <input
+                    type="text"
+                    id="filter-zip-input"
+                    inputmode="numeric"
+                    maxlength="6"
+                    class="form-control"
+                    style="min-height:38px; padding:6px 10px; font-size:0.84rem;"
+                    placeholder="Enter 6-Digit PIN (e.g. 560001)"
+                    autocomplete="off"
+                  />
+                  <div id="filter-zip-hint" class="zip-auto-hint" aria-live="polite"></div>
+                </div>
+                <div>
+                  <label for="filter-state-select" class="sr-only">Select State</label>
+                  <select id="filter-state-select" class="form-control" style="min-height:38px; padding:6px 32px 6px 10px; font-size:0.84rem;">
+                    <option value="">All States &amp; UTs</option>
+                  </select>
+                </div>
+                <div>
+                  <label for="filter-city-select" class="sr-only">Select City</label>
+                  <select id="filter-city-select" class="form-control" style="min-height:38px; padding:6px 32px 6px 10px; font-size:0.84rem;">
+                    <option value="">All Major Cities</option>
+                  </select>
+                </div>
+              </div>
             </div>
 
             <!-- Category Filter -->
@@ -202,11 +204,8 @@
             </div>
           </aside>
 
-          <!-- Results Area -->
+          <!-- Results Area (EV Cards Immediately From Top) -->
           <div>
-            <div id="explore-top-cat-tabs" class="segment-filter-pills" style="margin-bottom:12px;" role="group" aria-label="Quick top category filter"></div>
-            <div id="explore-elastic-suggestions" class="elastic-suggestions-bar" role="group" aria-label="Elastic quick filters"></div>
-
             <div class="explore-toolbar">
               <div id="explore-results-summary" class="results-summary" aria-live="polite">Loading electric vehicles...</div>
 
@@ -216,7 +215,7 @@
                 </button>
 
                 <label for="explore-sort-select" class="sr-only">Sort vehicles by</label>
-                <select id="explore-sort-select" class="form-control" style="min-height:40px; padding-block:6px; width:auto;">
+                <select id="explore-sort-select" class="form-control" style="min-height:38px; padding-block:5px; width:auto; font-size:0.86rem;">
                   <option value="popularity">Sort: Popularity</option>
                   <option value="price-asc">Price: Low to High</option>
                   <option value="price-desc">Price: High to Low</option>
@@ -234,6 +233,17 @@
 
             <div id="explore-load-more-wrap" class="load-more-wrap" hidden>
               <button type="button" id="explore-load-more-btn" class="btn btn-outline">Load More Vehicles</button>
+            </div>
+
+            <div class="dealer-advisory-banner" style="margin-top:22px; margin-bottom:0;" role="note">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="12" y1="8" x2="12" y2="12"></line>
+                <line x1="12" y1="16" x2="12.01" y2="16"></line>
+              </svg>
+              <div>
+                <strong>Indicative Pricing &amp; Specification Advisory:</strong> Displayed ex-showroom prices, certified range ratings, and features vary by city, variant, and state EV policy. Please consult an <strong>authorized dealer or brand sales team</strong> for exact city quotes and live subsidies. <a href="terms.html" style="font-weight:800; color:var(--color-navy); text-decoration:underline;">Terms &amp; Conditions</a>
+              </div>
             </div>
           </div>
         </div>
