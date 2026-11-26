@@ -14,26 +14,59 @@
   const POS_STORAGE_KEY = 'evdisha_robot_pos_v2';
 
   const ROBOT_SVG = `
-    <svg class="ev-ai-bot-svg" width="30" height="30" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <circle class="robot-antenna-glow" cx="18" cy="4.2" r="3.4" fill="#20C957" opacity="0.35"/>
-      <line x1="18" y1="4.8" x2="18" y2="8.8" stroke="#20C957" stroke-width="2" stroke-linecap="round"/>
-      <circle cx="18" cy="4.2" r="1.8" fill="#74F39E"/>
-      <rect x="8.5" y="8.8" width="19" height="14.5" rx="6" fill="#0B2D59" stroke="#20C957" stroke-width="1.6"/>
-      <rect x="11.2" y="12.2" width="13.6" height="6.8" rx="3.4" fill="#041326"/>
-      <g class="robot-visor-eyes">
-        <circle cx="14.8" cy="15.6" r="1.7" fill="#20C957"/>
-        <circle cx="21.2" cy="15.6" r="1.7" fill="#20C957"/>
-      </g>
-      <path d="M15.4 20.8C16.6 21.6 19.4 21.6 20.6 20.8" stroke="#74F39E" stroke-width="1.35" stroke-linecap="round"/>
-      <rect x="6.4" y="13.5" width="2.1" height="4.8" rx="1" fill="#20C957"/>
-      <rect x="27.5" y="13.5" width="2.1" height="4.8" rx="1" fill="#20C957"/>
-      <rect x="11.5" y="24.2" width="13" height="9.2" rx="4.2" fill="#0B2D59" stroke="#20C957" stroke-width="1.5"/>
-      <rect x="15.4" y="27.2" width="5.2" height="3" rx="1.5" fill="#20C957" opacity="0.85"/>
-      <path d="M11.2 26.2C9.2 26.8 8.2 28.4 8.2 30.2" stroke="#74F39E" stroke-width="2.1" stroke-linecap="round"/>
+    <svg class="ev-ai-bot-svg" width="38" height="38" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <defs>
+        <linearGradient id="evBotShell" x1="12" y1="9" x2="34" y2="39" gradientUnits="userSpaceOnUse">
+          <stop offset="0%" stop-color="#FFFFFF"/>
+          <stop offset="65%" stop-color="#E6EFFB"/>
+          <stop offset="100%" stop-color="#C6D8F0"/>
+        </linearGradient>
+        <linearGradient id="evBotVisor" x1="14" y1="15" x2="32" y2="27" gradientUnits="userSpaceOnUse">
+          <stop offset="0%" stop-color="#0E305E"/>
+          <stop offset="100%" stop-color="#041122"/>
+        </linearGradient>
+        <linearGradient id="evBotGreen" x1="18" y1="4" x2="30" y2="42" gradientUnits="userSpaceOnUse">
+          <stop offset="0%" stop-color="#69FFA0"/>
+          <stop offset="100%" stop-color="#16C456"/>
+        </linearGradient>
+      </defs>
+
+      <!-- Glowing Antenna Beacon -->
+      <circle class="robot-antenna-glow" cx="22" cy="5.5" r="4.2" fill="#20C957" opacity="0.35"/>
+      <line x1="22" y1="6.5" x2="22" y2="11" stroke="#74F39E" stroke-width="2.2" stroke-linecap="round"/>
+      <circle cx="22" cy="5.5" r="2.3" fill="url(#evBotGreen)"/>
+
+      <!-- Sculpted Rounded Body & Chest EV Bolt -->
+      <path d="M13.5 31.5C13.5 28.8 15.7 27 18.4 27H25.6C28.3 27 30.5 28.8 30.5 31.5V36.8C30.5 39.4 28.4 41.5 25.8 41.5H18.2C15.6 41.5 13.5 39.4 13.5 36.8V31.5Z" fill="url(#evBotShell)"/>
+      <path d="M23.1 30.8L19.6 35.1H22.1L21.1 38.4L24.7 34.1H22.2L23.1 30.8Z" fill="#16A34A"/>
+
+      <!-- Resting Left Arm -->
+      <path d="M13.2 30.8C10.5 31.5 9.4 33.8 10.1 36.2" stroke="url(#evBotShell)" stroke-width="3.6" stroke-linecap="round"/>
+
+      <!-- Articulated Waving Right Arm & Hand -->
       <g class="robot-wave-hand">
-        <path d="M24.8 25.8C27.5 25.4 30.2 23.2 32.2 19.4" stroke="#74F39E" stroke-width="2.2" stroke-linecap="round"/>
-        <circle cx="32.8" cy="18.2" r="2.2" fill="#20C957" stroke="#041326" stroke-width="0.9"/>
+        <path d="M30.5 30.6C34.8 29.8 38.4 26.8 40.6 21.8" stroke="url(#evBotShell)" stroke-width="3.6" stroke-linecap="round"/>
+        <circle cx="41.2" cy="20.2" r="2.9" fill="#FFFFFF" stroke="#20C957" stroke-width="1.3"/>
+        <circle cx="41.2" cy="20.2" r="1.15" fill="#20C957"/>
       </g>
+
+      <!-- Pearl-White Sculpted Head & Side Pods -->
+      <rect x="8.2" y="16.5" width="3.2" height="6.8" rx="1.6" fill="url(#evBotGreen)"/>
+      <rect x="32.6" y="16.5" width="3.2" height="6.8" rx="1.6" fill="url(#evBotGreen)"/>
+      <rect x="10.8" y="10.8" width="22.4" height="17.2" rx="8.2" fill="url(#evBotShell)"/>
+
+      <!-- Glossy Dark Visor + Specular Highlight -->
+      <rect x="13.4" y="14.2" width="17.2" height="10.2" rx="5.1" fill="url(#evBotVisor)"/>
+      <path d="M16.4 15.7H23.2" stroke="#FFFFFF" stroke-opacity="0.28" stroke-width="1.3" stroke-linecap="round"/>
+
+      <!-- Expressive Glowing Eyes + Friendly Smile -->
+      <g class="robot-visor-eyes">
+        <ellipse cx="18.2" cy="19.1" rx="2.0" ry="2.2" fill="#46FA8F"/>
+        <ellipse cx="25.8" cy="19.1" rx="2.0" ry="2.2" fill="#46FA8F"/>
+        <circle cx="17.6" cy="18.3" r="0.65" fill="#FFFFFF"/>
+        <circle cx="25.2" cy="18.3" r="0.65" fill="#FFFFFF"/>
+      </g>
+      <path d="M19.8 22.3C20.9 23.1 23.1 23.1 24.2 22.3" stroke="#69FFA0" stroke-width="1.35" stroke-linecap="round"/>
     </svg>
   `;
 

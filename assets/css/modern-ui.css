@@ -1477,64 +1477,140 @@ body[data-page="explore"] .explore-toolbar {
 }
 
 /* --------------------------------------------------------------------------
-   7. Compact Icon-Only Robotic EV AI Launcher (Bottom-Right + Waving Hand)
+   7. Studio-Grade Glossy Icon-Only Robotic EV AI Launcher (Bottom-Right)
    -------------------------------------------------------------------------- */
 @keyframes evdisha-hand-wave {
-  0%, 52%, 100% {
+  0%, 48%, 100% {
     transform: rotate(0deg);
   }
-  58% {
-    transform: rotate(-20deg);
+  56% {
+    transform: rotate(14deg);
   }
-  65% {
-    transform: rotate(12deg);
+  64% {
+    transform: rotate(-8deg);
   }
   72% {
-    transform: rotate(-18deg);
+    transform: rotate(13deg);
   }
-  79% {
-    transform: rotate(10deg);
+  80% {
+    transform: rotate(-6deg);
   }
-  86% {
+  88% {
     transform: rotate(0deg);
+  }
+}
+
+@keyframes evdisha-bot-gentle-float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-2.5px);
+  }
+}
+
+@keyframes evdisha-online-ring {
+  0% {
+    transform: scale(1);
+    opacity: 0.75;
+  }
+  75%, 100% {
+    transform: scale(2.2);
+    opacity: 0;
   }
 }
 
 .ev-ai-launcher {
   left: auto;
-  right: 18px;
-  bottom: max(18px, env(safe-area-inset-bottom));
-  width: 48px;
-  height: 48px;
+  right: 20px;
+  bottom: max(20px, env(safe-area-inset-bottom));
+  width: 54px;
+  height: 54px;
   padding: 0;
   gap: 0;
   justify-content: center;
   border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.92);
+  background: radial-gradient(circle at 30% 20%, #154380 0%, #09254D 58%, #061833 100%);
+  box-shadow:
+    0 12px 28px rgba(6, 24, 51, 0.36),
+    0 0 0 3px rgba(32, 201, 87, 0.24),
+    inset 0 1px 1px rgba(255, 255, 255, 0.28);
+  animation: none;
+  transition: transform 220ms cubic-bezier(0.22, 1, 0.36, 1), box-shadow 220ms ease, border-color 220ms ease;
+}
+
+@media (hover: hover) {
+  .ev-ai-launcher:hover {
+    transform: translateY(-3px) scale(1.05);
+    border-color: #69FFA0;
+    box-shadow:
+      0 16px 34px rgba(6, 24, 51, 0.42),
+      0 0 0 5px rgba(32, 201, 87, 0.30);
+  }
+
+  .ev-ai-launcher::before {
+    content: 'Ask EV AI';
+    position: absolute;
+    right: calc(100% + 10px);
+    top: 50%;
+    transform: translateY(-50%) translateX(6px);
+    background: #071D3B;
+    color: #FFFFFF;
+    font-size: 0.75rem;
+    font-weight: 800;
+    padding: 5px 10px;
+    border-radius: 8px;
+    border: 1px solid rgba(32, 201, 87, 0.4);
+    box-shadow: 0 8px 20px rgba(7, 29, 59, 0.28);
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 180ms ease, transform 180ms ease;
+  }
+
+  .ev-ai-launcher:hover::before {
+    opacity: 1;
+    transform: translateY(-50%) translateX(0);
+  }
+
+  .ev-ai-launcher.is-dragging::before {
+    opacity: 0;
+  }
 }
 
 .ev-ai-launcher .ev-ai-robot-orb {
-  width: 42px;
-  height: 42px;
+  width: 48px;
+  height: 48px;
   border-width: 0;
   background: transparent;
 }
 
 .ev-ai-launcher .ev-ai-bot-svg {
-  width: 30px;
-  height: 30px;
+  width: 38px;
+  height: 38px;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.32));
+  animation: evdisha-bot-gentle-float 3.4s ease-in-out infinite;
 }
 
 .robot-wave-hand {
-  transform-origin: 25px 25.5px;
-  animation: evdisha-hand-wave 3.4s ease-in-out infinite;
+  transform-origin: 30.5px 30.6px;
+  animation: evdisha-hand-wave 4.0s ease-in-out infinite;
 }
 
-.ev-ai-launcher.is-dragging .robot-wave-hand {
+.ev-ai-launcher:hover .robot-wave-hand {
+  animation-duration: 1.6s;
+}
+
+.ev-ai-launcher.is-dragging .robot-wave-hand,
+.ev-ai-launcher.is-dragging .ev-ai-bot-svg {
   animation: none;
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .robot-wave-hand {
+  .robot-wave-hand,
+  .ev-ai-launcher .ev-ai-bot-svg,
+  .ev-ai-launcher .ev-ai-status-ping::after {
     animation: none;
   }
 }
@@ -1542,14 +1618,25 @@ body[data-page="explore"] .explore-toolbar {
 .ev-ai-launcher .ev-ai-status-ping {
   top: 2px;
   right: 2px;
-  width: 8px;
-  height: 8px;
+  width: 10px;
+  height: 10px;
+  background: #22E564;
+  border: 2px solid #071D3B;
+}
+
+.ev-ai-launcher .ev-ai-status-ping::after {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  border-radius: 50%;
+  border: 1.5px solid #22E564;
+  animation: evdisha-online-ring 2.6s cubic-bezier(0.2, 0.7, 0.2, 1) infinite;
 }
 
 .ev-ai-panel {
   left: auto;
-  right: 18px;
-  bottom: 74px;
+  right: 20px;
+  bottom: 84px;
   transform-origin: bottom right;
 }
 
@@ -1561,8 +1648,13 @@ body:has(#floating-compare-bar:not([hidden])) .ev-ai-launcher {
   .ev-ai-launcher {
     right: 14px;
     bottom: max(14px, env(safe-area-inset-bottom));
-    width: 44px;
-    height: 44px;
+    width: 50px;
+    height: 50px;
+  }
+
+  .ev-ai-launcher .ev-ai-bot-svg {
+    width: 34px;
+    height: 34px;
   }
 
   body:has(#floating-compare-bar:not([hidden])) .ev-ai-launcher {
