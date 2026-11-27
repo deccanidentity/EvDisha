@@ -697,6 +697,7 @@
 
     closeBtn.addEventListener('click', () => setOpen(false));
     resetPosBtn.addEventListener('click', resetToBottomRight);
+    window.addEventListener('evdisha:open-ai', () => setOpen(true));
 
     window.addEventListener('keydown', (e) => {
       if (e.key === 'Escape' && panel.classList.contains('is-open')) {

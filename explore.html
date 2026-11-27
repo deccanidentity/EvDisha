@@ -20,9 +20,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 
-  <link rel="stylesheet" href="assets/css/style.css?v=4.0" />
-  <link rel="stylesheet" href="assets/css/responsive.css?v=4.0" />
-  <link rel="stylesheet" href="assets/css/modern-ui.css?v=4.0" />
+  <link rel="stylesheet" href="assets/css/style.css?v=4.1" />
+  <link rel="stylesheet" href="assets/css/responsive.css?v=4.1" />
+  <link rel="stylesheet" href="assets/css/modern-ui.css?v=4.1" />
 
   <script type="application/ld+json">
   {
@@ -44,14 +44,42 @@
         <img src="assets/images/logo/ev-disha-logo.webp" alt="EV Disha – देखो • Compare • Go Electric" width="186" height="62" />
       </a>
 
-      <nav class="primary-nav" id="primary-nav" aria-label="Main navigation">
+            <nav class="primary-nav" id="primary-nav" aria-label="Main navigation">
         <a href="index.html" class="nav-link">Home</a>
         <a href="explore.html" class="nav-link active" aria-current="page">Explore EVs</a>
         <a href="compare.html" class="nav-link">
           <span>Compare</span>
           <span class="nav-compare-badge js-compare-count" hidden>0</span>
         </a>
-        <a href="tools.html" class="nav-link">Tools</a>
+        <div class="nav-dropdown" data-nav-dropdown="calculators">
+          <button type="button" class="nav-link nav-dropdown-toggle" aria-haspopup="true" aria-expanded="false">
+            <span>Calculators</span>
+            <svg class="nav-dd-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </button>
+          <div class="nav-dropdown-menu" role="menu" aria-label="EV Calculators sub-menu">
+            <a href="tools.html#emi-calculator" class="nav-dropdown-item" role="menuitem">
+              <span class="nav-dd-icon" aria-hidden="true">💰</span>
+              <span class="nav-dd-copy"><strong>EV Loan EMI Calculator</strong><small>Monthly EMI, green loan interest &amp; yearly schedule</small></span>
+            </a>
+            <a href="tools.html#fuel-savings" class="nav-dropdown-item" role="menuitem">
+              <span class="nav-dd-icon" aria-hidden="true">⛽</span>
+              <span class="nav-dd-copy"><strong>Fuel vs EV Savings</strong><small>Compare 1-yr &amp; 5-yr savings against petrol/diesel</small></span>
+            </a>
+            <a href="tools.html#range-estimator" class="nav-dropdown-item" role="menuitem">
+              <span class="nav-dd-icon" aria-hidden="true">🔋</span>
+              <span class="nav-dd-copy"><strong>Range &amp; Running Cost</strong><small>Real-world AC/highway range &amp; monthly charging spend</small></span>
+            </a>
+            <a href="charging.html#charging-calculator" class="nav-dropdown-item" role="menuitem">
+              <span class="nav-dd-icon" aria-hidden="true">⚡</span>
+              <span class="nav-dd-copy"><strong>Charging Time Calculator</strong><small>Home AC &amp; DC Fast Charge duration &amp; cost</small></span>
+            </a>
+            <div class="nav-dd-footer">
+              <a href="tools.html" class="nav-dd-all" role="menuitem">Open All EV Calculators &rarr;</a>
+            </div>
+          </div>
+        </div>
         <a href="news.html" class="nav-link">News</a>
         <a href="charging.html" class="nav-link nav-link-charging">⚡ Charging Hub</a>
       </nav>
@@ -253,88 +281,135 @@
   </main>
 
   <!-- Footer -->
-  <footer class="site-footer">
+    <footer class="site-footer">
+    <div class="footer-top-banner">
+      <div class="container footer-top-banner-inner">
+        <div class="footer-banner-copy">
+          <h2>Ready to find your ideal Electric Vehicle in India?</h2>
+          <div class="footer-trust-pills" aria-label="Platform highlights">
+            <span class="footer-trust-pill">✓ 187+ Verified EVs</span>
+            <span class="footer-trust-pill">✓ 82 OEM Brands</span>
+            <span class="footer-trust-pill">✓ 52,000+ Public Chargers</span>
+            <span class="footer-trust-pill">✓ 56 Indian Cities</span>
+          </div>
+        </div>
+        <div class="footer-banner-actions">
+          <button type="button" class="footer-banner-btn-ai js-open-ev-ai">⚡ Ask EV Disha AI</button>
+          <a href="tools.html#emi-calculator" class="footer-banner-btn-emi">💰 Calculate EV EMI</a>
+        </div>
+      </div>
+    </div>
+
     <div class="container">
       <div class="footer-grid">
         <div class="footer-col">
           <a href="index.html" class="footer-logo-plate" aria-label="EV Disha Home">
-            <img src="assets/images/logo/ev-disha-logo.webp" alt="EV Disha – देखो • Compare • Go Electric" width="192" height="64" />
+            <img src="assets/images/logo/ev-disha-logo.webp" alt="EV Disha – देखो • Compare • Go Electric" width="164" height="44" />
           </a>
           <div class="footer-tagline">देखो &bull; Compare &bull; Go Electric</div>
           <p class="footer-desc">
-            EV Disha is an independent Indian electric vehicle discovery, comparison, tools, and EV charging guide helping buyers evaluate cars, scooters, bikes, and commercial EVs clearly.
+            India's independent electric vehicle discovery, comparison, calculators, and EV charging guide—helping buyers evaluate electric cars, scooters, motorcycles, and commercial EVs with clarity.
           </p>
+          <div class="footer-india-badge">🇮🇳 Built for Indian EV Mobility</div>
           <div class="social-links" aria-label="Social media channels">
             <a href="contact.html#social-channels" class="social-link" aria-label="EV Disha on X (Twitter)" title="Official Social Channels">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4l11.733 16h4.267l-11.733 -16z"></path><path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772"></path></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4l11.733 16h4.267l-11.733 -16z"></path><path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772"></path></svg>
             </a>
             <a href="contact.html#social-channels" class="social-link" aria-label="EV Disha on Instagram" title="Official Social Channels">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
             </a>
             <a href="contact.html#social-channels" class="social-link" aria-label="EV Disha on YouTube" title="Official Social Channels">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
             </a>
             <a href="contact.html#social-channels" class="social-link" aria-label="EV Disha on LinkedIn" title="Official Social Channels">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
             </a>
           </div>
         </div>
 
         <div class="footer-col">
-          <h3>Navigation</h3>
+          <h3>Explore EVs</h3>
           <ul class="footer-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="explore.html">Explore EVs</a></li>
-            <li><a href="compare.html">Compare Vehicles</a></li>
-            <li><a href="tools.html">EV Tools &amp; Calculators</a></li>
-            <li><a href="news.html">News &amp; Reviews</a></li>
+            <li><a href="explore.html">All Electric Vehicles</a></li>
+            <li><a href="explore.html?category=four-wheelers">Electric Cars &amp; SUVs</a></li>
+            <li><a href="explore.html?category=two-wheelers">Electric 2-Wheelers</a></li>
+            <li><a href="explore.html?category=three-wheelers">Electric 3-Wheelers</a></li>
+            <li><a href="explore.html?category=commercial">Commercial &amp; Fleet EVs</a></li>
+            <li><a href="compare.html">Compare Side-by-Side</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h3>Calculators</h3>
+          <ul class="footer-links">
+            <li><a href="tools.html#emi-calculator">EV Loan EMI Calculator</a></li>
+            <li><a href="tools.html#fuel-savings">Fuel vs EV Savings</a></li>
+            <li><a href="tools.html#range-estimator">Range &amp; Running Cost</a></li>
+            <li><a href="charging.html#charging-calculator">Charging Time Calculator</a></li>
             <li><a href="charging.html">EV Charging Hub</a></li>
           </ul>
         </div>
 
         <div class="footer-col">
-          <h3>EV Tools &amp; Segments</h3>
+          <h3>Popular EVs</h3>
           <ul class="footer-links">
-            <li><a href="tools.html#emi-calculator">EV EMI Calculator</a></li>
-            <li><a href="tools.html#fuel-savings">Fuel Savings Calculator</a></li>
-            <li><a href="explore.html?category=four-wheelers">Electric 4-Wheelers</a></li>
-            <li><a href="explore.html?category=two-wheelers">Electric 2-Wheelers</a></li>
-            <li><a href="explore.html?category=three-wheelers">Electric 3-Wheelers</a></li>
-            <li><a href="explore.html?category=commercial">Commercial Vehicles</a></li>
+            <li><a href="vehicle-details.html?id=tata-nexon-ev">Tata Nexon.ev</a></li>
+            <li><a href="vehicle-details.html?id=tata-punch-ev">Tata Punch.ev</a></li>
+            <li><a href="vehicle-details.html?id=mahindra-be-6">Mahindra BE 6</a></li>
+            <li><a href="vehicle-details.html?id=mg-windsor-ev">MG Windsor EV</a></li>
+            <li><a href="vehicle-details.html?id=ather-450x">Ather 450X</a></li>
+            <li><a href="vehicle-details.html?id=ola-s1-pro">Ola S1 Pro</a></li>
           </ul>
         </div>
 
         <div class="footer-col">
-          <h3>About &amp; Legal</h3>
+          <h3>Company &amp; Legal</h3>
           <ul class="footer-links">
             <li><a href="index.html#about-evdisha">About EV Disha</a></li>
+            <li><a href="news.html">EV News &amp; Guides</a></li>
+            <li><a href="index.html#data-methodology">Data Policy</a></li>
             <li><a href="terms.html">Terms &amp; Disclaimer</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="contact.html">Contact &amp; Feedback</a></li>
             <li><a href="mailto:hello@evdisha.com">hello@evdisha.com</a></li>
           </ul>
         </div>
       </div>
 
+      <div class="footer-cities-bar" aria-label="Popular Indian EV Cities">
+        <span class="footer-cities-label">Popular EV Cities:</span>
+        <a href="charging.html?city=bengaluru" class="footer-city-pill">Bengaluru</a>
+        <a href="charging.html?city=delhi" class="footer-city-pill">Delhi NCR</a>
+        <a href="charging.html?city=mumbai" class="footer-city-pill">Mumbai</a>
+        <a href="charging.html?city=hyderabad" class="footer-city-pill">Hyderabad</a>
+        <a href="charging.html?city=pune" class="footer-city-pill">Pune</a>
+        <a href="charging.html?city=chennai" class="footer-city-pill">Chennai</a>
+        <a href="charging.html?city=ahmedabad" class="footer-city-pill">Ahmedabad</a>
+        <a href="charging.html?city=kolkata" class="footer-city-pill">Kolkata</a>
+      </div>
+
       <div class="footer-disclaimer-box" role="note">
-        <strong>Strict Disclaimer &amp; T&amp;C:</strong> All prices, specifications, driving range figures, charging station counts, tariffs, and features shown on EV Disha are strictly indicative informational data for buyer comparison only and do not constitute an offer or guarantee. Manufacturers and CPOs may revise specifications or prices at any time—please consult an <strong>authorized dealer or CPO app</strong> for exact live pricing and availability. <a href="terms.html">Read Full Terms &amp; Conditions &rarr;</a>
+        <strong>Indicative Information &amp; Disclaimer:</strong> All ex-showroom prices, specifications, certified/real-world driving ranges, charging station counts, and tariffs on EV Disha are informational comparisons compiled from public OEM and CPO sources and do not constitute an offer or guarantee. Please confirm live on-road pricing, subsidies, and variant availability with an <strong>authorized EV dealer or CPO app</strong>. <a href="terms.html">Read Full Terms &amp; Conditions &rarr;</a>
       </div>
 
       <div class="footer-bottom">
         <span>&copy; 2026 EV Disha. All rights reserved.</span>
-        <div class="footer-legal-links">
-          <a href="terms.html">Terms &amp; Conditions</a>
-          <span aria-hidden="true">&bull;</span>
-          <a href="index.html#data-methodology">Data Policy</a>
-          <span aria-hidden="true">&bull;</span>
-          <a href="contact.html">Contact</a>
+        <div class="footer-bottom-right">
+          <div class="footer-legal-links">
+            <a href="terms.html">Terms &amp; Conditions</a>
+            <span aria-hidden="true">&bull;</span>
+            <a href="index.html#data-methodology">Data Policy</a>
+            <span aria-hidden="true">&bull;</span>
+            <a href="contact.html">Contact</a>
+          </div>
+          <button type="button" class="footer-back-top js-back-to-top" aria-label="Scroll back to top">&uarr; Back to Top</button>
         </div>
       </div>
     </div>
   </footer>
 
-  <script src="assets/js/main.js?v=4.0" defer></script>
-  <script src="assets/js/ai-agent.js?v=4.0" defer></script>
-  <script src="assets/js/filters.js?v=4.0" defer></script>
-  <script src="assets/js/explore.js?v=4.0" defer></script>
+  <script src="assets/js/main.js?v=4.1" defer></script>
+  <script src="assets/js/ai-agent.js?v=4.1" defer></script>
+  <script src="assets/js/filters.js?v=4.1" defer></script>
+  <script src="assets/js/explore.js?v=4.1" defer></script>
 </body>
 </html>

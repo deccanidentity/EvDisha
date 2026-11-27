@@ -79,10 +79,22 @@
       activateTab(initialHash);
     }
 
+    // Support instant switching when clicking Calculators dropdown sub-menu items while already on tools.html
+    window.addEventListener('hashchange', () => {
+      const nextHash = (window.location.hash || '').replace('#', '');
+      if (nextHash) {
+        activateTab(nextHash);
+        const targetEl = document.getElementById(nextHash);
+        if (targetEl) {
+          targetEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }
+    });
+
     try {
       const vehicles = await window.EVDisha.getVehicles();
       const priced = vehicles.filter((v) => Number(v.priceMin) > 0);
-      const defaultEv = priced.find((v) => v.id === 'mg-windsor-ev') || priced.find((v) => v.id === 'mahindra-be-6') || priced[0];
+      const defaultEv = priced.find((v) => v.id === 'tata-nexon-ev') || priced.find((v) => v.id === 'mg-windsor-ev') || priced[0];
       const optsHtml = buildEvOptionsHTML(priced, defaultEv ? defaultEv.id : '', esc);
 
       /* ====================================================================

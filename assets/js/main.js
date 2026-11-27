@@ -367,7 +367,7 @@
 
   /* ------------------------------------------------------------------------
      Canonical Navigation Synchronizer (Single Source of Truth Across Pages)
-     Guarantees identical 6-item nav order even if an HTML page is browser-cached
+     Guarantees identical 6-item nav order + Calculators dropdown sub-menu
      ------------------------------------------------------------------------ */
   function syncCanonicalNav() {
     const nav = document.getElementById('primary-nav');
@@ -379,7 +379,7 @@
     if (pageAttr === 'home' || path.endsWith('/') || path.endsWith('/index.html')) activeKey = 'home';
     else if (pageAttr === 'explore' || pageAttr === 'vehicle-details' || path.includes('explore.html') || path.includes('vehicle-details.html')) activeKey = 'explore';
     else if (pageAttr === 'compare' || path.includes('compare.html')) activeKey = 'compare';
-    else if (pageAttr === 'tools' || path.includes('tools.html')) activeKey = 'tools';
+    else if (pageAttr === 'tools' || path.includes('tools.html')) activeKey = 'calculators';
     else if (pageAttr === 'news' || path.includes('news.html')) activeKey = 'news';
     else if (pageAttr === 'charging' || path.includes('charging.html')) activeKey = 'charging';
 
@@ -387,7 +387,37 @@
       { key: 'home', href: 'index.html', label: 'Home' },
       { key: 'explore', href: 'explore.html', label: 'Explore EVs' },
       { key: 'compare', href: 'compare.html', label: 'Compare', isCompare: true },
-      { key: 'tools', href: 'tools.html', label: 'Tools' },
+      {
+        key: 'calculators',
+        href: 'tools.html',
+        label: 'Calculators',
+        children: [
+          {
+            href: 'tools.html#emi-calculator',
+            icon: '💰',
+            title: 'EV Loan EMI Calculator',
+            desc: 'Monthly EMI, green loan interest & yearly schedule'
+          },
+          {
+            href: 'tools.html#fuel-savings',
+            icon: '⛽',
+            title: 'Fuel vs EV Savings',
+            desc: 'Compare 1-yr & 5-yr savings against petrol/diesel'
+          },
+          {
+            href: 'tools.html#range-estimator',
+            icon: '🔋',
+            title: 'Range & Running Cost',
+            desc: 'Real-world AC/highway range & monthly charging spend'
+          },
+          {
+            href: 'charging.html#charging-calculator',
+            icon: '⚡',
+            title: 'Charging Time Calculator',
+            desc: 'Home AC & DC Fast Charge duration & cost'
+          }
+        ]
+      },
       { key: 'news', href: 'news.html', label: 'News' },
       { key: 'charging', href: 'charging.html', label: '⚡ Charging Hub', isCharging: true }
     ];
@@ -400,9 +430,140 @@
         if (item.isCompare) {
           return `<a href="${item.href}" class="${cls}"${aria}><span>${item.label}</span><span class="nav-compare-badge js-compare-count" hidden>0</span></a>`;
         }
+        if (item.children && item.children.length) {
+          const subLinks = item.children
+            .map(
+              (sub) => `
+                <a href="${sub.href}" class="nav-dropdown-item" role="menuitem">
+                  <span class="nav-dd-icon" aria-hidden="true">${sub.icon}</span>
+                  <span class="nav-dd-copy">
+                    <strong>${sub.title}</strong>
+                    <small>${sub.desc}</small>
+                  </span>
+                </a>
+              `
+            )
+            .join('');
+          return `
+            <div class="nav-dropdown${active ? ' is-active-parent' : ''}" data-nav-dropdown="calculators">
+              <button type="button" class="${cls} nav-dropdown-toggle" aria-haspopup="true" aria-expanded="false"${aria}>
+                <span>${item.label}</span>
+                <svg class="nav-dd-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </button>
+              <div class="nav-dropdown-menu" role="menu" aria-label="EV Calculators sub-menu">
+                ${subLinks}
+                <div class="nav-dd-footer">
+                  <a href="${item.href}" class="nav-dd-all" role="menuitem">Open All EV Calculators &rarr;</a>
+                </div>
+              </div>
+            </div>
+          `;
+        }
         return `<a href="${item.href}" class="${cls}"${aria}>${item.label}</a>`;
       })
       .join('');
+
+    initNavDropdowns(nav);
+  }
+
+  function initNavDropdowns(nav) {
+    const dropdowns = Array.from(nav.querySelectorAll('.nav-dropdown'));
+    if (!dropdowns.length) return;
+
+    function closeAll(except) {
+      dropdowns.forEach((dd) => {
+        if (dd === except) return;
+        dd.classList.remove('is-open');
+        const btn = dd.querySelector('.nav-dropdown-toggle');
+        if (btn) btn.setAttribute('aria-expanded', 'false');
+      });
+    }
+
+    dropdowns.forEach((dd) => {
+      const toggle = dd.querySelector('.nav-dropdown-toggle');
+      if (!toggle) return;
+
+      // Desktop hover convenience with smooth leave delay & hover-then-click protection
+      let closeTimer = null;
+      let hoverOpenedAt = 0;
+
+      toggle.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        if (window.innerWidth > 991 && dd.classList.contains('is-open') && Date.now() - hoverOpenedAt < 650) {
+          // User moved cursor onto button (opening via hover) and immediately clicked — keep it open!
+          hoverOpenedAt = 0;
+          return;
+        }
+        const willOpen = !dd.classList.contains('is-open');
+        closeAll(dd);
+        dd.classList.toggle('is-open', willOpen);
+        toggle.setAttribute('aria-expanded', willOpen ? 'true' : 'false');
+      });
+
+      dd.addEventListener('mouseenter', () => {
+        if (window.innerWidth <= 991) return;
+        if (closeTimer) clearTimeout(closeTimer);
+        const wasOpen = dd.classList.contains('is-open');
+        closeAll(dd);
+        dd.classList.add('is-open');
+        toggle.setAttribute('aria-expanded', 'true');
+        if (!wasOpen) hoverOpenedAt = Date.now();
+      });
+      dd.addEventListener('mouseleave', () => {
+        if (window.innerWidth <= 991) return;
+        closeTimer = setTimeout(() => {
+          dd.classList.remove('is-open');
+          toggle.setAttribute('aria-expanded', 'false');
+        }, 160);
+      });
+
+      dd.querySelectorAll('.nav-dropdown-item, .nav-dd-all').forEach((link) => {
+        link.addEventListener('click', () => {
+          closeAll();
+        });
+      });
+    });
+
+    if (!window.__evdishaNavDdBound) {
+      window.__evdishaNavDdBound = true;
+      document.addEventListener('click', (e) => {
+        if (!e.target.closest('.nav-dropdown')) {
+          document.querySelectorAll('.nav-dropdown.is-open').forEach((dd) => {
+            dd.classList.remove('is-open');
+            const btn = dd.querySelector('.nav-dropdown-toggle');
+            if (btn) btn.setAttribute('aria-expanded', 'false');
+          });
+        }
+      });
+      window.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+          document.querySelectorAll('.nav-dropdown.is-open').forEach((dd) => {
+            dd.classList.remove('is-open');
+            const btn = dd.querySelector('.nav-dropdown-toggle');
+            if (btn) btn.setAttribute('aria-expanded', 'false');
+          });
+        }
+      });
+    }
+  }
+
+  function initFooterActions() {
+    document.addEventListener('click', (e) => {
+      const aiTrigger = e.target.closest('.js-open-ev-ai');
+      if (aiTrigger) {
+        e.preventDefault();
+        window.dispatchEvent(new CustomEvent('evdisha:open-ai'));
+        return;
+      }
+      const topBtn = e.target.closest('.js-back-to-top');
+      if (topBtn) {
+        e.preventDefault();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+    });
   }
 
   /* ------------------------------------------------------------------------
@@ -1450,6 +1611,7 @@
   document.addEventListener('DOMContentLoaded', () => {
     syncCanonicalNav();
     initMobileMenu();
+    initFooterActions();
     initLocationModal();
     initSearchModal();
     initGlobalCompareEvents();
