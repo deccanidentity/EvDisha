@@ -15,9 +15,9 @@
     "advisoryNote": "Compiled from verified public EV sources. Confirm live on-road pricing, variant availability, and state subsidies with an authorized dealer.",
     "trending": true,
     "popularity": 121,
-    "priceMin": 101999,
-    "priceMax": 101999,
-    "priceDisplay": "₹1.02 Lakh",
+    "priceMin": 150000,
+    "priceMax": 199888,
+    "priceDisplay": "₹1.50 Lakh – ₹2.00 Lakh",
     "batteryCapacityKwh": 2.9,
     "batteryDisplay": "2.9 kWh",
     "batteryChemistry": "NMC",
@@ -44,7 +44,7 @@
     "galleryLabels": [
       "Exterior Studio View"
     ],
-    "overview": "Ather 450X is an electric smart & performance scooters from Ather (Ather Energy) featuring indicative ex-showroom pricing of ₹1.02 Lakh, a 2.9 kWh battery pack, claimed range of 161 km, 6.4 kW peak output.",
+    "overview": "Ather 450X is an electric smart & performance scooters from Ather (Ather Energy) featuring indicative ex-showroom pricing of ₹1.50 Lakh – ₹2.00 Lakh, a 2.9 kWh battery pack, claimed range of 161 km, 6.4 kW peak output.",
     "variants": [
       {
         "name": "450X IDC 126 KM - Mono",
@@ -95,28 +95,10 @@
         "price": "₹2.00 Lakh*"
       },
       {
-        "name": "Ampere Magnus G Max",
-        "battery": "2.9 kWh",
-        "range": "161 km",
-        "price": "₹1.03 Lakh*"
-      },
-      {
         "name": "Ather 450X Standard",
         "battery": "2.9 kWh",
         "range": "161 km",
         "price": "₹1.50 Lakh*"
-      },
-      {
-        "name": "Ather Konarc",
-        "battery": "2.9 kWh",
-        "range": "161 km",
-        "price": "₹1.02 Lakh*"
-      },
-      {
-        "name": "Honda Activa e",
-        "battery": "2.9 kWh",
-        "range": "161 km",
-        "price": "₹1.20 Lakh*"
       },
       {
         "name": "IDC 126 KM - Mono",
@@ -165,18 +147,6 @@
         "battery": "2.9 kWh",
         "range": "161 km",
         "price": "₹1.91 Lakh*"
-      },
-      {
-        "name": "Simple One",
-        "battery": "2.9 kWh",
-        "range": "161 km",
-        "price": "₹2.05 Lakh*"
-      },
-      {
-        "name": "Vida VX2",
-        "battery": "2.9 kWh",
-        "range": "161 km",
-        "price": "₹1.10 Lakh*"
       }
     ],
     "features": [
@@ -186,7 +156,7 @@
       "Claimed Driving Range: 161 km",
       "Peak Motor Output: 6.4 kW",
       "Claimed Top Speed: 90 km/h",
-      "Available in 22 trim variants"
+      "Available in 17 trim variants"
     ],
     "availabilityScope": "pan-india",
     "highlightTag": "⚡ 161 km IDC",
@@ -202,8 +172,8 @@
       },
       "runningCostPerKmInr": 0.13,
       "iceEquivalentCostPerKmInr": 2.65,
-      "indicativeEmiInr": 2767,
-      "emiDisplay": "₹2,767/mo*",
+      "indicativeEmiInr": 4069,
+      "emiDisplay": "₹4,069/mo*",
       "loanTenureMonths": 36,
       "interestRatePct": 9.25,
       "typicalDailyKm": 30,
@@ -237,8 +207,8 @@
     "trending": true,
     "popularity": 121,
     "priceMin": 2499000,
-    "priceMax": 2499000,
-    "priceDisplay": "₹24.99 Lakh",
+    "priceMax": 3449000,
+    "priceDisplay": "₹24.99 Lakh – ₹34.49 Lakh",
     "batteryCapacityKwh": 62.0,
     "batteryDisplay": "62 kWh",
     "batteryChemistry": "Lithium-Ion Battery Pack",
@@ -265,7 +235,7 @@
     "galleryLabels": [
       "Exterior Studio View"
     ],
-    "overview": "BYD Atto 3 is an electric family ev suvs & crossovers from BYD (BYD India) featuring indicative ex-showroom pricing of ₹24.99 Lakh, a 62 kWh battery pack, claimed range of 521 km, 149.9 kW peak output.",
+    "overview": "BYD Atto 3 is an electric family ev suvs & crossovers from BYD (BYD India) featuring indicative ex-showroom pricing of ₹24.99 Lakh – ₹34.49 Lakh, a 62 kWh battery pack, claimed range of 521 km, 149.9 kW peak output.",
     "variants": [
       {
         "name": "BYD Atto 3 Dynamic",
@@ -351,9 +321,9 @@
     "advisoryNote": "Compiled from verified public EV sources. Confirm live on-road pricing, variant availability, and state subsidies with an authorized dealer.",
     "trending": true,
     "popularity": 121,
-    "priceMin": 89999,
-    "priceMax": 89999,
-    "priceDisplay": "₹89,999",
+    "priceMin": 110000,
+    "priceMax": 166000,
+    "priceDisplay": "₹1.10 Lakh – ₹1.66 Lakh",
     "batteryCapacityKwh": 4.56,
     "batteryDisplay": "4.56 kWh",
     "batteryChemistry": "Lithium-Ion Battery Pack",
@@ -367,8 +337,8 @@
     "acChargingTime": "~2 hrs (AC)",
     "dcChargingTime": "Check Dealer for DC Spec",
     "chargingConnector": "Standard EV Charger",
-    "motorPowerKw": 11.0,
-    "motorPowerDisplay": "11 kW",
+    "motorPowerKw": 6.4,
+    "motorPowerDisplay": "6.4 kW",
     "motorType": "Electric Traction Motor",
     "driveType": "Electric Drive",
     "warrantyDisplay": "Refer Official OEM Battery Warranty",
@@ -380,7 +350,7 @@
     "galleryLabels": [
       "Exterior Studio View"
     ],
-    "overview": "Bajaj Chetak is an electric family & city scooters from Chetak (Bajaj Auto) featuring indicative ex-showroom pricing of ₹89,999, a 4.56 kWh battery pack, claimed range of 153 km, 11 kW peak output.",
+    "overview": "Bajaj Chetak is an electric family & city scooters from Chetak (Bajaj Auto) featuring indicative ex-showroom pricing of ₹1.10 Lakh – ₹1.66 Lakh, a 4.56 kWh battery pack, claimed range of 153 km, 6.4 kW peak output.",
     "variants": [
       {
         "name": "Bajaj Chetak Standard",
@@ -389,34 +359,28 @@
         "price": "₹1.20 Lakh*"
       },
       {
-        "name": "Chetak 3001 ( Variant explainer here )",
-        "battery": "4.56 kWh",
-        "range": "153 km",
-        "price": "₹89,999*"
-      },
-      {
         "name": "Chetak 3501",
         "battery": "4.56 kWh",
         "range": "153 km",
-        "price": "₹89,999*"
+        "price": "₹1.10 Lakh – ₹1.66 Lakh*"
       },
       {
         "name": "Chetak 3502",
         "battery": "4.56 kWh",
         "range": "153 km",
-        "price": "₹89,999*"
+        "price": "₹1.10 Lakh – ₹1.66 Lakh*"
       },
       {
         "name": "Chetak 3503",
         "battery": "4.56 kWh",
         "range": "153 km",
-        "price": "₹89,999*"
+        "price": "₹1.10 Lakh – ₹1.66 Lakh*"
       },
       {
         "name": "Chetak C25 (updated)",
         "battery": "4.56 kWh",
         "range": "153 km",
-        "price": "₹89,999*"
+        "price": "₹1.10 Lakh – ₹1.66 Lakh*"
       },
       {
         "name": "Chetak C3001",
@@ -428,7 +392,7 @@
         "name": "Chetak C3001 (updated)",
         "battery": "4.56 kWh",
         "range": "153 km",
-        "price": "₹89,999*"
+        "price": "₹1.10 Lakh – ₹1.66 Lakh*"
       },
       {
         "name": "Chetak C3501",
@@ -440,7 +404,7 @@
         "name": "Chetak C3501 (updated)",
         "battery": "4.56 kWh",
         "range": "153 km",
-        "price": "₹89,999*"
+        "price": "₹1.10 Lakh – ₹1.66 Lakh*"
       },
       {
         "name": "Chetak C3502",
@@ -452,7 +416,7 @@
         "name": "Chetak C3502 (updated)",
         "battery": "4.56 kWh",
         "range": "153 km",
-        "price": "₹89,999*"
+        "price": "₹1.10 Lakh – ₹1.66 Lakh*"
       },
       {
         "name": "Chetak C3503",
@@ -464,13 +428,7 @@
         "name": "Chetak C3503 (updated)",
         "battery": "4.56 kWh",
         "range": "153 km",
-        "price": "₹89,999*"
-      },
-      {
-        "name": "Ola S1 X/Pro",
-        "battery": "4.56 kWh",
-        "range": "153 km",
-        "price": "₹89,999*"
+        "price": "₹1.10 Lakh – ₹1.66 Lakh*"
       }
     ],
     "features": [
@@ -478,9 +436,9 @@
       "Powertrain: BEV (Zero Tailpipe Emissions)",
       "Battery Pack: 4.56 kWh",
       "Claimed Driving Range: 153 km",
-      "Peak Motor Output: 11 kW",
+      "Peak Motor Output: 6.4 kW",
       "Claimed Top Speed: 70 km/h",
-      "Available in 15 trim variants"
+      "Available in 13 trim variants"
     ],
     "availabilityScope": "pan-india",
     "highlightTag": "⚡ 153 km IDC",
@@ -496,8 +454,8 @@
       },
       "runningCostPerKmInr": 0.22,
       "iceEquivalentCostPerKmInr": 2.65,
-      "indicativeEmiInr": 2442,
-      "emiDisplay": "₹2,442/mo*",
+      "indicativeEmiInr": 2984,
+      "emiDisplay": "₹2,984/mo*",
       "loanTenureMonths": 36,
       "interestRatePct": 9.25,
       "typicalDailyKm": 30,
@@ -523,16 +481,16 @@
     "fullName": "Hyundai Creta Electric",
     "categoryId": "four-wheelers",
     "category": "4-Wheelers",
-    "subCategoryId": "premium-suvs",
-    "subCategory": "Premium & Luxury EVs",
+    "subCategoryId": "family-crossovers",
+    "subCategory": "Family EV SUVs & Crossovers",
     "isSampleData": false,
     "sampleDataNote": "Verified from public OEM and automotive specifications. Confirm live city ex-showroom pricing and subsidies with an authorized dealer.",
     "advisoryNote": "Compiled from verified public EV sources. Confirm live on-road pricing, variant availability, and state subsidies with an authorized dealer.",
     "trending": true,
     "popularity": 121,
-    "priceMin": 5570000,
-    "priceMax": 5570000,
-    "priceDisplay": "₹55.70 Lakh",
+    "priceMin": 1803000,
+    "priceMax": 2507000,
+    "priceDisplay": "₹18.03 Lakh – ₹25.07 Lakh",
     "batteryCapacityKwh": 51.4,
     "batteryDisplay": "51.4 kWh",
     "batteryChemistry": "Lithium-Ion Battery Pack",
@@ -559,7 +517,7 @@
     "galleryLabels": [
       "Exterior Studio View"
     ],
-    "overview": "Hyundai Creta Electric is an electric premium & luxury evs from Hyundai (Hyundai Motor India) featuring indicative ex-showroom pricing of ₹55.70 Lakh, a 51.4 kWh battery pack, claimed range of 510 km, 126 kW peak output.",
+    "overview": "Hyundai Creta Electric is an electric family ev suvs & crossovers from Hyundai (Hyundai Motor India) featuring indicative ex-showroom pricing of ₹18.03 Lakh – ₹25.07 Lakh, a 51.4 kWh battery pack, claimed range of 510 km, 126 kW peak output.",
     "variants": [
       {
         "name": "Hyundai Creta Electric Standard",
@@ -638,45 +596,15 @@
         "battery": "51.4 kWh",
         "range": "510 km",
         "price": "₹21.94 Lakh*"
-      },
-      {
-        "name": "Hyundai IONIQ 5",
-        "battery": "51.4 kWh",
-        "range": "510 km",
-        "price": "₹55.70 Lakh*"
-      },
-      {
-        "name": "Most Affordable",
-        "battery": "51.4 kWh",
-        "range": "510 km",
-        "price": "₹14.57 Lakh*"
-      },
-      {
-        "name": "PMV EaS E",
-        "battery": "51.4 kWh",
-        "range": "510 km",
-        "price": "₹4.79 Lakh*"
-      },
-      {
-        "name": "Strom Motors R3",
-        "battery": "51.4 kWh",
-        "range": "510 km",
-        "price": "₹4.50 Lakh*"
-      },
-      {
-        "name": "Toyota Urban Cruiser EBELLA",
-        "battery": "51.4 kWh",
-        "range": "510 km",
-        "price": "₹23.60 Lakh*"
       }
     ],
     "features": [
-      "Segment: 4-Wheelers (Premium & Luxury EVs)",
+      "Segment: 4-Wheelers (Family EV SUVs & Crossovers)",
       "Powertrain: BEV (Zero Tailpipe Emissions)",
       "Battery Pack: 51.4 kWh",
       "Claimed Driving Range: 510 km",
       "Peak Motor Output: 126 kW",
-      "Available in 18 trim variants"
+      "Available in 13 trim variants"
     ],
     "availabilityScope": "pan-india",
     "highlightTag": "🛣️ 510 km Range",
@@ -692,8 +620,8 @@
       },
       "runningCostPerKmInr": 0.76,
       "iceEquivalentCostPerKmInr": 7.8,
-      "indicativeEmiInr": 97936,
-      "emiDisplay": "₹97,936/mo*",
+      "indicativeEmiInr": 31702,
+      "emiDisplay": "₹31,702/mo*",
       "loanTenureMonths": 60,
       "interestRatePct": 8.85,
       "typicalDailyKm": 45,
@@ -703,116 +631,13 @@
     "elasticTags": [
       "5 seater",
       "family car",
+      "family-crossovers",
       "fast charging",
       "four-wheelers",
       "highway",
       "hyundai",
       "hyundai creta electric",
       "hyundai motor india",
-      "premium-suvs",
-      "suv"
-    ]
-  },
-  {
-    "id": "mahindra-be-6",
-    "brandId": "mahindra-be",
-    "brand": "Mahindra BE",
-    "manufacturer": "Mahindra Electric Automobile",
-    "model": "BE 6",
-    "fullName": "Mahindra BE 6",
-    "categoryId": "four-wheelers",
-    "category": "4-Wheelers",
-    "subCategoryId": "family-crossovers",
-    "subCategory": "Family EV SUVs & Crossovers",
-    "isSampleData": false,
-    "sampleDataNote": "Verified from public OEM and automotive specifications. Confirm live city ex-showroom pricing and subsidies with an authorized dealer.",
-    "advisoryNote": "Compiled from verified public EV sources. Confirm live on-road pricing, variant availability, and state subsidies with an authorized dealer.",
-    "trending": true,
-    "popularity": 121,
-    "priceMin": 1545000,
-    "priceMax": 1545000,
-    "priceDisplay": "₹15.45 Lakh",
-    "batteryCapacityKwh": 79.0,
-    "batteryDisplay": "79 kWh",
-    "batteryChemistry": "Lithium-Ion Battery Pack",
-    "claimedRangeKm": 708,
-    "rangeDisplay": "708 km",
-    "rangeStandard": "Certified / Claimed",
-    "topSpeedKmh": null,
-    "topSpeedDisplay": "TBA",
-    "accelerationDisplay": "Check Official Brochure",
-    "chargingTimeDisplay": "Standard EV Charging",
-    "acChargingTime": "Standard Home AC",
-    "dcChargingTime": "Check Dealer for DC Spec",
-    "chargingConnector": "CCS2 / Type-2",
-    "motorPowerKw": 210.3,
-    "motorPowerDisplay": "210.3 kW",
-    "motorType": "Electric Traction Motor",
-    "driveType": "Electric Drive",
-    "warrantyDisplay": "Refer Official OEM Battery Warranty",
-    "vehicleWarranty": "Standard OEM Vehicle Warranty",
-    "image": "assets/images/vehicles/mahindra-be/be-6/hero.webp",
-    "images": [
-      "assets/images/vehicles/mahindra-be/be-6/hero.webp"
-    ],
-    "galleryLabels": [
-      "Exterior Studio View"
-    ],
-    "overview": "Mahindra BE 6 is an electric family ev suvs & crossovers from Mahindra BE (Mahindra Electric Automobile) featuring indicative ex-showroom pricing of ₹15.45 Lakh, a 79 kWh battery pack, claimed range of 708 km, 210.3 kW peak output.",
-    "variants": [
-      {
-        "name": "BE 6 Standard",
-        "battery": "79 kWh",
-        "range": "708 km",
-        "price": "₹19.45 Lakh*"
-      },
-      {
-        "name": "Mahindra BE 6 Sporteq",
-        "battery": "79 kWh",
-        "range": "708 km",
-        "price": "₹15.45 Lakh*"
-      }
-    ],
-    "features": [
-      "Segment: 4-Wheelers (Family EV SUVs & Crossovers)",
-      "Powertrain: BEV (Zero Tailpipe Emissions)",
-      "Battery Pack: 79 kWh",
-      "Claimed Driving Range: 708 km",
-      "Peak Motor Output: 210.3 kW",
-      "Available in 2 trim variants"
-    ],
-    "availabilityScope": "pan-india",
-    "highlightTag": "🛣️ 708 km Range",
-    "sourceUrl": "https://www.carwale.com/new/electric-cars/",
-    "verificationStatus": "verified",
-    "firstLaunchYear": 2024,
-    "elasticMetrics": {
-      "efficiencyWhPerKm": 111.6,
-      "realWorldRangeKm": {
-        "eco": 602,
-        "city": 538,
-        "highway": 467
-      },
-      "runningCostPerKmInr": 0.84,
-      "iceEquivalentCostPerKmInr": 7.8,
-      "indicativeEmiInr": 27165,
-      "emiDisplay": "₹27,165/mo*",
-      "loanTenureMonths": 60,
-      "interestRatePct": 8.85,
-      "typicalDailyKm": 45,
-      "estMonthlySavingsInr": 8143,
-      "co2SavedKgPerYear": 2317
-    },
-    "elasticTags": [
-      "5 seater",
-      "be 6",
-      "family car",
-      "family-crossovers",
-      "fast charging",
-      "four-wheelers",
-      "highway",
-      "mahindra be",
-      "mahindra electric automobile",
       "suv"
     ]
   },
@@ -832,9 +657,9 @@
     "advisoryNote": "Compiled from verified public EV sources. Confirm live on-road pricing, variant availability, and state subsidies with an authorized dealer.",
     "trending": true,
     "popularity": 121,
-    "priceMin": 1791000,
-    "priceMax": 1791000,
-    "priceDisplay": "₹17.91 Lakh",
+    "priceMin": 2190000,
+    "priceMax": 3125000,
+    "priceDisplay": "₹21.90 Lakh – ₹31.25 Lakh",
     "batteryCapacityKwh": 79.0,
     "batteryDisplay": "79 kWh",
     "batteryChemistry": "Lithium-Ion Battery Pack",
@@ -861,14 +686,8 @@
     "galleryLabels": [
       "Exterior Studio View"
     ],
-    "overview": "Mahindra XEV 9e is an electric family ev suvs & crossovers from Mahindra XEV (Mahindra Electric Automobile) featuring indicative ex-showroom pricing of ₹17.91 Lakh, a 79 kWh battery pack, claimed range of 656 km, 210.3 kW peak output.",
+    "overview": "Mahindra XEV 9e is an electric family ev suvs & crossovers from Mahindra XEV (Mahindra Electric Automobile) featuring indicative ex-showroom pricing of ₹21.90 Lakh – ₹31.25 Lakh, a 79 kWh battery pack, claimed range of 656 km, 210.3 kW peak output.",
     "variants": [
-      {
-        "name": "Mahindra XEV 9e",
-        "battery": "79 kWh",
-        "range": "656 km",
-        "price": "₹17.91 Lakh*"
-      },
       {
         "name": "Mahindra XEV 9e Cineluxe Edition",
         "battery": "79 kWh",
@@ -990,7 +809,7 @@
       "Battery Pack: 79 kWh",
       "Claimed Driving Range: 656 km",
       "Peak Motor Output: 210.3 kW",
-      "Available in 20 trim variants"
+      "Available in 19 trim variants"
     ],
     "availabilityScope": "pan-india",
     "highlightTag": "🛣️ 656 km Range",
@@ -1006,8 +825,8 @@
       },
       "runningCostPerKmInr": 0.9,
       "iceEquivalentCostPerKmInr": 7.8,
-      "indicativeEmiInr": 31491,
-      "emiDisplay": "₹31,491/mo*",
+      "indicativeEmiInr": 38506,
+      "emiDisplay": "₹38,506/mo*",
       "loanTenureMonths": 60,
       "interestRatePct": 8.85,
       "typicalDailyKm": 45,
@@ -1044,8 +863,8 @@
     "trending": true,
     "popularity": 121,
     "priceMin": 1619000,
-    "priceMax": 1619000,
-    "priceDisplay": "₹16.19 Lakh",
+    "priceMax": 2021000,
+    "priceDisplay": "₹16.19 Lakh – ₹20.21 Lakh",
     "batteryCapacityKwh": 61.0,
     "batteryDisplay": "61 kWh",
     "batteryChemistry": "Lithium-Ion Battery Pack",
@@ -1072,14 +891,8 @@
     "galleryLabels": [
       "Exterior Studio View"
     ],
-    "overview": "Maruti e Vitara is an electric family ev suvs & crossovers from Maruti Suzuki (Maruti Suzuki India) featuring indicative ex-showroom pricing of ₹16.19 Lakh, a 61 kWh battery pack, claimed range of 543 km, 128.3 kW peak output.",
+    "overview": "Maruti e Vitara is an electric family ev suvs & crossovers from Maruti Suzuki (Maruti Suzuki India) featuring indicative ex-showroom pricing of ₹16.19 Lakh – ₹20.21 Lakh, a 61 kWh battery pack, claimed range of 543 km, 128.3 kW peak output.",
     "variants": [
-      {
-        "name": "Maruti Suzuki e Vitara",
-        "battery": "61 kWh",
-        "range": "543 km",
-        "price": "₹16.19 Lakh*"
-      },
       {
         "name": "Maruti Suzuki e Vitara Alpha",
         "battery": "61 kWh",
@@ -1117,7 +930,7 @@
       "Battery Pack: 61 kWh",
       "Claimed Driving Range: 543 km",
       "Peak Motor Output: 128.3 kW",
-      "Available in 6 trim variants"
+      "Available in 5 trim variants"
     ],
     "availabilityScope": "pan-india",
     "highlightTag": "🛣️ 543 km Range",
@@ -1171,8 +984,8 @@
     "trending": true,
     "popularity": 121,
     "priceMin": 1485000,
-    "priceMax": 1485000,
-    "priceDisplay": "₹14.85 Lakh",
+    "priceMax": 1915000,
+    "priceDisplay": "₹14.85 Lakh – ₹19.15 Lakh",
     "batteryCapacityKwh": 52.9,
     "batteryDisplay": "52.9 kWh",
     "batteryChemistry": "Lithium-Ion Battery Pack",
@@ -1199,7 +1012,7 @@
     "galleryLabels": [
       "Exterior Studio View"
     ],
-    "overview": "MG Windsor EV is an electric family ev suvs & crossovers from MG (JSW MG Motor India) featuring indicative ex-showroom pricing of ₹14.85 Lakh, a 52.9 kWh battery pack, claimed range of 449 km, 99.9 kW peak output.",
+    "overview": "MG Windsor EV is an electric family ev suvs & crossovers from MG (JSW MG Motor India) featuring indicative ex-showroom pricing of ₹14.85 Lakh – ₹19.15 Lakh, a 52.9 kWh battery pack, claimed range of 449 km, 99.9 kW peak output.",
     "variants": [
       {
         "name": "MG Windsor EV Essence",
@@ -1304,8 +1117,8 @@
     "trending": true,
     "popularity": 121,
     "priceMin": 130999,
-    "priceMax": 130999,
-    "priceDisplay": "₹1.31 Lakh",
+    "priceMax": 144999,
+    "priceDisplay": "₹1.31 Lakh – ₹1.45 Lakh",
     "batteryCapacityKwh": 4.0,
     "batteryDisplay": "4 kWh",
     "batteryChemistry": "Lithium-Ion Battery Pack",
@@ -1332,7 +1145,7 @@
     "galleryLabels": [
       "Exterior Studio View"
     ],
-    "overview": "Ola S1 Pro is an electric smart & performance scooters from Ola Electric (Ola Electric Mobility) featuring indicative ex-showroom pricing of ₹1.31 Lakh, a 4 kWh battery pack, claimed range of 242 km, 5.5 kW peak output.",
+    "overview": "Ola S1 Pro is an electric smart & performance scooters from Ola Electric (Ola Electric Mobility) featuring indicative ex-showroom pricing of ₹1.31 Lakh – ₹1.45 Lakh, a 4 kWh battery pack, claimed range of 242 km, 5.5 kW peak output.",
     "variants": [
       {
         "name": "3kWh",
@@ -1345,24 +1158,6 @@
         "battery": "4 kWh",
         "range": "242 km",
         "price": "₹1.45 Lakh*"
-      },
-      {
-        "name": "Affordable Model",
-        "battery": "4 kWh",
-        "range": "242 km",
-        "price": "₹79,999*"
-      },
-      {
-        "name": "Most Expensive",
-        "battery": "4 kWh",
-        "range": "242 km",
-        "price": "₹2.50 Lakh*"
-      },
-      {
-        "name": "Ola S1 Z",
-        "battery": "4 kWh",
-        "range": "242 km",
-        "price": "₹79,999*"
       },
       {
         "name": "S1 Pro 3kWh",
@@ -1384,7 +1179,7 @@
       "Claimed Driving Range: 242 km",
       "Peak Motor Output: 5.5 kW",
       "Claimed Top Speed: 125 km/h",
-      "Available in 7 trim variants"
+      "Available in 4 trim variants"
     ],
     "availabilityScope": "pan-india",
     "highlightTag": "⚡ 242 km IDC",
@@ -1427,16 +1222,16 @@
     "fullName": "Tata Nexon.ev",
     "categoryId": "four-wheelers",
     "category": "4-Wheelers",
-    "subCategoryId": "premium-suvs",
-    "subCategory": "Premium & Luxury EVs",
+    "subCategoryId": "family-crossovers",
+    "subCategory": "Family EV SUVs & Crossovers",
     "isSampleData": false,
     "sampleDataNote": "Verified from public OEM and automotive specifications. Confirm live city ex-showroom pricing and subsidies with an authorized dealer.",
     "advisoryNote": "Compiled from verified public EV sources. Confirm live on-road pricing, variant availability, and state subsidies with an authorized dealer.",
     "trending": true,
     "popularity": 121,
-    "priceMin": 7755000,
-    "priceMax": 7755000,
-    "priceDisplay": "₹77.55 Lakh",
+    "priceMin": 1249000,
+    "priceMax": 1789000,
+    "priceDisplay": "₹12.49 Lakh – ₹17.89 Lakh",
     "batteryCapacityKwh": 45.0,
     "batteryDisplay": "45 kWh",
     "batteryChemistry": "Lithium-Ion Battery Pack",
@@ -1463,32 +1258,8 @@
     "galleryLabels": [
       "Exterior Studio View"
     ],
-    "overview": "Tata Nexon.ev is an electric premium & luxury evs from Tata.ev (Tata Passenger Electric Mobility) featuring indicative ex-showroom pricing of ₹77.55 Lakh, a 45 kWh battery pack, claimed range of 489 km, 106.6 kW peak output.",
+    "overview": "Tata Nexon.ev is an electric family ev suvs & crossovers from Tata.ev (Tata Passenger Electric Mobility) featuring indicative ex-showroom pricing of ₹12.49 Lakh – ₹17.89 Lakh, a 45 kWh battery pack, claimed range of 489 km, 106.6 kW peak output.",
     "variants": [
-      {
-        "name": "Kia Syros EV",
-        "battery": "45 kWh",
-        "range": "489 km",
-        "price": "₹10.76 Lakh*"
-      },
-      {
-        "name": "MG Cyberster",
-        "battery": "45 kWh",
-        "range": "489 km",
-        "price": "₹77.55 Lakh*"
-      },
-      {
-        "name": "MG Hector Tomahawk EV",
-        "battery": "45 kWh",
-        "range": "489 km",
-        "price": "₹17.16 Lakh*"
-      },
-      {
-        "name": "Tata Nexon EV",
-        "battery": "45 kWh",
-        "range": "489 km",
-        "price": "₹11.66 Lakh*"
-      },
       {
         "name": "Tata Nexon EV Creative 45",
         "battery": "45 kWh",
@@ -1536,21 +1307,15 @@
         "battery": "45 kWh",
         "range": "489 km",
         "price": "₹13.29 Lakh*"
-      },
-      {
-        "name": "Tata Sierra EV",
-        "battery": "45 kWh",
-        "range": "489 km",
-        "price": "₹15.36 Lakh*"
       }
     ],
     "features": [
-      "Segment: 4-Wheelers (Premium & Luxury EVs)",
+      "Segment: 4-Wheelers (Family EV SUVs & Crossovers)",
       "Powertrain: BEV (Zero Tailpipe Emissions)",
       "Battery Pack: 45 kWh",
       "Claimed Driving Range: 489 km",
       "Peak Motor Output: 106.6 kW",
-      "Available in 13 trim variants"
+      "Available in 8 trim variants"
     ],
     "availabilityScope": "pan-india",
     "highlightTag": "🛣️ 489 km Range",
@@ -1566,8 +1331,8 @@
       },
       "runningCostPerKmInr": 0.69,
       "iceEquivalentCostPerKmInr": 7.8,
-      "indicativeEmiInr": 136355,
-      "emiDisplay": "₹136,355/mo*",
+      "indicativeEmiInr": 21961,
+      "emiDisplay": "₹21,961/mo*",
       "loanTenureMonths": 60,
       "interestRatePct": 8.85,
       "typicalDailyKm": 45,
@@ -1577,11 +1342,11 @@
     "elasticTags": [
       "5 seater",
       "family car",
+      "family-crossovers",
       "fast charging",
       "four-wheelers",
       "highway",
       "nexon.ev",
-      "premium-suvs",
       "suv",
       "tata passenger electric mobility",
       "tata.ev"
@@ -1603,9 +1368,9 @@
     "advisoryNote": "Compiled from verified public EV sources. Confirm live on-road pricing, variant availability, and state subsidies with an authorized dealer.",
     "trending": true,
     "popularity": 121,
-    "priceMin": 819000,
-    "priceMax": 819000,
-    "priceDisplay": "₹8.19 Lakh",
+    "priceMin": 979000,
+    "priceMax": 1299000,
+    "priceDisplay": "₹9.79 Lakh – ₹12.99 Lakh",
     "batteryCapacityKwh": 40.0,
     "batteryDisplay": "40 kWh",
     "batteryChemistry": "Lithium-Ion Battery Pack",
@@ -1632,14 +1397,8 @@
     "galleryLabels": [
       "Exterior Studio View"
     ],
-    "overview": "Tata Punch.ev is an electric compact evs & hatchbacks from Tata.ev (Tata Passenger Electric Mobility) featuring indicative ex-showroom pricing of ₹8.19 Lakh, a 40 kWh battery pack, claimed range of 355 km, 94.7 kW peak output.",
+    "overview": "Tata Punch.ev is an electric compact evs & hatchbacks from Tata.ev (Tata Passenger Electric Mobility) featuring indicative ex-showroom pricing of ₹9.79 Lakh – ₹12.99 Lakh, a 40 kWh battery pack, claimed range of 355 km, 94.7 kW peak output.",
     "variants": [
-      {
-        "name": "Tata Punch EV",
-        "battery": "40 kWh",
-        "range": "355 km",
-        "price": "₹8.19 Lakh*"
-      },
       {
         "name": "Tata Punch EV Adventure 40",
         "battery": "40 kWh",
@@ -1683,7 +1442,7 @@
       "Battery Pack: 40 kWh",
       "Claimed Driving Range: 355 km",
       "Peak Motor Output: 94.7 kW",
-      "Available in 7 trim variants"
+      "Available in 6 trim variants"
     ],
     "availabilityScope": "pan-india",
     "highlightTag": "💰 Value EV",
@@ -1699,8 +1458,8 @@
       },
       "runningCostPerKmInr": 0.85,
       "iceEquivalentCostPerKmInr": 7.8,
-      "indicativeEmiInr": 14400,
-      "emiDisplay": "₹14,400/mo*",
+      "indicativeEmiInr": 17214,
+      "emiDisplay": "₹17,214/mo*",
       "loanTenureMonths": 60,
       "interestRatePct": 8.85,
       "typicalDailyKm": 45,
@@ -1736,9 +1495,9 @@
     "advisoryNote": "Compiled from verified public EV sources. Confirm live on-road pricing, variant availability, and state subsidies with an authorized dealer.",
     "trending": true,
     "popularity": 121,
-    "priceMin": 99999,
-    "priceMax": 99999,
-    "priceDisplay": "₹99,999",
+    "priceMin": 120374,
+    "priceMax": 152251,
+    "priceDisplay": "₹1.20 Lakh – ₹1.52 Lakh",
     "batteryCapacityKwh": 3.5,
     "batteryDisplay": "3.5 kWh",
     "batteryChemistry": "Lithium-Ion Battery Pack",
@@ -1765,13 +1524,13 @@
     "galleryLabels": [
       "Exterior Studio View"
     ],
-    "overview": "TVS iQube is an electric family & city scooters from TVS iQube (TVS Motor Company) featuring indicative ex-showroom pricing of ₹99,999, a 3.5 kWh battery pack, claimed range of 145 km, 4.4 kW peak output.",
+    "overview": "TVS iQube is an electric family & city scooters from TVS iQube (TVS Motor Company) featuring indicative ex-showroom pricing of ₹1.20 Lakh – ₹1.52 Lakh, a 3.5 kWh battery pack, claimed range of 145 km, 4.4 kW peak output.",
     "variants": [
       {
         "name": "2.2kWh",
         "battery": "3.5 kWh",
         "range": "145 km",
-        "price": "₹99,999*"
+        "price": "₹1.20 Lakh – ₹1.52 Lakh*"
       },
       {
         "name": "2.3 kWh",
@@ -1789,7 +1548,7 @@
         "name": "3.1kWh",
         "battery": "3.5 kWh",
         "range": "145 km",
-        "price": "₹99,999*"
+        "price": "₹1.20 Lakh – ₹1.52 Lakh*"
       },
       {
         "name": "3.5 kWh",
@@ -1801,19 +1560,7 @@
         "name": "3.5kWh",
         "battery": "3.5 kWh",
         "range": "145 km",
-        "price": "₹99,999*"
-      },
-      {
-        "name": "Affordable Model",
-        "battery": "3.5 kWh",
-        "range": "145 km",
-        "price": "₹99,999*"
-      },
-      {
-        "name": "E3 Trion",
-        "battery": "3.5 kWh",
-        "range": "145 km",
-        "price": "₹99,999*"
+        "price": "₹1.20 Lakh – ₹1.52 Lakh*"
       },
       {
         "name": "MillionR Special Edition",
@@ -1822,22 +1569,10 @@
         "price": "₹1.52 Lakh*"
       },
       {
-        "name": "Most Expensive",
-        "battery": "3.5 kWh",
-        "range": "145 km",
-        "price": "₹1.20 Lakh*"
-      },
-      {
         "name": "iQube 2.3 kWh",
         "battery": "3.5 kWh",
         "range": "145 km",
         "price": "₹1.20 Lakh*"
-      },
-      {
-        "name": "iQube 3.1 kWh",
-        "battery": "3.5 kWh",
-        "range": "145 km",
-        "price": "₹1.00 Lakh*"
       },
       {
         "name": "iQube 3.5 kWh",
@@ -1849,7 +1584,7 @@
         "name": "iQube MillionR Edition",
         "battery": "3.5 kWh",
         "range": "145 km",
-        "price": "₹99,999*"
+        "price": "₹1.20 Lakh – ₹1.52 Lakh*"
       },
       {
         "name": "iQube MillionR Special Edition",
@@ -1861,13 +1596,13 @@
         "name": "iQube S",
         "battery": "3.5 kWh",
         "range": "145 km",
-        "price": "₹99,999*"
+        "price": "₹1.20 Lakh – ₹1.52 Lakh*"
       },
       {
         "name": "iQube ST",
         "battery": "3.5 kWh",
         "range": "145 km",
-        "price": "₹99,999*"
+        "price": "₹1.20 Lakh – ₹1.52 Lakh*"
       }
     ],
     "features": [
@@ -1877,7 +1612,7 @@
       "Claimed Driving Range: 145 km",
       "Peak Motor Output: 4.4 kW",
       "Claimed Top Speed: 68 km/h",
-      "Available in 17 trim variants"
+      "Available in 13 trim variants"
     ],
     "availabilityScope": "pan-india",
     "highlightTag": "⚡ 145 km IDC",
@@ -1893,8 +1628,8 @@
       },
       "runningCostPerKmInr": 0.18,
       "iceEquivalentCostPerKmInr": 2.65,
-      "indicativeEmiInr": 2713,
-      "emiDisplay": "₹2,713/mo*",
+      "indicativeEmiInr": 3266,
+      "emiDisplay": "₹3,266/mo*",
       "loanTenureMonths": 36,
       "interestRatePct": 9.25,
       "typicalDailyKm": 30,
@@ -1908,6 +1643,102 @@
       "tvs iqube",
       "tvs motor company",
       "two-wheelers"
+    ]
+  },
+  {
+    "id": "mahindra-be-6",
+    "brandId": "mahindra-be",
+    "brand": "Mahindra BE",
+    "manufacturer": "Mahindra Electric Automobile",
+    "model": "BE 6",
+    "fullName": "Mahindra BE 6",
+    "categoryId": "four-wheelers",
+    "category": "4-Wheelers",
+    "subCategoryId": "family-crossovers",
+    "subCategory": "Family EV SUVs & Crossovers",
+    "isSampleData": false,
+    "sampleDataNote": "Verified from public OEM and automotive specifications. Confirm live city ex-showroom pricing and subsidies with an authorized dealer.",
+    "advisoryNote": "Compiled from verified public EV sources. Confirm live on-road pricing, variant availability, and state subsidies with an authorized dealer.",
+    "trending": true,
+    "popularity": 118,
+    "priceMin": 1945000,
+    "priceMax": 2695000,
+    "priceDisplay": "₹19.45 Lakh – ₹26.95 Lakh",
+    "batteryCapacityKwh": 79.0,
+    "batteryDisplay": "79 kWh",
+    "batteryChemistry": "Lithium-Ion Battery Pack",
+    "claimedRangeKm": 708,
+    "rangeDisplay": "708 km",
+    "rangeStandard": "Certified / Claimed",
+    "topSpeedKmh": null,
+    "topSpeedDisplay": "TBA",
+    "accelerationDisplay": "Check Official Brochure",
+    "chargingTimeDisplay": "Standard EV Charging",
+    "acChargingTime": "Standard Home AC",
+    "dcChargingTime": "Check Dealer for DC Spec",
+    "chargingConnector": "CCS2 / Type-2",
+    "motorPowerKw": 210.3,
+    "motorPowerDisplay": "210.3 kW",
+    "motorType": "Electric Traction Motor",
+    "driveType": "Electric Drive",
+    "warrantyDisplay": "Refer Official OEM Battery Warranty",
+    "vehicleWarranty": "Standard OEM Vehicle Warranty",
+    "image": "assets/images/vehicles/mahindra-be/be-6/hero.webp",
+    "images": [
+      "assets/images/vehicles/mahindra-be/be-6/hero.webp"
+    ],
+    "galleryLabels": [
+      "Exterior Studio View"
+    ],
+    "overview": "Mahindra BE 6 is an electric family ev suvs & crossovers from Mahindra BE (Mahindra Electric Automobile) featuring indicative ex-showroom pricing of ₹19.45 Lakh – ₹26.95 Lakh, a 79 kWh battery pack, claimed range of 708 km, 210.3 kW peak output.",
+    "variants": [
+      {
+        "name": "BE 6 Standard",
+        "battery": "79 kWh",
+        "range": "708 km",
+        "price": "₹19.45 Lakh*"
+      }
+    ],
+    "features": [
+      "Segment: 4-Wheelers (Family EV SUVs & Crossovers)",
+      "Powertrain: BEV (Zero Tailpipe Emissions)",
+      "Battery Pack: 79 kWh",
+      "Claimed Driving Range: 708 km",
+      "Peak Motor Output: 210.3 kW"
+    ],
+    "availabilityScope": "pan-india",
+    "highlightTag": "🛣️ 708 km Range",
+    "sourceUrl": "https://www.carwale.com/new/electric-cars/",
+    "verificationStatus": "verified",
+    "firstLaunchYear": 2024,
+    "elasticMetrics": {
+      "efficiencyWhPerKm": 111.6,
+      "realWorldRangeKm": {
+        "eco": 602,
+        "city": 538,
+        "highway": 467
+      },
+      "runningCostPerKmInr": 0.84,
+      "iceEquivalentCostPerKmInr": 7.8,
+      "indicativeEmiInr": 34199,
+      "emiDisplay": "₹34,199/mo*",
+      "loanTenureMonths": 60,
+      "interestRatePct": 8.85,
+      "typicalDailyKm": 45,
+      "estMonthlySavingsInr": 8143,
+      "co2SavedKgPerYear": 2317
+    },
+    "elasticTags": [
+      "5 seater",
+      "be 6",
+      "family car",
+      "family-crossovers",
+      "fast charging",
+      "four-wheelers",
+      "highway",
+      "mahindra be",
+      "mahindra electric automobile",
+      "suv"
     ]
   },
   {
@@ -1927,8 +1758,8 @@
     "trending": false,
     "popularity": 96,
     "priceMin": 129999,
-    "priceMax": 129999,
-    "priceDisplay": "₹1.30 Lakh",
+    "priceMax": 142769,
+    "priceDisplay": "₹1.30 Lakh – ₹1.43 Lakh",
     "batteryCapacityKwh": 3.0,
     "batteryDisplay": "3 kWh",
     "batteryChemistry": "LFP",
@@ -1955,7 +1786,7 @@
     "galleryLabels": [
       "Exterior Studio View"
     ],
-    "overview": "Ampere Nexus is an electric family & city scooters from Ampere (Greaves Electric Mobility) featuring indicative ex-showroom pricing of ₹1.30 Lakh, a 3 kWh battery pack, claimed range of 136 km, 6.4 kW peak output.",
+    "overview": "Ampere Nexus is an electric family & city scooters from Ampere (Greaves Electric Mobility) featuring indicative ex-showroom pricing of ₹1.30 Lakh – ₹1.43 Lakh, a 3 kWh battery pack, claimed range of 136 km, 6.4 kW peak output.",
     "variants": [
       {
         "name": "Nexus EX+",
@@ -2028,8 +1859,8 @@
     "trending": false,
     "popularity": 96,
     "priceMin": 127888,
-    "priceMax": 127888,
-    "priceDisplay": "₹1.28 Lakh",
+    "priceMax": 179144,
+    "priceDisplay": "₹1.28 Lakh – ₹1.79 Lakh",
     "batteryCapacityKwh": 2.9,
     "batteryDisplay": "2.9 kWh",
     "batteryChemistry": "NMC",
@@ -2056,7 +1887,7 @@
     "galleryLabels": [
       "Exterior Studio View"
     ],
-    "overview": "Ather 450S is an electric smart & performance scooters from Ather (Ather Energy) featuring indicative ex-showroom pricing of ₹1.28 Lakh, a 2.9 kWh battery pack, claimed range of 161 km, 6.4 kW peak output.",
+    "overview": "Ather 450S is an electric smart & performance scooters from Ather (Ather Energy) featuring indicative ex-showroom pricing of ₹1.28 Lakh – ₹1.79 Lakh, a 2.9 kWh battery pack, claimed range of 161 km, 6.4 kW peak output.",
     "variants": [
       {
         "name": "450S IDC 122 KM - Mono",
@@ -2165,8 +1996,8 @@
     "trending": false,
     "popularity": 96,
     "priceMin": 130130,
-    "priceMax": 130130,
-    "priceDisplay": "₹1.30 Lakh",
+    "priceMax": 194796,
+    "priceDisplay": "₹1.30 Lakh – ₹1.95 Lakh",
     "batteryCapacityKwh": 2.9,
     "batteryDisplay": "2.9 kWh",
     "batteryChemistry": "LFP",
@@ -2193,7 +2024,7 @@
     "galleryLabels": [
       "Exterior Studio View"
     ],
-    "overview": "Ather Rizta is an electric family & city scooters from Ather (Ather Energy) featuring indicative ex-showroom pricing of ₹1.30 Lakh, a 2.9 kWh battery pack, claimed range of 161 km, 4.3 kW peak output.",
+    "overview": "Ather Rizta is an electric family & city scooters from Ather (Ather Energy) featuring indicative ex-showroom pricing of ₹1.30 Lakh – ₹1.95 Lakh, a 2.9 kWh battery pack, claimed range of 161 km, 4.3 kW peak output.",
     "variants": [
       {
         "name": "Rizta S (IDC 123 Km) Mono",
@@ -2545,8 +2376,8 @@
     "trending": false,
     "popularity": 96,
     "priceMin": 4150000,
-    "priceMax": 4150000,
-    "priceDisplay": "₹41.50 Lakh",
+    "priceMax": 5365000,
+    "priceDisplay": "₹41.50 Lakh – ₹53.65 Lakh",
     "batteryCapacityKwh": 82.5,
     "batteryDisplay": "82.5 kWh",
     "batteryChemistry": "Lithium-Ion Battery Pack",
@@ -2573,7 +2404,7 @@
     "galleryLabels": [
       "Exterior Studio View"
     ],
-    "overview": "BYD Seal is an electric electric sedans & gt from BYD (BYD India) featuring indicative ex-showroom pricing of ₹41.50 Lakh, a 82.5 kWh battery pack, claimed range of 650 km, 150 kW peak output.",
+    "overview": "BYD Seal is an electric electric sedans & gt from BYD (BYD India) featuring indicative ex-showroom pricing of ₹41.50 Lakh – ₹53.65 Lakh, a 82.5 kWh battery pack, claimed range of 650 km, 150 kW peak output.",
     "variants": [
       {
         "name": "BYD Seal Dynamic Range",
@@ -2597,19 +2428,19 @@
         "name": "Dynamic",
         "battery": "82.5 kWh",
         "range": "650 km",
-        "price": "₹41.50 Lakh*"
+        "price": "₹41.50 Lakh – ₹53.65 Lakh*"
       },
       {
         "name": "Performance",
         "battery": "82.5 kWh",
         "range": "650 km",
-        "price": "₹41.50 Lakh*"
+        "price": "₹41.50 Lakh – ₹53.65 Lakh*"
       },
       {
         "name": "Premium",
         "battery": "82.5 kWh",
         "range": "650 km",
-        "price": "₹41.50 Lakh*"
+        "price": "₹41.50 Lakh – ₹53.65 Lakh*"
       }
     ],
     "features": [
@@ -2669,8 +2500,8 @@
     "trending": false,
     "popularity": 96,
     "priceMin": 2690000,
-    "priceMax": 2690000,
-    "priceDisplay": "₹26.90 Lakh",
+    "priceMax": 2990000,
+    "priceDisplay": "₹26.90 Lakh – ₹29.90 Lakh",
     "batteryCapacityKwh": 71.8,
     "batteryDisplay": "71.8 kWh",
     "batteryChemistry": "Lithium-Ion Battery Pack",
@@ -2697,7 +2528,7 @@
     "galleryLabels": [
       "Exterior Studio View"
     ],
-    "overview": "BYD eMAX 7 is an electric family ev suvs & crossovers from BYD (BYD India) featuring indicative ex-showroom pricing of ₹26.90 Lakh, a 71.8 kWh battery pack, claimed range of 530 km, 149.9 kW peak output.",
+    "overview": "BYD eMAX 7 is an electric family ev suvs & crossovers from BYD (BYD India) featuring indicative ex-showroom pricing of ₹26.90 Lakh – ₹29.90 Lakh, a 71.8 kWh battery pack, claimed range of 530 km, 149.9 kW peak output.",
     "variants": [
       {
         "name": "BYD eMAX 7 Comfort 6-Seater",
@@ -2796,8 +2627,8 @@
     "trending": false,
     "popularity": 96,
     "priceMin": 4190000,
-    "priceMax": 4190000,
-    "priceDisplay": "₹41.90 Lakh",
+    "priceMax": 5590000,
+    "priceDisplay": "₹41.90 Lakh – ₹55.90 Lakh",
     "batteryCapacityKwh": 82.56,
     "batteryDisplay": "82.56 kWh",
     "batteryChemistry": "Lithium-Ion Battery Pack",
@@ -2824,7 +2655,7 @@
     "galleryLabels": [
       "Exterior Studio View"
     ],
-    "overview": "BYD Sealion 7 is an electric electric sedans & gt from BYD (BYD India) featuring indicative ex-showroom pricing of ₹41.90 Lakh, a 82.56 kWh battery pack, claimed range of 567 km, 390 kW peak output.",
+    "overview": "BYD Sealion 7 is an electric electric sedans & gt from BYD (BYD India) featuring indicative ex-showroom pricing of ₹41.90 Lakh – ₹55.90 Lakh, a 82.56 kWh battery pack, claimed range of 567 km, 390 kW peak output.",
     "variants": [
       {
         "name": "BYD Sealion 7 Dynamic",
@@ -2908,8 +2739,8 @@
     "trending": false,
     "popularity": 96,
     "priceMin": 62190,
-    "priceMax": 62190,
-    "priceDisplay": "₹62,190",
+    "priceMax": 104360,
+    "priceDisplay": "₹62,190 – ₹1.04 Lakh",
     "batteryCapacityKwh": 0.96,
     "batteryDisplay": "0.96 kWh",
     "batteryChemistry": "Lithium-Ion Battery Pack",
@@ -2936,7 +2767,7 @@
     "galleryLabels": [
       "Exterior Studio View"
     ],
-    "overview": "Hero Electric Optima is an electric family & city scooters from Hero Electric (Hero Electric) featuring indicative ex-showroom pricing of ₹62,190, a 0.96 kWh battery pack, claimed range of 140 km.",
+    "overview": "Hero Electric Optima is an electric family & city scooters from Hero Electric (Hero Electric) featuring indicative ex-showroom pricing of ₹62,190 – ₹1.04 Lakh, a 0.96 kWh battery pack, claimed range of 140 km.",
     "variants": [
       {
         "name": "Optima CX 2.0",
@@ -2984,13 +2815,13 @@
         "name": "Optima LX (VRLA)",
         "battery": "0.96 kWh",
         "range": "140 km",
-        "price": "₹62,190*"
+        "price": "₹62,190 – ₹1.04 Lakh*"
       },
       {
         "name": "Optima Plus",
         "battery": "0.96 kWh",
         "range": "140 km",
-        "price": "₹62,190*"
+        "price": "₹62,190 – ₹1.04 Lakh*"
       }
     ],
     "features": [
@@ -3049,8 +2880,8 @@
     "trending": false,
     "popularity": 96,
     "priceMin": 61866,
-    "priceMax": 61866,
-    "priceDisplay": "₹61,866",
+    "priceMax": 110891,
+    "priceDisplay": "₹61,866 – ₹1.11 Lakh",
     "batteryCapacityKwh": 1.44,
     "batteryDisplay": "1.44 kWh",
     "batteryChemistry": "Lithium-Ion Battery Pack",
@@ -3077,7 +2908,7 @@
     "galleryLabels": [
       "Exterior Studio View"
     ],
-    "overview": "Hero Electric Photon is an electric family & city scooters from Hero Electric (Hero Electric) featuring indicative ex-showroom pricing of ₹61,866, a 1.44 kWh battery pack, claimed range of 108 km.",
+    "overview": "Hero Electric Photon is an electric family & city scooters from Hero Electric (Hero Electric) featuring indicative ex-showroom pricing of ₹61,866 – ₹1.11 Lakh, a 1.44 kWh battery pack, claimed range of 108 km.",
     "variants": [
       {
         "name": "Photon 72 LI",
@@ -3160,8 +2991,8 @@
     "trending": false,
     "popularity": 96,
     "priceMin": 1804000,
-    "priceMax": 1804000,
-    "priceDisplay": "₹18.04 Lakh",
+    "priceMax": 2500000,
+    "priceDisplay": "₹18.04 Lakh – ₹25.00 Lakh",
     "batteryCapacityKwh": 51.4,
     "batteryDisplay": "51.4 kWh",
     "batteryChemistry": "Lithium-Ion Battery Pack",
@@ -3188,7 +3019,7 @@
     "galleryLabels": [
       "Exterior Studio View"
     ],
-    "overview": "Kia Carens Clavis EV is an electric electric sedans & gt from Kia (Kia) featuring indicative ex-showroom pricing of ₹18.04 Lakh, a 51.4 kWh battery pack, claimed range of 490 km, 126 kW peak output.",
+    "overview": "Kia Carens Clavis EV is an electric electric sedans & gt from Kia (Kia) featuring indicative ex-showroom pricing of ₹18.04 Lakh – ₹25.00 Lakh, a 51.4 kWh battery pack, claimed range of 490 km, 126 kW peak output.",
     "variants": [
       {
         "name": "Kia Carens Clavis EV GTX ER",
@@ -3319,8 +3150,8 @@
     "trending": false,
     "popularity": 96,
     "priceMin": 1350000,
-    "priceMax": 1350000,
-    "priceDisplay": "₹13.50 Lakh",
+    "priceMax": 2000000,
+    "priceDisplay": "₹13.50 Lakh – ₹20.00 Lakh",
     "batteryCapacityKwh": 51.4,
     "batteryDisplay": "51.4 kWh",
     "batteryChemistry": "Lithium-Ion Battery Pack",
@@ -3347,7 +3178,7 @@
     "galleryLabels": [
       "Exterior Studio View"
     ],
-    "overview": "Kia Syros EV is an electric family ev suvs & crossovers from Kia (Kia) featuring indicative ex-showroom pricing of ₹13.50 Lakh, a 51.4 kWh battery pack, claimed range of 526 km, 126 kW peak output.",
+    "overview": "Kia Syros EV is an electric family ev suvs & crossovers from Kia (Kia) featuring indicative ex-showroom pricing of ₹13.50 Lakh – ₹20.00 Lakh, a 51.4 kWh battery pack, claimed range of 526 km, 126 kW peak output.",
     "variants": [
       {
         "name": "Kia Syros EV HTK",
@@ -3451,8 +3282,8 @@
     "trending": false,
     "popularity": 96,
     "priceMin": 25500000,
-    "priceMax": 25500000,
-    "priceDisplay": "₹2.55 Cr",
+    "priceMax": 29900000,
+    "priceDisplay": "₹2.55 Cr – ₹2.99 Cr",
     "batteryCapacityKwh": 112.0,
     "batteryDisplay": "112 kWh",
     "batteryChemistry": "Lithium-Ion Battery Pack",
@@ -3479,7 +3310,7 @@
     "galleryLabels": [
       "Exterior Studio View"
     ],
-    "overview": "Lotus Eletre is an electric premium & luxury evs from Lotus (Lotus) featuring indicative ex-showroom pricing of ₹2.55 Cr, a 112 kWh battery pack, claimed range of 600 km, 449.7 kW peak output.",
+    "overview": "Lotus Eletre is an electric premium & luxury evs from Lotus (Lotus) featuring indicative ex-showroom pricing of ₹2.55 Cr – ₹2.99 Cr, a 112 kWh battery pack, claimed range of 600 km, 449.7 kW peak output.",
     "variants": [
       {
         "name": "Lotus Eletre Base",
@@ -3543,109 +3374,6 @@
     ]
   },
   {
-    "id": "mahindra-xuv400",
-    "brandId": "mahindra",
-    "brand": "Mahindra",
-    "manufacturer": "Mahindra Electric Automobile",
-    "model": "XUV400",
-    "fullName": "Mahindra XUV400",
-    "categoryId": "four-wheelers",
-    "category": "4-Wheelers",
-    "subCategoryId": "family-crossovers",
-    "subCategory": "Family EV SUVs & Crossovers",
-    "isSampleData": false,
-    "sampleDataNote": "Verified from public OEM and automotive specifications. Confirm live city ex-showroom pricing and subsidies with an authorized dealer.",
-    "advisoryNote": "Compiled from verified public EV sources. Confirm live on-road pricing, variant availability, and state subsidies with an authorized dealer.",
-    "trending": false,
-    "popularity": 96,
-    "priceMin": 2000000,
-    "priceMax": 2000000,
-    "priceDisplay": "₹20.00 Lakh",
-    "batteryCapacityKwh": 34.5,
-    "batteryDisplay": "34.5 kWh",
-    "batteryChemistry": "Lithium-Ion Battery Pack",
-    "claimedRangeKm": 456,
-    "rangeDisplay": "456 km",
-    "rangeStandard": "Certified / Claimed",
-    "topSpeedKmh": null,
-    "topSpeedDisplay": "TBA",
-    "accelerationDisplay": "Check Official Brochure",
-    "chargingTimeDisplay": "Standard EV Charging",
-    "acChargingTime": "Standard Home AC",
-    "dcChargingTime": "Check Dealer for DC Spec",
-    "chargingConnector": "CCS2 / Type-2",
-    "motorPowerKw": 111.5,
-    "motorPowerDisplay": "111.5 kW",
-    "motorType": "Electric Traction Motor",
-    "driveType": "Electric Drive",
-    "warrantyDisplay": "Refer Official OEM Battery Warranty",
-    "vehicleWarranty": "Standard OEM Vehicle Warranty",
-    "image": "assets/images/vehicles/mahindra/xuv400/hero.webp",
-    "images": [
-      "assets/images/vehicles/mahindra/xuv400/hero.webp"
-    ],
-    "galleryLabels": [
-      "Exterior Studio View"
-    ],
-    "overview": "Mahindra XUV400 is an electric family ev suvs & crossovers from Mahindra (Mahindra Electric Automobile) featuring indicative ex-showroom pricing of ₹20.00 Lakh, a 34.5 kWh battery pack, claimed range of 456 km, 111.5 kW peak output.",
-    "variants": [
-      {
-        "name": "Most Affordable",
-        "battery": "34.5 kWh",
-        "range": "456 km",
-        "price": "₹9.57 Lakh*"
-      },
-      {
-        "name": "XUV400 Standard",
-        "battery": "34.5 kWh",
-        "range": "456 km",
-        "price": "₹20.00 Lakh*"
-      }
-    ],
-    "features": [
-      "Segment: 4-Wheelers (Family EV SUVs & Crossovers)",
-      "Powertrain: BEV (Zero Tailpipe Emissions)",
-      "Battery Pack: 34.5 kWh",
-      "Claimed Driving Range: 456 km",
-      "Peak Motor Output: 111.5 kW",
-      "Available in 2 trim variants"
-    ],
-    "availabilityScope": "pan-india",
-    "highlightTag": "🛣️ 456 km Range",
-    "sourceUrl": "https://www.carwale.com/new/electric-cars/3/",
-    "verificationStatus": "verified",
-    "firstLaunchYear": 2023,
-    "elasticMetrics": {
-      "efficiencyWhPerKm": 75.7,
-      "realWorldRangeKm": {
-        "eco": 388,
-        "city": 347,
-        "highway": 301
-      },
-      "runningCostPerKmInr": 0.57,
-      "iceEquivalentCostPerKmInr": 7.8,
-      "indicativeEmiInr": 35166,
-      "emiDisplay": "₹35,166/mo*",
-      "loanTenureMonths": 60,
-      "interestRatePct": 8.85,
-      "typicalDailyKm": 45,
-      "estMonthlySavingsInr": 8459,
-      "co2SavedKgPerYear": 2317
-    },
-    "elasticTags": [
-      "5 seater",
-      "family car",
-      "family-crossovers",
-      "fast charging",
-      "four-wheelers",
-      "highway",
-      "mahindra",
-      "mahindra electric automobile",
-      "suv",
-      "xuv400"
-    ]
-  },
-  {
     "id": "mahindra-be-6-sporteq",
     "brandId": "mahindra-be",
     "brand": "Mahindra BE",
@@ -3662,8 +3390,8 @@
     "trending": false,
     "popularity": 96,
     "priceMin": 1945000,
-    "priceMax": 1945000,
-    "priceDisplay": "₹19.45 Lakh",
+    "priceMax": 2695000,
+    "priceDisplay": "₹19.45 Lakh – ₹26.95 Lakh",
     "batteryCapacityKwh": 79.0,
     "batteryDisplay": "79 kWh",
     "batteryChemistry": "Lithium-Ion Battery Pack",
@@ -3690,7 +3418,7 @@
     "galleryLabels": [
       "Exterior Studio View"
     ],
-    "overview": "Mahindra BE 6 SPORTEQ is an electric family ev suvs & crossovers from Mahindra BE (Mahindra Electric Automobile) featuring indicative ex-showroom pricing of ₹19.45 Lakh, a 79 kWh battery pack, claimed range of 708 km, 210.3 kW peak output.",
+    "overview": "Mahindra BE 6 SPORTEQ is an electric family ev suvs & crossovers from Mahindra BE (Mahindra Electric Automobile) featuring indicative ex-showroom pricing of ₹19.45 Lakh – ₹26.95 Lakh, a 79 kWh battery pack, claimed range of 708 km, 210.3 kW peak output.",
     "variants": [
       {
         "name": "Mahindra BE 6 SPORTEQ FE 79kWh",
@@ -3813,8 +3541,8 @@
     "trending": false,
     "popularity": 96,
     "priceMin": 2065000,
-    "priceMax": 2065000,
-    "priceDisplay": "₹20.65 Lakh",
+    "priceMax": 3015000,
+    "priceDisplay": "₹20.65 Lakh – ₹30.15 Lakh",
     "batteryCapacityKwh": 79.0,
     "batteryDisplay": "79 kWh",
     "batteryChemistry": "Lithium-Ion Battery Pack",
@@ -3841,7 +3569,7 @@
     "galleryLabels": [
       "Exterior Studio View"
     ],
-    "overview": "Mahindra XEV 9S is an electric family ev suvs & crossovers from Mahindra BE (Mahindra Electric Automobile) featuring indicative ex-showroom pricing of ₹20.65 Lakh, a 79 kWh battery pack, claimed range of 679 km, 210.3 kW peak output.",
+    "overview": "Mahindra XEV 9S is an electric family ev suvs & crossovers from Mahindra BE (Mahindra Electric Automobile) featuring indicative ex-showroom pricing of ₹20.65 Lakh – ₹30.15 Lakh, a 79 kWh battery pack, claimed range of 679 km, 210.3 kW peak output.",
     "variants": [
       {
         "name": "Mahindra XEV 9S Pack One Above 59kWh 7-Seater",
@@ -3964,8 +3692,8 @@
     "trending": false,
     "popularity": 96,
     "priceMin": 1389000,
-    "priceMax": 1389000,
-    "priceDisplay": "₹13.89 Lakh",
+    "priceMax": 1496000,
+    "priceDisplay": "₹13.89 Lakh – ₹14.96 Lakh",
     "batteryCapacityKwh": 39.4,
     "batteryDisplay": "39.4 kWh",
     "batteryChemistry": "Lithium-Ion Battery Pack",
@@ -3992,7 +3720,7 @@
     "galleryLabels": [
       "Exterior Studio View"
     ],
-    "overview": "Mahindra XUV 3XO EV is an electric family ev suvs & crossovers from Mahindra BE (Mahindra Electric Automobile) featuring indicative ex-showroom pricing of ₹13.89 Lakh, a 39.4 kWh battery pack, claimed range of 456 km, 110 kW peak output.",
+    "overview": "Mahindra XUV 3XO EV is an electric family ev suvs & crossovers from Mahindra BE (Mahindra Electric Automobile) featuring indicative ex-showroom pricing of ₹13.89 Lakh – ₹14.96 Lakh, a 39.4 kWh battery pack, claimed range of 456 km, 110 kW peak output.",
     "variants": [
       {
         "name": "Mahindra XUV 3XO EV AX5",
@@ -4067,8 +3795,8 @@
     "trending": false,
     "popularity": 96,
     "priceMin": 1549000,
-    "priceMax": 1549000,
-    "priceDisplay": "₹15.49 Lakh",
+    "priceMax": 1769000,
+    "priceDisplay": "₹15.49 Lakh – ₹17.69 Lakh",
     "batteryCapacityKwh": 39.4,
     "batteryDisplay": "39.4 kWh",
     "batteryChemistry": "Lithium-Ion Battery Pack",
@@ -4095,7 +3823,7 @@
     "galleryLabels": [
       "Exterior Studio View"
     ],
-    "overview": "Mahindra XUV400 EV is an electric family ev suvs & crossovers from Mahindra BE (Mahindra Electric Automobile) featuring indicative ex-showroom pricing of ₹15.49 Lakh, a 39.4 kWh battery pack, claimed range of 456 km, 110 kW peak output.",
+    "overview": "Mahindra XUV400 EV is an electric family ev suvs & crossovers from Mahindra BE (Mahindra Electric Automobile) featuring indicative ex-showroom pricing of ₹15.49 Lakh – ₹17.69 Lakh, a 39.4 kWh battery pack, claimed range of 456 km, 110 kW peak output.",
     "variants": [
       {
         "name": "Mahindra XUV400 EV EC Pro 34.5 kWh",
@@ -4188,8 +3916,8 @@
     "trending": false,
     "popularity": 96,
     "priceMin": 5650000,
-    "priceMax": 5650000,
-    "priceDisplay": "₹56.50 Lakh",
+    "priceMax": 6400000,
+    "priceDisplay": "₹56.50 Lakh – ₹64.00 Lakh",
     "batteryCapacityKwh": 85.5,
     "batteryDisplay": "85.5 kWh",
     "batteryChemistry": "Lithium-Ion Battery Pack",
@@ -4216,7 +3944,7 @@
     "galleryLabels": [
       "Exterior Studio View"
     ],
-    "overview": "Mercedes-Benz CLA Electric is an electric electric sedans & gt from Mercedes-Benz (Mercedes-Benz) featuring indicative ex-showroom pricing of ₹56.50 Lakh, a 85.5 kWh battery pack, claimed range of 792 km, 200 kW peak output.",
+    "overview": "Mercedes-Benz CLA Electric is an electric electric sedans & gt from Mercedes-Benz (Mercedes-Benz) featuring indicative ex-showroom pricing of ₹56.50 Lakh – ₹64.00 Lakh, a 85.5 kWh battery pack, claimed range of 792 km, 200 kW peak output.",
     "variants": [
       {
         "name": "Mercedes-Benz CLA 200",
@@ -4293,8 +4021,8 @@
     "trending": false,
     "popularity": 96,
     "priceMin": 13000000,
-    "priceMax": 13000000,
-    "priceDisplay": "₹1.30 Cr",
+    "priceMax": 14800000,
+    "priceDisplay": "₹1.30 Cr – ₹1.48 Cr",
     "batteryCapacityKwh": 107.8,
     "batteryDisplay": "107.8 kWh",
     "batteryChemistry": "Lithium-Ion Battery Pack",
@@ -4321,7 +4049,7 @@
     "galleryLabels": [
       "Exterior Studio View"
     ],
-    "overview": "Mercedes-Benz EQS is an electric electric sedans & gt from Mercedes-Benz (Mercedes-Benz) featuring indicative ex-showroom pricing of ₹1.30 Cr, a 107.8 kWh battery pack, claimed range of 857 km, 560 kW peak output.",
+    "overview": "Mercedes-Benz EQS is an electric electric sedans & gt from Mercedes-Benz (Mercedes-Benz) featuring indicative ex-showroom pricing of ₹1.30 Cr – ₹1.48 Cr, a 107.8 kWh battery pack, claimed range of 857 km, 560 kW peak output.",
     "variants": [
       {
         "name": "Mercedes-Benz EQS 580 4MATIC Celebration Edition",
@@ -4392,8 +4120,8 @@
     "trending": false,
     "popularity": 96,
     "priceMin": 13300000,
-    "priceMax": 13300000,
-    "priceDisplay": "₹1.33 Cr",
+    "priceMax": 14800000,
+    "priceDisplay": "₹1.33 Cr – ₹1.48 Cr",
     "batteryCapacityKwh": 122.0,
     "batteryDisplay": "122 kWh",
     "batteryChemistry": "Lithium-Ion Battery Pack",
@@ -4420,7 +4148,7 @@
     "galleryLabels": [
       "Exterior Studio View"
     ],
-    "overview": "Mercedes-Benz EQS SUV is an electric electric sedans & gt from Mercedes-Benz (Mercedes-Benz) featuring indicative ex-showroom pricing of ₹1.33 Cr, a 122 kWh battery pack, claimed range of 820 km, 400 kW peak output.",
+    "overview": "Mercedes-Benz EQS SUV is an electric electric sedans & gt from Mercedes-Benz (Mercedes-Benz) featuring indicative ex-showroom pricing of ₹1.33 Cr – ₹1.48 Cr, a 122 kWh battery pack, claimed range of 820 km, 400 kW peak output.",
     "variants": [
       {
         "name": "Mercedes-Benz EQS SUV 450 4Matic",
@@ -4503,8 +4231,8 @@
     "trending": false,
     "popularity": 96,
     "priceMin": 24000000,
-    "priceMax": 24000000,
-    "priceDisplay": "₹2.40 Cr",
+    "priceMax": 26500000,
+    "priceDisplay": "₹2.40 Cr – ₹2.65 Cr",
     "batteryCapacityKwh": 122.0,
     "batteryDisplay": "122 kWh",
     "batteryChemistry": "Lithium-Ion Battery Pack",
@@ -4531,7 +4259,7 @@
     "galleryLabels": [
       "Exterior Studio View"
     ],
-    "overview": "Mercedes-Benz Maybach EQS SUV is an electric electric sedans & gt from Mercedes-Benz (Mercedes-Benz) featuring indicative ex-showroom pricing of ₹2.40 Cr, a 122 kWh battery pack, claimed range of 611 km, 484 kW peak output.",
+    "overview": "Mercedes-Benz Maybach EQS SUV is an electric electric sedans & gt from Mercedes-Benz (Mercedes-Benz) featuring indicative ex-showroom pricing of ₹2.40 Cr – ₹2.65 Cr, a 122 kWh battery pack, claimed range of 611 km, 484 kW peak output.",
     "variants": [
       {
         "name": "Mercedes-Benz Maybach EQS SUV 680",
@@ -4602,8 +4330,8 @@
     "trending": false,
     "popularity": 96,
     "priceMin": 8250000,
-    "priceMax": 8250000,
-    "priceDisplay": "₹82.50 Lakh",
+    "priceMax": 8749000,
+    "priceDisplay": "₹82.50 Lakh – ₹87.49 Lakh",
     "batteryCapacityKwh": 77.0,
     "batteryDisplay": "77 kWh",
     "batteryChemistry": "Lithium-Ion Battery Pack",
@@ -4630,7 +4358,7 @@
     "galleryLabels": [
       "Exterior Studio View"
     ],
-    "overview": "MG Cyberster is an electric premium & luxury evs from MG (JSW MG Motor India) featuring indicative ex-showroom pricing of ₹82.50 Lakh, a 77 kWh battery pack, claimed range of 580 km, 375.1 kW peak output.",
+    "overview": "MG Cyberster is an electric premium & luxury evs from MG (JSW MG Motor India) featuring indicative ex-showroom pricing of ₹82.50 Lakh – ₹87.49 Lakh, a 77 kWh battery pack, claimed range of 580 km, 375.1 kW peak output.",
     "variants": [
       {
         "name": "MG Cyberster Couture Edition",
@@ -4705,8 +4433,8 @@
     "trending": false,
     "popularity": 96,
     "priceMin": 2025000,
-    "priceMax": 2025000,
-    "priceDisplay": "₹20.25 Lakh",
+    "priceMax": 2425000,
+    "priceDisplay": "₹20.25 Lakh – ₹24.25 Lakh",
     "batteryCapacityKwh": 69.2,
     "batteryDisplay": "69.2 kWh",
     "batteryChemistry": "Lithium-Ion Battery Pack",
@@ -4733,7 +4461,7 @@
     "galleryLabels": [
       "Exterior Studio View"
     ],
-    "overview": "MG Hector Tomahawk EV is an electric family ev suvs & crossovers from MG (JSW MG Motor India) featuring indicative ex-showroom pricing of ₹20.25 Lakh, a 69.2 kWh battery pack, claimed range of 517 km, 149.9 kW peak output.",
+    "overview": "MG Hector Tomahawk EV is an electric family ev suvs & crossovers from MG (JSW MG Motor India) featuring indicative ex-showroom pricing of ₹20.25 Lakh – ₹24.25 Lakh, a 69.2 kWh battery pack, claimed range of 517 km, 149.9 kW peak output.",
     "variants": [
       {
         "name": "Essence 5-Seater",
@@ -4820,8 +4548,8 @@
     "trending": false,
     "popularity": 96,
     "priceMin": 790000,
-    "priceMax": 790000,
-    "priceDisplay": "₹7.90 Lakh",
+    "priceMax": 1017000,
+    "priceDisplay": "₹7.90 Lakh – ₹10.17 Lakh",
     "batteryCapacityKwh": 26.7,
     "batteryDisplay": "26.7 kWh",
     "batteryChemistry": "Lithium-Ion Battery Pack",
@@ -4848,7 +4576,7 @@
     "galleryLabels": [
       "Exterior Studio View"
     ],
-    "overview": "MG Comet EV is an electric compact evs & hatchbacks from MG (JSW MG Motor India) featuring indicative ex-showroom pricing of ₹7.90 Lakh, a 26.7 kWh battery pack, claimed range of 300 km, 50 kW peak output.",
+    "overview": "MG Comet EV is an electric compact evs & hatchbacks from MG (JSW MG Motor India) featuring indicative ex-showroom pricing of ₹7.90 Lakh – ₹10.17 Lakh, a 26.7 kWh battery pack, claimed range of 300 km, 50 kW peak output.",
     "variants": [
       {
         "name": "MG Comet EV Blackstorm Edition",
@@ -4951,8 +4679,8 @@
     "trending": false,
     "popularity": 96,
     "priceMin": 5565000,
-    "priceMax": 5565000,
-    "priceDisplay": "₹55.65 Lakh",
+    "priceMax": 6070000,
+    "priceDisplay": "₹55.65 Lakh – ₹60.70 Lakh",
     "batteryCapacityKwh": 66.4,
     "batteryDisplay": "66.4 kWh",
     "batteryChemistry": "Lithium-Ion Battery Pack",
@@ -4979,7 +4707,7 @@
     "galleryLabels": [
       "Exterior Studio View"
     ],
-    "overview": "Mini Countryman Electric is an electric premium & luxury evs from Mini (Mini) featuring indicative ex-showroom pricing of ₹55.65 Lakh, a 66.4 kWh battery pack, claimed range of 462 km, 233.4 kW peak output.",
+    "overview": "Mini Countryman Electric is an electric premium & luxury evs from Mini (Mini) featuring indicative ex-showroom pricing of ₹55.65 Lakh – ₹60.70 Lakh, a 66.4 kWh battery pack, claimed range of 462 km, 233.4 kW peak output.",
     "variants": [
       {
         "name": "Mini Countryman Favoured Pack",
@@ -5053,8 +4781,8 @@
     "trending": false,
     "popularity": 96,
     "priceMin": 95280,
-    "priceMax": 95280,
-    "priceDisplay": "₹95,280",
+    "priceMax": 139999,
+    "priceDisplay": "₹95,280 – ₹1.40 Lakh",
     "batteryCapacityKwh": 4.5,
     "batteryDisplay": "4.5 kWh",
     "batteryChemistry": "Lithium-Ion Battery Pack",
@@ -5081,7 +4809,7 @@
     "galleryLabels": [
       "Exterior Studio View"
     ],
-    "overview": "Ola Roadster is an electric performance e-bikes from Ola Electric (Ola Electric Mobility) featuring indicative ex-showroom pricing of ₹95,280, a 4.5 kWh battery pack, claimed range of 252 km, 7 kW peak output.",
+    "overview": "Ola Roadster is an electric performance e-bikes from Ola Electric (Ola Electric Mobility) featuring indicative ex-showroom pricing of ₹95,280 – ₹1.40 Lakh, a 4.5 kWh battery pack, claimed range of 252 km, 7 kW peak output.",
     "variants": [
       {
         "name": "3.5 kWh",
@@ -5178,8 +4906,8 @@
     "trending": false,
     "popularity": 96,
     "priceMin": 84999,
-    "priceMax": 84999,
-    "priceDisplay": "₹84,999",
+    "priceMax": 109999,
+    "priceDisplay": "₹84,999 – ₹1.10 Lakh",
     "batteryCapacityKwh": 4.0,
     "batteryDisplay": "4 kWh",
     "batteryChemistry": "Lithium-Ion Battery Pack",
@@ -5206,7 +4934,7 @@
     "galleryLabels": [
       "Exterior Studio View"
     ],
-    "overview": "Ola S1 Air is an electric family & city scooters from Ola Electric (Ola Electric Mobility) featuring indicative ex-showroom pricing of ₹84,999, a 4 kWh battery pack, claimed range of 151 km, 4.5 kW peak output.",
+    "overview": "Ola S1 Air is an electric family & city scooters from Ola Electric (Ola Electric Mobility) featuring indicative ex-showroom pricing of ₹84,999 – ₹1.10 Lakh, a 4 kWh battery pack, claimed range of 151 km, 4.5 kW peak output.",
     "variants": [
       {
         "name": "S1 Air 2 kWh",
@@ -5285,8 +5013,8 @@
     "trending": false,
     "popularity": 96,
     "priceMin": 12200000,
-    "priceMax": 12200000,
-    "priceDisplay": "₹1.22 Cr",
+    "priceMax": 17300000,
+    "priceDisplay": "₹1.22 Cr – ₹1.73 Cr",
     "batteryCapacityKwh": 100.0,
     "batteryDisplay": "100 kWh",
     "batteryChemistry": "Lithium-Ion Battery Pack",
@@ -5313,7 +5041,7 @@
     "galleryLabels": [
       "Exterior Studio View"
     ],
-    "overview": "Porsche Macan EV is an electric premium & luxury evs from Porsche (Porsche) featuring indicative ex-showroom pricing of ₹1.22 Cr, a 100 kWh battery pack, claimed range of 624 km, 453.4 kW peak output.",
+    "overview": "Porsche Macan EV is an electric premium & luxury evs from Porsche (Porsche) featuring indicative ex-showroom pricing of ₹1.22 Cr – ₹1.73 Cr, a 100 kWh battery pack, claimed range of 624 km, 453.4 kW peak output.",
     "variants": [
       {
         "name": "Porsche Macan EV 4S",
@@ -5393,8 +5121,8 @@
     "trending": false,
     "popularity": 96,
     "priceMin": 17000000,
-    "priceMax": 17000000,
-    "priceDisplay": "₹1.70 Cr",
+    "priceMax": 27000000,
+    "priceDisplay": "₹1.70 Cr – ₹2.70 Cr",
     "batteryCapacityKwh": 93.4,
     "batteryDisplay": "93.4 kWh",
     "batteryChemistry": "Lithium-Ion Battery Pack",
@@ -5421,7 +5149,7 @@
     "galleryLabels": [
       "Exterior Studio View"
     ],
-    "overview": "Porsche Taycan is an electric electric sedans & gt from Porsche (Porsche) featuring indicative ex-showroom pricing of ₹1.70 Cr, a 93.4 kWh battery pack, claimed range of 705 km, 650.2 kW peak output.",
+    "overview": "Porsche Taycan is an electric electric sedans & gt from Porsche (Porsche) featuring indicative ex-showroom pricing of ₹1.70 Cr – ₹2.70 Cr, a 93.4 kWh battery pack, claimed range of 705 km, 650.2 kW peak output.",
     "variants": [
       {
         "name": "Porsche Taycan 4S",
@@ -5497,9 +5225,9 @@
     "advisoryNote": "Compiled from verified public EV sources. Confirm live on-road pricing, variant availability, and state subsidies with an authorized dealer.",
     "trending": false,
     "popularity": 96,
-    "priceMin": 127922,
-    "priceMax": 127922,
-    "priceDisplay": "₹1.28 Lakh",
+    "priceMin": 129950,
+    "priceMax": 139950,
+    "priceDisplay": "₹1.30 Lakh – ₹1.40 Lakh",
     "batteryCapacityKwh": 3.24,
     "batteryDisplay": "3.24 kWh",
     "batteryChemistry": "Lithium-Ion Battery Pack",
@@ -5526,61 +5254,13 @@
     "galleryLabels": [
       "Exterior Studio View"
     ],
-    "overview": "Revolt RV400 is an electric electric motorcycles from Revolt (Revolt Motors) featuring indicative ex-showroom pricing of ₹1.28 Lakh, a 3.24 kWh battery pack, claimed range of 150 km, 4.1 kW peak output.",
+    "overview": "Revolt RV400 is an electric electric motorcycles from Revolt (Revolt Motors) featuring indicative ex-showroom pricing of ₹1.30 Lakh – ₹1.40 Lakh, a 3.24 kWh battery pack, claimed range of 150 km, 4.1 kW peak output.",
     "variants": [
-      {
-        "name": "Affordable Model",
-        "battery": "3.24 kWh",
-        "range": "150 km",
-        "price": "₹84,360*"
-      },
       {
         "name": "Cricket Special Edition (India Blue)",
         "battery": "3.24 kWh",
         "range": "150 km",
         "price": "₹1.40 Lakh*"
-      },
-      {
-        "name": "Hop Electric LEO",
-        "battery": "3.24 kWh",
-        "range": "150 km",
-        "price": "₹84,360*"
-      },
-      {
-        "name": "Hop Oxo",
-        "battery": "3.24 kWh",
-        "range": "150 km",
-        "price": "₹1.28 Lakh*"
-      },
-      {
-        "name": "JHEV Delta R3",
-        "battery": "3.24 kWh",
-        "range": "150 km",
-        "price": "₹1.70 Lakh*"
-      },
-      {
-        "name": "Joy e-bike Hurricane",
-        "battery": "3.24 kWh",
-        "range": "150 km",
-        "price": "₹2.33 Lakh*"
-      },
-      {
-        "name": "Joy e-bike Thunderbolt",
-        "battery": "3.24 kWh",
-        "range": "150 km",
-        "price": "₹2.33 Lakh*"
-      },
-      {
-        "name": "Most Expensive",
-        "battery": "3.24 kWh",
-        "range": "150 km",
-        "price": "₹1.61 Lakh*"
-      },
-      {
-        "name": "PURE EV eTryst 350",
-        "battery": "3.24 kWh",
-        "range": "150 km",
-        "price": "₹1.50 Lakh*"
       },
       {
         "name": "RV400 Cricket Special Edition (India Blue)",
@@ -5614,7 +5294,7 @@
       "Claimed Driving Range: 150 km",
       "Peak Motor Output: 4.1 kW",
       "Claimed Top Speed: 85 km/h",
-      "Available in 13 trim variants"
+      "Available in 5 trim variants"
     ],
     "availabilityScope": "pan-india",
     "highlightTag": "⚡ 150 km IDC",
@@ -5630,8 +5310,8 @@
       },
       "runningCostPerKmInr": 0.16,
       "iceEquivalentCostPerKmInr": 2.65,
-      "indicativeEmiInr": 3470,
-      "emiDisplay": "₹3,470/mo*",
+      "indicativeEmiInr": 3525,
+      "emiDisplay": "₹3,525/mo*",
       "loanTenureMonths": 36,
       "interestRatePct": 9.25,
       "typicalDailyKm": 30,
@@ -5664,9 +5344,9 @@
     "advisoryNote": "Compiled from verified public EV sources. Confirm live on-road pricing, variant availability, and state subsidies with an authorized dealer.",
     "trending": false,
     "popularity": 96,
-    "priceMin": 1409000,
-    "priceMax": 1409000,
-    "priceDisplay": "₹14.09 Lakh",
+    "priceMin": 1719000,
+    "priceMax": 1969000,
+    "priceDisplay": "₹17.19 Lakh – ₹19.69 Lakh",
     "batteryCapacityKwh": 55.0,
     "batteryDisplay": "55 kWh",
     "batteryChemistry": "Lithium-Ion Battery Pack",
@@ -5693,19 +5373,13 @@
     "galleryLabels": [
       "Exterior Studio View"
     ],
-    "overview": "Tata Curvv.ev is an electric family ev suvs & crossovers from Tata.ev (Tata Passenger Electric Mobility) featuring indicative ex-showroom pricing of ₹14.09 Lakh, a 55 kWh battery pack, claimed range of 502 km, 123 kW peak output.",
+    "overview": "Tata Curvv.ev is an electric family ev suvs & crossovers from Tata.ev (Tata Passenger Electric Mobility) featuring indicative ex-showroom pricing of ₹17.19 Lakh – ₹19.69 Lakh, a 55 kWh battery pack, claimed range of 502 km, 123 kW peak output.",
     "variants": [
       {
         "name": "Curvv.ev Standard",
         "battery": "55 kWh",
         "range": "502 km",
         "price": "₹17.49 Lakh*"
-      },
-      {
-        "name": "Tata Curvv EV",
-        "battery": "55 kWh",
-        "range": "502 km",
-        "price": "₹14.09 Lakh*"
       },
       {
         "name": "Tata Curvv EV Accomplished X 55",
@@ -5732,7 +5406,7 @@
       "Battery Pack: 55 kWh",
       "Claimed Driving Range: 502 km",
       "Peak Motor Output: 123 kW",
-      "Available in 5 trim variants"
+      "Available in 4 trim variants"
     ],
     "availabilityScope": "pan-india",
     "highlightTag": "🛣️ 502 km Range",
@@ -5748,8 +5422,8 @@
       },
       "runningCostPerKmInr": 0.82,
       "iceEquivalentCostPerKmInr": 7.8,
-      "indicativeEmiInr": 24774,
-      "emiDisplay": "₹24,774/mo*",
+      "indicativeEmiInr": 30225,
+      "emiDisplay": "₹30,225/mo*",
       "loanTenureMonths": 60,
       "interestRatePct": 8.85,
       "typicalDailyKm": 45,
@@ -5785,9 +5459,9 @@
     "advisoryNote": "Compiled from verified public EV sources. Confirm live on-road pricing, variant availability, and state subsidies with an authorized dealer.",
     "trending": false,
     "popularity": 96,
-    "priceMin": 1814000,
-    "priceMax": 1814000,
-    "priceDisplay": "₹18.14 Lakh",
+    "priceMin": 2149000,
+    "priceMax": 3004000,
+    "priceDisplay": "₹21.49 Lakh – ₹30.04 Lakh",
     "batteryCapacityKwh": 75.0,
     "batteryDisplay": "75 kWh",
     "batteryChemistry": "LFP",
@@ -5814,19 +5488,13 @@
     "galleryLabels": [
       "Exterior Studio View"
     ],
-    "overview": "Tata Harrier.ev is an electric family ev suvs & crossovers from Tata.ev (Tata Passenger Electric Mobility) featuring indicative ex-showroom pricing of ₹18.14 Lakh, a 75 kWh battery pack, claimed range of 627 km, 233.4 kW peak output.",
+    "overview": "Tata Harrier.ev is an electric family ev suvs & crossovers from Tata.ev (Tata Passenger Electric Mobility) featuring indicative ex-showroom pricing of ₹21.49 Lakh – ₹30.04 Lakh, a 75 kWh battery pack, claimed range of 627 km, 233.4 kW peak output.",
     "variants": [
       {
         "name": "Harrier.ev Standard",
         "battery": "75 kWh",
         "range": "627 km",
         "price": "₹21.49 Lakh*"
-      },
-      {
-        "name": "Tata Harrier EV",
-        "battery": "75 kWh",
-        "range": "627 km",
-        "price": "₹18.14 Lakh*"
       },
       {
         "name": "Tata Harrier EV Adventure 65",
@@ -5907,7 +5575,7 @@
       "Battery Pack: 75 kWh (LFP)",
       "Claimed Driving Range: 627 km",
       "Peak Motor Output: 233.4 kW",
-      "Available in 14 trim variants"
+      "Available in 13 trim variants"
     ],
     "availabilityScope": "pan-india",
     "highlightTag": "🛣️ 627 km Range",
@@ -5923,8 +5591,8 @@
       },
       "runningCostPerKmInr": 0.9,
       "iceEquivalentCostPerKmInr": 7.8,
-      "indicativeEmiInr": 31895,
-      "emiDisplay": "₹31,895/mo*",
+      "indicativeEmiInr": 37785,
+      "emiDisplay": "₹37,785/mo*",
       "loanTenureMonths": 60,
       "interestRatePct": 8.85,
       "typicalDailyKm": 45,
@@ -5961,8 +5629,8 @@
     "trending": false,
     "popularity": 96,
     "priceMin": 1879000,
-    "priceMax": 1879000,
-    "priceDisplay": "₹18.79 Lakh",
+    "priceMax": 2648000,
+    "priceDisplay": "₹18.79 Lakh – ₹26.48 Lakh",
     "batteryCapacityKwh": 75.0,
     "batteryDisplay": "75 kWh",
     "batteryChemistry": "Lithium-Ion Battery Pack",
@@ -5989,7 +5657,7 @@
     "galleryLabels": [
       "Exterior Studio View"
     ],
-    "overview": "Tata Sierra EV is an electric family ev suvs & crossovers from Tata.ev (Tata Passenger Electric Mobility) featuring indicative ex-showroom pricing of ₹18.79 Lakh, a 75 kWh battery pack, claimed range of 665 km.",
+    "overview": "Tata Sierra EV is an electric family ev suvs & crossovers from Tata.ev (Tata Passenger Electric Mobility) featuring indicative ex-showroom pricing of ₹18.79 Lakh – ₹26.48 Lakh, a 75 kWh battery pack, claimed range of 665 km.",
     "variants": [
       {
         "name": "Tata Sierra EV Adventure 75 RWD ACFC",
@@ -6115,16 +5783,16 @@
     "fullName": "Tata Tiago.ev",
     "categoryId": "four-wheelers",
     "category": "4-Wheelers",
-    "subCategoryId": "premium-suvs",
-    "subCategory": "Premium & Luxury EVs",
+    "subCategoryId": "compact-suvs",
+    "subCategory": "Compact EVs & Hatchbacks",
     "isSampleData": false,
     "sampleDataNote": "Verified from public OEM and automotive specifications. Confirm live city ex-showroom pricing and subsidies with an authorized dealer.",
     "advisoryNote": "Compiled from verified public EV sources. Confirm live on-road pricing, variant availability, and state subsidies with an authorized dealer.",
     "trending": false,
     "popularity": 96,
-    "priceMin": 7755000,
-    "priceMax": 7755000,
-    "priceDisplay": "₹77.55 Lakh",
+    "priceMin": 699000,
+    "priceMax": 1009000,
+    "priceDisplay": "₹6.99 Lakh – ₹10.09 Lakh",
     "batteryCapacityKwh": 24.0,
     "batteryDisplay": "24 kWh",
     "batteryChemistry": "Lithium-Ion Battery Pack",
@@ -6151,26 +5819,8 @@
     "galleryLabels": [
       "Exterior Studio View"
     ],
-    "overview": "Tata Tiago.ev is an electric premium & luxury evs from Tata.ev (Tata Passenger Electric Mobility) featuring indicative ex-showroom pricing of ₹77.55 Lakh, a 24 kWh battery pack, claimed range of 285 km, 55 kW peak output.",
+    "overview": "Tata Tiago.ev is an electric compact evs & hatchbacks from Tata.ev (Tata Passenger Electric Mobility) featuring indicative ex-showroom pricing of ₹6.99 Lakh – ₹10.09 Lakh, a 24 kWh battery pack, claimed range of 285 km, 55 kW peak output.",
     "variants": [
-      {
-        "name": "Most Affordable",
-        "battery": "24 kWh",
-        "range": "285 km",
-        "price": "₹5.84 Lakh*"
-      },
-      {
-        "name": "Most Expensive",
-        "battery": "24 kWh",
-        "range": "285 km",
-        "price": "₹77.55 Lakh*"
-      },
-      {
-        "name": "Tata Tiago EV",
-        "battery": "24 kWh",
-        "range": "285 km",
-        "price": "₹5.84 Lakh*"
-      },
       {
         "name": "Tata Tiago EV Creative Plus 24 Long Range",
         "battery": "24 kWh",
@@ -6203,15 +5853,15 @@
       }
     ],
     "features": [
-      "Segment: 4-Wheelers (Premium & Luxury EVs)",
+      "Segment: 4-Wheelers (Compact EVs & Hatchbacks)",
       "Powertrain: BEV (Zero Tailpipe Emissions)",
       "Battery Pack: 24 kWh",
       "Claimed Driving Range: 285 km",
       "Peak Motor Output: 55 kW",
-      "Available in 8 trim variants"
+      "Available in 5 trim variants"
     ],
     "availabilityScope": "pan-india",
-    "highlightTag": "✓ Verified Spec",
+    "highlightTag": "💰 Value EV",
     "sourceUrl": "https://www.carwale.com/new/electric-cars/",
     "verificationStatus": "verified",
     "firstLaunchYear": 2022,
@@ -6224,8 +5874,8 @@
       },
       "runningCostPerKmInr": 0.63,
       "iceEquivalentCostPerKmInr": 7.8,
-      "indicativeEmiInr": 136355,
-      "emiDisplay": "₹136,355/mo*",
+      "indicativeEmiInr": 12290,
+      "emiDisplay": "₹12,290/mo*",
       "loanTenureMonths": 60,
       "interestRatePct": 8.85,
       "typicalDailyKm": 45,
@@ -6234,9 +5884,9 @@
     },
     "elasticTags": [
       "5 seater",
+      "compact-suvs",
       "family car",
       "four-wheelers",
-      "premium-suvs",
       "suv",
       "tata passenger electric mobility",
       "tata.ev",
@@ -6260,8 +5910,8 @@
     "trending": false,
     "popularity": 96,
     "priceMin": 1249000,
-    "priceMax": 1249000,
-    "priceDisplay": "₹12.49 Lakh",
+    "priceMax": 1375000,
+    "priceDisplay": "₹12.49 Lakh – ₹13.75 Lakh",
     "batteryCapacityKwh": 26.0,
     "batteryDisplay": "26 kWh",
     "batteryChemistry": "Lithium-Ion Battery Pack",
@@ -6288,7 +5938,7 @@
     "galleryLabels": [
       "Exterior Studio View"
     ],
-    "overview": "Tata Tigor.ev is an electric electric sedans & gt from Tata.ev (Tata Passenger Electric Mobility) featuring indicative ex-showroom pricing of ₹12.49 Lakh, a 26 kWh battery pack, claimed range of 315 km, 55 kW peak output.",
+    "overview": "Tata Tigor.ev is an electric electric sedans & gt from Tata.ev (Tata Passenger Electric Mobility) featuring indicative ex-showroom pricing of ₹12.49 Lakh – ₹13.75 Lakh, a 26 kWh battery pack, claimed range of 315 km, 55 kW peak output.",
     "variants": [
       {
         "name": "Tata Tigor EV XE",
@@ -6376,8 +6026,8 @@
     "trending": false,
     "popularity": 96,
     "priceMin": 5089000,
-    "priceMax": 5089000,
-    "priceDisplay": "₹50.89 Lakh",
+    "priceMax": 6199000,
+    "priceDisplay": "₹50.89 Lakh – ₹61.99 Lakh",
     "batteryCapacityKwh": 82.0,
     "batteryDisplay": "82 kWh",
     "batteryChemistry": "Lithium-Ion Battery Pack",
@@ -6404,7 +6054,7 @@
     "galleryLabels": [
       "Exterior Studio View"
     ],
-    "overview": "Tesla Model Y is an electric premium & luxury evs from Tesla (Tesla) featuring indicative ex-showroom pricing of ₹50.89 Lakh, a 82 kWh battery pack, claimed range of 681 km.",
+    "overview": "Tesla Model Y is an electric premium & luxury evs from Tesla (Tesla) featuring indicative ex-showroom pricing of ₹50.89 Lakh – ₹61.99 Lakh, a 82 kWh battery pack, claimed range of 681 km.",
     "variants": [
       {
         "name": "Tesla Model Y L Premium AWD",
@@ -6476,9 +6126,9 @@
     "advisoryNote": "Compiled from verified public EV sources. Confirm live on-road pricing, variant availability, and state subsidies with an authorized dealer.",
     "trending": false,
     "popularity": 96,
-    "priceMin": 279000,
-    "priceMax": 279000,
-    "priceDisplay": "₹2.79 Lakh",
+    "priceMin": 309000,
+    "priceMax": 445487,
+    "priceDisplay": "₹3.09 Lakh – ₹4.45 Lakh",
     "batteryCapacityKwh": 10.3,
     "batteryDisplay": "10.3 kWh",
     "batteryChemistry": "Lithium-Ion Battery Pack",
@@ -6505,7 +6155,7 @@
     "galleryLabels": [
       "Exterior Studio View"
     ],
-    "overview": "Ultraviolette F77 is an electric performance e-bikes from Ultraviolette (Ultraviolette Automotive) featuring indicative ex-showroom pricing of ₹2.79 Lakh, a 10.3 kWh battery pack, claimed range of 323 km, 30 kW peak output.",
+    "overview": "Ultraviolette F77 is an electric performance e-bikes from Ultraviolette (Ultraviolette Automotive) featuring indicative ex-showroom pricing of ₹3.09 Lakh – ₹4.45 Lakh, a 10.3 kWh battery pack, claimed range of 323 km, 30 kW peak output.",
     "variants": [
       {
         "name": "F77 Mach 2 Original",
@@ -6520,12 +6170,6 @@
         "price": "₹4.45 Lakh*"
       },
       {
-        "name": "Flying Flea C6 (Royal Enfield)",
-        "battery": "10.3 kWh",
-        "range": "323 km",
-        "price": "₹2.79 Lakh*"
-      },
-      {
         "name": "Mach 2 Original",
         "battery": "10.3 kWh",
         "range": "323 km",
@@ -6538,12 +6182,6 @@
         "price": "₹4.24 Lakh*"
       },
       {
-        "name": "Oben Rorr Evo",
-        "battery": "10.3 kWh",
-        "range": "323 km",
-        "price": "₹1.40 Lakh*"
-      },
-      {
         "name": "Recon",
         "battery": "10.3 kWh",
         "range": "323 km",
@@ -6554,12 +6192,6 @@
         "battery": "10.3 kWh",
         "range": "323 km",
         "price": "₹3.09 Lakh*"
-      },
-      {
-        "name": "Vida Dirt.E K3",
-        "battery": "10.3 kWh",
-        "range": "323 km",
-        "price": "₹69,990*"
       }
     ],
     "features": [
@@ -6569,7 +6201,7 @@
       "Claimed Driving Range: 323 km",
       "Peak Motor Output: 30 kW",
       "Claimed Top Speed: 155 km/h",
-      "Available in 9 trim variants"
+      "Available in 6 trim variants"
     ],
     "availabilityScope": "pan-india",
     "highlightTag": "⚡ 323 km IDC",
@@ -6585,8 +6217,8 @@
       },
       "runningCostPerKmInr": 0.24,
       "iceEquivalentCostPerKmInr": 2.65,
-      "indicativeEmiInr": 7569,
-      "emiDisplay": "₹7,569/mo*",
+      "indicativeEmiInr": 8383,
+      "emiDisplay": "₹8,383/mo*",
       "loanTenureMonths": 36,
       "interestRatePct": 9.25,
       "typicalDailyKm": 30,
@@ -6620,8 +6252,8 @@
     "trending": false,
     "popularity": 96,
     "priceMin": 399000,
-    "priceMax": 399000,
-    "priceDisplay": "₹3.99 Lakh",
+    "priceMax": 599000,
+    "priceDisplay": "₹3.99 Lakh – ₹5.99 Lakh",
     "batteryCapacityKwh": 18.0,
     "batteryDisplay": "18 kWh",
     "batteryChemistry": "Lithium-Ion Battery Pack",
@@ -6648,7 +6280,7 @@
     "galleryLabels": [
       "Exterior Studio View"
     ],
-    "overview": "Vayve Mobility Eva is an electric compact evs & hatchbacks from Vayve Mobility (Vayve Mobility) featuring indicative ex-showroom pricing of ₹3.99 Lakh, a 18 kWh battery pack, claimed range of 250 km, 15 kW peak output.",
+    "overview": "Vayve Mobility Eva is an electric compact evs & hatchbacks from Vayve Mobility (Vayve Mobility) featuring indicative ex-showroom pricing of ₹3.99 Lakh – ₹5.99 Lakh, a 18 kWh battery pack, claimed range of 250 km, 15 kW peak output.",
     "variants": [
       {
         "name": "Vayve Mobility Eva Nova",
@@ -6726,8 +6358,8 @@
     "trending": false,
     "popularity": 96,
     "priceMin": 119900,
-    "priceMax": 119900,
-    "priceDisplay": "₹1.20 Lakh",
+    "priceMax": 149900,
+    "priceDisplay": "₹1.20 Lakh – ₹1.50 Lakh",
     "batteryCapacityKwh": 3.44,
     "batteryDisplay": "3.44 kWh",
     "batteryChemistry": "Lithium-Ion Battery Pack",
@@ -6754,7 +6386,7 @@
     "galleryLabels": [
       "Exterior Studio View"
     ],
-    "overview": "VIDA V1 is an electric smart & performance scooters from VIDA (Hero MotoCorp) featuring indicative ex-showroom pricing of ₹1.20 Lakh, a 3.44 kWh battery pack, claimed range of 165 km, 6 kW peak output.",
+    "overview": "VIDA V1 is an electric smart & performance scooters from VIDA (Hero MotoCorp) featuring indicative ex-showroom pricing of ₹1.20 Lakh – ₹1.50 Lakh, a 3.44 kWh battery pack, claimed range of 165 km, 6 kW peak output.",
     "variants": [
       {
         "name": "V1 Plus",
@@ -6827,8 +6459,8 @@
     "trending": false,
     "popularity": 96,
     "priceMin": 150999,
-    "priceMax": 150999,
-    "priceDisplay": "₹1.51 Lakh",
+    "priceMax": 155000,
+    "priceDisplay": "₹1.51 Lakh – ₹1.55 Lakh",
     "batteryCapacityKwh": 3.44,
     "batteryDisplay": "3.44 kWh",
     "batteryChemistry": "Lithium-Ion Battery Pack",
@@ -6855,7 +6487,7 @@
     "galleryLabels": [
       "Exterior Studio View"
     ],
-    "overview": "VIDA V2 is an electric smart & performance scooters from VIDA (Hero MotoCorp) featuring indicative ex-showroom pricing of ₹1.51 Lakh, a 3.44 kWh battery pack, claimed range of 165 km, 6 kW peak output.",
+    "overview": "VIDA V2 is an electric smart & performance scooters from VIDA (Hero MotoCorp) featuring indicative ex-showroom pricing of ₹1.51 Lakh – ₹1.55 Lakh, a 3.44 kWh battery pack, claimed range of 165 km, 6 kW peak output.",
     "variants": [
       {
         "name": "Plus",
@@ -6940,11 +6572,11 @@
     "trending": false,
     "popularity": 96,
     "priceMin": 1819000,
-    "priceMax": 1819000,
-    "priceDisplay": "₹18.19 Lakh",
+    "priceMax": 2009000,
+    "priceDisplay": "₹18.19 Lakh – ₹20.09 Lakh",
     "batteryCapacityKwh": 59.6,
     "batteryDisplay": "59.6 kWh",
-    "batteryChemistry": "NMC",
+    "batteryChemistry": "Lithium-Ion Battery Pack",
     "claimedRangeKm": 468,
     "rangeDisplay": "468 km",
     "rangeStandard": "Certified / Claimed",
@@ -6968,43 +6600,13 @@
     "galleryLabels": [
       "Exterior Studio View"
     ],
-    "overview": "VinFast VF 6 is an electric family ev suvs & crossovers from VinFast (VinFast India) featuring indicative ex-showroom pricing of ₹18.19 Lakh, a 59.6 kWh battery pack, claimed range of 468 km, 150 kW peak output.",
+    "overview": "VinFast VF 6 is an electric family ev suvs & crossovers from VinFast (VinFast India) featuring indicative ex-showroom pricing of ₹18.19 Lakh – ₹20.09 Lakh, a 59.6 kWh battery pack, claimed range of 468 km, 150 kW peak output.",
     "variants": [
-      {
-        "name": "5NM",
-        "battery": "59.6 kWh",
-        "range": "468 km",
-        "price": "₹18.19 Lakh*"
-      },
-      {
-        "name": "LFP",
-        "battery": "59.6 kWh",
-        "range": "468 km",
-        "price": "₹18.19 Lakh*"
-      },
-      {
-        "name": "NMC",
-        "battery": "59.6 kWh",
-        "range": "468 km",
-        "price": "₹18.19 Lakh*"
-      },
-      {
-        "name": "VinFast Limo Green",
-        "battery": "59.6 kWh",
-        "range": "468 km",
-        "price": "₹22.99 Lakh*"
-      },
       {
         "name": "VinFast VF 6 Standard",
         "battery": "59.6 kWh",
         "range": "468 km",
         "price": "₹18.19 Lakh*"
-      },
-      {
-        "name": "VinFast VF MPV 7",
-        "battery": "59.6 kWh",
-        "range": "468 km",
-        "price": "₹20.39 Lakh*"
       },
       {
         "name": "VinFast VF6",
@@ -7034,10 +6636,10 @@
     "features": [
       "Segment: 4-Wheelers (Family EV SUVs & Crossovers)",
       "Powertrain: BEV (Zero Tailpipe Emissions)",
-      "Battery Pack: 59.6 kWh (NMC)",
+      "Battery Pack: 59.6 kWh",
       "Claimed Driving Range: 468 km",
       "Peak Motor Output: 150 kW",
-      "Available in 10 trim variants"
+      "Available in 5 trim variants"
     ],
     "availabilityScope": "pan-india",
     "highlightTag": "🛣️ 468 km Range",
@@ -7091,8 +6693,8 @@
     "trending": false,
     "popularity": 96,
     "priceMin": 2299000,
-    "priceMax": 2299000,
-    "priceDisplay": "₹22.99 Lakh",
+    "priceMax": 2809000,
+    "priceDisplay": "₹22.99 Lakh – ₹28.09 Lakh",
     "batteryCapacityKwh": 70.0,
     "batteryDisplay": "70 kWh",
     "batteryChemistry": "Lithium-Ion Battery Pack",
@@ -7119,7 +6721,7 @@
     "galleryLabels": [
       "Exterior Studio View"
     ],
-    "overview": "VinFast VF 7 is an electric family ev suvs & crossovers from VinFast (VinFast India) featuring indicative ex-showroom pricing of ₹22.99 Lakh, a 70 kWh battery pack, claimed range of 532 km, 260 kW peak output.",
+    "overview": "VinFast VF 7 is an electric family ev suvs & crossovers from VinFast (VinFast India) featuring indicative ex-showroom pricing of ₹22.99 Lakh – ₹28.09 Lakh, a 70 kWh battery pack, claimed range of 532 km, 260 kW peak output.",
     "variants": [
       {
         "name": "VinFast VF 7 Standard",
@@ -7773,6 +7375,102 @@
       "four-wheelers",
       "highway",
       "lotus"
+    ]
+  },
+  {
+    "id": "mahindra-xuv400",
+    "brandId": "mahindra",
+    "brand": "Mahindra",
+    "manufacturer": "Mahindra Electric Automobile",
+    "model": "XUV400",
+    "fullName": "Mahindra XUV400",
+    "categoryId": "four-wheelers",
+    "category": "4-Wheelers",
+    "subCategoryId": "family-crossovers",
+    "subCategory": "Family EV SUVs & Crossovers",
+    "isSampleData": false,
+    "sampleDataNote": "Verified from public OEM and automotive specifications. Confirm live city ex-showroom pricing and subsidies with an authorized dealer.",
+    "advisoryNote": "Compiled from verified public EV sources. Confirm live on-road pricing, variant availability, and state subsidies with an authorized dealer.",
+    "trending": false,
+    "popularity": 93,
+    "priceMin": 1549000,
+    "priceMax": 1549000,
+    "priceDisplay": "₹15.49 Lakh",
+    "batteryCapacityKwh": 34.5,
+    "batteryDisplay": "34.5 kWh",
+    "batteryChemistry": "Lithium-Ion Battery Pack",
+    "claimedRangeKm": 456,
+    "rangeDisplay": "456 km",
+    "rangeStandard": "Certified / Claimed",
+    "topSpeedKmh": null,
+    "topSpeedDisplay": "TBA",
+    "accelerationDisplay": "Check Official Brochure",
+    "chargingTimeDisplay": "Standard EV Charging",
+    "acChargingTime": "Standard Home AC",
+    "dcChargingTime": "Check Dealer for DC Spec",
+    "chargingConnector": "CCS2 / Type-2",
+    "motorPowerKw": 111.5,
+    "motorPowerDisplay": "111.5 kW",
+    "motorType": "Electric Traction Motor",
+    "driveType": "Electric Drive",
+    "warrantyDisplay": "Refer Official OEM Battery Warranty",
+    "vehicleWarranty": "Standard OEM Vehicle Warranty",
+    "image": "assets/images/vehicles/mahindra/xuv400/hero.webp",
+    "images": [
+      "assets/images/vehicles/mahindra/xuv400/hero.webp"
+    ],
+    "galleryLabels": [
+      "Exterior Studio View"
+    ],
+    "overview": "Mahindra XUV400 is an electric family ev suvs & crossovers from Mahindra (Mahindra Electric Automobile) featuring indicative ex-showroom pricing of ₹15.49 Lakh, a 34.5 kWh battery pack, claimed range of 456 km, 111.5 kW peak output.",
+    "variants": [
+      {
+        "name": "XUV400 Standard",
+        "battery": "34.5 kWh",
+        "range": "456 km",
+        "price": "₹15.49 Lakh*"
+      }
+    ],
+    "features": [
+      "Segment: 4-Wheelers (Family EV SUVs & Crossovers)",
+      "Powertrain: BEV (Zero Tailpipe Emissions)",
+      "Battery Pack: 34.5 kWh",
+      "Claimed Driving Range: 456 km",
+      "Peak Motor Output: 111.5 kW"
+    ],
+    "availabilityScope": "pan-india",
+    "highlightTag": "🛣️ 456 km Range",
+    "sourceUrl": "https://www.carwale.com/new/electric-cars/3/",
+    "verificationStatus": "verified",
+    "firstLaunchYear": 2023,
+    "elasticMetrics": {
+      "efficiencyWhPerKm": 75.7,
+      "realWorldRangeKm": {
+        "eco": 388,
+        "city": 347,
+        "highway": 301
+      },
+      "runningCostPerKmInr": 0.57,
+      "iceEquivalentCostPerKmInr": 7.8,
+      "indicativeEmiInr": 27236,
+      "emiDisplay": "₹27,236/mo*",
+      "loanTenureMonths": 60,
+      "interestRatePct": 8.85,
+      "typicalDailyKm": 45,
+      "estMonthlySavingsInr": 8459,
+      "co2SavedKgPerYear": 2317
+    },
+    "elasticTags": [
+      "5 seater",
+      "family car",
+      "family-crossovers",
+      "fast charging",
+      "four-wheelers",
+      "highway",
+      "mahindra",
+      "mahindra electric automobile",
+      "suv",
+      "xuv400"
     ]
   },
   {
@@ -9207,8 +8905,8 @@
     "trending": false,
     "popularity": 92,
     "priceMin": 145999,
-    "priceMax": 145999,
-    "priceDisplay": "₹1.46 Lakh",
+    "priceMax": 150999,
+    "priceDisplay": "₹1.46 Lakh – ₹1.51 Lakh",
     "batteryCapacityKwh": null,
     "batteryDisplay": "TBA",
     "batteryChemistry": "Lithium-Ion Battery Pack",
@@ -9235,7 +8933,7 @@
     "galleryLabels": [
       "Exterior Studio View"
     ],
-    "overview": "ADMS Alpha is an electric electric motorcycles from ADMS (ADMS) featuring indicative ex-showroom pricing of ₹1.46 Lakh, claimed range of 80 km, 2 kW peak output.",
+    "overview": "ADMS Alpha is an electric electric motorcycles from ADMS (ADMS) featuring indicative ex-showroom pricing of ₹1.46 Lakh – ₹1.51 Lakh, claimed range of 80 km, 2 kW peak output.",
     "variants": [
       {
         "name": "60V, 50Ah",
@@ -9306,8 +9004,8 @@
     "trending": false,
     "popularity": 92,
     "priceMin": 450000,
-    "priceMax": 450000,
-    "priceDisplay": "₹4.50 Lakh",
+    "priceMax": 500000,
+    "priceDisplay": "₹4.50 Lakh – ₹5.00 Lakh",
     "batteryCapacityKwh": null,
     "batteryDisplay": "TBA",
     "batteryChemistry": "Lithium-Ion Battery Pack",
@@ -9334,7 +9032,7 @@
     "galleryLabels": [
       "Exterior Studio View"
     ],
-    "overview": "Blinq Mobility RYDE is an electric compact evs & hatchbacks from Blinq Mobility (Blinq Mobility) featuring indicative ex-showroom pricing of ₹4.50 Lakh, claimed range of 250 km.",
+    "overview": "Blinq Mobility RYDE is an electric compact evs & hatchbacks from Blinq Mobility (Blinq Mobility) featuring indicative ex-showroom pricing of ₹4.50 Lakh – ₹5.00 Lakh, claimed range of 250 km.",
     "variants": [
       {
         "name": "Blinq RYDE Family",
@@ -9404,8 +9102,8 @@
     "trending": false,
     "popularity": 92,
     "priceMin": 120133,
-    "priceMax": 120133,
-    "priceDisplay": "₹1.20 Lakh",
+    "priceMax": 154733,
+    "priceDisplay": "₹1.20 Lakh – ₹1.55 Lakh",
     "batteryCapacityKwh": null,
     "batteryDisplay": "TBA",
     "batteryChemistry": "Lithium-Ion Battery Pack",
@@ -9432,7 +9130,7 @@
     "galleryLabels": [
       "Exterior Studio View"
     ],
-    "overview": "Honda Activa e is an electric family & city scooters from Honda (Honda) featuring indicative ex-showroom pricing of ₹1.20 Lakh, claimed range of 102 km, 6 kW peak output.",
+    "overview": "Honda Activa e is an electric family & city scooters from Honda (Honda) featuring indicative ex-showroom pricing of ₹1.20 Lakh – ₹1.55 Lakh, claimed range of 102 km, 6 kW peak output.",
     "variants": [
       {
         "name": "RoadSync Duo",
@@ -9503,8 +9201,8 @@
     "trending": false,
     "popularity": 92,
     "priceMin": 69990,
-    "priceMax": 69990,
-    "priceDisplay": "₹69,990",
+    "priceMax": 82490,
+    "priceDisplay": "₹69,990 – ₹82,490",
     "batteryCapacityKwh": null,
     "batteryDisplay": "TBA",
     "batteryChemistry": "Lithium-Ion Battery Pack",
@@ -9531,7 +9229,7 @@
     "galleryLabels": [
       "Exterior Studio View"
     ],
-    "overview": "Kinetic Safar is an electric family & city scooters from Kinetic Green (Kinetic Green) featuring indicative ex-showroom pricing of ₹69,990, claimed range of 105 km, 2.2 kW peak output.",
+    "overview": "Kinetic Safar is an electric family & city scooters from Kinetic Green (Kinetic Green) featuring indicative ex-showroom pricing of ₹69,990 – ₹82,490, claimed range of 105 km, 2.2 kW peak output.",
     "variants": [
       {
         "name": "X3 Go",
@@ -9614,8 +9312,8 @@
     "trending": false,
     "popularity": 92,
     "priceMin": 132499,
-    "priceMax": 132499,
-    "priceDisplay": "₹1.32 Lakh",
+    "priceMax": 137499,
+    "priceDisplay": "₹1.32 Lakh – ₹1.37 Lakh",
     "batteryCapacityKwh": null,
     "batteryDisplay": "TBA",
     "batteryChemistry": "Lithium-Ion Battery Pack",
@@ -9642,7 +9340,7 @@
     "galleryLabels": [
       "Exterior Studio View"
     ],
-    "overview": "Komaki Ranger is an electric electric motorcycles from Komaki (Komaki) featuring indicative ex-showroom pricing of ₹1.32 Lakh, claimed range of 250 km, 5 kW peak output.",
+    "overview": "Komaki Ranger is an electric electric motorcycles from Komaki (Komaki) featuring indicative ex-showroom pricing of ₹1.32 Lakh – ₹1.37 Lakh, claimed range of 250 km, 5 kW peak output.",
     "variants": [
       {
         "name": "Fully-Loaded",
@@ -9713,8 +9411,8 @@
     "trending": false,
     "popularity": 92,
     "priceMin": 55999,
-    "priceMax": 55999,
-    "priceDisplay": "₹55,999",
+    "priceMax": 63699,
+    "priceDisplay": "₹55,999 – ₹63,699",
     "batteryCapacityKwh": null,
     "batteryDisplay": "TBA",
     "batteryChemistry": "Lithium-Ion Battery Pack",
@@ -9741,7 +9439,7 @@
     "galleryLabels": [
       "Exterior Studio View"
     ],
-    "overview": "Komaki X One is an electric family & city scooters from Komaki (Komaki) featuring indicative ex-showroom pricing of ₹55,999, claimed range of 150 km, 3 kW peak output.",
+    "overview": "Komaki X One is an electric family & city scooters from Komaki (Komaki) featuring indicative ex-showroom pricing of ₹55,999 – ₹63,699, claimed range of 150 km, 3 kW peak output.",
     "variants": [
       {
         "name": "Ace",
@@ -9753,19 +9451,19 @@
         "name": "Graphene",
         "battery": "TBA",
         "range": "150 km",
-        "price": "₹55,999*"
+        "price": "₹55,999 – ₹63,699*"
       },
       {
         "name": "Lithium Ion - 1.5 kWh",
         "battery": "TBA",
         "range": "150 km",
-        "price": "₹55,999*"
+        "price": "₹55,999 – ₹63,699*"
       },
       {
         "name": "Lithium Ion - 1.75 kWh",
         "battery": "TBA",
         "range": "150 km",
-        "price": "₹55,999*"
+        "price": "₹55,999 – ₹63,699*"
       },
       {
         "name": "Prime",
@@ -9830,8 +9528,8 @@
     "trending": false,
     "popularity": 92,
     "priceMin": 17700000,
-    "priceMax": 17700000,
-    "priceDisplay": "₹1.77 Cr",
+    "priceMax": 22800000,
+    "priceDisplay": "₹1.77 Cr – ₹2.28 Cr",
     "batteryCapacityKwh": null,
     "batteryDisplay": "TBA",
     "batteryChemistry": "Lithium-Ion Battery Pack",
@@ -9858,7 +9556,7 @@
     "galleryLabels": [
       "Exterior Studio View"
     ],
-    "overview": "Porsche Cayenne Electric is an electric electric sedans & gt from Porsche (Porsche) featuring indicative ex-showroom pricing of ₹1.77 Cr, claimed range of 642 km, 325.1 kW peak output.",
+    "overview": "Porsche Cayenne Electric is an electric electric sedans & gt from Porsche (Porsche) featuring indicative ex-showroom pricing of ₹1.77 Cr – ₹2.28 Cr, claimed range of 642 km, 325.1 kW peak output.",
     "variants": [
       {
         "name": "Porsche Cayenne Standard",
@@ -9928,8 +9626,8 @@
     "trending": false,
     "popularity": 92,
     "priceMin": 118699,
-    "priceMax": 118699,
-    "priceDisplay": "₹1.19 Lakh",
+    "priceMax": 127999,
+    "priceDisplay": "₹1.19 Lakh – ₹1.28 Lakh",
     "batteryCapacityKwh": null,
     "batteryDisplay": "TBA",
     "batteryChemistry": "Lithium-Ion Battery Pack",
@@ -9956,7 +9654,7 @@
     "galleryLabels": [
       "Exterior Studio View"
     ],
-    "overview": "PURE EV EcoDryft is an electric electric motorcycles from PURE EV (PURE EV) featuring indicative ex-showroom pricing of ₹1.19 Lakh, claimed range of 171 km, 3 kW peak output.",
+    "overview": "PURE EV EcoDryft is an electric electric motorcycles from PURE EV (PURE EV) featuring indicative ex-showroom pricing of ₹1.19 Lakh – ₹1.28 Lakh, claimed range of 171 km, 3 kW peak output.",
     "variants": [
       {
         "name": "350",
@@ -10027,8 +9725,8 @@
     "trending": false,
     "popularity": 92,
     "priceMin": 99999,
-    "priceMax": 99999,
-    "priceDisplay": "₹99,999",
+    "priceMax": 112990,
+    "priceDisplay": "₹99,999 – ₹1.13 Lakh",
     "batteryCapacityKwh": null,
     "batteryDisplay": "TBA",
     "batteryChemistry": "Lithium-Ion Battery Pack",
@@ -10055,7 +9753,7 @@
     "galleryLabels": [
       "Exterior Studio View"
     ],
-    "overview": "Revolt RV1 is an electric electric motorcycles from Revolt (Revolt Motors) featuring indicative ex-showroom pricing of ₹99,999, claimed range of 160 km, 2.8 kW peak output.",
+    "overview": "Revolt RV1 is an electric electric motorcycles from Revolt (Revolt Motors) featuring indicative ex-showroom pricing of ₹99,999 – ₹1.13 Lakh, claimed range of 160 km, 2.8 kW peak output.",
     "variants": [
       {
         "name": "Plus",
@@ -10127,8 +9825,8 @@
     "trending": false,
     "popularity": 92,
     "priceMin": 265000,
-    "priceMax": 265000,
-    "priceDisplay": "₹2.65 Lakh",
+    "priceMax": 399900,
+    "priceDisplay": "₹2.65 Lakh – ₹4.00 Lakh",
     "batteryCapacityKwh": null,
     "batteryDisplay": "TBA",
     "batteryChemistry": "Lithium-Ion Battery Pack",
@@ -10155,7 +9853,7 @@
     "galleryLabels": [
       "Exterior Studio View"
     ],
-    "overview": "Ultraviolette X47 Venom is an electric performance e-bikes from Ultraviolette (Ultraviolette Automotive) featuring indicative ex-showroom pricing of ₹2.65 Lakh, claimed range of 343 km, 30 kW peak output.",
+    "overview": "Ultraviolette X47 Venom is an electric performance e-bikes from Ultraviolette (Ultraviolette Automotive) featuring indicative ex-showroom pricing of ₹2.65 Lakh – ₹4.00 Lakh, claimed range of 343 km, 30 kW peak output.",
     "variants": [
       {
         "name": "Plus",
@@ -10239,8 +9937,8 @@
     "trending": false,
     "popularity": 92,
     "priceMin": 109990,
-    "priceMax": 109990,
-    "priceDisplay": "₹1.10 Lakh",
+    "priceMax": 160990,
+    "priceDisplay": "₹1.10 Lakh – ₹1.61 Lakh",
     "batteryCapacityKwh": null,
     "batteryDisplay": "TBA",
     "batteryChemistry": "Lithium-Ion Battery Pack",
@@ -10267,7 +9965,7 @@
     "galleryLabels": [
       "Exterior Studio View"
     ],
-    "overview": "VIDA VX2 is an electric family & city scooters from VIDA (Hero MotoCorp) featuring indicative ex-showroom pricing of ₹1.10 Lakh, claimed range of 128 km, 6 kW peak output.",
+    "overview": "VIDA VX2 is an electric family & city scooters from VIDA (Hero MotoCorp) featuring indicative ex-showroom pricing of ₹1.10 Lakh – ₹1.61 Lakh, claimed range of 128 km, 6 kW peak output.",
     "variants": [
       {
         "name": "Go 2.2 kWh",
@@ -13493,8 +13191,8 @@
     "trending": false,
     "popularity": 89,
     "priceMin": 249990,
-    "priceMax": 249990,
-    "priceDisplay": "₹2.50 Lakh",
+    "priceMax": 250000,
+    "priceDisplay": "₹2.50 Lakh – ₹2.50 Lakh",
     "batteryCapacityKwh": null,
     "batteryDisplay": "TBA",
     "batteryChemistry": "Lithium-Ion Battery Pack",
@@ -13521,7 +13219,7 @@
     "galleryLabels": [
       "Exterior Studio View"
     ],
-    "overview": "TVS X is an electric smart & performance scooters from TVS (TVS Motor Company) featuring indicative ex-showroom pricing of ₹2.50 Lakh, claimed range of 140 km.",
+    "overview": "TVS X is an electric smart & performance scooters from TVS (TVS Motor Company) featuring indicative ex-showroom pricing of ₹2.50 Lakh – ₹2.50 Lakh, claimed range of 140 km.",
     "variants": [
       {
         "name": "TVS X Standard",
@@ -13788,8 +13486,8 @@
     "trending": false,
     "popularity": 86,
     "priceMin": 7250000,
-    "priceMax": 7250000,
-    "priceDisplay": "₹72.50 Lakh",
+    "priceMax": 7750000,
+    "priceDisplay": "₹72.50 Lakh – ₹77.50 Lakh",
     "batteryCapacityKwh": 83.9,
     "batteryDisplay": "83.9 kWh",
     "batteryChemistry": "Lithium-Ion Battery Pack",
@@ -13816,7 +13514,7 @@
     "galleryLabels": [
       "Exterior Studio View"
     ],
-    "overview": "BMW i4 is an electric electric sedans & gt from BMW (BMW) featuring indicative ex-showroom pricing of ₹72.50 Lakh, a 83.9 kWh battery pack, claimed range of 590 km, 250 kW peak output.",
+    "overview": "BMW i4 is an electric electric sedans & gt from BMW (BMW) featuring indicative ex-showroom pricing of ₹72.50 Lakh – ₹77.50 Lakh, a 83.9 kWh battery pack, claimed range of 590 km, 250 kW peak output.",
     "variants": [
       {
         "name": "BMW i4 eDrive35 M Sport",
@@ -13887,8 +13585,8 @@
     "trending": false,
     "popularity": 86,
     "priceMin": 19500000,
-    "priceMax": 19500000,
-    "priceDisplay": "₹1.95 Cr",
+    "priceMax": 26500000,
+    "priceDisplay": "₹1.95 Cr – ₹2.65 Cr",
     "batteryCapacityKwh": 112.5,
     "batteryDisplay": "112.5 kWh",
     "batteryChemistry": "Lithium-Ion Battery Pack",
@@ -13915,7 +13613,7 @@
     "galleryLabels": [
       "Exterior Studio View"
     ],
-    "overview": "BMW i7 is an electric electric sedans & gt from BMW (BMW) featuring indicative ex-showroom pricing of ₹1.95 Cr, a 112.5 kWh battery pack, claimed range of 728 km, 500.4 kW peak output.",
+    "overview": "BMW i7 is an electric electric sedans & gt from BMW (BMW) featuring indicative ex-showroom pricing of ₹1.95 Cr – ₹2.65 Cr, a 112.5 kWh battery pack, claimed range of 728 km, 500.4 kW peak output.",
     "variants": [
       {
         "name": "BMW i7 50 xDrive",
@@ -13986,8 +13684,8 @@
     "trending": false,
     "popularity": 86,
     "priceMin": 1209000,
-    "priceMax": 1209000,
-    "priceDisplay": "₹12.09 Lakh",
+    "priceMax": 1336000,
+    "priceDisplay": "₹12.09 Lakh – ₹13.36 Lakh",
     "batteryCapacityKwh": 29.2,
     "batteryDisplay": "29.2 kWh",
     "batteryChemistry": "Lithium-Ion Battery Pack",
@@ -14014,7 +13712,7 @@
     "galleryLabels": [
       "Exterior Studio View"
     ],
-    "overview": "Citroen e-C3 X is an electric compact evs & hatchbacks from Citroen (Citroen) featuring indicative ex-showroom pricing of ₹12.09 Lakh, a 29.2 kWh battery pack, claimed range of 330 km, 41.9 kW peak output.",
+    "overview": "Citroen e-C3 X is an electric compact evs & hatchbacks from Citroen (Citroen) featuring indicative ex-showroom pricing of ₹12.09 Lakh – ₹13.36 Lakh, a 29.2 kWh battery pack, claimed range of 330 km, 41.9 kW peak output.",
     "variants": [
       {
         "name": "Citroen e-C3 X Live",
@@ -14092,8 +13790,8 @@
     "trending": false,
     "popularity": 86,
     "priceMin": 7995000,
-    "priceMax": 7995000,
-    "priceDisplay": "₹79.95 Lakh",
+    "priceMax": 8494000,
+    "priceDisplay": "₹79.95 Lakh – ₹84.94 Lakh",
     "batteryCapacityKwh": 90.0,
     "batteryDisplay": "90 kWh",
     "batteryChemistry": "Lithium-Ion Battery Pack",
@@ -14120,7 +13818,7 @@
     "galleryLabels": [
       "Exterior Studio View"
     ],
-    "overview": "MG M9 is an electric premium & luxury evs from MG (JSW MG Motor India) featuring indicative ex-showroom pricing of ₹79.95 Lakh, a 90 kWh battery pack, claimed range of 548 km, 180.5 kW peak output.",
+    "overview": "MG M9 is an electric premium & luxury evs from MG (JSW MG Motor India) featuring indicative ex-showroom pricing of ₹79.95 Lakh – ₹84.94 Lakh, a 90 kWh battery pack, claimed range of 548 km, 180.5 kW peak output.",
     "variants": [
       {
         "name": "MG M9 Couture Edition",
@@ -14187,16 +13885,16 @@
     "fullName": "MG ZS EV",
     "categoryId": "four-wheelers",
     "category": "4-Wheelers",
-    "subCategoryId": "premium-suvs",
-    "subCategory": "Premium & Luxury EVs",
+    "subCategoryId": "family-crossovers",
+    "subCategory": "Family EV SUVs & Crossovers",
     "isSampleData": false,
     "sampleDataNote": "Verified from public OEM and automotive specifications. Confirm live city ex-showroom pricing and subsidies with an authorized dealer.",
     "advisoryNote": "Compiled from verified public EV sources. Confirm live on-road pricing, variant availability, and state subsidies with an authorized dealer.",
     "trending": false,
     "popularity": 86,
-    "priceMin": 5470000,
-    "priceMax": 5470000,
-    "priceDisplay": "₹54.70 Lakh",
+    "priceMin": 1799000,
+    "priceMax": 2075000,
+    "priceDisplay": "₹17.99 Lakh – ₹20.75 Lakh",
     "batteryCapacityKwh": 64.0,
     "batteryDisplay": "64 kWh",
     "batteryChemistry": "LFP",
@@ -14223,20 +13921,8 @@
     "galleryLabels": [
       "Exterior Studio View"
     ],
-    "overview": "MG ZS EV is an electric premium & luxury evs from MG (JSW MG Motor India) featuring indicative ex-showroom pricing of ₹54.70 Lakh, a 64 kWh battery pack, claimed range of 550 km, 180 kW peak output.",
+    "overview": "MG ZS EV is an electric family ev suvs & crossovers from MG (JSW MG Motor India) featuring indicative ex-showroom pricing of ₹17.99 Lakh – ₹20.75 Lakh, a 64 kWh battery pack, claimed range of 550 km, 180 kW peak output.",
     "variants": [
-      {
-        "name": "BMW iX1",
-        "battery": "64 kWh",
-        "range": "550 km",
-        "price": "₹54.70 Lakh*"
-      },
-      {
-        "name": "MG Hector Tomahawk EV",
-        "battery": "64 kWh",
-        "range": "550 km",
-        "price": "₹20.25 Lakh*"
-      },
       {
         "name": "MG ZS EV 100 Year Limited Edition",
         "battery": "64 kWh",
@@ -14287,12 +13973,12 @@
       }
     ],
     "features": [
-      "Segment: 4-Wheelers (Premium & Luxury EVs)",
+      "Segment: 4-Wheelers (Family EV SUVs & Crossovers)",
       "Powertrain: BEV (Zero Tailpipe Emissions)",
       "Battery Pack: 64 kWh (LFP)",
       "Claimed Driving Range: 550 km",
       "Peak Motor Output: 180 kW",
-      "Available in 10 trim variants"
+      "Available in 8 trim variants"
     ],
     "availabilityScope": "pan-india",
     "highlightTag": "🛣️ 550 km Range",
@@ -14308,8 +13994,8 @@
       },
       "runningCostPerKmInr": 0.87,
       "iceEquivalentCostPerKmInr": 7.8,
-      "indicativeEmiInr": 96178,
-      "emiDisplay": "₹96,178/mo*",
+      "indicativeEmiInr": 31631,
+      "emiDisplay": "₹31,631/mo*",
       "loanTenureMonths": 60,
       "interestRatePct": 8.85,
       "typicalDailyKm": 45,
@@ -14319,13 +14005,13 @@
     "elasticTags": [
       "5 seater",
       "family car",
+      "family-crossovers",
       "fast charging",
       "four-wheelers",
       "highway",
       "jsw mg motor india",
       "mg",
       "mg zs ev",
-      "premium-suvs",
       "suv"
     ]
   },
@@ -14346,8 +14032,8 @@
     "trending": false,
     "popularity": 86,
     "priceMin": 84999,
-    "priceMax": 84999,
-    "priceDisplay": "₹84,999",
+    "priceMax": 163999,
+    "priceDisplay": "₹84,999 – ₹1.64 Lakh",
     "batteryCapacityKwh": 5.2,
     "batteryDisplay": "5.2 kWh",
     "batteryChemistry": "Lithium-Ion Battery Pack",
@@ -14374,7 +14060,7 @@
     "galleryLabels": [
       "Exterior Studio View"
     ],
-    "overview": "Ola S1 X is an electric smart & performance scooters from Ola Electric (Ola Electric Mobility) featuring indicative ex-showroom pricing of ₹84,999, a 5.2 kWh battery pack, claimed range of 320 km, 5.5 kW peak output.",
+    "overview": "Ola S1 X is an electric smart & performance scooters from Ola Electric (Ola Electric Mobility) featuring indicative ex-showroom pricing of ₹84,999 – ₹1.64 Lakh, a 5.2 kWh battery pack, claimed range of 320 km, 5.5 kW peak output.",
     "variants": [
       {
         "name": "2kWh",
@@ -17365,8 +17051,8 @@
     "trending": false,
     "popularity": 82,
     "priceMin": 102999,
-    "priceMax": 102999,
-    "priceDisplay": "₹1.03 Lakh",
+    "priceMax": 109999,
+    "priceDisplay": "₹1.03 Lakh – ₹1.10 Lakh",
     "batteryCapacityKwh": null,
     "batteryDisplay": "TBA",
     "batteryChemistry": "Lithium-Ion Battery Pack",
@@ -17393,7 +17079,7 @@
     "galleryLabels": [
       "Exterior Studio View"
     ],
-    "overview": "Ampere Magnus G Max is an electric family & city scooters from Ampere (Greaves Electric Mobility) featuring indicative ex-showroom pricing of ₹1.03 Lakh, claimed range of 142 km, 2.4 kW peak output.",
+    "overview": "Ampere Magnus G Max is an electric family & city scooters from Ampere (Greaves Electric Mobility) featuring indicative ex-showroom pricing of ₹1.03 Lakh – ₹1.10 Lakh, claimed range of 142 km, 2.4 kW peak output.",
     "variants": [
       {
         "name": "STD",
@@ -17465,8 +17151,8 @@
     "trending": false,
     "popularity": 82,
     "priceMin": 101999,
-    "priceMax": 101999,
-    "priceDisplay": "₹1.02 Lakh",
+    "priceMax": 144049,
+    "priceDisplay": "₹1.02 Lakh – ₹1.44 Lakh",
     "batteryCapacityKwh": null,
     "batteryDisplay": "TBA",
     "batteryChemistry": "Lithium-Ion Battery Pack",
@@ -17493,7 +17179,7 @@
     "galleryLabels": [
       "Exterior Studio View"
     ],
-    "overview": "Ather Konarc is an electric family & city scooters from Ather (Ather Energy) featuring indicative ex-showroom pricing of ₹1.02 Lakh, claimed range of 161 km, 4.7 kW peak output.",
+    "overview": "Ather Konarc is an electric family & city scooters from Ather (Ather Energy) featuring indicative ex-showroom pricing of ₹1.02 Lakh – ₹1.44 Lakh, claimed range of 161 km, 4.7 kW peak output.",
     "variants": [
       {
         "name": "S (IDC 100 Km)",
@@ -17571,8 +17257,8 @@
     "trending": false,
     "popularity": 82,
     "priceMin": 111499,
-    "priceMax": 111499,
-    "priceDisplay": "₹1.11 Lakh",
+    "priceMax": 127650,
+    "priceDisplay": "₹1.11 Lakh – ₹1.28 Lakh",
     "batteryCapacityKwh": null,
     "batteryDisplay": "TBA",
     "batteryChemistry": "Lithium-Ion Battery Pack",
@@ -17599,7 +17285,7 @@
     "galleryLabels": [
       "Exterior Studio View"
     ],
-    "overview": "Kinetic DX EV is an electric family & city scooters from Kinetic (Kinetic) featuring indicative ex-showroom pricing of ₹1.11 Lakh, claimed range of 105 km, 4.8 kW peak output.",
+    "overview": "Kinetic DX EV is an electric family & city scooters from Kinetic (Kinetic) featuring indicative ex-showroom pricing of ₹1.11 Lakh – ₹1.28 Lakh, claimed range of 105 km, 4.8 kW peak output.",
     "variants": [
       {
         "name": "2.6 kWh",
@@ -17682,8 +17368,8 @@
     "trending": false,
     "popularity": 82,
     "priceMin": 83499,
-    "priceMax": 83499,
-    "priceDisplay": "₹83,499",
+    "priceMax": 126499,
+    "priceDisplay": "₹83,499 – ₹1.26 Lakh",
     "batteryCapacityKwh": null,
     "batteryDisplay": "TBA",
     "batteryChemistry": "Lithium-Ion Battery Pack",
@@ -17710,7 +17396,7 @@
     "galleryLabels": [
       "Exterior Studio View"
     ],
-    "overview": "Komaki XGT CAT 2.0 is an electric family & city scooters from Komaki (Komaki) featuring indicative ex-showroom pricing of ₹83,499, claimed range of 125 km.",
+    "overview": "Komaki XGT CAT 2.0 is an electric family & city scooters from Komaki (Komaki) featuring indicative ex-showroom pricing of ₹83,499 – ₹1.26 Lakh, claimed range of 125 km.",
     "variants": [
       {
         "name": "73 V, 33 Ah",
@@ -17786,8 +17472,8 @@
     "trending": false,
     "popularity": 82,
     "priceMin": 109999,
-    "priceMax": 109999,
-    "priceDisplay": "₹1.10 Lakh",
+    "priceMax": 119999,
+    "priceDisplay": "₹1.10 Lakh – ₹1.20 Lakh",
     "batteryCapacityKwh": null,
     "batteryDisplay": "TBA",
     "batteryChemistry": "Lithium-Ion Battery Pack",
@@ -17814,7 +17500,7 @@
     "galleryLabels": [
       "Exterior Studio View"
     ],
-    "overview": "Oben Electric Rorr EZ Sigma is an electric performance e-bikes from Oben Electric (Oben Electric) featuring indicative ex-showroom pricing of ₹1.10 Lakh, claimed range of 175 km, 7.5 kW peak output.",
+    "overview": "Oben Electric Rorr EZ Sigma is an electric performance e-bikes from Oben Electric (Oben Electric) featuring indicative ex-showroom pricing of ₹1.10 Lakh – ₹1.20 Lakh, claimed range of 175 km, 7.5 kW peak output.",
     "variants": [
       {
         "name": "3.4 kWh",
@@ -17885,8 +17571,8 @@
     "trending": false,
     "popularity": 82,
     "priceMin": 79999,
-    "priceMax": 79999,
-    "priceDisplay": "₹79,999",
+    "priceMax": 99999,
+    "priceDisplay": "₹79,999 – ₹99,999",
     "batteryCapacityKwh": null,
     "batteryDisplay": "TBA",
     "batteryChemistry": "Lithium-Ion Battery Pack",
@@ -17913,7 +17599,7 @@
     "galleryLabels": [
       "Exterior Studio View"
     ],
-    "overview": "Ola Electric S1 Z is an electric family & city scooters from Ola Electric (Ola Electric Mobility) featuring indicative ex-showroom pricing of ₹79,999, claimed range of 179 km, 4 kW peak output.",
+    "overview": "Ola Electric S1 Z is an electric family & city scooters from Ola Electric (Ola Electric Mobility) featuring indicative ex-showroom pricing of ₹79,999 – ₹99,999, claimed range of 179 km, 4 kW peak output.",
     "variants": [
       {
         "name": "3.1 Kwh",
@@ -17969,112 +17655,6 @@
     ]
   },
   {
-    "id": "river-indie",
-    "brandId": "river",
-    "brand": "River",
-    "manufacturer": "River Mobility",
-    "model": "River Indie",
-    "fullName": "River Indie",
-    "categoryId": "two-wheelers",
-    "category": "2-Wheelers",
-    "subCategoryId": "smart-scooters",
-    "subCategory": "Smart & Performance Scooters",
-    "isSampleData": false,
-    "sampleDataNote": "Verified from public OEM and automotive specifications. Confirm live city ex-showroom pricing and subsidies with an authorized dealer.",
-    "advisoryNote": "Compiled from verified public EV sources. Confirm live on-road pricing, variant availability, and state subsidies with an authorized dealer.",
-    "trending": false,
-    "popularity": 82,
-    "priceMin": 157499,
-    "priceMax": 157499,
-    "priceDisplay": "₹1.57 Lakh",
-    "batteryCapacityKwh": null,
-    "batteryDisplay": "TBA",
-    "batteryChemistry": "Lithium-Ion Battery Pack",
-    "claimedRangeKm": 163,
-    "rangeDisplay": "163 km",
-    "rangeStandard": "Certified / Claimed",
-    "topSpeedKmh": 90,
-    "topSpeedDisplay": "90 km/h",
-    "accelerationDisplay": "Check Official Brochure",
-    "chargingTimeDisplay": "~8 hrs (AC Charge)",
-    "acChargingTime": "~8 hrs (AC)",
-    "dcChargingTime": "Check Dealer for DC Spec",
-    "chargingConnector": "Standard EV Charger",
-    "motorPowerKw": 6.7,
-    "motorPowerDisplay": "6.7 kW",
-    "motorType": "Electric Traction Motor",
-    "driveType": "Electric Drive",
-    "warrantyDisplay": "Refer Official OEM Battery Warranty",
-    "vehicleWarranty": "Standard OEM Vehicle Warranty",
-    "image": "assets/images/vehicles/fallback-2w.svg",
-    "images": [
-      "assets/images/vehicles/fallback-2w.svg"
-    ],
-    "galleryLabels": [
-      "Exterior Studio View"
-    ],
-    "overview": "River Indie is an electric smart & performance scooters from River (River Mobility) featuring indicative ex-showroom pricing of ₹1.57 Lakh, claimed range of 163 km, 6.7 kW peak output.",
-    "variants": [
-      {
-        "name": "Affordable Model",
-        "battery": "TBA",
-        "range": "163 km",
-        "price": "₹1.57 Lakh*"
-      },
-      {
-        "name": "Most Expensive",
-        "battery": "TBA",
-        "range": "163 km",
-        "price": "₹1.57 Lakh*"
-      },
-      {
-        "name": "STD",
-        "battery": "TBA",
-        "range": "163 km",
-        "price": "₹1.57 Lakh*"
-      }
-    ],
-    "features": [
-      "Segment: 2-Wheelers (Smart & Performance Scooters)",
-      "Powertrain: BEV (Zero Tailpipe Emissions)",
-      "Claimed Driving Range: 163 km",
-      "Peak Motor Output: 6.7 kW",
-      "Claimed Top Speed: 90 km/h",
-      "Available in 3 trim variants"
-    ],
-    "availabilityScope": "pan-india",
-    "highlightTag": "⚡ 163 km IDC",
-    "sourceUrl": "https://www.bikedekho.com/electric-scooters",
-    "verificationStatus": "verified",
-    "firstLaunchYear": 2023,
-    "elasticMetrics": {
-      "efficiencyWhPerKm": 32.0,
-      "realWorldRangeKm": {
-        "eco": 139,
-        "city": 124,
-        "highway": 108
-      },
-      "runningCostPerKmInr": 0.24,
-      "iceEquivalentCostPerKmInr": 2.65,
-      "indicativeEmiInr": 4273,
-      "emiDisplay": "₹4,273/mo*",
-      "loanTenureMonths": 36,
-      "interestRatePct": 9.25,
-      "typicalDailyKm": 30,
-      "estMonthlySavingsInr": 1880,
-      "co2SavedKgPerYear": 889
-    },
-    "elasticTags": [
-      "city commute",
-      "river",
-      "river indie",
-      "river mobility",
-      "scooter",
-      "smart-scooters",
-      "two-wheelers"
-    ]
-  },
-  {
     "id": "simple-energy-wave",
     "brandId": "simple-energy",
     "brand": "Simple Energy",
@@ -18091,8 +17671,8 @@
     "trending": false,
     "popularity": 82,
     "priceMin": 109999,
-    "priceMax": 109999,
-    "priceDisplay": "₹1.10 Lakh",
+    "priceMax": 189999,
+    "priceDisplay": "₹1.10 Lakh – ₹1.90 Lakh",
     "batteryCapacityKwh": null,
     "batteryDisplay": "TBA",
     "batteryChemistry": "Lithium-Ion Battery Pack",
@@ -18119,7 +17699,7 @@
     "galleryLabels": [
       "Exterior Studio View"
     ],
-    "overview": "Simple Energy Wave is an electric family & city scooters from Simple Energy (Simple Energy) featuring indicative ex-showroom pricing of ₹1.10 Lakh, claimed range of 243 km, 6.4 kW peak output.",
+    "overview": "Simple Energy Wave is an electric family & city scooters from Simple Energy (Simple Energy) featuring indicative ex-showroom pricing of ₹1.10 Lakh – ₹1.90 Lakh, claimed range of 243 km, 6.4 kW peak output.",
     "variants": [
       {
         "name": "EBN",
@@ -18214,8 +17794,8 @@
     "trending": false,
     "popularity": 82,
     "priceMin": 275000,
-    "priceMax": 275000,
-    "priceDisplay": "₹2.75 Lakh",
+    "priceMax": 370000,
+    "priceDisplay": "₹2.75 Lakh – ₹3.70 Lakh",
     "batteryCapacityKwh": null,
     "batteryDisplay": "TBA",
     "batteryChemistry": "Lithium-Ion Battery Pack",
@@ -18242,7 +17822,7 @@
     "galleryLabels": [
       "Exterior Studio View"
     ],
-    "overview": "Srivaru Motors Prana 2.0 is an electric electric motorcycles from Srivaru Motors (Srivaru Motors) featuring indicative ex-showroom pricing of ₹2.75 Lakh, claimed range of 150 km, 10 kW peak output.",
+    "overview": "Srivaru Motors Prana 2.0 is an electric electric motorcycles from Srivaru Motors (Srivaru Motors) featuring indicative ex-showroom pricing of ₹2.75 Lakh – ₹3.70 Lakh, claimed range of 150 km, 10 kW peak output.",
     "variants": [
       {
         "name": "Elite",
@@ -18313,8 +17893,8 @@
     "trending": false,
     "popularity": 82,
     "priceMin": 102150,
-    "priceMax": 102150,
-    "priceDisplay": "₹1.02 Lakh",
+    "priceMax": 120980,
+    "priceDisplay": "₹1.02 Lakh – ₹1.21 Lakh",
     "batteryCapacityKwh": null,
     "batteryDisplay": "TBA",
     "batteryChemistry": "Lithium-Ion Battery Pack",
@@ -18341,7 +17921,7 @@
     "galleryLabels": [
       "Exterior Studio View"
     ],
-    "overview": "TVS iQube Orbiter is an electric family & city scooters from TVS iQube (TVS Motor Company) featuring indicative ex-showroom pricing of ₹1.02 Lakh, claimed range of 86 km, 1.8 kW peak output.",
+    "overview": "TVS iQube Orbiter is an electric family & city scooters from TVS iQube (TVS Motor Company) featuring indicative ex-showroom pricing of ₹1.02 Lakh – ₹1.21 Lakh, claimed range of 86 km, 1.8 kW peak output.",
     "variants": [
       {
         "name": "V1",
@@ -19125,6 +18705,99 @@
       "revolt",
       "revolt motors",
       "rvx",
+      "two-wheelers"
+    ]
+  },
+  {
+    "id": "river-indie",
+    "brandId": "river",
+    "brand": "River",
+    "manufacturer": "River Mobility",
+    "model": "River Indie",
+    "fullName": "River Indie",
+    "categoryId": "two-wheelers",
+    "category": "2-Wheelers",
+    "subCategoryId": "smart-scooters",
+    "subCategory": "Smart & Performance Scooters",
+    "isSampleData": false,
+    "sampleDataNote": "Verified from public OEM and automotive specifications. Confirm live city ex-showroom pricing and subsidies with an authorized dealer.",
+    "advisoryNote": "Compiled from verified public EV sources. Confirm live on-road pricing, variant availability, and state subsidies with an authorized dealer.",
+    "trending": false,
+    "popularity": 79,
+    "priceMin": 157499,
+    "priceMax": 157499,
+    "priceDisplay": "₹1.57 Lakh",
+    "batteryCapacityKwh": null,
+    "batteryDisplay": "TBA",
+    "batteryChemistry": "Lithium-Ion Battery Pack",
+    "claimedRangeKm": 163,
+    "rangeDisplay": "163 km",
+    "rangeStandard": "Certified / Claimed",
+    "topSpeedKmh": 90,
+    "topSpeedDisplay": "90 km/h",
+    "accelerationDisplay": "Check Official Brochure",
+    "chargingTimeDisplay": "~8 hrs (AC Charge)",
+    "acChargingTime": "~8 hrs (AC)",
+    "dcChargingTime": "Check Dealer for DC Spec",
+    "chargingConnector": "Standard EV Charger",
+    "motorPowerKw": 6.7,
+    "motorPowerDisplay": "6.7 kW",
+    "motorType": "Electric Traction Motor",
+    "driveType": "Electric Drive",
+    "warrantyDisplay": "Refer Official OEM Battery Warranty",
+    "vehicleWarranty": "Standard OEM Vehicle Warranty",
+    "image": "assets/images/vehicles/fallback-2w.svg",
+    "images": [
+      "assets/images/vehicles/fallback-2w.svg"
+    ],
+    "galleryLabels": [
+      "Exterior Studio View"
+    ],
+    "overview": "River Indie is an electric smart & performance scooters from River (River Mobility) featuring indicative ex-showroom pricing of ₹1.57 Lakh, claimed range of 163 km, 6.7 kW peak output.",
+    "variants": [
+      {
+        "name": "STD",
+        "battery": "TBA",
+        "range": "163 km",
+        "price": "₹1.57 Lakh*"
+      }
+    ],
+    "features": [
+      "Segment: 2-Wheelers (Smart & Performance Scooters)",
+      "Powertrain: BEV (Zero Tailpipe Emissions)",
+      "Claimed Driving Range: 163 km",
+      "Peak Motor Output: 6.7 kW",
+      "Claimed Top Speed: 90 km/h"
+    ],
+    "availabilityScope": "pan-india",
+    "highlightTag": "⚡ 163 km IDC",
+    "sourceUrl": "https://www.bikedekho.com/electric-scooters",
+    "verificationStatus": "verified",
+    "firstLaunchYear": 2023,
+    "elasticMetrics": {
+      "efficiencyWhPerKm": 32.0,
+      "realWorldRangeKm": {
+        "eco": 139,
+        "city": 124,
+        "highway": 108
+      },
+      "runningCostPerKmInr": 0.24,
+      "iceEquivalentCostPerKmInr": 2.65,
+      "indicativeEmiInr": 4273,
+      "emiDisplay": "₹4,273/mo*",
+      "loanTenureMonths": 36,
+      "interestRatePct": 9.25,
+      "typicalDailyKm": 30,
+      "estMonthlySavingsInr": 1880,
+      "co2SavedKgPerYear": 889
+    },
+    "elasticTags": [
+      "city commute",
+      "river",
+      "river indie",
+      "river mobility",
+      "scooter",
+      "smart-scooters",
       "two-wheelers"
     ]
   },
